@@ -4,7 +4,7 @@
 :root {
     --orange: #ff6300;
     --light-orange: #ff883c;
-    --yellow: #8d6e43;
+    --yellow: #ffaf42;
     --white: #fff;
     --black: #000000;
     --sans-serif-1: 'Michroma', sans-serif;
@@ -78,6 +78,7 @@ a {
 body {
     background: url(../images/mobile-bg.svg);
     background-repeat: repeat;
+
 }
 
 .no-scroll {
