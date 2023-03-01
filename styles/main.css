@@ -78,7 +78,7 @@ a {
 body {
     background: url(../images/mobile-bg.svg);
     background-repeat: repeat;
-    background-size: cover;
+    /* background-size: cover; */
 }
 
 .no-scroll {
@@ -494,7 +494,7 @@ section {
 
 /*--- ABOUT ---*/
 
-canvas {
+/* canvas {
     position: absolute;
     top: 0;
-}
+} */
