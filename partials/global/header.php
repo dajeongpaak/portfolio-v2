@@ -10,7 +10,7 @@
                         </div>
                     </li>
                     <li class="main-nav__logo">
-                        <a href="index.php">
+                        <a href="index.html">
                             <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
                                 xml:space="preserve" id="Layer_2_00000006673566752872726920000009700072344301659571_"
                                 x="0" y="0" style="enable-background:new 0 0 127.9 137.9" version="1.1"

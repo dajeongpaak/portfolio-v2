@@ -78,7 +78,7 @@ a {
 body {
     background: url(../images/mobile-bg.svg);
     background-repeat: repeat;
-
+    background-size: cover;
 }
 
 .no-scroll {
