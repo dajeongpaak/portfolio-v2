@@ -95,6 +95,8 @@ section {
     height: 100%;
 }
 
+
+
 .grid {
     display: grid;
     grid-template-columns: repeat(12, 1fr);
@@ -375,6 +377,12 @@ section {
 
 
 /* Home__main */
+.matter-container--home {
+    width: 100%;
+    height: 2.5hv;
+    overflow: hidden;
+}
+
 .home__content {
     flex-direction: column;
     justify-content: center;
@@ -494,7 +502,12 @@ section {
 
 /*--- ABOUT ---*/
 
-/* canvas {
-    position: absolute;
-    top: 0;
-} */
+.matter-container {
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.about-footer {
+    margin-top: unset;
+}

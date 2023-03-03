@@ -9,6 +9,7 @@
 <body>
     <?php require_once("partials/global/header.php")?>
     <main>
+        <div id="matter-container--home" class="matter-container--home"></div>
         <section class="home__main">
             <div class="container">
                 <div class="grid">
@@ -25,7 +26,7 @@
                         </div>
                         <div class="home__desc">
                             <h2 class="p">I strive to make<br>The web a place of<br>
-                                <span class="drop-shadow">wonder and
+                                <span class="drop-shadow">Wonder and
                                     excitement!
                                 </span>
                             </h2>
