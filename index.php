@@ -163,8 +163,8 @@
             render: {
                 sprite: {
                     texture: "images/pnglogo.png",
-                    xScale: 0.15,
-                    yScale: 0.15
+                    xScale: 0.1,
+                    yScale: 0.1
                 }
             }
         });
