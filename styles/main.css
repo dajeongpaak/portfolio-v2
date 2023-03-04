@@ -382,6 +382,7 @@ section {
     border-radius: 34px;
     margin-bottom: .5rem;
     backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
 }
 
 /* Headings */
