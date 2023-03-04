@@ -109,6 +109,7 @@
     <?php require_once("partials/global/footer.php")?>
     <script src="scripts/main.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/matter-js/0.19.0/matter.min.js"></script>
+
     <script>
         const matterContainer = document.querySelector("#matter-container--home");
         const mainHeight = document.querySelector("#main");
@@ -125,7 +126,7 @@
 
         world.gravity.x = 0;
         world.gravity.y = 0;
-        
+
         let width = matterContainer.clientWidth;
         let height = matterContainer.clientHeight;
 
@@ -200,16 +201,46 @@
                 stiffness: 0.2
             }
         });
+
+        // var touch = MatterTouch.create(engine);
+        // var mouseConstraint = Matter.MouseConstraint.create(engine, {
+        //   mouse: Matter.Mouse.create(render.canvas),
+        //     constraint: {
+        //     stiffness: 0.2,
+        //     render: {
+        //         visible: false
+        // }}, plugins: {
+        //         wrap: MatterWrap,
+        //         touch: touch
+        //     }
+        // });
         Composite.add(world, mouseConstraint);
 
         mouseConstraint.mouse.element.removeEventListener(
             "mousewheel",
             mouseConstraint.mouse.mousewheel
         );
+
         mouseConstraint.mouse.element.removeEventListener(
             "DOMMouseScroll",
             mouseConstraint.mouse.mousewheel
         );
+
+        mouseConstraint.mouse.element.removeEventListener('touchstart', mouseConstraint.mouse.mousedown);
+mouseConstraint.mouse.element.removeEventListener('touchmove', mouseConstraint.mouse.mousemove);
+mouseConstraint.mouse.element.removeEventListener('touchend', mouseConstraint.mouse.mouseup);
+
+mouseConstraint.mouse.element.addEventListener('touchstart', mouseConstraint.mouse.mousedown, { passive: true });
+mouseConstraint.mouse.element.addEventListener('touchmove', (e) => {
+  if (mouseConstraint.body) {
+    mouseConstraint.mouse.mousemove(e);
+  }
+});
+mouseConstraint.mouse.element.addEventListener('touchend', (e) => {
+  if (mouseConstraint.body) {
+    mouseConstraint.mouse.mouseup(e);
+  }
+});
 
         Render.run(render);
 
