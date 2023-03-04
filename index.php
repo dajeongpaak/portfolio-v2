@@ -162,9 +162,9 @@
             restitution: 0.8,
             render: {
                 sprite: {
-                    texture: "images/pnglogo.png",
-                    xScale: 0.1,
-                    yScale: 0.1
+                    texture: "images/logosm.png",
+                    xScale: 1,
+                    yScale: 1
                 }
             }
         });
