@@ -50,7 +50,7 @@
     const SVG_WIDTH_IN_PX = 100;
     const SVG_WIDTH_AS_PERCENT_OF_CONTAINER_WIDTH = 0.38
 
-    var canvas = document.getElementById("world");
+
         // module aliases
         var Engine = Matter.Engine,
             Render = Matter.Render,
@@ -69,7 +69,6 @@
 
         // create a renderer
         var render = Render.create({
-            canvas: canvas,
             element: matterContainer,
             engine: engine,
             options: {
@@ -247,6 +246,44 @@
         Composite.add(world, mouseConstraint);
 
         // Allow scroll through the canvas
+        mouseConstraint.mouse.element.addEventListener(
+    "touchstart",
+    function(event) {
+        event.preventDefault();
+        var touches = event.changedTouches;
+        for (var i = 0; i < touches.length; i++) {
+            var touch = touches[i];
+            mouseConstraint.updateConstraint(touch);
+        }
+    },
+    false
+);
+
+mouseConstraint.mouse.element.addEventListener(
+    "touchmove",
+    function(event) {
+        event.preventDefault();
+        var touches = event.changedTouches;
+        for (var i = 0; i < touches.length; i++) {
+            var touch = touches[i];
+            mouseConstraint.updateConstraint(touch);
+        }
+    },
+    false
+);
+
+mouseConstraint.mouse.element.addEventListener(
+    "touchend",
+    function(event) {
+        var touches = event.changedTouches;
+        for (var i = 0; i < touches.length; i++) {
+            var touch = touches[i];
+            mouseConstraint.removeConstraint(touch);
+        }
+    },
+    false
+);
+
         mouseConstraint.mouse.element.removeEventListener(
             "mousewheel",
             mouseConstraint.mouse.mousewheel
