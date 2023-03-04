@@ -75,10 +75,14 @@ a {
 }
 
 /* Layout */
+
 body {
     background: url(../images/mobile-bg.svg);
     background-repeat: repeat;
-    background-size: cover;
+}
+
+main {
+    padding-bottom: 2rem;
 }
 
 .no-scroll {
@@ -379,8 +383,8 @@ section {
 /* Home__main */
 .matter-container--home {
     width: 100%;
-    height: 2.5hv;
-    overflow: hidden;
+    height: auto;
+    position: absolute;
 }
 
 .home__content {
@@ -397,8 +401,8 @@ section {
 .home__elem-1 img,
 .home__elem-2 img {
     position: absolute;
-    width: 5rem;
-    height: 5rem;
+    width: 7.5rem;
+    height: 7.5rem;
     z-index: -99;
 }
 
@@ -476,7 +480,6 @@ section {
 .footer {
     position: relative;
     font-size: 1.1rem;
-    margin-top: 2rem;
     padding-top: 6rem;
     padding-bottom: 3rem;
     background: var(--yellow);

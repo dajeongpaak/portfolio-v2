@@ -8,17 +8,17 @@
 
 <body>
     <?php require_once("partials/global/header.php")?>
-    <main>
+    <main id="main">
         <div id="matter-container--home" class="matter-container--home"></div>
         <section class="home__main">
             <div class="container">
                 <div class="grid">
-                    <div class="home__elem-1">
+                    <!-- <div class="home__elem-1">
                         <img src="images/ball.png" alt="a ball shpaped element in homepage">
                     </div>
                     <div class="home__elem-2">
-                        <img src="images/main-logo.svg" alt="logo element">
-                    </div>
+                        <img src="images/main-logo.png" alt="logo element">
+                    </div> -->
                     <div class="home__content  col-12 flex">
 
                         <div class="home__title">
@@ -30,7 +30,6 @@
                                     excitement!
                                 </span>
                             </h2>
-
                         </div>
                     </div>
                 </div>
@@ -109,6 +108,115 @@
     </main>
     <?php require_once("partials/global/footer.php")?>
     <script src="scripts/main.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/matter-js/0.19.0/matter.min.js"></script>
+    <script>
+        const matterContainer = document.querySelector("#matter-container--home");
+        const mainHeight = document.querySelector("#main");
+        var Engine = Matter.Engine,
+            Render = Matter.Render,
+            Runner = Matter.Runner,
+            Bodies = Matter.Bodies,
+            Composite = Matter.Composite,
+            Body = Matter.Body,
+            World = Matter.World;
+
+        var engine = Engine.create(),
+            world = engine.world;
+
+        world.gravity.x = 0;
+        world.gravity.y = 0;
+        
+        let width = matterContainer.clientWidth;
+        let height = matterContainer.clientHeight;
+
+        var render = Render.create({
+            element: matterContainer,
+            engine: engine,
+            options: {
+                width: width,
+                height: mainHeight.clientHeight,
+                wireframes: false,
+                background: "transparent"
+            }
+        });
+
+        var ball = Bodies.circle(100, 100, 40, {
+            density: 0.04,
+            friction: 0.01,
+            frictionAir: 0.000001,
+            restitution: 0.8,
+            render: {
+                sprite: {
+                    texture: "images/ball.png",
+                    xScale: 0.15,
+                    yScale: 0.15
+                }
+            }
+        });
+
+        var logo = Bodies.circle(100, 100, 40, {
+            density: 0.04,
+            friction: 0.01,
+            frictionAir: 0.000001,
+            restitution: 0.8,
+            render: {
+                sprite: {
+                    texture: "images/main-logo.png",
+                    xScale: 0.15,
+                    yScale: 0.15
+                }
+            }
+        });
+
+        var ground = Bodies.rectangle(width / 2, document.body.offsetHeight, 32848, 460, { isStatic: true,
+            render: {
+                fillStyle:'rgba(0,0,0,0)'
+            }});
+
+        var roof = Bodies.rectangle( 0, 0, 34234, 1, {   isStatic: true,
+            render: {
+                fillStyle: 'rgba(0,0,0,0)'}});
+
+        var leftwall = Bodies.rectangle( 0, 0 , 1 , 11254, {
+            isStatic: true,
+            render: {
+                fillStyle:'rgba(0,0,0,0)'
+            }
+        });
+
+        var rightwall = Bodies.rectangle( width , height , 1 , 11254, {
+            isStatic: true,
+            render: {
+                fillStyle:'rgba(0,0,0,0)'
+            }
+        });
+
+        Composite.add(world, [ball, logo, ground, roof, leftwall, rightwall]);
+
+        let mouse = Matter.Mouse.create(render.canvas);
+        let mouseConstraint = Matter.MouseConstraint.create(engine, {
+            mouse: mouse,
+            constraint: {
+                stiffness: 0.2
+            }
+        });
+        Composite.add(world, mouseConstraint);
+
+        mouseConstraint.mouse.element.removeEventListener(
+            "mousewheel",
+            mouseConstraint.mouse.mousewheel
+        );
+        mouseConstraint.mouse.element.removeEventListener(
+            "DOMMouseScroll",
+            mouseConstraint.mouse.mousewheel
+        );
+
+        Render.run(render);
+
+        var runner = Runner.create();
+
+        Runner.run(runner, engine);
+    </script>
 </body>
 
 </html>

@@ -208,18 +208,6 @@
                 texture: "images/html.png", 
                 xScale: ScaleRec, 
                 yScale: ScaleRec }}})
-
-    //     var sass = Bodies.rectangle(width / 2, 200, 80, 80, {
-    //         density: 0.04,
-	// 	    friction: 0.01,
-	// 	    frictionAir: 0.000001,
-	// 	    restitution: 0.8,
-    //         render: { 
-    //         sprite: { 
-    //             texture: "images/sass.png", 
-    //             xScale: 1, 
-    //             yScale: 1 }}})
-
             
         var ground = Bodies.rectangle(matterContainer.clientWidth / 2, matterContainer.clientHeight + THICCNESS / 2, 82854, THICCNESS, { isStatic: true,
             render: {
@@ -230,11 +218,11 @@
         var rightwall = Bodies.rectangle( matterContainer.clientWidth + THICCNESS / 2, matterContainer.clientHeight / 2, THICCNESS, matterContainer.clientHeight * 5, { isStatic: true,
             render: {
         fillStyle: 'rgba(0,0,0,0)'}});
+        
         // add all of the bodies to the world
         Composite.add(world, [css, sass, figma, matter, php, gsap, jquery, js, responsive, html, ground, leftwall, rightwall]);
 
-        // css, sass, html, js, php, figma, jquery, gsap, responsive, matter, adobe,
-
+ 
 
         let mouse = Matter.Mouse.create(render.canvas);
         let mouseConstraint = Matter.MouseConstraint.create(engine, {
