@@ -97,6 +97,7 @@ body {
 
 section {
     height: 100%;
+    z-index: 999;
 }
 
 
@@ -166,6 +167,11 @@ section {
 
 .mx-auto {
     margin: 0 auto;
+}
+
+.z-index {
+    z-index: 2;
+    position: relative;
 }
 
 /* Header */
@@ -371,10 +377,11 @@ section {
     display: flex;
     align-items: center;
     height: 8rem;
-    background: #FFFFFF;
+    background: rgba(255, 255, 255, 0.4);
     border: 1px solid #000000;
     border-radius: 34px;
     margin-bottom: .5rem;
+    backdrop-filter: blur(8px);
 }
 
 /* Headings */
@@ -385,6 +392,9 @@ section {
     width: 100%;
     height: auto;
     position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
 }
 
 .home__content {
@@ -396,14 +406,6 @@ section {
 .drop-shadow {
     text-shadow: 2px -1px var(--orange);
     font-weight: 100;
-}
-
-.home__elem-1 img,
-.home__elem-2 img {
-    position: absolute;
-    width: 7.5rem;
-    height: 7.5rem;
-    z-index: -99;
 }
 
 .card__content {

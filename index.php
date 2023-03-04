@@ -13,18 +13,11 @@
         <section class="home__main">
             <div class="container">
                 <div class="grid">
-                    <!-- <div class="home__elem-1">
-                        <img src="images/ball.png" alt="a ball shpaped element in homepage">
-                    </div>
-                    <div class="home__elem-2">
-                        <img src="images/main-logo.png" alt="logo element">
-                    </div> -->
                     <div class="home__content  col-12 flex">
-
-                        <div class="home__title">
+                        <div class="home__title z-index">
                             <h1>Front-end Developer</h1>
                         </div>
-                        <div class="home__desc">
+                        <div class="home__desc z-index">
                             <h2 class="p">I strive to make<br>The web a place of<br>
                                 <span class="drop-shadow">Wonder and
                                     excitement!
@@ -35,7 +28,7 @@
                 </div>
             </div>
         </section>
-        <section class="home__projects">
+        <section class="home__projects z-index">
             <div class="container">
                 <div class="grid">
                     <div class="col-12 button title">
