@@ -141,7 +141,7 @@
             }
         });
 
-        var ball = Bodies.circle(100, 100, 40, {
+        var ball = Bodies.circle(width*(1/4), mainHeight.clientHeight*(1/7), 40, {
             density: 0.04,
             friction: 0.01,
             frictionAir: 0.000001,
@@ -155,7 +155,7 @@
             }
         });
 
-        var logo = Bodies.circle(100, 100, 40, {
+        var logo = Bodies.circle(width*(3/4), mainHeight.clientHeight*(2/5), 40, {
             density: 0.04,
             friction: 0.01,
             frictionAir: 0.000001,
@@ -168,7 +168,7 @@
                 }
             }
         });
-
+        console.log(matterContainer.clientHeight);
         var ground = Bodies.rectangle(width / 2, document.body.offsetHeight, 32848, 460, { isStatic: true,
             render: {
                 fillStyle:'rgba(0,0,0,0)'
