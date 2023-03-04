@@ -218,7 +218,7 @@
         var rightwall = Bodies.rectangle( matterContainer.clientWidth + THICCNESS / 2, matterContainer.clientHeight / 2, THICCNESS, matterContainer.clientHeight * 5, { isStatic: true,
             render: {
         fillStyle: 'rgba(0,0,0,0)'}});
-        
+
         // add all of the bodies to the world
         Composite.add(world, [css, sass, figma, matter, php, gsap, jquery, js, responsive, html, ground, leftwall, rightwall]);
 
@@ -231,17 +231,50 @@
                 stiffness: 0.2
             }
         });
+        
         Composite.add(world, mouseConstraint);
 
-        // Allow scroll through the canvas
         mouseConstraint.mouse.element.removeEventListener(
-            "mousewheel",
+            'mousewheel',
             mouseConstraint.mouse.mousewheel
         );
+
         mouseConstraint.mouse.element.removeEventListener(
-            "DOMMouseScroll",
+            'DOMMouseScroll',
             mouseConstraint.mouse.mousewheel
         );
+
+        mouseConstraint.mouse.element.removeEventListener(
+            'touchstart', 
+            mouseConstraint.mouse.mousedown
+        );
+
+        mouseConstraint.mouse.element.removeEventListener(
+            'touchmove',
+            mouseConstraint.mouse.mousemove
+        );
+
+        mouseConstraint.mouse.element.removeEventListener(
+            'touchend', 
+            mouseConstraint.mouse.mouseup
+        );
+
+        mouseConstraint.mouse.element.addEventListener(
+            'touchstart', 
+            mouseConstraint.mouse.mousedown, { passive: true });
+
+        mouseConstraint.mouse.element.addEventListener('touchmove', (e) => {
+        if (mouseConstraint.body) {
+        mouseConstraint.mouse.mousemove(e);
+        }
+        });
+
+        mouseConstraint.mouse.element.addEventListener('touchend', (e) => {
+        if (mouseConstraint.body) {
+        mouseConstraint.mouse.mouseup(e);
+        }
+        });
+
 
         // run the renderer
         Render.run(render);
