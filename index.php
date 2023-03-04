@@ -162,7 +162,7 @@
             restitution: 0.8,
             render: {
                 sprite: {
-                    texture: "images/main-logo.png",
+                    texture: "images/pnglogo.png",
                     xScale: 0.15,
                     yScale: 0.15
                 }
