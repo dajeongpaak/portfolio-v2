@@ -149,8 +149,8 @@
             render: {
                 sprite: {
                     texture: "images/ball.png",
-                    xScale: 0.15,
-                    yScale: 0.15
+                    xScale: 0.5,
+                    yScale: 0.5
                 }
             }
         });
