@@ -246,44 +246,6 @@
         Composite.add(world, mouseConstraint);
 
         // Allow scroll through the canvas
-        mouseConstraint.mouse.element.addEventListener(
-    "touchstart",
-    function(event) {
-        event.preventDefault();
-        var touches = event.changedTouches;
-        for (var i = 0; i < touches.length; i++) {
-            var touch = touches[i];
-            mouseConstraint.updateConstraint(touch);
-        }
-    },
-    false
-);
-
-mouseConstraint.mouse.element.addEventListener(
-    "touchmove",
-    function(event) {
-        event.preventDefault();
-        var touches = event.changedTouches;
-        for (var i = 0; i < touches.length; i++) {
-            var touch = touches[i];
-            mouseConstraint.updateConstraint(touch);
-        }
-    },
-    false
-);
-
-mouseConstraint.mouse.element.addEventListener(
-    "touchend",
-    function(event) {
-        var touches = event.changedTouches;
-        for (var i = 0; i < touches.length; i++) {
-            var touch = touches[i];
-            mouseConstraint.removeConstraint(touch);
-        }
-    },
-    false
-);
-
         mouseConstraint.mouse.element.removeEventListener(
             "mousewheel",
             mouseConstraint.mouse.mousewheel
