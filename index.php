@@ -163,8 +163,8 @@
             render: {
                 sprite: {
                     texture: "images/logosm.png",
-                    xScale: 1,
-                    yScale: 1
+                    xScale: 0.7,
+                    yScale: 0.7
                 }
             }
         });
