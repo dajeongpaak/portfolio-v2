@@ -110,8 +110,8 @@
 
         render.canvas.id = "canvas";
         const canvasHTML = document.querySelector('#canvas');
-        canvasHTML.width = matterContainer.clientWidth * 2;
-        canvasHTML.height = matterContainer.clientHeight * 2;
+        canvasHTML.width = matterContainer.clientWidth / 2;
+        canvasHTML.height = matterContainer.clientHeight / 2;
         console.log(canvasHTML);
         
 
