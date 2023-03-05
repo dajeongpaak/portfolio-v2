@@ -108,21 +108,21 @@
         });
 
 
-        let pixelRatio = window.devicePixelRatio;
+        // let pixelRatio = window.devicePixelRatio;
 	
         // Optionally print it to the console (if interested).
-		console.log(`Device Pixel Ratio: ${pixelRatio}`);
+		// console.log(`Device Pixel Ratio: ${pixelRatio}`);
 
-        let sizeOnScreen = render.canvas.getBoundingClientRect();
+        // let sizeOnScreen = render.canvas.getBoundingClientRect();
 
-        render.canvas.width = sizeOnScreen.width * pixelRatio;
-        render.canvas.height = sizeOnScreen.height * pixelRatio;
+        // render.canvas.width = sizeOnScreen.width * pixelRatio;
+        // render.canvas.height = sizeOnScreen.height * pixelRatio;
 
-        let context = render.canvas.getContext('2d');
-        context.scale(pixelRatio, pixelRatio);
+        // let context = render.canvas.getContext('2d');
+        // context.scale(pixelRatio, pixelRatio);
         
 
-        console.log(sizeOnScreen.width);
+        // console.log(sizeOnScreen.width);
         // render.canvas.width = matterContainer.clientWidth * 2;
         // render.canvas.height = matterContainer.clientHeight * 2;
         // const canvasHTML = document.querySelector('#canvas');
