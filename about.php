@@ -71,6 +71,7 @@
     <script src="scripts/main.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/matter-js/0.19.0/matter.min.js"></script>
     <script>
+    
     const matterContainer = document.querySelector("#matter-container");
     const THICCNESS = 60
     const SVG_WIDTH_IN_PX = 100;
@@ -100,14 +101,19 @@
             options: {
                 width: matterContainer.clientWidth,
                 height: matterContainer.clientHeight,
-                pixelRatio: 'auto',
+                pixelRatio: 2,
                 wireframes: false,
                 background: '#000'
             }
             
         });
 
-        // createSvgBodies();
+        render.canvas.id = "canvas";
+        const canvasHTML = document.querySelector('#canvas');
+        canvasHTML.width = matterContainer.clientWidth * 2;
+        canvasHTML.height = matterContainer.clientHeight * 2;
+        console.log(canvasHTML);
+        
 
         let scaleFactor;
             if (matterContainer.clientWidth >= matterContainer.clientHeight) {
