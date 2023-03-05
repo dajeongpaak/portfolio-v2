@@ -13,7 +13,7 @@
         <section class="home__main">
             <div class="container">
                 <div class="grid">
-                    <div class="home__content  col-12 flex">
+                    <div class="home__content col-12 flex">
                         <div class="home__title z-index">
                             <h1>Front-end Developer</h1>
                         </div>
@@ -135,7 +135,7 @@
             }
         });
 
-        var ball = Bodies.circle(width*(1/4), mainHeight.clientHeight*(1/7), 40, {
+        var ball = Bodies.circle(width*(1/4), mainHeight.clientHeight*(1/7), 55, {
             density: 0.04,
             friction: 0.01,
             frictionAir: 0.000001,
@@ -143,13 +143,13 @@
             render: {
                 sprite: {
                     texture: "images/ball.png",
-                    xScale: 0.5,
-                    yScale: 0.5
+                    xScale: 0.65,
+                    yScale: 0.65
                 }
             }
         });
 
-        var logo = Bodies.circle(width*(3/4), mainHeight.clientHeight*(2/5), 40, {
+        var logo = Bodies.circle(width*(3/4), mainHeight.clientHeight*(2/5), 44, {
             density: 0.04,
             friction: 0.01,
             frictionAir: 0.000001,

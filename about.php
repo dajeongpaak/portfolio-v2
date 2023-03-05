@@ -9,7 +9,36 @@
 <body>
     <?php require_once("partials/global/header.php")?>
     <main>
-    <div id="matter-container" class="matter-container"></div>
+        <section>
+            <div class="img-container">
+                <img src="images/DJ.jpg" alt="photograph of dajeong park">
+            </div>
+            <div class="container">
+                <div class="grid">
+                    <div class="about__content col-12">
+                        <div class="about__intro flex h3">
+                            <div>Hey there! I’m</div>
+                            <span class="drop-shadow">Dajeong</span>
+                            <div>but you can call me</div>
+                            <span class="drop-shadow">DJ</span>
+                        </div>
+                        <div class="about__desc">
+                            <p>
+                            I'm a  front-end developer from Korea, currently based in Vancouver, and in training to become a professional in the field.
+                            </p>
+                            <br>
+                            <p>
+                            I'm on a mission to make the web a more fun and immersive place, one website at a time. With the true passion for crafting user journeys that feel like exciting adventures, 
+                            I'm always looking for ways to make web browsing a more engaging experience.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <div id="matter-container" class="matter-container">
+            <!-- <h2>SKILLS</h2> -->
+        </div>
     </main>
     <footer class="footer about-footer">
         <div class="container">
@@ -41,9 +70,6 @@
     </footer>
     <script src="scripts/main.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/matter-js/0.19.0/matter.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/pathseg@1.2.1/pathseg.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/poly-decomp@0.2.1/build/decomp.min.js"></script>
-
     <script>
     const matterContainer = document.querySelector("#matter-container");
     const THICCNESS = 60
@@ -74,7 +100,6 @@
             options: {
                 width: matterContainer.clientWidth,
                 height: matterContainer.clientHeight,
-                pixelRatio: 2,
                 wireframes: false,
                 background: '#000'
             }
@@ -223,9 +248,17 @@
         // add all of the bodies to the world
         Composite.add(world, [css, sass, figma, matter, php, gsap, jquery, js, responsive, html, ground, leftwall, rightwall]);
 
- 
+        var canvas = render.canvas;
 
-        let mouse = Matter.Mouse.create(render.canvas);
+        var canvasTitle = canvas.getContext('2d');
+
+        canvas.style.backgroundColor = '#000';
+        canvasTitle.font = "24px 'Michroma'";
+        canvasTitle.fillStyle = '#fff';
+
+        canvasTitle.fillText('SKILLS', 0, 0);
+
+        let mouse = Matter.Mouse.create(canvas);
         let mouseConstraint = Matter.MouseConstraint.create(engine, {
             mouse: mouse,
             constraint: {
@@ -279,7 +312,7 @@
         }
         });
 
-
+        
         // run the renderer
         Render.run(render);
 
@@ -292,8 +325,8 @@
         
         function handleResize(matterContainer) {
             // Set canvas size to new values
-            render.canvas.width = matterContainer.clientWidth;
-            render.canvas.height = matterContainer.clientHeight;
+            canvas.width = matterContainer.clientWidth;
+            canvas.height = matterContainer.clientHeight;
 
             // reposition ground
             Matter.Body.setPosition(
