@@ -110,7 +110,8 @@
 
         render.canvas.width = matterContainer.clientWidth * 2;
         render.canvas.height = matterContainer.clientHeight * 2;
-        
+        var context = render.canvas.getContext('2d');
+        context.imageSmoothingEnabled = false;
 
         let scaleFactor;
             if (matterContainer.clientWidth >= matterContainer.clientHeight) {
