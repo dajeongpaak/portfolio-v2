@@ -108,11 +108,8 @@
             
         });
 
-        render.canvas.id = "canvas";
-        const canvasHTML = document.querySelector('#canvas');
-        canvasHTML.width = matterContainer.clientWidth * 2;
-        canvasHTML.height = matterContainer.clientHeight * 2;
-        console.log(canvasHTML);
+        render.canvas.width = matterContainer.clientWidth * 2;
+        render.canvas.height = matterContainer.clientHeight * 2;
         
 
         let scaleFactor;
