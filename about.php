@@ -108,10 +108,10 @@
             
         });
 
-        render.canvas.width = matterContainer.clientWidth * 2;
-        render.canvas.height = matterContainer.clientHeight * 2;
-        var context = render.canvas.getContext('2d');
-        context.imageSmoothingEnabled = false;
+        Render.lookAt(render, {
+        min: { x: 0, y: 0 },
+        max: { x: matterContainer.clientWidth, y: matterContainer.clientHeight }
+    });
 
         let scaleFactor;
             if (matterContainer.clientWidth >= matterContainer.clientHeight) {
