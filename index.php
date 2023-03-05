@@ -118,7 +118,7 @@
             world = engine.world;
 
         world.gravity.x = 0;
-        world.gravity.y = 0;
+        world.gravity.y = - 0.09;
 
         let width = matterContainer.clientWidth;
         let height = matterContainer.clientHeight;
@@ -129,6 +129,7 @@
             options: {
                 width: width,
                 height: mainHeight.clientHeight,
+                pixelRatio: 2,
                 wireframes: false,
                 background: "transparent"
             }
@@ -161,7 +162,6 @@
                 }
             }
         });
-        console.log(matterContainer.clientHeight);
         var ground = Bodies.rectangle(width / 2, document.body.offsetHeight, 32848, 460, { isStatic: true,
             render: {
                 fillStyle:'rgba(0,0,0,0)'
