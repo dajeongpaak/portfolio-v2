@@ -108,11 +108,32 @@
             
         });
 
-        Render.lookAt(render, {
-        min: { x: 0, y: 0 },
-        max: { x: matterContainer.clientWidth, y: matterContainer.clientHeight }
-    });
 
+        let pixelRatio = window.devicePixelRatio;
+	
+        // Optionally print it to the console (if interested).
+		console.log(`Device Pixel Ratio: ${pixelRatio}`);
+
+        let sizeOnScreen = render.canvas.getBoundingClientRect();
+
+        render.canvas.width = sizeOnScreen.width * pixelRatio;
+        render.canvas.height = sizeOnScreen.height * pixelRatio;
+
+        let context = render.canvas.getContext('2d');
+        context.scale(pixelRatio, pixelRatio);
+        
+
+        console.log(sizeOnScreen.width);
+        // render.canvas.width = matterContainer.clientWidth * 2;
+        // render.canvas.height = matterContainer.clientHeight * 2;
+        // const canvasHTML = document.querySelector('#canvas');
+        // canvasHTML.width = matterContainer.clientWidth * 2;
+        // canvasHTML.height = matterContainer.clientHeight * 2;
+
+        // var context = render.canvas.getContext('2d');
+        // context.imageSmoothingEnabled = false;
+
+      
         let scaleFactor;
             if (matterContainer.clientWidth >= matterContainer.clientHeight) {
                 scaleFactor = (matterContainer.clientHeight * (SVG_WIDTH_AS_PERCENT_OF_CONTAINER_WIDTH - 0.08)) / SVG_WIDTH_IN_PX;
@@ -255,13 +276,13 @@
 
         var canvas = render.canvas;
 
-        var canvasTitle = canvas.getContext('2d');
+        // var canvasTitle = canvas.getContext('2d');
 
-        canvas.style.backgroundColor = '#000';
-        canvasTitle.font = "24px 'Michroma'";
-        canvasTitle.fillStyle = '#fff';
+        // canvas.style.backgroundColor = '#000';
+        // canvasTitle.font = "24px 'Michroma'";
+        // canvasTitle.fillStyle = '#fff';
 
-        canvasTitle.fillText('SKILLS', 0, 0);
+        // canvasTitle.fillText('SKILLS', 0, 0);
 
         let mouse = Matter.Mouse.create(canvas);
         let mouseConstraint = Matter.MouseConstraint.create(engine, {
