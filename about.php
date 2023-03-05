@@ -94,27 +94,30 @@
         world = engine.world;
 
         // create a renderer
+        var canvasWidth = Math.floor(matterContainer.clientWidth * window.devicePixelRatio);
+        var canvasHeight = Math.floor(matterContainer.clientHeight * window.devicePixelRatio);
+
+        // create a renderer
         var render = Render.create({
             element: matterContainer,
             engine: engine,
             options: {
-                width: matterContainer.clientWidth,
-                height: matterContainer.clientHeight,
+                width: canvasWidth,
+                height: canvasHeight,
                 pixelRatio: window.devicePixelRatio,
                 wireframes: false,
                 background: '#000'
             }
-            
         });
 
         // createSvgBodies();
 
         let scaleFactor;
-        if (matterContainer.clientWidth >= matterContainer.clientHeight) {
-            scaleFactor = (matterContainer.clientHeight * (SVG_WIDTH_AS_PERCENT_OF_CONTAINER_WIDTH - 0.08)) / (SVG_WIDTH_IN_PX * window.devicePixelRatio);
-        } else {
-            scaleFactor = (matterContainer.clientWidth * SVG_WIDTH_AS_PERCENT_OF_CONTAINER_WIDTH) / (SVG_WIDTH_IN_PX * window.devicePixelRatio);
-        }
+            if (matterContainer.clientWidth >= matterContainer.clientHeight) {
+                scaleFactor = (matterContainer.clientHeight * (SVG_WIDTH_AS_PERCENT_OF_CONTAINER_WIDTH - 0.08)) / SVG_WIDTH_IN_PX;
+            } else {
+                scaleFactor = (matterContainer.clientWidth * SVG_WIDTH_AS_PERCENT_OF_CONTAINER_WIDTH) / SVG_WIDTH_IN_PX;
+            }
 
      
         let ScaleCircle = scaleFactor/4.5;
