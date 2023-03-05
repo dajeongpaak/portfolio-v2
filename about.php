@@ -74,6 +74,7 @@
             options: {
                 width: matterContainer.clientWidth,
                 height: matterContainer.clientHeight,
+                pixelRatio: 2,
                 wireframes: false,
                 background: '#000'
             }
