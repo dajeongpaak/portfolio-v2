@@ -94,20 +94,17 @@
         world = engine.world;
 
         // create a renderer
-        var canvasWidth = Math.floor(matterContainer.clientWidth * window.devicePixelRatio);
-        var canvasHeight = Math.floor(matterContainer.clientHeight * window.devicePixelRatio);
-
-        // create a renderer
         var render = Render.create({
             element: matterContainer,
             engine: engine,
             options: {
-                width: canvasWidth,
-                height: canvasHeight,
-                pixelRatio: window.devicePixelRatio,
+                width: matterContainer.clientWidth,
+                height: matterContainer.clientHeight,
+                pixelRatio: 'auto'
                 wireframes: false,
                 background: '#000'
             }
+            
         });
 
         // createSvgBodies();
