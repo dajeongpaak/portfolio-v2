@@ -278,7 +278,7 @@
         fillStyle: 'rgba(0,0,0,0)'}});
 
         // add all of the bodies to the world
-        Composite.add(world, [sass, figma, matter, php, gsap, jquery, js, responsive, html, css, cssR, htmlR, roof, ground, leftwall, rightwall]);
+        Composite.add(world, [sass, figma, matter, php, gsap, jquery, js, responsive, html, css, htmlR, roof, ground, leftwall, rightwall]);
 
         var canvas = render.canvas;
 
@@ -374,11 +374,11 @@
         window.addEventListener('scroll', function() {
         var body = document.querySelector('body');
         var gap = document.querySelector('#skills-gap')
-        var matterContainerRect = matterContainer.getBoundingClientRect();
+        var matterContainerRect = gap.getBoundingClientRect();
 
         if (matterContainerRect.top <= window.innerHeight && matterContainerRect.bottom >= 0) {
         body.classList.add('background-change');
-        } else {
+        } else if (matterContainerRect.bottom < 0){
         body.classList.remove('background-change');
         }
         });
