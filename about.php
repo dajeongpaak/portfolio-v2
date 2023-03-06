@@ -253,7 +253,7 @@
         fillStyle: 'rgba(0,0,0,0)'}});
 
         // add all of the bodies to the world
-        Composite.add(world, [css, sass, figma, matter, php, gsap, jquery, js, responsive, html, roof, ground, leftwall, rightwall]);
+        Composite.add(world, [sass, figma, matter, php, gsap, jquery, js, responsive, html, css, roof, ground, leftwall, rightwall]);
 
         var canvas = render.canvas;
 
