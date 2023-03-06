@@ -140,7 +140,7 @@
       
         let scaleFactor;
             if (matterContainer.clientWidth >= matterContainer.clientHeight) {
-                scaleFactor = (matterContainer.clientHeight * (SVG_WIDTH_AS_PERCENT_OF_CONTAINER_WIDTH - 0.1)) / SVG_WIDTH_IN_PX;
+                scaleFactor = (matterContainer.clientHeight * (SVG_WIDTH_AS_PERCENT_OF_CONTAINER_WIDTH - 0.08)) / SVG_WIDTH_IN_PX;
             } else {
                 scaleFactor = (matterContainer.clientWidth * SVG_WIDTH_AS_PERCENT_OF_CONTAINER_WIDTH) / SVG_WIDTH_IN_PX;
             }
@@ -283,14 +283,6 @@
         Composite.add(world, [css, sass, figma, matter, php, gsap, jquery, js, responsive, html, roof,ground, leftwall, rightwall]);
 
         var canvas = render.canvas;
-
-        // var canvasTitle = canvas.getContext('2d');
-
-        // canvas.style.backgroundColor = '#000';
-        // canvasTitle.font = "24px 'Michroma'";
-        // canvasTitle.fillStyle = '#fff';
-
-        // canvasTitle.fillText('SKILLS', 0, 0);
 
         let mouse = Matter.Mouse.create(canvas);
         let mouseConstraint = Matter.MouseConstraint.create(engine, {
