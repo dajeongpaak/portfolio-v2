@@ -36,6 +36,7 @@
                 </div>
             </div>
         </section>
+        <div id="skills-gap"></div>
         <div id="matter-container" class="matter-container">
             <!-- <h2>SKILLS</h2> -->
         </div>
@@ -70,8 +71,11 @@
     </footer>
     <script src="scripts/main.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/matter-js/0.19.0/matter.min.js"></script>
-    <script>
+
     
+
+   
+    <script>
     const matterContainer = document.querySelector("#matter-container");
     const THICCNESS = 60
     const SVG_WIDTH_IN_PX = 100;
@@ -101,14 +105,15 @@
             options: {
                 width: matterContainer.clientWidth,
                 height: matterContainer.clientHeight,
+                // pixelRatio: 2,
                 wireframes: false,
-                background: '#000'
+                background: 'transparent'
             }
             
         });
 
 
-        // let pixelRatio = window.devicePixelRatio;
+        //let pixelRatio = window.devicePixelRatio;
 	
         // Optionally print it to the console (if interested).
 		// console.log(`Device Pixel Ratio: ${pixelRatio}`);
@@ -135,7 +140,7 @@
       
         let scaleFactor;
             if (matterContainer.clientWidth >= matterContainer.clientHeight) {
-                scaleFactor = (matterContainer.clientHeight * (SVG_WIDTH_AS_PERCENT_OF_CONTAINER_WIDTH - 0.08)) / SVG_WIDTH_IN_PX;
+                scaleFactor = (matterContainer.clientHeight * (SVG_WIDTH_AS_PERCENT_OF_CONTAINER_WIDTH - 0.1)) / SVG_WIDTH_IN_PX;
             } else {
                 scaleFactor = (matterContainer.clientWidth * SVG_WIDTH_AS_PERCENT_OF_CONTAINER_WIDTH) / SVG_WIDTH_IN_PX;
             }
@@ -259,7 +264,11 @@
                 texture: "images/html.png", 
                 xScale: ScaleRec, 
                 yScale: ScaleRec }}})
-            
+         
+                
+        var roof = Bodies.rectangle(0, 0, 82854, THICCNESS, { isStatic: true,
+            render: {
+        fillStyle: 'rgba(0,0,0,0)'}});
         var ground = Bodies.rectangle(matterContainer.clientWidth / 2, matterContainer.clientHeight + THICCNESS / 2, 82854, THICCNESS, { isStatic: true,
             render: {
         fillStyle: 'rgba(0,0,0,0)'}});
@@ -271,7 +280,7 @@
         fillStyle: 'rgba(0,0,0,0)'}});
 
         // add all of the bodies to the world
-        Composite.add(world, [css, sass, figma, matter, php, gsap, jquery, js, responsive, html, ground, leftwall, rightwall]);
+        Composite.add(world, [css, sass, figma, matter, php, gsap, jquery, js, responsive, html, roof,ground, leftwall, rightwall]);
 
         var canvas = render.canvas;
 
@@ -372,9 +381,20 @@
         }
 
         window.addEventListener("resize", () => handleResize(matterContainer));
-    </script>
 
-    
+        window.addEventListener('scroll', function() {
+        var body = document.querySelector('body');
+        var gap = document.querySelector('#skills-gap')
+        var matterContainerRect = matterContainer.getBoundingClientRect();
+
+        if (matterContainerRect.top <= window.innerHeight && matterContainerRect.bottom >= 0) {
+        body.classList.add('background-change');
+        } else {
+        body.classList.remove('background-change');
+        }
+        });
+    </script>
+   
 </body>
 
 </html>

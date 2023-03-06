@@ -80,6 +80,13 @@ a {
 body {
     background: url(../images/mobile-bg.svg);
     background-repeat: repeat;
+    background-color: white;
+    transition: background-color 0.5s ease-in-out;
+}
+
+body.background-change {
+    background: unset;
+    background-color: var(--black);
 }
 
 #main {
@@ -530,7 +537,8 @@ section {
 }
 
 .about__content {
-    margin-top: 2rem;
+    margin: 2rem 0;
+
 }
 
 .about__intro {
@@ -548,11 +556,26 @@ section {
     line-height: 1.85;
 }
 
+#skills-gap {
+    height: 10vh;
+    background-color: var(--black);
+}
+
+.skills-gap-1 {
+    height: 10vh;
+    background-color: var(--black);
+}
+
 .matter-container {
     width: 100%;
-    height: 100vh;
+    height: 110vh;
     overflow: hidden;
+    background-image: url(../images/skills.svg);
+    background-position: top;
+    background-repeat: no-repeat;
+    background-color: var(--black);
 }
+
 
 .matter-container h2 {
     text-align: center;
