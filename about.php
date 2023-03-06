@@ -226,6 +226,19 @@
                 yScale: ScaleRec}}
         });
 
+        var htmlR = Bodies.circle(300, 0, scaleFactor * 50,  {
+            density: 0.04,
+		    friction: 0.01,
+		    frictionAir: 0.000001,
+		    restitution: 0.8,
+            render: { 
+            sprite: { 
+                texture: "images/html.png", 
+                xScale: ScaleRec, 
+                yScale: ScaleRec }}
+            });
+         
+
         var cssR = Bodies.rectangle(matterContainer.clientWidth / 2 , 0 , scaleFactor * 80, scaleFactor * 80, {
             density: 0.04,
 		    friction: 0.01,
@@ -265,7 +278,7 @@
         fillStyle: 'rgba(0,0,0,0)'}});
 
         // add all of the bodies to the world
-        Composite.add(world, [sass, figma, matter, php, gsap, jquery, js, responsive, html, css, cssR, roof, ground, leftwall, rightwall]);
+        Composite.add(world, [sass, figma, matter, php, gsap, jquery, js, responsive, html, css, cssR, htmlR, roof, ground, leftwall, rightwall]);
 
         var canvas = render.canvas;
 
