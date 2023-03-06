@@ -9,7 +9,7 @@
 <body>
     <?php require_once("partials/global/header.php")?>
     <main id="main">
-        <div id="matter-container--home" class="matter-container--home"></div>
+        
         <section class="home__main">
             <div class="container">
                 <div class="grid">
@@ -98,6 +98,7 @@
                 </div>
             </div>
         </section>
+        <div id="matter-container--home" class="matter-container--home"></div>
     </main>
     <?php require_once("partials/global/footer.php")?>
     <script src="scripts/main.js"></script>

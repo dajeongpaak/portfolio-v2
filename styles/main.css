@@ -85,12 +85,17 @@ body {
 }
 
 body.background-change {
-    background: unset;
     background-color: var(--black);
 }
 
 #main {
     padding-bottom: 2rem;
+}
+
+#about-main {
+    position: relative;
+    height: 210vh;
+    padding-top: 7rem;
 }
 
 .no-scroll {
@@ -387,7 +392,7 @@ section {
     height: 8rem;
     background: rgba(255, 255, 255, 0.4);
     border: 1px solid #000000;
-    border-radius: 34px;
+    border-radius: 2rem;
     margin-bottom: .5rem;
     backdrop-filter: blur(8px);
     -webkit-backdrop-filter: blur(8px);
@@ -517,7 +522,6 @@ section {
 /*--- ABOUT ---*/
 
 .img-container {
-    margin-top: 7rem;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -527,7 +531,15 @@ section {
     border-bottom-right-radius: 50%;
     border: 1px solid var(--black);
     background-color: var(--white);
-    box-shadow: 2px 10px 0px #000000;
+    box-shadow: 2px 10px 0px var(--black);
+    transition: all 0.5s ease-in-out;
+}
+
+.img-container.background-change {
+    background: rgba(0, 0, 0, 0.5);
+    color: var(--white);
+    box-shadow: 2px 10px 0px var(--white);
+    border: 1px solid var(--white);
 }
 
 .img-container img {
@@ -538,11 +550,24 @@ section {
 
 .about__content {
     margin: 2rem 0;
+    background: rgba(255, 255, 255, 0.4);
+    border: 1px solid #000000;
+    border-radius: 2rem;
+    margin-bottom: .5rem;
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    transition: all 0.5s ease-in-out;
+}
 
+.about__content.background-change {
+    background: rgba(0, 0, 0, 0.5);
+    color: var(--white);
+    border: 1px solid var(--white);
 }
 
 .about__intro {
     flex-direction: column;
+    margin: 1rem;
 }
 
 .about__intro .drop-shadow {
@@ -554,20 +579,28 @@ section {
 
 .about__desc {
     line-height: 1.85;
+    margin: 1rem;
+}
+
+.skills__title {
+    margin-top: 10rem;
+    background-image: url(../images/skills.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 3rem;
 }
 
 #skills-gap {
-    height: 10vh;
+    height: 20vh;
     background-color: var(--black);
 }
 
 .matter-container {
     width: 100%;
-    height: 110vh;
-    background-image: url(../images/skills.svg);
-    background-position: top;
-    background-repeat: no-repeat;
-    background-color: var(--black);
+    height: auto;
+    position: absolute;
+    bottom: -8px;
+    /* background-color: var(--black); */
 }
 
 

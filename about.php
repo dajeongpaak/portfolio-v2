@@ -8,15 +8,16 @@
 
 <body>
     <?php require_once("partials/global/header.php")?>
-    <main>
+    <main id="about-main">
+    
         <section>
-            <div class="img-container">
+            <div class="img-container z-index">
                 <img src="images/DJ.jpg" alt="photograph of dajeong park">
             </div>
             <div class="container">
                 <div class="grid">
-                    <div class="about__content col-12">
-                        <div class="about__intro flex h3">
+                    <div class="about__content col-12 z-index">
+                        <div class="about__intro flex h3 ">
                             <div>Hey there! I’m</div>
                             <span class="drop-shadow">Dajeong</span>
                             <div>but you can call me</div>
@@ -35,8 +36,8 @@
                     </div>
                 </div>
             </div>
+            <div id="skills" class="skills__title z-index"></div>
         </section>
-        <div id="skills-gap"></div>
         <div id="matter-container" class="matter-container">
             <!-- <h2>SKILLS</h2> -->
         </div>
@@ -74,6 +75,7 @@
    
     <script>
     const matterContainer = document.querySelector("#matter-container");
+    const mainHeight = document.querySelector("#about-main");
     const THICCNESS = 60
     const SVG_WIDTH_IN_PX = 100;
     const SVG_WIDTH_AS_PERCENT_OF_CONTAINER_WIDTH = 0.38
@@ -100,13 +102,14 @@
             engine: engine,
             options: {
                 width: matterContainer.clientWidth,
-                height: matterContainer.clientHeight,
+                height: mainHeight.clientHeight,
                 // pixelRatio: 2,
                 wireframes: false,
                 background: 'transparent'
             }
         });
 
+        render.canvas.height = mainHeight.clientHeight;
         let scaleFactor;
             if (matterContainer.clientWidth >= matterContainer.clientHeight) {
                 scaleFactor = (matterContainer.clientHeight * (SVG_WIDTH_AS_PERCENT_OF_CONTAINER_WIDTH - 0.1)) / SVG_WIDTH_IN_PX;
@@ -117,8 +120,9 @@
      
         let ScaleCircle = scaleFactor/4.5;
         let ScaleRec = scaleFactor/4;
+        let startingPoint =  (mainHeight.clientHeight)*3 /5;
         
-        var css = Bodies.rectangle(matterContainer.clientWidth / 2 , 0 , scaleFactor * 80, scaleFactor * 80, {
+        var css = Bodies.rectangle(matterContainer.clientWidth / 2 , startingPoint , scaleFactor * 80, scaleFactor * 80, {
             density: 0.04,
 		    friction: 0.01,
 		    frictionAir: 0.000001,
@@ -130,7 +134,7 @@
                 yScale: ScaleRec}}
         });
 
-        var sass = Bodies.circle(300, 0, scaleFactor * 45,  {
+        var sass = Bodies.circle(300, startingPoint, scaleFactor * 45,  {
             density: 0.04,
 		    friction: 0.01,
 		    frictionAir: 0.000001,
@@ -142,7 +146,7 @@
                 yScale: ScaleCircle }}
             });
 
-        var figma = Bodies.circle(300, 0, scaleFactor * 45,  {
+        var figma = Bodies.circle(300, startingPoint, scaleFactor * 45,  {
             density: 0.04,
             friction: 0.01,
             frictionAir: 0.000001,
@@ -154,7 +158,7 @@
                 yScale: ScaleCircle }}
             });
 
-        var matter = Bodies.circle(300, 0, scaleFactor * 45,  {
+        var matter = Bodies.circle(300, startingPoint, scaleFactor * 45,  {
             density: 0.04,
             friction: 0.01,
             frictionAir: 0.000001,
@@ -166,7 +170,7 @@
                 yScale: ScaleCircle }}
             });
 
-        var php = Bodies.rectangle(matterContainer.clientWidth / 2 , 0 , scaleFactor * 100, scaleFactor * 100, {
+        var php = Bodies.rectangle(matterContainer.clientWidth / 2 , startingPoint , scaleFactor * 100, scaleFactor * 100, {
             density: 0.04,
 		    friction: 0.01,
 		    frictionAir: 0.000001,
@@ -178,7 +182,7 @@
                 yScale: ScaleRec}}
         });
 
-        var gsap = Bodies.rectangle(matterContainer.clientWidth / 2 , 0 , scaleFactor * 80, scaleFactor * 80, {
+        var gsap = Bodies.rectangle(matterContainer.clientWidth / 2 , startingPoint , scaleFactor * 80, scaleFactor * 80, {
             density: 0.04,
 		    friction: 0.01,
 		    frictionAir: 0.000001,
@@ -190,7 +194,7 @@
                 yScale: ScaleRec}}
         });
 
-        var jquery = Bodies.polygon(matterContainer.clientWidth / 2, 0, 3, scaleFactor *53, {
+        var jquery = Bodies.polygon(matterContainer.clientWidth / 2, startingPoint, 3, scaleFactor *53, {
             density: 0.04,
 		    friction: 0.01,
 		    frictionAir: 0.000001,
@@ -202,7 +206,7 @@
                 yScale: ScaleRec}}
         });
 
-        var js = Bodies.rectangle(matterContainer.clientWidth / 2 , 0 , scaleFactor * 150, scaleFactor * 100, {
+        var js = Bodies.rectangle(matterContainer.clientWidth / 2 , startingPoint , scaleFactor * 150, scaleFactor * 100, {
             density: 0.04,
 		    friction: 0.01,
 		    frictionAir: 0.000001,
@@ -214,7 +218,7 @@
                 yScale: scaleFactor/2.2}}
         });
 
-        var responsive = Bodies.rectangle(matterContainer.clientWidth / 4 , 0 , scaleFactor * 100, scaleFactor * 100, {
+        var responsive = Bodies.rectangle(matterContainer.clientWidth / 4 , startingPoint , scaleFactor * 100, scaleFactor * 100, {
             density: 0.04,
 		    friction: 0.01,
 		    frictionAir: 0.000001,
@@ -226,7 +230,7 @@
                 yScale: ScaleRec}}
         });
 
-        var htmlR = Bodies.circle(300, 0, scaleFactor * 50,  {
+        var htmlR = Bodies.circle(300, startingPoint, scaleFactor * 50,  {
             density: 0.04,
 		    friction: 0.01,
 		    frictionAir: 0.000001,
@@ -239,7 +243,7 @@
             });
          
 
-        var cssR = Bodies.rectangle(matterContainer.clientWidth / 2 , 0 , scaleFactor * 80, scaleFactor * 80, {
+        var cssR = Bodies.rectangle(matterContainer.clientWidth / 2 , startingPoint , scaleFactor * 80, scaleFactor * 80, {
             density: 0.04,
 		    friction: 0.01,
 		    frictionAir: 0.000001,
@@ -251,7 +255,7 @@
                 yScale: ScaleRec}}
         });
 
-        var html = Bodies.circle(300, 0, scaleFactor * 50,  {
+        var html = Bodies.circle(300, startingPoint, scaleFactor * 50,  {
             density: 0.04,
 		    friction: 0.01,
 		    frictionAir: 0.000001,
@@ -267,7 +271,7 @@
         var roof = Bodies.rectangle(0, 0, 82854, THICCNESS, { isStatic: true,
             render: {
         fillStyle: 'rgba(0,0,0,0)'}});
-        var ground = Bodies.rectangle(matterContainer.clientWidth / 2, matterContainer.clientHeight + THICCNESS / 2, 82854, THICCNESS, { isStatic: true,
+        var ground = Bodies.rectangle(matterContainer.clientWidth / 2, mainHeight.clientHeight + THICCNESS / 2, 82854, THICCNESS, { isStatic: true,
             render: {
         fillStyle: 'rgba(0,0,0,0)'}});
         var leftwall = Bodies.rectangle( 0 - THICCNESS / 2, matterContainer.clientHeight / 2, THICCNESS , matterContainer.clientHeight * 5, { isStatic: true,
@@ -278,7 +282,7 @@
         fillStyle: 'rgba(0,0,0,0)'}});
 
         // add all of the bodies to the world
-        Composite.add(world, [sass, figma, matter, php, gsap, jquery, js, responsive, html, css, htmlR, roof, ground, leftwall, rightwall]);
+        Composite.add(world, [sass, figma, matter, php, gsap, jquery, js, responsive, html, cssR, ground, leftwall, rightwall]);
 
         var canvas = render.canvas;
 
@@ -371,16 +375,28 @@
 
         window.addEventListener("resize", () => handleResize(matterContainer));
 
+        var body = document.querySelector('body');
+        var gap = document.querySelector('#skills-gap');
+        var imgContainer = document.querySelector(".img-container");
+        var aboutContent = document.querySelector(".about__content");
+        var insideGap = false;
+
         window.addEventListener('scroll', function() {
         var body = document.querySelector('body');
-        var gap = document.querySelector('#skills-gap')
-        var matterContainerRect = matterContainer.getBoundingClientRect();
+        var skills = document.querySelector('#skills');
+        var skillsRect = skills.getBoundingClientRect();
 
-        if (matterContainerRect.top <= window.innerHeight && matterContainerRect.bottom >= 0) {
-        body.classList.add('background-change');
-        } else if (matterContainerRect.bottom < 0){
-        body.classList.remove('background-change');
+        if (skillsRect.top <= window.innerHeight && skillsRect.bottom >= 0) {
+            body.classList.add('background-change');
+            imgContainer.classList.add('background-change');
+            aboutContent.classList.add('background-change')
+        } else if (skillsRect.bottom > 0) {
+            body.classList.remove('background-change');
+            imgContainer.classList.remove('background-change');
+            aboutContent.classList.remove('background-change');
         }
+
+        console.log(skillsRect.top, skillsRect.bottom, window.innerHeight)
         });
     </script>
    
