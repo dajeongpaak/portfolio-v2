@@ -374,7 +374,7 @@
         window.addEventListener('scroll', function() {
         var body = document.querySelector('body');
         var gap = document.querySelector('#skills-gap')
-        var matterContainerRect = gap.getBoundingClientRect();
+        var matterContainerRect = matterContainer.getBoundingClientRect();
 
         if (matterContainerRect.top <= window.innerHeight && matterContainerRect.bottom >= 0) {
         body.classList.add('background-change');
