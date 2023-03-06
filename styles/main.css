@@ -564,7 +564,6 @@ section {
 .matter-container {
     width: 100%;
     height: 110vh;
-    overflow: hidden;
     background-image: url(../images/skills.svg);
     background-position: top;
     background-repeat: no-repeat;
