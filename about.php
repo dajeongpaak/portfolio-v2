@@ -71,16 +71,12 @@
     </footer>
     <script src="scripts/main.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/matter-js/0.19.0/matter.min.js"></script>
-
-    
-
    
     <script>
     const matterContainer = document.querySelector("#matter-container");
     const THICCNESS = 60
     const SVG_WIDTH_IN_PX = 100;
     const SVG_WIDTH_AS_PERCENT_OF_CONTAINER_WIDTH = 0.38
-
 
         // module aliases
         var Engine = Matter.Engine,
@@ -109,38 +105,11 @@
                 wireframes: false,
                 background: 'transparent'
             }
-            
         });
 
-
-        //let pixelRatio = window.devicePixelRatio;
-	
-        // Optionally print it to the console (if interested).
-		// console.log(`Device Pixel Ratio: ${pixelRatio}`);
-
-        // let sizeOnScreen = render.canvas.getBoundingClientRect();
-
-        // render.canvas.width = sizeOnScreen.width * pixelRatio;
-        // render.canvas.height = sizeOnScreen.height * pixelRatio;
-
-        // let context = render.canvas.getContext('2d');
-        // context.scale(pixelRatio, pixelRatio);
-        
-
-        // console.log(sizeOnScreen.width);
-        // render.canvas.width = matterContainer.clientWidth * 2;
-        // render.canvas.height = matterContainer.clientHeight * 2;
-        // const canvasHTML = document.querySelector('#canvas');
-        // canvasHTML.width = matterContainer.clientWidth * 2;
-        // canvasHTML.height = matterContainer.clientHeight * 2;
-
-        // var context = render.canvas.getContext('2d');
-        // context.imageSmoothingEnabled = false;
-
-      
         let scaleFactor;
             if (matterContainer.clientWidth >= matterContainer.clientHeight) {
-                scaleFactor = (matterContainer.clientHeight * (SVG_WIDTH_AS_PERCENT_OF_CONTAINER_WIDTH - 0.08)) / SVG_WIDTH_IN_PX;
+                scaleFactor = (matterContainer.clientHeight * (SVG_WIDTH_AS_PERCENT_OF_CONTAINER_WIDTH - 0.1)) / SVG_WIDTH_IN_PX;
             } else {
                 scaleFactor = (matterContainer.clientWidth * SVG_WIDTH_AS_PERCENT_OF_CONTAINER_WIDTH) / SVG_WIDTH_IN_PX;
             }
@@ -159,7 +128,7 @@
                 texture: "images/css.png", 
                 xScale: ScaleRec, 
                 yScale: ScaleRec}}
-        })
+        });
 
         var sass = Bodies.circle(300, 0, scaleFactor * 45,  {
             density: 0.04,
@@ -170,7 +139,8 @@
             sprite: { 
                 texture: "images/sass.png", 
                 xScale: ScaleCircle, 
-                yScale: ScaleCircle }}})
+                yScale: ScaleCircle }}
+            });
 
         var figma = Bodies.circle(300, 0, scaleFactor * 45,  {
             density: 0.04,
@@ -181,7 +151,8 @@
             sprite: { 
                 texture: "images/figma.png", 
                 xScale: ScaleCircle, 
-                yScale: ScaleCircle }}})
+                yScale: ScaleCircle }}
+            });
 
         var matter = Bodies.circle(300, 0, scaleFactor * 45,  {
             density: 0.04,
@@ -192,7 +163,8 @@
             sprite: { 
                 texture: "images/matter.png", 
                 xScale: ScaleCircle, 
-                yScale: ScaleCircle }}})
+                yScale: ScaleCircle }}
+            });
 
         var php = Bodies.rectangle(matterContainer.clientWidth / 2 , 0 , scaleFactor * 100, scaleFactor * 100, {
             density: 0.04,
@@ -204,7 +176,7 @@
                 texture: "images/php.png", 
                 xScale: ScaleRec, 
                 yScale: ScaleRec}}
-        })
+        });
 
         var gsap = Bodies.rectangle(matterContainer.clientWidth / 2 , 0 , scaleFactor * 80, scaleFactor * 80, {
             density: 0.04,
@@ -216,7 +188,7 @@
                 texture: "images/gsap.png", 
                 xScale: ScaleRec, 
                 yScale: ScaleRec}}
-        })
+        });
 
         var jquery = Bodies.polygon(matterContainer.clientWidth / 2, 0, 3, scaleFactor *53, {
             density: 0.04,
@@ -228,7 +200,7 @@
                 texture: "images/jquery.png", 
                 xScale: ScaleCircle, 
                 yScale: ScaleRec}}
-        })
+        });
 
         var js = Bodies.rectangle(matterContainer.clientWidth / 2 , 0 , scaleFactor * 150, scaleFactor * 100, {
             density: 0.04,
@@ -240,7 +212,7 @@
                 texture: "images/js.png", 
                 xScale: scaleFactor/2.7, 
                 yScale: scaleFactor/2.2}}
-        })
+        });
 
         var responsive = Bodies.rectangle(matterContainer.clientWidth / 4 , 0 , scaleFactor * 100, scaleFactor * 100, {
             density: 0.04,
@@ -252,7 +224,7 @@
                 texture: "images/responsive.png", 
                 xScale: ScaleRec, 
                 yScale: ScaleRec}}
-        })
+        });
 
         var html = Bodies.circle(300, 0, scaleFactor * 50,  {
             density: 0.04,
@@ -263,7 +235,8 @@
             sprite: { 
                 texture: "images/html.png", 
                 xScale: ScaleRec, 
-                yScale: ScaleRec }}})
+                yScale: ScaleRec }}
+            });
          
                 
         var roof = Bodies.rectangle(0, 0, 82854, THICCNESS, { isStatic: true,
@@ -280,7 +253,7 @@
         fillStyle: 'rgba(0,0,0,0)'}});
 
         // add all of the bodies to the world
-        Composite.add(world, [css, sass, figma, matter, php, gsap, jquery, js, responsive, html, roof,ground, leftwall, rightwall]);
+        Composite.add(world, [css, sass, figma, matter, php, gsap, jquery, js, responsive, html, roof, ground, leftwall, rightwall]);
 
         var canvas = render.canvas;
 
@@ -369,7 +342,6 @@
             matterContainer.clientHeight / 2 
                 )
             );
-
         }
 
         window.addEventListener("resize", () => handleResize(matterContainer));
