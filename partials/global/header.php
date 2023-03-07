@@ -19,8 +19,10 @@
                                     .st2 {
                                         fill: #010101
                                     }
-                                    #Layer_1-2 {
-                                        transition: background-color 0.5s ease-in-out;
+                                    #logoWhite, #logoOrange,
+                                    .st2 {
+                                        transition: fill 0.5s ease-in-out;
+                                        
                                     }
                                 </style>
                                 <g id="Layer_1-2">

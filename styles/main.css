@@ -210,8 +210,8 @@ section {
     z-index: 999;
     left: 50%;
     transform: translateX(-50%);
-    transition: all 0.5s ease-in-out;
-    -webkit-transition: all 0.5s ease-in-out;
+    transition: all 0.4s ease-in-out;
+    -webkit-transition: all 0.4s ease-in-out;
 }
 
 .main-nav__logo a {
@@ -243,10 +243,7 @@ section {
     margin: 0.3em 0;
     background-color: var(--orange);
     color: var(--black);
-    transition: all 0.5s ease-in-out;
-    -moz-transition: all 0.5s ease-in-out;
-    -webkit-transition: all 0.5s ease-in-out;
-    -o-transition: all 0.5s ease-in-out;
+    transition: all 0.4s ease-in-out;
 }
 
 .hamburger.--bg-change {
@@ -258,7 +255,7 @@ section {
 }
 
 .hamburger:nth-last-child(2) {
-    transition: all 0.1s;
+    transition: visibility, position 0.1s ease, background-color 0.5s ease-in-out;
     top: 1rem;
 }
 
