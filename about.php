@@ -9,7 +9,6 @@
 <body>
     <?php require_once("partials/global/header.php")?>
     <main id="about-main">
-    
         <section>
             <div class="img-container z-index">
                 <img src="images/DJ.jpg" alt="photograph of dajeong park">
@@ -111,18 +110,17 @@
 
         render.canvas.height = mainHeight.clientHeight;
         let scaleFactor;
-            if (matterContainer.clientWidth >= matterContainer.clientHeight) {
-                scaleFactor = (matterContainer.clientHeight * (SVG_WIDTH_AS_PERCENT_OF_CONTAINER_WIDTH - 0.1)) / SVG_WIDTH_IN_PX;
+            if (window.innerWidth >= window.innerHeight) {
+                scaleFactor = (window.innerHeight * (SVG_WIDTH_AS_PERCENT_OF_CONTAINER_WIDTH - 0.08)) / SVG_WIDTH_IN_PX;
             } else {
                 scaleFactor = (matterContainer.clientWidth * SVG_WIDTH_AS_PERCENT_OF_CONTAINER_WIDTH) / SVG_WIDTH_IN_PX;
             }
 
-     
         let ScaleCircle = scaleFactor/4.5;
         let ScaleRec = scaleFactor/4;
         let startingPoint =  (mainHeight.clientHeight)*3 /5;
         
-        var css = Bodies.rectangle(matterContainer.clientWidth / 2 , startingPoint , scaleFactor * 80, scaleFactor * 80, {
+        var css = Bodies.rectangle(matterContainer.clientWidth / 2 , startingPoint , scaleFactor * 8, scaleFactor * 8, {
             density: 0.04,
 		    friction: 0.01,
 		    frictionAir: 0.000001,
@@ -380,23 +378,48 @@
         var imgContainer = document.querySelector(".img-container");
         var aboutContent = document.querySelector(".about__content");
         var insideGap = false;
+        
 
         window.addEventListener('scroll', function() {
         var body = document.querySelector('body');
         var skills = document.querySelector('#skills');
+        var dropShadows = document.querySelectorAll('.drop-shadow');
+        var menus = document.querySelectorAll('.hamburger');
+        var logoChange = document.querySelector('#logoOrange');
+        var logoBlack = document.querySelectorAll('.st2');
+        var logoWhite = document.querySelector('#logoWhite');
+        var navColor = document.querySelector(".main-nav");
         var skillsRect = skills.getBoundingClientRect();
 
         if (skillsRect.top <= window.innerHeight && skillsRect.bottom >= 0) {
-            body.classList.add('background-change');
-            imgContainer.classList.add('background-change');
-            aboutContent.classList.add('background-change')
+            body.classList.add('--bg-change');
+            imgContainer.classList.add('--bg-change');
+            aboutContent.classList.add('--bg-change');
+            dropShadows.forEach( item =>
+              item.classList.add('--bg-change'));
+            menus.forEach( item =>
+            item.classList.add('--bg-change'));
+            logoChange.style.fill = "#e4ff5e";
+            logoBlack.forEach( item =>
+            item.style.fill = "#fff");
+            navColor.style.backgroundColor = "#000";
+            navColor.style.border = "2px solid #fff";
+            logoWhite.style.fill = "#000";
         } else if (skillsRect.bottom > 0) {
-            body.classList.remove('background-change');
-            imgContainer.classList.remove('background-change');
-            aboutContent.classList.remove('background-change');
+            body.classList.remove('--bg-change');
+            imgContainer.classList.remove('--bg-change');
+            aboutContent.classList.remove('--bg-change');
+            dropShadows.forEach( item =>
+              item.classList.remove('--bg-change'));
+            menus.forEach( item =>
+            item.classList.remove('--bg-change'));
+            logoChange.style.fill = "#f15822";
+            logoBlack.forEach( item =>
+            item.style.fill = "#010101");
+            navColor.style.backgroundColor = "#fff";
+            navColor.style.border = "2px solid #000";
+            logoWhite.style.fill = "#fff";
         }
-
-        console.log(skillsRect.top, skillsRect.bottom, window.innerHeight)
         });
     </script>
    
