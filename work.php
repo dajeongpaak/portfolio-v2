@@ -109,7 +109,7 @@
             trigger: card,
             start: "top",
             end: "bottom",
-            scrub: 1,
+            scrub: 1, 
             pin: i === cards.length - 1,
             },
             
