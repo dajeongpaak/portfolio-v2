@@ -110,7 +110,6 @@
             start: "top",
             end: "bottom",
             scrub: 1,
-            markers: true,
             pin: i === cards.length - 1,
             },
             
