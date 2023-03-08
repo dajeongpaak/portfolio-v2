@@ -86,7 +86,9 @@ body {
     background: url(../images/mobile-bg.svg);
     background-repeat: repeat;
     background-color: white;
-    transition: background-color 0.5s ease-in-out;
+    transition: background-color 0.4s ease-in-out;
+    -moz-transition: background-color 0.4s ease-in-out;
+    -webkit-transition: background-color 0.4s ease-in-out;
 }
 
 body.--bg-change {
@@ -212,6 +214,7 @@ section {
     transform: translateX(-50%);
     transition: all 0.4s ease-in-out;
     -webkit-transition: all 0.4s ease-in-out;
+    -moz-transition: all 0.4s ease-in-out;
 }
 
 .main-nav__logo a {
@@ -244,6 +247,8 @@ section {
     background-color: var(--orange);
     color: var(--black);
     transition: all 0.4s ease-in-out;
+    -moz-transition: all 0.4s ease-in-out;
+    -webkit-transition: all 0.4s ease-in-out;
 }
 
 .hamburger.--bg-change {
@@ -256,6 +261,8 @@ section {
 
 .hamburger:nth-last-child(2) {
     transition: visibility, position 0.1s ease, background-color 0.4s ease-in-out;
+    -moz-transition: visibility, position 0.1s ease, background-color 0.4s ease-in-out;
+    -webkit-transition: visibility, position 0.1s ease, background-color 0.4s ease-in-out;
     top: 1rem;
 }
 
@@ -305,13 +312,14 @@ section {
     left: 50%;
     top: 3rem;
     transition: opacity 1s, width .8s, height 0.7s;
+    -moz-transition: opacity 1s, width .8s, height 0.7s;
+    -webkit-transition: opacity 1s, width .8s, height 0.7s;
 }
 
 .js-menu--hidden {
     opacity: 0;
     width: 25px;
     height: 25px;
-    transition: opacity 1s, width .8s, height 0.7s;
 }
 
 .main-nav__list {
@@ -323,6 +331,8 @@ section {
     font-size: 2rem;
     opacity: 1;
     transition: all .4s ease .5s;
+    -moz-transition: all .4s ease .5s;
+    -webkit-transition: all .4s ease .5s;
     transform: translateY(0);
     z-index: 99;
 }
@@ -335,6 +345,8 @@ section {
     opacity: 0;
     visibility: hidden;
     transition: all .3s ease;
+    -moz-transition: all .3s ease;
+    -webkit-transition: all .3s ease;
     transform: translateY(-1.5rem);
 }
 
@@ -350,7 +362,9 @@ section {
 }
 
 #navBar {
-    transition: all 0.5s ease-in-out;
+    transition: all 0.4s ease-in-out;
+    -moz-transition: all 0.4s ease-in-out;
+    -webkit-transition: all 0.4s ease-in-out;
 }
 
 /* Components */
@@ -544,9 +558,9 @@ section {
     box-shadow: 2px 10px 0px var(--black);
     backdrop-filter: blur(8px);
     -webkit-backdrop-filter: blur(8px);
-    transition: all 0.5s ease-in-out;
-    -webkit-transition: all 0.5s ease-in-out;
-    -moz-transition: all 0.5s ease-in-out;
+    transition: all 0.4s ease-in-out;
+    -webkit-transition: all 0.4s ease-in-out;
+    -moz-transition: all 0.4s ease-in-out;
 }
 
 .img-container.--bg-change {
@@ -570,7 +584,9 @@ section {
     margin-bottom: .5rem;
     backdrop-filter: blur(8px);
     -webkit-backdrop-filter: blur(8px);
-    transition: all 0.5s ease-in-out;
+    transition: all 0.4s ease-in-out;
+    -moz-transition: all 0.4s ease-in-out;
+    -webkit-transition: all 0.4s ease-in-out;
 }
 
 .about__content.--bg-change {
