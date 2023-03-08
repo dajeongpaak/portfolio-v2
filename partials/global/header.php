@@ -21,8 +21,9 @@
                                     }
                                     #logoWhite, #logoOrange,
                                     .st2 {
-                                        transition: fill 0.5s ease-in-out;
-                                        
+                                        transition: fill 0.4s ease-in-out;
+                                        -moz-transition: fill 0.4s ease-in-out;
+                                        -webkit-transition: fill 0.4s ease-in-out;
                                     }
                                 </style>
                                 <g id="Layer_1-2">

@@ -3,6 +3,7 @@ const jsMenu = document.querySelector('#js-menu');
 const hamburgers = document.querySelectorAll('.hamburger');
 const menuList = document.querySelector('#menuList');
 
+
 menuOpen.addEventListener('click', () => {
 
     jsMenu.classList.toggle('js-menu--hidden');
@@ -23,6 +24,7 @@ window.onscroll = function () {
     }
     prevScrollpos = currentScrollPos;
 }
+
 
 
 
