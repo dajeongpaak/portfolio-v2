@@ -87,8 +87,8 @@ body {
     background-repeat: repeat;
     background-color: white;
     transition: background-color 0.4s ease-in-out;
-    -moz-transition: background-color 0.4s ease-in-out;
-    -webkit-transition: background-color 0.4s ease-in-out;
+    /* -moz-transition: background-color 0.4s ease-in-out;
+    -webkit-transition: background-color 0.4s ease-in-out; */
 }
 
 body.--bg-change {
