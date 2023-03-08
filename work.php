@@ -170,14 +170,11 @@
                         // start: startPoints[j % startPoints.length],
                         start: "top -30%",
                         end: "bottom  bottom",
-                        // pin: ,
                         scrub: 1,
                         duration: 5
-                     
             },
             x: 300,
             rotation: 360,
-            // timeScale: 2
         })
 
         logotl.timeScale(2);
