@@ -19,7 +19,7 @@
                                 <div class="work-card__title">
                                     Note-taking Web Application Note-taking Web Application Note-taking Web Application 
                                 </div>
-                                <video class="video" loop muted>
+                                <video class="video" playsinline autoplay loop muted>
                                     <source src="images/note-taking-app-preview.mp4" type="video/mp4">
                                 </video>
                                 <div class="flex wrap">
@@ -37,7 +37,7 @@
                                 <div class="work-card__title">
                                 ‘SYMMETRY’ Photo Gallery ‘SYMMETRY’ Photo Gallery
                                 </div>
-                                <video class="video" loop muted>
+                                <video class="video" playsinline autoplay loop muted>
                                     <source src="images/symmetry-photo-gallery-preview.mp4" type="video/mp4">
                                 </video>
                                 <div class="flex wrap">
@@ -57,7 +57,7 @@
                                 Launching site ‘esnes’ Perfume
                                 Launching site
                                 </div>
-                                <video class="video" loop muted>
+                                <video class="video" playsinline autoplay loop muted>
                                     <source src="images/esnes-launching-project-preview.mp4" type="video/mp4">
                                 </video>
                                 <div class="flex wrap">
@@ -148,7 +148,7 @@
                         // start: startPoints[j % startPoints.length],
                         start: "top top",
                         // end: "bottom bottom",
-                        // pin: ,
+                        // pin: i === cards.length - 1,
                         scrub: true,
                         // markers: true,
                     },
