@@ -117,7 +117,7 @@ body.--bg-change {
 
 section {
     height: 100%;
-    z-index: 999;
+    z-index: 990;
 }
 
 
@@ -209,7 +209,7 @@ section {
     border: 2px solid black;
     border-radius: 7rem;
     margin: 2rem auto 0 auto;
-    z-index: 999;
+    z-index: 9999;
     left: 50%;
     transform: translateX(-50%);
     transition: all 0.4s ease-in-out;
@@ -306,7 +306,7 @@ section {
     background: var(--yellow);
     position: fixed;
     opacity: 1;
-    z-index: 99;
+    z-index: 999;
     border-radius: 50%;
     transform: translate(-50%, -50%);
     left: 50%;
@@ -334,7 +334,7 @@ section {
     -moz-transition: all .4s ease .5s;
     -webkit-transition: all .4s ease .5s;
     transform: translateY(0);
-    z-index: 99;
+    z-index: 999;
 }
 
 .main-nav__list li {
@@ -361,7 +361,7 @@ section {
     transform: translate(2px, 6px);
 }
 
-#navBar {
+#js-navBar {
     transition: all 0.4s ease-in-out;
     -moz-transition: all 0.4s ease-in-out;
     -webkit-transition: all 0.4s ease-in-out;
@@ -634,7 +634,6 @@ section {
     height: auto;
     position: absolute;
     bottom: -8px;
-    /* background-color: var(--black); */
 }
 
 
@@ -649,6 +648,7 @@ section {
 /*--- WORK ---*/
 .work__main {
     margin-top: 7rem;
+    position: relative;
 }
 
 .work__card {
@@ -661,10 +661,6 @@ section {
     margin-bottom: 100%;
     top: 12.5vh;
 }
-
-/* .work__card:last-child {
-    margin-bottom: 50%;
-} */
 
 .work-card__content {
     display: flex;
@@ -681,14 +677,7 @@ section {
     font-weight: 600;
     margin-bottom: 1rem;
     white-space: nowrap;
-    /* animation: titleAnim 20s infinite ease; */
 }
-
-/* @keyframes titleAnim {
-    100% {
-        transform: translateX(-500px);
-    }
-} */
 
 .work__card video,
 .work__card img {
@@ -740,7 +729,9 @@ section {
     margin-top: unset;
 }
 
-.bottom-logo {
-    width: 11rem;
-    transform: translateX(-10rem);
+.js-bottom-logo {
+    width: 9rem;
+    transform: translateX(-5rem);
+    position: absolute;
+    bottom: 0;
 }

@@ -7,7 +7,8 @@
 <?php require_once("partials/global/head.php")?>
 
 <body>
-    <?php require_once("partials/global/header.php")?>
+    <?php require_once(get_path("partials/global/header.php"));?>
+    
     <main id="about-main">
         <section>
             <div class="img-container z-index">

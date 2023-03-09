@@ -1,15 +1,19 @@
 <?php 
+
     require("init.php")
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
-
-<?php require_once("partials/global/head.php")?>
+<?php 
+    $title_tag = "Dajeong Park";
+?>
+<?php require_once(get_path("partials/global/head.php"));?>
 
 <body>
-    <?php require_once("partials/global/header.php")?>
+    <?php require_once(get_path("partials/global/header.php"));?>
+
     <main id="main">
-        
         <section class="home__main">
             <div class="container">
                 <div class="grid">
@@ -39,12 +43,12 @@
                             <li class="card">
                                 <div class="card__content flex">
                                     <div class="card__title">
-                                        <a href="note-taking-application.html">
+                                        <a href="<?php echo get_url("/projects/note-taking-application-web-development-project.php"); ?>">
                                             <h3>Note-taking Web Application</h3>
                                         </a>
                                     </div>
                                     <div class="card__btn">
-                                        <a href="note-taking-application.html" class="button-sm">
+                                        <a href="<?php echo get_url("/projects/note-taking-application-web-development-project.php"); ?>" class="button-sm">
                                             <i class="fa-solid fa-arrow-right-long"></i>
                                         </a>
                                     </div>
@@ -100,7 +104,9 @@
         </section>
         <div id="matter-container--home" class="matter-container--home"></div>
     </main>
-    <?php require_once("partials/global/footer.php")?>
+
+    <?php require_once(get_path("partials/global/footer.php"))?>
+    
     <script src="scripts/main.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/matter-js/0.19.0/matter.min.js"></script>
 
