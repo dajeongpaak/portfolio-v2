@@ -7,9 +7,11 @@ const menuList = document.querySelector('#menuList');
 menuOpen.addEventListener('click', () => {
 
     jsMenu.classList.toggle('js-menu--hidden');
+
     for (const hamburger of hamburgers) {
         hamburger.classList.toggle('active');
     }
+
     menuList.classList.toggle('main-nav__list--hidden');
     document.body.classList.toggle('no-scroll');
 });
