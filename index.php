@@ -20,7 +20,7 @@
                 <div class="grid">
                     <div class="home__content col-12 flex">
                         <div class="home__title z-index">
-                            <h1>Front-end Developer</h1>
+                            <h1>Front-end Developer/Designer</h1>
                         </div>
                         <div class="home__desc z-index">
                             <h2 class="p">I strive to make<br>The web a place of<br>
