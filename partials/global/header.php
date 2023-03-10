@@ -18,6 +18,9 @@
                             <style>
                                 .st2 {
                                     fill: #010101
+                                    transition: fill 0.4s ease-in-out;
+                                    -moz-transition: fill 0.4s ease-in-out;
+                                    -webkit-transition: fill 0.4s ease-in-out;
                                 }
                                 #logoWhite, #logoOrange,
                                 .st2 {
