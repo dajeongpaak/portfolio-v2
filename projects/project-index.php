@@ -5,6 +5,10 @@
 ?>
 <!DOCTYPE html>
 <html lang="en">
+<?php 
+    $partial_css = 'project-index';
+    $title_tag = 'WORK | Dajeong Park';
+?>
 <?php require_once(get_path("/partials/global/head.php"))?>
 <body>
     <?php require_once(get_path("/partials/global/header.php"));?>  

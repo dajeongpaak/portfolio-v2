@@ -1,12 +1,13 @@
 <?php 
 
     require("init.php")
-
+   
 ?>
 <!DOCTYPE html>
 <html lang="en">
 <?php 
-    $title_tag = "Dajeong Park";
+    $title_tag = 'HOME | Dajeong Park';
+    $partial_css = 'home';
 ?>
 <?php require_once(get_path("partials/global/head.php"));?>
 

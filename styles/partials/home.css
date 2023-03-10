@@ -1,0 +1,36 @@
+/* Home__main */
+.matter-container--home {
+    width: 100%;
+    height: auto;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
+.home__content {
+    flex-direction: column;
+    justify-content: center;
+    height: 100vh;
+}
+
+.drop-shadow {
+    text-shadow: 2px -1px var(--orange);
+    font-weight: 100;
+}
+
+.card__content {
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    margin: 0 1.5rem;
+}
+
+.card__title {
+    max-width: 70%;
+}
+
+
+.card__btn {
+    max-width: 30%;
+}

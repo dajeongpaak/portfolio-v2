@@ -1,11 +1,15 @@
 <?php 
-    require("init.php")
+
+    require("init.php");
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
-
-<?php require_once("partials/global/head.php")?>
-
+<?php 
+    $partial_css = 'about';
+    $title_tag = 'ABOUT | Dajeong Park';
+?>
+<?php require_once(get_path("partials/global/head.php"));?>
 <body>
     <?php require_once(get_path("partials/global/header.php"));?>
     
@@ -36,10 +40,10 @@
                     </div>
                 </div>
             </div>
+            <!-- background-color change trigger -->
             <div id="skills" class="skills__title z-index"></div>
         </section>
         <div id="matter-container" class="matter-container">
-            <!-- <h2>SKILLS</h2> -->
         </div>
     </main>
     <footer class="footer about-footer">
@@ -76,9 +80,9 @@
     <script>
     const matterContainer = document.querySelector("#matter-container");
     const mainHeight = document.querySelector("#about-main");
-    const THICCNESS = 60
+    const THICCNESS = 60;
     const SVG_WIDTH_IN_PX = 100;
-    const SVG_WIDTH_AS_PERCENT_OF_CONTAINER_WIDTH = 0.38
+    const SVG_WIDTH_AS_PERCENT_OF_CONTAINER_WIDTH = 0.38;
 
         // module aliases
         var Engine = Matter.Engine,
