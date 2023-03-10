@@ -74,7 +74,7 @@
         </div>
         <span class="footer__copy h6">© Dajeong Park 2023</span>
     </footer>
-    <script src="scripts/main.js"></script>
+    <?php require_once(get_path("partials/global/js-global.php"))?>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/matter-js/0.19.0/matter.min.js"></script>
    
     <script>

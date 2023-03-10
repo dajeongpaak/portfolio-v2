@@ -12,7 +12,17 @@
     padding: 4rem 1rem;
     position: sticky;
     margin-bottom: 100%;
-    top: 15 vh;
+    top: 15vh;
+}
+
+.work-card__subheading {
+    position: absolute;
+    width: 100%;
+    top: 0;
+    padding: 1rem;
+    display: inline-block;
+    border-bottom: 1px solid black;
+    border-right: 1px solid black;
 }
 
 .work-card__content {
@@ -78,7 +88,8 @@
     margin-bottom: 115%;
 }
 
-.work__burgersquad .work-card__title {
+.work__burgersquad .work-card__title,
+.work__burgersquad .work-card__subheading {
     color: var(--white);
 }
 

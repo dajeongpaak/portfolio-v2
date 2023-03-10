@@ -17,10 +17,11 @@
             <div class="container">
                 <div class="grid">
                     <div class="col-12 button title">
-                        <h2>Web Development</h2>
+                        <h2 class="h5">Web Development</h2>
                     </div>
                     <ul class="col-12" style="position:relative">
                         <li class="work__card work__note-taking">
+                            <a href="<?php echo get_url("/projects/note-taking-application-web-development-project.php"); ?>" class="work-card__subheading h6">Project 1</a>
                             <a class="work-card__content" href="<?php echo get_url("/projects/note-taking-application-web-development-project.php"); ?>">
                                 <div class="work-card__title">
                                     Note-taking Web Application Note-taking Web Application Note-taking Web Application 
@@ -39,7 +40,8 @@
                             </a>
                         </li>
                         <li class="work__card work__symmetry">
-                            <a class="work-card__content" href="symmetry-photo-gallery-web-development-project.php" >
+                            <a href="<?php echo get_url("/projects/symmetry-photo-gallery-web-development-project.php"); ?>" class="work-card__subheading h6">Project 2</a>
+                            <a class="work-card__content" href="<?php echo get_url("/projects/symmetry-photo-gallery-web-development-project.php"); ?>" >
                                 <div class="work-card__title">
                                 ‘SYMMETRY’ Photo Gallery ‘SYMMETRY’ Photo Gallery
                                 </div>
@@ -57,7 +59,8 @@
                             </a>
                         </li>
                         <li class="work__card work__esnes">
-                            <a class="work-card__content" href="esnes-launching-site-web-development-project.php">
+                            <a href="<?php echo get_url("/projects/esnes-web-development-project.php"); ?>" class="work-card__subheading h6">Project 3</a>
+                            <a class="work-card__content" href="<?php echo get_url("/projects/esnes-web-development-project.php"); ?>">
                                 <div class="work-card__title">
                                 ‘esnes’ Perfume
                                 Launching site ‘esnes’ Perfume
@@ -78,7 +81,8 @@
                             </a>
                         </li>
                         <li class="work__card work__burgersquad">
-                            <a class="work-card__content" href="note-taking-application.php">
+                            <a href="<?php echo get_url("/projects/burgersquad-web-development-project.php"); ?>" class="work-card__subheading h6">Project 4</a>
+                            <a class="work-card__content" href="<?php echo get_url("/projects/burgersquad-web-development-project.php"); ?>">
                                 <div class="work-card__title">
                                 ‘Burgersquad’ Responsive Design ‘Burgersquad’ Responsive Design 
                                 </div>
@@ -103,7 +107,7 @@
     </main>
     <?php require_once(get_path("/partials/global/footer.php"));?>
 
-    <script src="../scripts/main.js"></script>
+    <?php require_once(get_path("partials/global/js-global.php"))?>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/ScrollTrigger.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/ScrollToPlugin.min.js"></script>

@@ -47,13 +47,14 @@ p,
 
 h1,
 .h1 {
-    font-size: 2.625rem
+    font-size: 2.625rem;
+    font-weight: 600;
 }
 
-h2,
+/* h2,
 .h2 {
-    font-size: 1.333rem
-}
+
+} */
 
 h3,
 .h3 {
@@ -63,7 +64,12 @@ h3,
 
 h4,
 .h4 {
-    font-size: 1.777rem
+    font-size: 1.777rem;
+}
+
+h5,
+.h5 {
+    font-size: 1.333rem;
 }
 
 h6,

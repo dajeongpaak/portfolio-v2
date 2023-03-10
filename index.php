@@ -6,7 +6,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <?php 
-    $title_tag = 'HOME | Dajeong Park';
+    $title_tag = 'Dajeong Park - Front-end develper, designer' ;
     $partial_css = 'home';
 ?>
 <?php require_once(get_path("partials/global/head.php"));?>
@@ -20,7 +20,11 @@
                 <div class="grid">
                     <div class="home__content col-12 flex">
                         <div class="home__title z-index">
-                            <h1>Front-end Developer/Designer</h1>
+                            <h1>
+                                <span>Front-end</span>
+                                <span>Developer</span>
+                                <span>/ Designer</span>
+                            </h1>
                         </div>
                         <div class="home__desc z-index">
                             <h2 class="p">I strive to make<br>The web a place of<br>
@@ -37,7 +41,7 @@
             <div class="container">
                 <div class="grid">
                     <div class="col-12 button title">
-                        <h2>Featured Projects</h2>
+                        <h2 class="h5">Featured Projects</h2>
                     </div>
                     <div class="projects__cards col-12">
                         <ul>
@@ -108,7 +112,8 @@
 
     <?php require_once(get_path("partials/global/footer.php"))?>
     
-    <script src="scripts/main.js"></script>
+    <?php require_once(get_path("partials/global/js-global.php"))?>
+    <!-- <script src="scripts/main.js"></script> -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/matter-js/0.19.0/matter.min.js"></script>
 
     <script>

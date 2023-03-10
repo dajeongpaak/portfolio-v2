@@ -1,3 +1,4 @@
+<script>
 const menuOpen = document.querySelector('#js-menu-open');
 const jsMenu = document.querySelector('#js-menu');
 const hamburgers = document.querySelectorAll('.hamburger');
@@ -27,6 +28,6 @@ window.onscroll = function () {
     prevScrollpos = currentScrollPos;
 }
 
-
+</script>
 
 

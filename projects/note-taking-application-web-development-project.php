@@ -17,7 +17,7 @@
     
     </main>
     <?php require_once(get_path("/partials/global/footer.php"));?>
-    <script src="../scripts/main.js"></script>
+    <?php require_once(get_path("partials/global/js-global.php"))?>
 </body>
 
 </html>
