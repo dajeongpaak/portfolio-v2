@@ -39,14 +39,26 @@
     height: 100%;
 }
 
-.work-card__title {
+h3 {
+    margin: unset;
+}
+
+.work-card__title span {
     font-family: var(--sans-serif-2);
     font-size: 7vmax;
-    width: 100%;
+    /* width: 100%; */
     font-style: italic;
     font-weight: 600;
     /* margin-bottom: 1rem; */
     white-space: nowrap;
+    animation: loop 30s ease infinite;
+    margin: unset;
+}
+
+@keyframes loop {
+    100% {
+        transform: translateX(-100%);
+    }
 }
 
 .work__card video,
