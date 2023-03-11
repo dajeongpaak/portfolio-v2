@@ -42,7 +42,6 @@ span {
 p,
 .p {
     font-family: var(--sans-serif-2);
-
 }
 
 h1,
@@ -79,6 +78,7 @@ h6,
 
 .p {
     font-size: 1rem;
+    font-weight: 400;
 }
 
 a {
