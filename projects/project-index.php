@@ -21,8 +21,8 @@
                     </div>
                     <ul class="col-12" style="position:relative">
                         <li class="work__card work__note-taking">
-                            <a href="<?php echo get_url("/projects/note-taking-application-web-development-project.php"); ?>" class="work-card__subheading h6">Project 1</a>
-                            <a class="work-card__content" href="<?php echo get_url("/projects/note-taking-application-web-development-project.php"); ?>">
+                            <a href="<?php echo get_url("projects/note-taking-application-web-development-project.php"); ?>" class="work-card__subheading h6">Project 1</a>
+                            <a class="work-card__content" href="<?php echo get_url("projects/note-taking-application-web-development-project.php"); ?>">
                                 <h3 class="work-card__title">
                                     Note-taking Web Application Note-taking Web Application 
                                 </h3>
