@@ -28,13 +28,18 @@ window.onscroll = function () {
     prevScrollpos = currentScrollPos;
 }
 
-const videos = document.querySelectorAll('.js-video');
+window.onload = function() {
 
-        window.addEventListener("load", () => {
-            videos.forEach(video => {
-                video.play();
-        });
-        });
+    const videos = document.querySelectorAll('.js-video');
+
+    window.addEventListener("load", () => {
+        videos.forEach(video => {
+            video.play();
+    });
+    
+});
+
+};
 
 
 </script>
