@@ -1,1 +1,54 @@
 /* Note-taking Web Application Project */
+
+.project__container {
+
+    padding-top: 7rem;
+    max-width: 80rem;
+    margin: 1rem auto;
+    border: 1px solid black;
+    border-radius: 2rem;
+    background-color: #efefef;
+}
+
+.container {
+    margin: 0 auto;
+}
+
+video {
+    max-width: 100%;
+    border-radius: 1rem;
+    border: 1px solid var(--black);
+}
+
+.title-sm {
+    font-family: var(--sans-serif-1);
+    font-size: .8rem;
+    box-shadow: 2px 5px 0px 0px var(--orange);
+    height: auto;
+    width: auto;
+    padding: 1rem 2rem;
+    margin: unset;
+}
+
+
+
+.project__process {
+    margin-top: 3rem;
+}
+
+img {
+    max-width: 100%;
+    margin: 1rem 0;
+    border: 1px solid var(--black);
+    border-radius: 2rem;
+}
+
+.h4 {
+    font-weight: 600;
+}
+
+p {
+    line-height: 1.7;
+    font-size: 1.2rem;
+    font-weight: 300;
+}

@@ -8,6 +8,10 @@
     z-index: 1;
 }
 
+.title {
+    padding: 0 .9rem;
+}
+
 .home__content {
     flex-direction: column;
     justify-content: center;

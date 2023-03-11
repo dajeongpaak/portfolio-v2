@@ -40,8 +40,8 @@
         <section class="home__projects z-index">
             <div class="container">
                 <div class="grid">
-                    <div class="col-12 button title">
-                        <h2 class="h5">Featured Projects</h2>
+                    <div class="col-12  title">
+                        <h2 class="h4">Featured Projects</h2>
                     </div>
                     <div class="projects__cards col-12">
                         <ul>
@@ -49,7 +49,7 @@
                                 <div class="card__content flex">
                                     <div class="card__title">
                                         <a href="<?php echo get_url("/projects/note-taking-application-web-development-project.php"); ?>">
-                                            <h3>Note-taking Web Application</h3>
+                                            <h3 class="h5">Note-taking Web Application</h3>
                                         </a>
                                     </div>
                                     <div class="card__btn">
@@ -63,7 +63,7 @@
                                 <div class="card__content flex">
                                     <div class="card__title">
                                         <a href="symmetry.html">
-                                            <h3>‘SYMMETRY’ Photo Gallery</h3>
+                                            <h3 class="h5">‘SYMMETRY’ Photo Gallery</h3>
                                         </a>
                                     </div>
                                     <div class="card__btn">
@@ -77,7 +77,7 @@
                                 <div class="card__content flex">
                                     <div class="card__title">
                                         <a href="esnes.html">
-                                            <h3>‘esnes’ Perfume
+                                            <h3 class="h5">‘esnes’ Perfume
                                                 Launching site</h3>
                                         </a>
                                     </div>
@@ -92,7 +92,7 @@
                                 <div class="card__content flex">
                                     <div class="card__title">
                                         <a href="burgersquad.html">
-                                            <h3>‘Burger Squad’ Responsive Web design </h3>
+                                            <h3 class="h5">‘Burger Squad’ Responsive Web design </h3>
                                         </a>
                                     </div>
                                     <div class="card__btn">
@@ -110,9 +110,9 @@
         <div id="matter-container--home" class="matter-container--home"></div>
     </main>
 
-    <?php require_once(get_path("partials/global/footer.php"))?>
+    <?php require_once(get_path("/partials/global/footer.php"))?>
     
-    <?php require_once(get_path("partials/global/js-global.php"))?>
+    <?php require_once(get_path("/partials/global/js-global.php"))?>
     <!-- <script src="scripts/main.js"></script> -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/matter-js/0.19.0/matter.min.js"></script>
 

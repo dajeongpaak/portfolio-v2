@@ -16,24 +16,24 @@
         <section class="work__main">
             <div class="container">
                 <div class="grid">
-                    <div class="col-12 button title">
-                        <h2 class="h5">Web Development</h2>
+                    <div class="col-12 title">
+                        <h2 class="h4">Web Development</h2>
                     </div>
                     <ul class="col-12" style="position:relative">
                         <li class="work__card work__note-taking">
                             <a href="<?php echo get_url("/projects/note-taking-application-web-development-project.php"); ?>" class="work-card__subheading h6">Project 1</a>
                             <a class="work-card__content" href="<?php echo get_url("/projects/note-taking-application-web-development-project.php"); ?>">
-                                <div class="work-card__title">
-                                    Note-taking Web Application Note-taking Web Application Note-taking Web Application 
-                                </div>
+                                <h3 class="work-card__title">
+                                    Note-taking Web Application Note-taking Web Application 
+                                </h3>
                                 <video class="js-video" playsinline autoplay loop muted>
                                     <source src="../images/note-taking-app-preview.mp4" type="video/mp4">
                                 </video>
                                 <div class="flex wrap">
-                                    <div class="button h5">
+                                    <div class="button h4">
                                         Web Development
                                     </div>
-                                    <div class="button h5">
+                                    <div class="button h4">
                                         Web Design
                                     </div>
                                 </div>
@@ -42,17 +42,17 @@
                         <li class="work__card work__symmetry">
                             <a href="<?php echo get_url("/projects/symmetry-photo-gallery-web-development-project.php"); ?>" class="work-card__subheading h6">Project 2</a>
                             <a class="work-card__content" href="<?php echo get_url("/projects/symmetry-photo-gallery-web-development-project.php"); ?>" >
-                                <div class="work-card__title">
+                                <h3 class="work-card__title">
                                 ‘SYMMETRY’ Photo Gallery ‘SYMMETRY’ Photo Gallery
-                                </div>
+                                </h3>
                                 <video class="js-video" playsinline autoplay loop muted>
                                     <source src="../images/symmetry-photo-gallery-preview.mp4" type="video/mp4">
                                 </video>
                                 <div class="flex wrap">
-                                    <div class="button h5">
+                                    <div class="button h4">
                                         Web Development
                                     </div>
-                                    <div class="button h5">
+                                    <div class="button h4">
                                         Web Design
                                     </div>
                                 </div>
@@ -61,37 +61,37 @@
                         <li class="work__card work__esnes">
                             <a href="<?php echo get_url("/projects/esnes-web-development-project.php"); ?>" class="work-card__subheading h6">Project 3</a>
                             <a class="work-card__content" href="<?php echo get_url("/projects/esnes-web-development-project.php"); ?>">
-                                <div class="work-card__title">
+                                <h3 class="work-card__title">
                                 ‘esnes’ Perfume
                                 Launching site ‘esnes’ Perfume
                                 Launching site
-                                </div>
+                                </h3>
                                 <video class="js-video" playsinline autoplay loop muted>
                                     <source src="../images/esnes-launching-project-preview.mp4" type="video/mp4">
                                 </video>
                                 <div class="flex wrap">
-                                    <div class="button h5">
+                                    <div class="button h4">
                                     Web Development
                                     </div>
-                                    <div class="button h5">
+                                    <div class="button h4">
                                     Web Design
                                     </div>
-                                    <div class="button h5">Branding</div>
+                                    <div class="button h4">Branding</div>
                                 </div>
                             </a>
                         </li>
                         <li class="work__card work__burgersquad">
                             <a href="<?php echo get_url("/projects/burgersquad-web-development-project.php"); ?>" class="work-card__subheading h6">Project 4</a>
                             <a class="work-card__content" href="<?php echo get_url("/projects/burgersquad-web-development-project.php"); ?>">
-                                <div class="work-card__title">
+                                <h3 class="work-card__title">
                                 ‘Burgersquad’ Responsive Design ‘Burgersquad’ Responsive Design 
-                                </div>
+                                </h3>
                                 <img src="../images/burger-squad-web-development-project.jpg" alt="Burgersquad web site image"></img>
                                 <div class="flex wrap">
-                                    <div class="button h5">
+                                    <div class="button h4">
                                         Web Development
                                     </div>
-                                    <div class="button h5">
+                                    <div class="button h4">
                                         Responsive  Design
                                     </div>
                                 </div>
@@ -107,19 +107,53 @@
     </main>
     <?php require_once(get_path("/partials/global/footer.php"));?>
 
-    <?php require_once(get_path("partials/global/js-global.php"))?>
+    <?php require_once(get_path("/partials/global/js-global.php"))?>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/ScrollTrigger.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/ScrollToPlugin.min.js"></script>
 
     <script>
-        const videos = document.querySelectorAll('.js-video');
+        // const workCards = document.querySelectorAll(".work__card");
 
-        window.addEventListener("load", () => {
-            videos.forEach(video => {
-                video.play();
-        });
-        });
+        // workCards.forEach( workCard => {
+        //     workCard.addEventListener("click", (e) => {
+   
+        //             workCard.classList.add('work__card-transition');
+        //             workCard.style.transform = 'scale(.5)';
+           
+        //             // workCard.classList.add('work__card-hidden');
+      
+        //         setTimeout(() => {
+        //             window.location.href = "https://dajeongpark.com/projects/note-taking-application-web-development-project.php";
+                    
+        //         }, 300);
+                
+        //         e.preventDefault();
+        //     })
+        // })
+
+//         workCards.forEach(workCard => {
+//         workCard.addEventListener("click", (e) => {
+//             workCards.forEach(card => {
+//             if (card === e.target) {
+//                 card.classList.add('work__card-transition');
+//                 card.addEventListener("transitionend", transitionEndHandler);
+//             } else {
+//                 card.classList.add('work__card-hidden');
+//             }
+//             });
+//             setTimeout(() => {
+//             window.location.href = "https://dajeongpark.com/projects/note-taking-application-web-development-project.php";
+//             }, 300);
+
+//             function transitionEndHandler(event) {
+//             event.target.classList.remove('work__card-transition');
+//             event.target.removeEventListener("transitionend", transitionEndHandler);
+//             }
+
+//             e.preventDefault();
+//         });
+// });
             
         gsap.registerPlugin(ScrollTrigger);
 
@@ -127,15 +161,19 @@
         let titles = gsap.utils.toArray(".work-card__title");
         titles.forEach((title, i) => {
             let cards = gsap.utils.toArray(".work__card");
-            cards.forEach((card, i) => {
+            cards.forEach((card, j) => {
                 tl.to(title, {
                     x: -(title.offsetWidth*2.1),
                     duration: 20,
                     scrollTrigger: {
-                        trigger: "body",
+                        trigger: card,
                         toggleActions: "play pause reverse none",
                         start: "top top",
-                        scrub: true,
+                        end: "bottom top",   
+                        scrub: 1,
+                        markers: true,
+                        // immediateRender: false
+                        // snap: 1 / (cards.length -1),
                     },
                     
                 })
@@ -143,13 +181,30 @@
 
             
         })
+
+        // titles.forEach((title, i) => {
+        //         tl.to(title, {
+        //             x: -(title.offsetWidth*2.1),
+        //             duration: 20,
+        //             scrollTrigger: {
+        //                 trigger: "body",
+        //                 toggleActions: "play pause reverse none",
+        //                 start: "top 20%",
+        //                 scrub: true,
+        //                 markers: true,
+        //             },
+        //     })
+
+            
+        // })
+        
         
         const logotl = tl.to('.js-bottom-logo', {
             scrollTrigger: {
                 trigger: ".work__burgersquad",
                         toggleActions: "play pause reverse none",
                         start: "top -30%",
-                        end: "bottom  bottom",
+                        end: "bottom bottom",
                         scrub: 1,
                         duration: 5,
                         // pin: true

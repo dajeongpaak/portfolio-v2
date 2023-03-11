@@ -13,16 +13,23 @@
     position: sticky;
     margin-bottom: 100%;
     top: 15vh;
+    transition: all .3s ease-in-out;
+    /* visibility: hidden; */
 }
+
+/* 
+.work__card.work__card-hidden {
+    visibility: hidden;
+} */
 
 .work-card__subheading {
     position: absolute;
+    font-size: .9rem;
     width: 100%;
     top: 0;
-    padding: 1rem;
+    padding: .7rem 0 .5rem 1rem;
     display: inline-block;
     border-bottom: 1px solid black;
-    border-right: 1px solid black;
 }
 
 .work-card__content {
@@ -34,11 +41,11 @@
 
 .work-card__title {
     font-family: var(--sans-serif-2);
-    font-size: 3rem;
+    font-size: 7vmax;
     width: 100%;
     font-style: italic;
     font-weight: 600;
-    margin-bottom: 1rem;
+    /* margin-bottom: 1rem; */
     white-space: nowrap;
 }
 
@@ -72,6 +79,29 @@
     background: #efefef;
     margin-bottom: 160%;
 }
+
+/* .work__card.work__card-transition {
+    width: 11rem;
+    height: 11rem;
+    border-radius: 50%;
+    position: fixed;
+    z-index: 10;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    overflow: visible;
+} */
+
+/* .work__card.work__card-transition::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: block;
+    background: rgba(0, 0, 0, 0.8);
+    width: 100vw;
+    height: 100vh;
+} */
 
 .work__symmetry {
     background: #fefaf2;

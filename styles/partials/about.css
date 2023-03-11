@@ -1,5 +1,11 @@
 /*--- ABOUT ---*/
 
+main {
+    position: relative;
+    height: 210vh;
+    padding-top: 7rem;
+}
+
 .img-container {
     display: flex;
     justify-content: center;

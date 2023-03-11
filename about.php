@@ -13,7 +13,7 @@
 <body>
     <?php require_once(get_path("partials/global/header.php"));?>
     
-    <main id="about-main">
+    <main id="matter-main">
         <section>
             <div class="img-container z-index">
                 <img src="images/DJ.jpg" alt="photograph of dajeong park">
@@ -21,7 +21,7 @@
             <div class="container">
                 <div class="grid">
                     <div class="about__content col-12 z-index">
-                        <div class="about__intro flex h3 ">
+                        <div class="about__intro flex h4 ">
                             <div>Hey there! I’m</div>
                             <span class="drop-shadow">Dajeong</span>
                             <div>but you can call me</div>
@@ -74,12 +74,12 @@
         </div>
         <span class="footer__copy h6">© Dajeong Park 2023</span>
     </footer>
-    <?php require_once(get_path("partials/global/js-global.php"))?>
+    <?php require_once(get_path("/partials/global/js-global.php"))?>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/matter-js/0.19.0/matter.min.js"></script>
    
     <script>
     const matterContainer = document.querySelector("#matter-container");
-    const mainHeight = document.querySelector("#about-main");
+    const mainHeight = document.querySelector("#matter-main");
     const THICCNESS = 60;
     const SVG_WIDTH_IN_PX = 100;
     const SVG_WIDTH_AS_PERCENT_OF_CONTAINER_WIDTH = 0.38;
