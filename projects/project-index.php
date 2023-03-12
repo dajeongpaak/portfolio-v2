@@ -164,43 +164,43 @@
 
         const tl = gsap.timeline({paused: false});
         let titles = gsap.utils.toArray(".work-card__title");
-        titles.forEach((title, i) => {
-            let cards = gsap.utils.toArray(".work__card");
-            cards.forEach((card, j) => {
-                tl.to(title, {
-                    x: -(title.offsetWidth*2.1),
-                    // duration: 20,
-                    scrollTrigger: {
-                        trigger: card,
-                        toggleActions: "play pause reverse none",
-                        start: "-20% top",
-                        end: "bottom top",   
-                        scrub: 2,
-                        // immediateRender: false
-                        // snap: 1 / (cards.length -1),
-                    },
-                    
-                })
-            })
-
-            
-        })
-
         // titles.forEach((title, i) => {
+        //     let cards = gsap.utils.toArray(".work__card");
+        //     cards.forEach((card, j) => {
         //         tl.to(title, {
         //             x: -(title.offsetWidth*2.1),
-        //             duration: 20,
+        //             // duration: 20,
         //             scrollTrigger: {
-        //                 trigger: "body",
+        //                 trigger: card,
         //                 toggleActions: "play pause reverse none",
-        //                 start: "top 20%",
-        //                 scrub: true,
-        //                 markers: true,
+        //                 start: "-20% top",
+        //                 end: "bottom top",   
+        //                 scrub: 2,
+        //                 // immediateRender: false
+        //                 // snap: 1 / (cards.length -1),
         //             },
+                    
+        //         })
         //     })
 
             
         // })
+
+        titles.forEach((title, i) => {
+                tl.to(title, {
+                    x: -(title.offsetWidth*2.1),
+                    duration: 20,
+                    scrollTrigger: {
+                        trigger: "body",
+                        toggleActions: "play pause reverse none",
+                        start: "top 20%",
+                        scrub: 1,
+                        // markers: true,
+                    },
+            })
+
+            
+        })
         
         
         const logotl = tl.to('.js-bottom-logo', {
