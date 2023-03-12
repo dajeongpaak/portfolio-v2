@@ -15,9 +15,16 @@
     <?php require_once(get_path("/partials/global/header.php"));?>  
     <main>
     <section>
+        <div class="project__container-2"></div>
         <div class="project__container">
             <div class="container">
+                <div class="back__btn">
+                    <div class="button-sm">
+                        <i class="fa-solid fa-arrow-right-long"></i>
+                </div>
+                </div>
                 <div class="grid project__overview">
+               
                 <div class="col-12 title">
                     <h2 class="h6">Note-taking Application</h2>
                 </div>
@@ -26,31 +33,31 @@
                         <source src="../images/note-taking-app-preview.mp4" type="video/mp4">
                     </video>
                 </div>
-                <div class="col-5">
+                <div class="col-4">
                     <div class="title title-sm">
                     ROLE
                     </div>
                 </div>
-                <div class="col-12">
-                    <p>Web developer / Web designer</p>
+                <div class="col-8 align-center">
+                    <p>Web developer / designer</p>
                 </div>
-                <div class="col-5">
+                <div class="col-4">
                     <div class="title title-sm">
                     TIMELINE
                     </div>
                 </div>
-                <div class="col-12">
+                <div class="col-8 align-center">
                     <p>Feb 3 - 5, 2023</p>
                 </div>
-                <div class="col-5">
+                <div class="col-4 align-center">
                     <div class="title title-sm">
                     TOOLS
                     </div>
                 </div>
-                <div class="col-12">
+                <div class="col-8 align-center">
                     <p>HTML, CSS, JavaScript, Figma</p>
                 </div>
-                <div class="col-5">
+                <div class="col-4 align-center">
                     <div class="title title-sm">
                     OVERVIEW
                     </div>
@@ -58,13 +65,13 @@
                 <div class="col-12">
                     <p>The goal was to create a functional note-taking app to gain hands-on experience in building a practical application from scratch, improving my understanding of JavaScript syntax and JavaScript concepts as well as reinforcing best practices in coding.</p>
                 </div>
-                <div class="col-5">
-                    <div class="title title-sm">
-                    PROCESS
-                    </div>
-                </div>
                 </div>
                 <div class="grid project__process">
+                    <div class="col-4 align-center">
+                        <div class="title title-sm">
+                        PROCESS
+                        </div>
+                    </div>
                     <div class="col-12">
                         <h3 class="h4">1.Planning & Design</h3>
                         <img src="<?php echo get_url('/images/note-taking-design.png');?>" alt="note-taking application design image">
@@ -103,6 +110,11 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/ScrollTrigger.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/ScrollToPlugin.min.js"></script>
     <script>
+        const backBtn = document.querySelector(".back__btn");
+
+        backBtn.addEventListener('click', () => {
+            window.history.back();
+        })
         
     </script>
 </body>

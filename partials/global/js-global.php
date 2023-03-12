@@ -32,12 +32,13 @@ window.onscroll = function () {
 const videos = document.querySelectorAll('.js-video');
 
 window.addEventListener("load", () => {
-
-    videos.forEach(video => {
-        video.play();
-    });
-})
-    
+window.addEventListener("load", () => {
+            videos.forEach(video => {
+                video.play();
+        });
+        });
+    })
+      
 </script>
 
 

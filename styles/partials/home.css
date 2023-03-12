@@ -12,6 +12,15 @@
     padding: 0 .9rem;
 }
 
+.p {
+    line-height: unset;
+}
+
+.home__title {
+    mix-blend-mode: difference;
+    color: white;
+}
+
 .home__content {
     flex-direction: column;
     justify-content: center;

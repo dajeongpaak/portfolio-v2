@@ -35,7 +35,7 @@ h6,
 .h6,
 span {
     font-family: var(--sans-serif-1);
-    margin-bottom: 0.5rem;
+    /* margin-bottom: 0.5rem; */
 }
 
 .h5,
@@ -78,8 +78,9 @@ h6,
 
 p,
 .p {
-    font-size: 1.1rem;
-    font-weight: 400;
+    font-size: 1.2rem;
+    font-weight: 300;
+    line-height: 1.75;
 }
 
 a {
@@ -182,7 +183,7 @@ section {
 }
 
 /* Helper classes */
-.items-center {
+.align-center {
     align-self: center;
 }
 
