@@ -96,9 +96,16 @@
                     </div>
                     <div class="col-12">
                         <p>While working on the project, the most I struggled with was thinking in a programming way. I had to encounter some errors when working with local storage so I tried to solve the errors using a console log as much as I can to check constantly what I got as a return also what was needed to operate the code properly. </p><br>
-                        <p>The whole process helped me get accustomed to JS concepts, how to work with them as well as approach problems and break them down into smaller pieces.</p><br>
+                        <p>The whole process helped me get accustomed to JS concepts, how to work with them as well as approach problems and break them down into smaller pieces.</p><br><br>
                       
                     </div>
+                </div>
+            </div>
+        </div>
+        <div class="project__symmetry">
+            <div class="grid">
+                <div class="col-12 title">
+                    <h4>Next Up</h4>
                 </div>
             </div>
         </div>

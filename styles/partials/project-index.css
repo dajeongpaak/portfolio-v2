@@ -51,7 +51,7 @@ h3 {
     font-weight: 600;
     /* margin-bottom: 1rem; */
     white-space: nowrap;
-    animation: loop 30s ease infinite;
+    animation: loop 30s linear infinite;
     margin: unset;
 }
 
@@ -63,6 +63,8 @@ h3 {
 
 .work__card video,
 .work__card img {
+    width: 100%;
+    height: auto;
     max-width: 100%;
     margin-bottom: 1rem;
     border-radius: 1rem;
