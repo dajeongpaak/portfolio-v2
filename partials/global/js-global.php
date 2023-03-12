@@ -20,7 +20,7 @@ menuOpen.addEventListener('click', () => {
 var prevScrollpos = window.pageYOffset;
 window.onscroll = function () {
     var currentScrollPos = window.pageYOffset;
-    if (prevScrollpos > currentScrollPos) {
+    if (prevScrollpos > currentScrollPos - 1) {
         document.getElementById("js-navBar").style.top = "0";
     } else {
         document.getElementById("js-navBar").style.top = "-6rem";
