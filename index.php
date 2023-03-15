@@ -6,7 +6,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <?php 
-    $title_tag = 'Dajeong Park - Front-end develper, designer' ;
+    $title_tag = 'Dajeong Park - Front-end developer, designer' ;
     $partial_css = 'home';
 ?>
 <?php require_once(get_path("partials/global/head.php"));?>
@@ -17,24 +17,22 @@
     <main id="main">
         <section class="home__main">
             <div class="container">
-                <div class="grid">
-                    <div class="home__content col-12 flex">
-                        <div class="home__title z-index">
-                            <h1>
-                                <span>Front-end</span>
-                                <span>Developer</span>
-                                <span>/ Designer</span>
-                            </h1>
-                        </div>
-                        <div class="home__desc z-index">
-                            <h2 class="p">I strive to make<br>The web a place of<br>
-                                <span class="drop-shadow">Wonder and
-                                    excitement!
-                                </span>
-                            </h2>
-                        </div>
-                    </div>
+                <div class="home__content flex">
+                    <h1 class="home__title flex">
+                        <span class="z-index">Front-</span>
+                        <span class="z-index ml-auto">end</span>
+                        <span class="z-index">Developer</span>
+                        <span class="z-index mx-auto">&</span>
+                        <span class="z-index ml-auto">Designer</span>
+                    </h1>
                 </div>
+                <div class="home__desc z-index">
+                        <h2 class="p">I strive to make<br>The web a place of<br>
+                            <span class="drop-shadow">Wonder and
+                                excitement!
+                            </span>
+                        </h2>
+                    </div>
             </div>
         </section>
         <section class="home__projects z-index">
@@ -119,6 +117,8 @@
     <script>
         const matterContainer = document.querySelector("#matter-container--home");
         const mainHeight = document.querySelector("#main");
+        const SVG_WIDTH_IN_PX = 100;
+        const SVG_WIDTH_AS_PERCENT_OF_CONTAINER_WIDTH = 0.20;
         var Engine = Matter.Engine,
             Render = Matter.Render,
             Runner = Matter.Runner,
@@ -136,19 +136,27 @@
         let width = matterContainer.clientWidth;
         let height = matterContainer.clientHeight;
 
+        let scaleFactor;
+            if (window.innerWidth >= window.innerHeight*0.6) {
+                scaleFactor = (window.innerHeight * (SVG_WIDTH_AS_PERCENT_OF_CONTAINER_WIDTH - 0.08)) / SVG_WIDTH_IN_PX;
+            } else {
+                scaleFactor = (width * SVG_WIDTH_AS_PERCENT_OF_CONTAINER_WIDTH) / SVG_WIDTH_IN_PX;
+            }
+
+
         var render = Render.create({
             element: matterContainer,
             engine: engine,
             options: {
                 width: width,
                 height: mainHeight.clientHeight,
-                pixelRatio: 2,
+                pixelRatio: 2,  
                 wireframes: false,
                 background: "transparent"
             }
         });
 
-        var ball = Bodies.circle(width*(1/4), mainHeight.clientHeight*(1/7), 55, {
+        var ball = Bodies.circle(width*(1/4), mainHeight.clientHeight*(1/7), scaleFactor*90, {
             density: 0.04,
             friction: 0.01,
             frictionAir: 0.000001,
@@ -156,13 +164,13 @@
             render: {
                 sprite: {
                     texture: "images/ball.png",
-                    xScale: 0.60,
-                    yScale: 0.60
+                    xScale: scaleFactor,
+                    yScale: scaleFactor
                 }
             }
         });
 
-        var logo = Bodies.circle(width*(3/4), mainHeight.clientHeight*(2/5), 44, {
+        var logo = Bodies.circle(width*(3/4), mainHeight.clientHeight*(2/5), scaleFactor*80, {
             density: 0.04,
             friction: 0.01,
             frictionAir: 0.000001,
@@ -170,8 +178,8 @@
             render: {
                 sprite: {
                     texture: "images/logosm.png",
-                    xScale: 0.5,
-                    yScale: 0.5
+                    xScale: scaleFactor*0.9,
+                    yScale: scaleFactor*0.9
                 }
             }
         });

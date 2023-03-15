@@ -14,17 +14,22 @@
 
 .p {
     line-height: unset;
-}
-
-.home__title {
-    mix-blend-mode: difference;
-    color: white;
+    font-size: 4.5vmin;
 }
 
 .home__content {
-    flex-direction: column;
+    align-items: center;
     justify-content: center;
     height: 100vh;
+}
+
+.home__title {
+    flex-direction: column;
+}
+
+.home__title span {
+    mix-blend-mode: difference;
+    color: white;
 }
 
 .drop-shadow {
@@ -46,4 +51,11 @@
 
 .card__btn {
     max-width: 30%;
+}
+
+@media screen and (min-width: 576px) {
+    .title {
+        padding: 0 2rem;
+    }
+
 }

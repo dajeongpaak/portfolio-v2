@@ -13,7 +13,7 @@
 }
 
 ::selection {
-    background: var(--neon-green);
+    background: var(--yellow);
 }
 
 /* Typography */
@@ -46,8 +46,8 @@ p,
 
 h1,
 .h1 {
-    font-size: 2.625rem;
-    font-weight: 600;
+    font-size: 14vmin;
+    font-weight: 800;
 }
 
 h2,
@@ -191,6 +191,10 @@ section {
     margin: 0 auto;
 }
 
+.ml-auto {
+    margin-left: auto;
+}
+
 .z-index {
     z-index: 2;
     position: relative;
@@ -290,12 +294,6 @@ section {
 .active.hamburger:last-child {
     transform: rotate(-45deg);
     top: 1rem;
-}
-
-.main-nav__icon--open {
-    font-size: 1.4rem;
-    color: var(--orange);
-    margin-right: .7rem;
 }
 
 #js-menu-open {
@@ -490,27 +488,101 @@ section {
     background: var(--light-orange);
 }
 
-.footer {
-    position: relative;
-    font-size: 1.1rem;
-    padding-top: 6rem;
-    padding-bottom: 3rem;
-    background: var(--yellow);
-    line-height: 1.6;
+
+
+@media screen and (min-width: 576px) {
+
+    h2,
+    .h2 {
+        font-size: 2rem;
+    }
+
+    h3,
+    .h3 {
+        font-size: 1.777rem;
+    }
+
+    h4,
+    .h4 {
+        font-size: 1.777rem;
+    }
+
+    h5,
+    .h5 {
+        font-size: 1.5rem;
+        font-weight: 300;
+    }
+
+    h6,
+    .h6 {
+        font-size: 1.2rem
+    }
+
+    p,
+    .p {
+        font-size: 1.2rem;
+        font-weight: 300;
+        line-height: 1.7;
+    }
+
+    .main-nav {
+        width: 8rem;
+        height: 4rem;
+    }
+
+    .main-nav__logo svg {
+        width: 2.5rem;
+    }
+
+    .hamburger:first-child {
+        top: .9rem;
+    }
+
+    .hamburger:nth-last-child(2) {
+        top: 1.5rem;
+    }
+
+    .hamburger:last-child {
+        top: 2.1rem;
+    }
+
+    .active.hamburger:first-child {
+        top: 1.5rem;
+    }
+
+    .active.hamburger:last-child {
+        top: 1.5rem;
+    }
+
+    .main-nav__list {
+        top: 29%;
+        left: 45%;
+    }
+
+    /* Components */
+    .button {
+        width: 16.5rem;
+        height: 7.5rem;
+    }
+
+    .button-sm {
+        width: 3.5rem;
+        height: 3.5rem;
+    }
+
+    .button-sm i {
+        font-size: 1.6rem;
+    }
+
+    .title {
+        height: 4.875rem;
+        padding: 0 2rem;
+    }
+
+    .card {
+        height: 9.5rem;
+    }
+
 }
 
-.footer__logo {
-    width: 7rem;
-    margin: 2rem auto 1rem auto;
-    opacity: .8;
-}
-
-.footer__copy {
-    position: absolute;
-    text-align: center;
-    font-size: .9rem;
-    width: 100%;
-    bottom: 0;
-    left: 50%;
-    transform: translateX(-50%);
-}
+@media screen and (min-width: 768px) {}

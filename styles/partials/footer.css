@@ -1,0 +1,31 @@
+.footer {
+    position: relative;
+    font-size: 1.1rem;
+    padding-top: 6rem;
+    padding-bottom: 3rem;
+    background: var(--yellow);
+    line-height: 1.6;
+}
+
+.footer__copy {
+    position: absolute;
+    text-align: center;
+    font-size: .9rem;
+    width: 100%;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+@media screen and (min-width: 576px) {
+    .footer {
+        font-size: 1.3rem;
+        padding-top: 7rem;
+    }
+
+
+    .footer__copy {
+        font-size: 1.1rem;
+    }
+
+}
