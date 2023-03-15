@@ -23,25 +23,41 @@
                         <span class="z-index ml-auto">end</span>
                         <span class="z-index">Developer</span>
                         <span class="z-index mx-auto">&</span>
-                        <span class="z-index ml-auto">Designer</span>
+                        <span class="z-index mx-auto">Designer</span>
                     </h1>
                 </div>
-                <div class="home__desc z-index">
-                        <h2 class="p">I strive to make<br>The web a place of<br>
-                            <span class="drop-shadow">Wonder and
+                <div class="home__desc">
+                    <div class="flex desc__card z-index">
+                        <h2>
+                            <span class="desc__h2">I strive <br>to make the web <br> a place of<br></span>
+                        <div class="desc__card-anim flex">
+                            <span class="drop-shadow z-index">Wonder <br>and<br>
                                 excitement!
                             </span>
+                            <span class="drop-shadow z-index">Wonder <br>and<br>
+                                excitement!
+                            </span>
+                            <span class="drop-shadow z-index">Wonder <br>and<br>
+                                excitement!
+                            </span>
+                            <span class="drop-shadow z-index">Wonder <br>and<br>
+                                excitement!
+                            </span> 
+                        </div>
+                        <span class="desc__h2 text-right">Through creativity, technology, and lifelong learning.</span>
                         </h2>
                     </div>
+                </div>
             </div>
+         
         </section>
-        <section class="home__projects z-index">
+        <section class="home__projects">
             <div class="container">
                 <div class="grid">
                     <div class="col-12  title">
                         <h2 class="h4">Featured Projects</h2>
                     </div>
-                    <div class="projects__cards col-12">
+                    <div class="projects__cards col-12 z-index">
                         <ul>
                             <li class="card">
                                 <div class="card__content flex">

@@ -5,6 +5,7 @@
     --orange: #ff6300;
     --light-orange: #ff883c;
     --neon-green: #e4ff5e;
+    --neon-green-invert: #1b00a1;
     --yellow: #ffaf42;
     --white: #fff;
     --black: #000000;
@@ -199,6 +200,10 @@ section {
 .z-index {
     z-index: 2;
     position: relative;
+}
+
+.text-right {
+    text-align: right;
 }
 
 /* Header */
@@ -412,7 +417,7 @@ section {
     height: 3.875rem;
     padding: 0 1rem;
     margin: 0 auto 1rem auto;
-    box-shadow: 2px 5px 0px 0px #000000;
+    box-shadow: 2px 5px 0px 0px var(--black);
     border: black 1px solid;
     background-color: var(--white);
     border-radius: 18rem;
@@ -423,7 +428,7 @@ section {
     align-items: center;
     height: 8rem;
     background: rgba(255, 255, 255, 0.4);
-    border: 1px solid #000000;
+    border: 1px solid var(--black);
     border-radius: 2rem;
     margin-bottom: .5rem;
     backdrop-filter: blur(8px);
