@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Michroma&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Epilogue:wght@100;300;400&family=Michroma&display=swap');
+@import url('https://fonts.cdnfonts.com/css/dm-sans');
 
 :root {
     --orange: #ff6300;
@@ -9,7 +9,7 @@
     --white: #fff;
     --black: #000000;
     --sans-serif-1: 'Michroma', sans-serif;
-    --sans-serif-2: 'Epilogue', sans-serif;
+    --sans-serif-2: 'DM Sans', sans-serif;
 }
 
 ::selection {
@@ -97,6 +97,7 @@ body {
     transition: background-color 0.4s ease-in-out;
     -moz-transition: background-color 0.4s ease-in-out;
     -webkit-transition: background-color 0.4s ease-in-out;
+
 }
 
 body.--bg-change {

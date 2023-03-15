@@ -113,8 +113,12 @@
     <?php require_once(get_path("/partials/global/js-global.php"))?>
     <!-- <script src="scripts/main.js"></script> -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/matter-js/0.19.0/matter.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/ScrollTrigger.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/ScrollToPlugin.min.js"></script>
 
     <script>
+        
         const matterContainer = document.querySelector("#matter-container--home");
         const mainHeight = document.querySelector("#main");
         const SVG_WIDTH_IN_PX = 100;

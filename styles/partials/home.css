@@ -27,6 +27,23 @@
     flex-direction: column;
 }
 
+.border {
+    border: 2px solid white;
+    border-radius: 5rem;
+    padding: .3rem;
+    background: #2b00f9;
+}
+
+/* .home__title::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 50%;
+    mix-blend-mode: difference;
+    color: white;
+    background: white;
+} */
+
 .home__title span {
     mix-blend-mode: difference;
     color: white;
