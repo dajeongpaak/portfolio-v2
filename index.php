@@ -20,10 +20,10 @@
                 <div class="home__content flex">
                     <h1 class="home__title flex">
                         <span class="z-index">Front-</span>
-                        <span class="z-index ml-auto">end</span>
+                        <span class="z-index">end</span>
                         <span class="z-index">Developer</span>
-                        <span class="z-index mx-auto">&</span>
-                        <span class="z-index mx-auto">Designer</span>
+                        <span class="z-index">&</span>
+                        <span class="z-index">Designer</span>
                     </h1>
                 </div>
                 <div class="home__desc">
@@ -44,7 +44,7 @@
                                 excitement!
                             </span> 
                         </div>
-                        <span class="desc__h2 text-right">Through creativity, technology, and lifelong learning.</span>
+                        <span class="desc__h2 text-right">Through creativity,<br> technology, <br>and lifelong learning.</span>
                         </h2>
                     </div>
                 </div>

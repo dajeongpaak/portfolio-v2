@@ -55,41 +55,38 @@
 
 .home__desc {
     height: 100vh;
-    justify-content: center;
-    align-items: center;
+    padding: 2rem 0;
 
 }
 
 .desc__card h2 {
-    font-size: 1.4rem;
+    font-size: 1.1rem;
     mix-blend-mode: difference;
     color: white;
+    text-transform: uppercase;
 }
 
 .desc__h2 {
     font-family: var(--sans-serif-2);
-    padding: 1rem 0;
+    padding: .5rem 0;
     display: block;
+    font-weight: 300;
 }
 
 .desc__card {
-    /* border: 1px solid var(--black); */
-    height: 80%;
+    border: 1px solid var(--black);
     height: 75vh;
-    border: 1px solid #000000;
     border-radius: 2rem;
-    /* overflow: hidden; */
     padding: 1rem;
-    margin-bottom: 100%;
     background: #fff4ed;
     flex-direction: column;
     justify-content: space-evenly;
-    mix-blend-mode: difference;
 }
 
-.desc__card-anim {
+.desc__card-anim span {
     white-space: nowrap;
-    animation: textAnim 35s infinite linear;
+    animation: textAnim 15s infinite linear;
+    padding: 0 1rem;
 }
 
 @keyframes textAnim {
@@ -106,7 +103,7 @@
     font-size: 2rem;
     color: #0087ff;
     margin-right: 2rem;
-    font-size: 2.5rem;
+    font-size: 3.5rem;
     position: relative;
     z-index: 1;
 }
