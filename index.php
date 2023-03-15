@@ -20,7 +20,7 @@
                 <div class="home__content flex">
                     <h1 class="home__title flex">
                         <span class="z-index">Front-</span>
-                        <span class="z-index">end</span>
+                        <span class="z-index ml-auto">end</span>
                         <span class="z-index">Developer</span>
                         <span class="z-index">&</span>
                         <span class="z-index">Designer</span>
@@ -134,7 +134,28 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/ScrollToPlugin.min.js"></script>
 
     <script>
-        
+        gsap.registerPlugin(ScrollTrigger);
+
+        const tl = gsap.timeline({paused: false});
+        tl.to('.desc__card', {
+            scrollTrigger: {
+                trigger: ".desc__card",
+                toggleActions: "restart pause reverse pause",
+                markers: true,
+                start: 'top 30%',
+                end: 'bottom bottom',
+                scrub: 2,
+            },
+            borderRadius: '2rem',
+            height: '70vh',
+            width: 'unset',
+            duration: 10,
+        }, {
+            
+        })
+
+
+
         const matterContainer = document.querySelector("#matter-container--home");
         const mainHeight = document.querySelector("#main");
         const SVG_WIDTH_IN_PX = 100;

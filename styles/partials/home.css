@@ -74,13 +74,15 @@
 }
 
 .desc__card {
-    border: 1px solid var(--black);
-    height: 75vh;
-    border-radius: 2rem;
+    width: 90vmin;
+    height: 90vmin;
+    border-radius: 25rem;
     padding: 1rem;
-    background: #fff4ed;
+    background: var(--white);
     flex-direction: column;
     justify-content: space-evenly;
+    margin: 0 auto;
+    mix-blend-mode: difference;
 }
 
 .desc__card-anim span {
