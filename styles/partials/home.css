@@ -61,8 +61,8 @@ h3 {
 }
 
 .desc__card {
-    width: 80vmin;
-    height: 80vmin;
+    width: 90vmin;
+    height: 90vmin;
     border-radius: 25rem;
     padding: 1rem;
     flex-direction: column;
