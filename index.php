@@ -181,9 +181,10 @@
             height: '70vh',
             width: 'unset',
             duration: 15,
-        }, {
-            
         })
+
+        tl.from('')
+
 
 
 
