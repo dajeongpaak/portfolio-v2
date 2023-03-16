@@ -38,6 +38,7 @@ main {
 
 .about__content {
     margin: 2rem 0;
+    padding: 2rem 0;
     background: rgba(255, 255, 255, 0.4);
     border: 1px solid var(--black);
     border-radius: 2rem;
@@ -102,4 +103,31 @@ main {
     color: var(--white);
     background-color: var(--black);
     margin-bottom: unset;
+}
+
+@media screen and (min-width: 576px) {
+    .img-container {
+        width: 17.5rem;
+        height: 17.5rem;
+    }
+
+    .img-container img {
+        width: 12rem;
+        height: 12rem;
+    }
+
+    .about__intro .drop-shadow {
+        font-size: 2.5rem;
+    }
+
+    .skills__title {
+        height: 4rem;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .img-container img {
+        width: 15rem;
+        height: 15rem;
+    }
 }

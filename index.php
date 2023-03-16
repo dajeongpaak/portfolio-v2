@@ -20,7 +20,7 @@
                 <div class="home__content flex">
                     <h1 class="home__title flex">
                         <span class="z-index">Front-</span>
-                        <span class="z-index ml-auto">end</span>
+                        <span class="z-index">end</span>
                         <span class="z-index">Developer</span>
                         <span class="z-index">&</span>
                         <span class="z-index">Designer</span>
@@ -58,12 +58,12 @@
                         <h2 class="h4">Featured Projects</h2>
                     </div>
                     <div class="projects__cards col-12 z-index">
-                        <ul>
+                        <ul class="grid">
                             <li class="card">
                                 <div class="card__content flex">
                                     <div class="card__title">
                                         <a href="<?php echo get_url("/projects/note-taking-application-web-development-project.php"); ?>">
-                                            <h3 class="h5">Note-taking Web Application</h3>
+                                            <h3 class="">Note-taking Web Application</h3>
                                         </a>
                                     </div>
                                     <div class="card__btn">
@@ -77,7 +77,7 @@
                                 <div class="card__content flex">
                                     <div class="card__title">
                                         <a href="symmetry.html">
-                                            <h3 class="h5">‘SYMMETRY’ Photo Gallery</h3>
+                                            <h3>‘SYMMETRY’ Photo Gallery</h3>
                                         </a>
                                     </div>
                                     <div class="card__btn">
@@ -91,7 +91,7 @@
                                 <div class="card__content flex">
                                     <div class="card__title">
                                         <a href="esnes.html">
-                                            <h3 class="h5">‘esnes’ Perfume
+                                            <h3>‘esnes’ Perfume
                                                 Launching site</h3>
                                         </a>
                                     </div>
@@ -106,7 +106,7 @@
                                 <div class="card__content flex">
                                     <div class="card__title">
                                         <a href="burgersquad.html">
-                                            <h3 class="h5">‘Burger Squad’ Responsive Web design </h3>
+                                            <h3>‘Burger Squad’ Responsive Web design </h3>
                                         </a>
                                     </div>
                                     <div class="card__btn">
@@ -142,14 +142,14 @@
                 trigger: ".desc__card",
                 toggleActions: "restart pause reverse pause",
                 markers: true,
-                start: 'top 30%',
+                start: 'top 50%',
                 end: 'bottom bottom',
                 scrub: 2,
             },
             borderRadius: '2rem',
             height: '70vh',
             width: 'unset',
-            duration: 10,
+            duration: 15,
         }, {
             
         })

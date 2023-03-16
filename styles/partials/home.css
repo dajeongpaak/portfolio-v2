@@ -16,6 +16,10 @@
     padding: 0 .9rem;
 }
 
+h3 {
+    font-family: var(--sans-serif-2);
+}
+
 .p {
     line-height: unset;
     font-size: 4.5vmin;
@@ -38,16 +42,6 @@
     background: #2b00f9;
 }
 
-/* .home__title::before {
-    content: '';
-    position: absolute;
-    width: 100%;
-    height: 50%;
-    mix-blend-mode: difference;
-    color: white;
-    background: white;
-} */
-
 .home__title span {
     mix-blend-mode: difference;
     color: white;
@@ -55,14 +49,14 @@
 
 .home__desc {
     height: 100vh;
-    padding: 2rem 0;
+    padding: 5rem 0;
 
 }
 
 .desc__card h2 {
     font-size: 1.1rem;
     mix-blend-mode: difference;
-    color: white;
+    color: #e9fbcf;
     text-transform: uppercase;
 }
 
@@ -74,15 +68,16 @@
 }
 
 .desc__card {
-    width: 90vmin;
-    height: 90vmin;
+    width: 80vmin;
+    height: 80vmin;
     border-radius: 25rem;
     padding: 1rem;
-    background: var(--white);
+    background: var(--yellow-invert);
     flex-direction: column;
     justify-content: space-evenly;
     margin: 0 auto;
     mix-blend-mode: difference;
+    border: 1px solid var(--white);
 }
 
 .desc__card-anim span {
@@ -102,12 +97,28 @@
     text-shadow: 2px -1px #ffe300;
     font-weight: 800;
     mix-blend-mode: difference;
-    font-size: 2rem;
     color: #0087ff;
     margin-right: 2rem;
     font-size: 3.5rem;
     position: relative;
     z-index: 1;
+}
+
+.projects__cards ul {
+    gap: unset;
+}
+
+.card {
+    grid-column: span 12 / auto;
+    display: flex;
+    align-items: center;
+    height: 8rem;
+    background: rgba(255, 255, 255, 0.4);
+    border: 1px solid var(--black);
+    border-radius: 2rem;
+    margin-bottom: .5rem;
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
 }
 
 .card__content {
@@ -127,8 +138,38 @@
 }
 
 @media screen and (min-width: 576px) {
+
+    h3 {
+        font-size: 1.4rem;
+    }
+
     .title {
         padding: 0 2rem;
     }
 
+    .desc__card h2 {
+        font-size: 1.5rem;
+    }
+
+
+}
+
+@media screen and (min-width: 768px) {
+    .desc__card h2 {
+        font-size: 2rem;
+    }
+
+    .drop-shadow {
+        font-size: 4.5rem;
+    }
+
+    .projects__cards ul {
+        gap: 1rem;
+    }
+
+    .card {
+        margin-bottom: unset;
+        grid-column: span 6 / auto;
+        height: 48vmin;
+    }
 }

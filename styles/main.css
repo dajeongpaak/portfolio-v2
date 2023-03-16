@@ -7,6 +7,7 @@
     --neon-green: #e4ff5e;
     --neon-green-invert: #1b00a1;
     --yellow: #ffaf42;
+    --yellow-invert: #0050bd;
     --white: #fff;
     --black: #000000;
     --sans-serif-1: 'Michroma', sans-serif;
@@ -47,7 +48,7 @@ p,
 
 h1,
 .h1 {
-    font-size: 13vmin;
+    font-size: 12vmin;
     font-weight: 800;
 }
 
@@ -58,7 +59,7 @@ h2,
 
 h3,
 .h3 {
-    font-size: 1.777rem;
+    font-size: 1.3rem;
 }
 
 h4,
@@ -123,8 +124,6 @@ section {
     height: 100%;
     z-index: 990;
 }
-
-
 
 .grid {
     display: grid;
@@ -423,17 +422,7 @@ section {
     border-radius: 18rem;
 }
 
-.card {
-    display: flex;
-    align-items: center;
-    height: 8rem;
-    background: rgba(255, 255, 255, 0.4);
-    border: 1px solid var(--black);
-    border-radius: 2rem;
-    margin-bottom: .5rem;
-    backdrop-filter: blur(8px);
-    -webkit-backdrop-filter: blur(8px);
-}
+
 
 /* Headings */
 
@@ -505,7 +494,7 @@ section {
 
     h3,
     .h3 {
-        font-size: 1.777rem;
+        font-size: 2rem;
     }
 
     h4,
@@ -526,7 +515,7 @@ section {
 
     p,
     .p {
-        font-size: 1.2rem;
+        font-size: 1.5rem;
         font-weight: 300;
         line-height: 1.7;
     }
@@ -591,4 +580,105 @@ section {
 
 }
 
-@media screen and (min-width: 768px) {}
+@media screen and (min-width: 768px) {
+
+    h1,
+    .h1 {
+        font-size: 11vmin;
+    }
+
+    h2,
+    .h2 {
+        font-size: 2rem;
+    }
+
+    /* v */
+    h3,
+    .h3 {
+        font-size: 2rem;
+    }
+
+    /* v */
+    h4,
+    .h4 {
+        font-size: 2rem;
+    }
+
+    h5,
+    .h5 {
+        font-size: 1.8rem;
+        font-weight: 300;
+    }
+
+    h6,
+    .h6 {
+        font-size: 1.2rem
+    }
+
+    p,
+    .p {
+        font-size: 1.2rem;
+        font-weight: 300;
+        line-height: 1.7;
+    }
+
+    .main-nav {
+        width: 8rem;
+        height: 4rem;
+    }
+
+    .main-nav__logo svg {
+        width: 2.5rem;
+    }
+
+    .hamburger:first-child {
+        top: .9rem;
+    }
+
+    .hamburger:nth-last-child(2) {
+        top: 1.5rem;
+    }
+
+    .hamburger:last-child {
+        top: 2.1rem;
+    }
+
+    .active.hamburger:first-child {
+        top: 1.5rem;
+    }
+
+    .active.hamburger:last-child {
+        top: 1.5rem;
+    }
+
+    .main-nav__list {
+        top: 29%;
+        left: 45%;
+        font-size: 3rem;
+    }
+
+    /* Components */
+    .button {
+        width: 19.5rem;
+        height: 9.5rem;
+    }
+
+    .button-sm {
+        width: 4.5rem;
+        height: 4.5rem;
+    }
+
+    .button-sm i {
+        font-size: 1.6rem;
+    }
+
+    .title {
+        height: 4.875rem;
+        padding: 0 2rem;
+    }
+
+    .card {
+        height: 9.5rem;
+    }
+
+}

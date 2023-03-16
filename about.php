@@ -21,7 +21,7 @@
             <div class="container">
                 <div class="grid">
                     <div class="about__content col-12 z-index">
-                        <div class="about__intro flex h4 ">
+                        <div class="about__intro flex h3">
                             <div>Hey there! I’m</div>
                             <span class="drop-shadow">Dajeong</span>
                             <div>but you can call me</div>
@@ -82,7 +82,7 @@
     const mainHeight = document.querySelector("#matter-main");
     const THICCNESS = 60;
     const SVG_WIDTH_IN_PX = 100;
-    const SVG_WIDTH_AS_PERCENT_OF_CONTAINER_WIDTH = 0.38;
+    const SVG_WIDTH_AS_PERCENT_OF_CONTAINER_WIDTH = 0.4;
 
         // module aliases
         var Engine = Matter.Engine,
@@ -113,10 +113,10 @@
             }
         });
 
-        render.canvas.height = mainHeight.clientHeight;
+        // render.canvas.height = mainHeight.clientHeight;
         let scaleFactor;
-            if (window.innerWidth >= window.innerHeight) {
-                scaleFactor = (window.innerHeight * (SVG_WIDTH_AS_PERCENT_OF_CONTAINER_WIDTH - 0.08)) / SVG_WIDTH_IN_PX;
+            if (window.innerWidth >= window.innerHeight*0.8) {
+                scaleFactor = (window.innerHeight * (SVG_WIDTH_AS_PERCENT_OF_CONTAINER_WIDTH - .7)) / SVG_WIDTH_IN_PX;
             } else {
                 scaleFactor = (matterContainer.clientWidth * SVG_WIDTH_AS_PERCENT_OF_CONTAINER_WIDTH) / SVG_WIDTH_IN_PX;
             }
@@ -125,7 +125,7 @@
         let ScaleRec = scaleFactor/4;
         let startingPoint =  (mainHeight.clientHeight)*3 /5;
         
-        var css = Bodies.rectangle(matterContainer.clientWidth / 2 , startingPoint , scaleFactor * 8, scaleFactor * 8, {
+        var css = Bodies.rectangle(matterContainer.clientWidth / 2 , startingPoint , scaleFactor * 7, scaleFactor * 8, {
             density: 0.04,
 		    friction: 0.01,
 		    frictionAir: 0.000001,
@@ -137,7 +137,7 @@
                 yScale: ScaleRec}}
         });
 
-        var sass = Bodies.circle(300, startingPoint, scaleFactor * 45,  {
+        var sass = Bodies.circle(300, startingPoint, scaleFactor * 40,  {
             density: 0.04,
 		    friction: 0.01,
 		    frictionAir: 0.000001,
@@ -149,7 +149,7 @@
                 yScale: ScaleCircle }}
             });
 
-        var figma = Bodies.circle(300, startingPoint, scaleFactor * 45,  {
+        var figma = Bodies.circle(300, startingPoint, scaleFactor * 40,  {
             density: 0.04,
             friction: 0.01,
             frictionAir: 0.000001,
@@ -161,7 +161,7 @@
                 yScale: ScaleCircle }}
             });
 
-        var matter = Bodies.circle(300, startingPoint, scaleFactor * 45,  {
+        var matter = Bodies.circle(300, startingPoint, scaleFactor * 40,  {
             density: 0.04,
             friction: 0.01,
             frictionAir: 0.000001,
@@ -173,7 +173,7 @@
                 yScale: ScaleCircle }}
             });
 
-        var php = Bodies.rectangle(matterContainer.clientWidth / 2 , startingPoint , scaleFactor * 100, scaleFactor * 100, {
+        var php = Bodies.rectangle(matterContainer.clientWidth / 2 , startingPoint , scaleFactor * 90, scaleFactor * 100, {
             density: 0.04,
 		    friction: 0.01,
 		    frictionAir: 0.000001,
@@ -185,7 +185,7 @@
                 yScale: ScaleRec}}
         });
 
-        var gsap = Bodies.rectangle(matterContainer.clientWidth / 2 , startingPoint , scaleFactor * 80, scaleFactor * 80, {
+        var gsap = Bodies.rectangle(matterContainer.clientWidth / 2 , startingPoint , scaleFactor * 70, scaleFactor * 80, {
             density: 0.04,
 		    friction: 0.01,
 		    frictionAir: 0.000001,
@@ -197,7 +197,7 @@
                 yScale: ScaleRec}}
         });
 
-        var jquery = Bodies.polygon(matterContainer.clientWidth / 2, startingPoint, 3, scaleFactor *53, {
+        var jquery = Bodies.polygon(matterContainer.clientWidth / 2, startingPoint, 3, scaleFactor *50, {
             density: 0.04,
 		    friction: 0.01,
 		    frictionAir: 0.000001,
