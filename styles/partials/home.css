@@ -35,13 +35,6 @@ h3 {
     flex-direction: column;
 }
 
-.border {
-    border: 2px solid white;
-    border-radius: 5rem;
-    padding: .3rem;
-    background: #2b00f9;
-}
-
 .home__title span {
     mix-blend-mode: difference;
     color: white;
@@ -49,14 +42,14 @@ h3 {
 
 .home__desc {
     height: 100vh;
-    padding: 5rem 0;
+    padding: 7rem 0;
 
 }
 
 .desc__card h2 {
-    font-size: 1.1rem;
+    font-size: 1.2rem;
     mix-blend-mode: difference;
-    color: #e9fbcf;
+    color: var(--white);
     text-transform: uppercase;
 }
 
@@ -72,7 +65,6 @@ h3 {
     height: 80vmin;
     border-radius: 25rem;
     padding: 1rem;
-    background: var(--yellow-invert);
     flex-direction: column;
     justify-content: space-evenly;
     margin: 0 auto;
@@ -82,19 +74,20 @@ h3 {
 
 .desc__card-anim span {
     white-space: nowrap;
-    animation: textAnim 15s infinite linear;
+    animation: textAnim 25s infinite linear;
     padding: 0 1rem;
+    transform: translateX(-300%);
 }
 
 @keyframes textAnim {
     100% {
-        transform: translateX(-100%);
+        transform: translateX(-400%);
     }
 }
 
 .drop-shadow {
     text-align: center;
-    text-shadow: 2px -1px #ffe300;
+    text-shadow: 2px -1px white;
     font-weight: 800;
     mix-blend-mode: difference;
     color: #0087ff;
@@ -155,6 +148,30 @@ h3 {
 }
 
 @media screen and (min-width: 768px) {
+    .desc__card h2 {
+        font-size: 2rem;
+    }
+
+    .drop-shadow {
+        font-size: 4.5rem;
+    }
+
+    .projects__cards ul {
+        gap: 1rem;
+    }
+
+    .card {
+        margin-bottom: unset;
+        grid-column: span 6 / auto;
+        height: 48vmin;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .container {
+        overflow: visible;
+    }
+
     .desc__card h2 {
         font-size: 2rem;
     }

@@ -43,6 +43,18 @@
                             <span class="drop-shadow z-index">Wonder <br>and<br>
                                 excitement!
                             </span> 
+                            <span class="drop-shadow z-index">Wonder <br>and<br>
+                                excitement!
+                            </span> 
+                            <span class="drop-shadow z-index">Wonder <br>and<br>
+                                excitement!
+                            </span> 
+                            <span class="drop-shadow z-index">Wonder <br>and<br>
+                                excitement!
+                            </span> 
+                            <span class="drop-shadow z-index">Wonder <br>and<br>
+                                excitement!
+                            </span> 
                         </div>
                         <span class="desc__h2 text-right">Through creativity,<br> technology, <br>and lifelong learning.</span>
                         </h2>
@@ -136,17 +148,36 @@
     <script>
         gsap.registerPlugin(ScrollTrigger);
 
+        const descCard = document.querySelector('.desc__card');
+        const textShadows = document.querySelectorAll('.drop-shadow');
+
+        function randomBGcolor() {
+            let x = Math.floor(Math.random() * 256);
+            let y = Math.floor(Math.random() * 256);
+            let z = Math.floor(Math.random() * 256);
+            let bgColor = "rgb(" + x  + ", " + y + ", " + z + ")";
+
+            descCard.style.background = bgColor;
+        } 
+        
+            // textShadows.forEach( item => {
+            //     item.style.textShadow = "2px -1px " + bgColor;
+            //     item.style.color = bgColor;
+            // })
+        randomBGcolor();
+
+
         const tl = gsap.timeline({paused: false});
         tl.to('.desc__card', {
             scrollTrigger: {
                 trigger: ".desc__card",
-                toggleActions: "restart pause reverse pause",
+                toggleActions: "restart pause reverse none",
                 markers: true,
-                start: 'top 50%',
+                start: 'top 30%',
                 end: 'bottom bottom',
                 scrub: 2,
             },
-            borderRadius: '2rem',
+            borderRadius: '12rem',
             height: '70vh',
             width: 'unset',
             duration: 15,
@@ -197,7 +228,7 @@
             }
         });
 
-        var ball = Bodies.circle(width*(1/4), mainHeight.clientHeight*(1/7), scaleFactor*90, {
+        var ball = Bodies.circle(width*(1/4), mainHeight.clientHeight*(1/7), scaleFactor*50, {
             density: 0.04,
             friction: 0.01,
             frictionAir: 0.000001,
@@ -205,13 +236,13 @@
             render: {
                 sprite: {
                     texture: "images/ball.png",
-                    xScale: scaleFactor,
-                    yScale: scaleFactor
+                    xScale: scaleFactor*0.6,
+                    yScale: scaleFactor*0.6
                 }
             }
         });
 
-        var logo = Bodies.circle(width*(3/4), mainHeight.clientHeight*(2/5), scaleFactor*80, {
+        var logo = Bodies.circle(width*(3/4), mainHeight.clientHeight*(2/5), scaleFactor*50, {
             density: 0.04,
             friction: 0.01,
             frictionAir: 0.000001,
@@ -219,8 +250,8 @@
             render: {
                 sprite: {
                     texture: "images/logosm.png",
-                    xScale: scaleFactor*0.9,
-                    yScale: scaleFactor*0.9
+                    xScale: scaleFactor*0.6,
+                    yScale: scaleFactor*0.6
                 }
             }
         });
