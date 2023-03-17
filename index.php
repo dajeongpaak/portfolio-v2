@@ -17,6 +17,7 @@
     <main id="main">
         <section class="home__main">
             <div class="container">
+                <div class="symbol">&#60;/&#62;</div>
                 <div class="home__content flex">
                     <h1 class="home__title flex">
                         <span class="z-index">Front-</span>
@@ -183,7 +184,7 @@
             duration: 15,
         })
 
-        tl.from('')
+        // tl.from('')
 
 
 
