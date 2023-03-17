@@ -17,13 +17,22 @@
     <main id="main">
         <section class="home__main">
             <div class="container">
-                <div class="symbol">&#60;/&#62;</div>
                 <div class="home__content flex">
                     <h1 class="home__title flex">
-                        <span class="z-index">Front-</span>
-                        <span class="z-index">end</span>
+                          
+                        <span class="z-index">
+                            Front-
+                        </span>
+                        <span class="z-index">end
+                        </span>
                         <span class="z-index">Developer</span>
-                        <span class="z-index">&</span>
+                        <span class="z-index">
+                        <div class="symbol">
+                                    &
+                                    <div class="symbol-inner"></div>
+                                    <div class="symbol-inner-2"></div>
+                            </div>
+                        </span>
                         <span class="z-index">Designer</span>
                     </h1>
                 </div>
@@ -173,7 +182,7 @@
             scrollTrigger: {
                 trigger: ".desc__card",
                 toggleActions: "restart pause reverse none",
-                markers: true,
+                // markers: true,
                 start: 'top 30%',
                 end: 'bottom bottom',
                 scrub: 2,
