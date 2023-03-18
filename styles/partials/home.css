@@ -117,15 +117,15 @@ h3 {
 }
 
 .home__desc {
-    height: 100vh;
-    padding: 7rem 0;
-
+    height: 80vh;
+    margin: 2rem 0;
 }
 
 .home__strive {
-    height: 70vh;
+    height: 90vh;
     display: flex;
-    align-items: center;
+    align-items: flex-end;
+    position: relative;
 }
 
 
@@ -144,24 +144,25 @@ h3 {
 
 .desc__h2 {
     font-family: var(--sans-serif-2);
-    padding: .5rem 0;
-    display: block;
+    /* padding: .5rem 0; */
     font-weight: 300;
+    display: block;
 }
 
 .desc__circle {
     width: 90vmin;
     height: 90vmin;
+    transform: scale(0);
     border-radius: 25rem;
-    padding: 1rem;
-    flex-direction: column;
-    justify-content: space-evenly;
     margin: 0 auto;
     mix-blend-mode: difference;
     border: 1px solid var(--white);
+    position: absolute;
 }
 
+
 .desc__circle-anim span {
+
     white-space: nowrap;
     animation: textAnim 25s infinite linear;
     padding: 0 1rem;
@@ -172,6 +173,17 @@ h3 {
     100% {
         transform: translateX(-400%);
     }
+}
+
+.desc__img img {
+    width: 3rem;
+    margin: 1rem 2rem 0 1rem;
+}
+
+.desc__img span {
+    font-size: 0.8rem;
+    min-width: 5rem;
+    padding-top: .5rem;
 }
 
 .drop-shadow {

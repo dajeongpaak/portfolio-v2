@@ -186,7 +186,7 @@ section {
 
 /* Helper classes */
 .align-center {
-    align-self: center;
+    align-items: center;
 }
 
 .mx-auto {
@@ -197,6 +197,30 @@ section {
     margin-left: auto;
 }
 
+.flex-column {
+    flex-direction: column;
+}
+
+.justify-center {
+    justify-content: center;
+}
+
+.justify-between {
+    justify-content: space-between;
+}
+
+.justify-end {
+    justify-content: flex-end;
+}
+
+.align-end {
+    align-items: flex-end;
+}
+
+.w-100 {
+    width: 100vw;
+}
+
 .z-index {
     z-index: 2;
     position: relative;
@@ -204,6 +228,7 @@ section {
 
 .text-right {
     text-align: right;
+    margin-right: 2rem;
 }
 
 /* Header */

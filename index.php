@@ -43,38 +43,54 @@
                     </div>
                 </div>
                 <div class="home__desc">
-                    <div class="flex desc__circle z-index">
-                        <h2>
+                    <div class="desc__anim flex justify-center align-center">
+                        <div class="desc__circle z-index"></div>     
                         <div class="desc__circle-anim flex">
-                            <span class="drop-shadow z-index">Wonder <br>and<br>
-                                excitement!
-                            </span>
-                            <span class="drop-shadow z-index">Wonder <br>and<br>
-                                excitement!
-                            </span>
-                            <span class="drop-shadow z-index">Wonder <br>and<br>
-                                excitement!
-                            </span>
-                            <span class="drop-shadow z-index">Wonder <br>and<br>
-                                excitement!
-                            </span> 
-                            <span class="drop-shadow z-index">Wonder <br>and<br>
-                                excitement!
-                            </span> 
-                            <span class="drop-shadow z-index">Wonder <br>and<br>
-                                excitement!
-                            </span> 
-                            <span class="drop-shadow z-index">Wonder <br>and<br>
-                                excitement!
-                            </span> 
-                            <span class="drop-shadow z-index">Wonder <br>and<br>
-                                excitement!
-                            </span> 
-                        </div>
-                        <span class="desc__h2 text-right">Through creativity,<br> technology, <br>and lifelong learning.</span>
+                                <span class="drop-shadow z-index">Wonder <br>and<br>
+                                    excitement!
+                                </span>
+                                <span class="drop-shadow z-index">Wonder <br>and<br>
+                                    excitement!
+                                </span>
+                                <span class="drop-shadow z-index">Wonder <br>and<br>
+                                    excitement!
+                                </span>
+                                <span class="drop-shadow z-index">Wonder <br>and<br>
+                                    excitement!
+                                </span> 
+                                <span class="drop-shadow z-index">Wonder <br>and<br>
+                                    excitement!
+                                </span> 
+                                <span class="drop-shadow z-index">Wonder <br>and<br>
+                                    excitement!
+                                </span> 
+                                <span class="drop-shadow z-index">Wonder <br>and<br>
+                                    excitement!
+                                </span> 
+                                <span class="drop-shadow z-index">Wonder <br>and<br>
+                                    excitement!
+                                </span> 
+                        </div>                  
+                    </div>
+                    <div class="desc__content w-100">
+                        <h2>
+                            <div class="flex justify-between"><span class="desc__h2">through</span>
+                            <span class="desc__h2 text-right">Creativity,
+                            </span>  </div>
+                            
+                            <span class="desc__h2 text-right">Technology,</span> 
+                            <span class="desc__h2 text-right">and Lifelong learning.</span>
                         </h2>
+                        <div id="js-color-change" class="flex align-center justify-center">
+                            <p>(what the hex the color is)</p>
+                            <div class="desc__img flex flex-column align-center">
+                                <img src="<?php echo get_url("images/sad-logo.svg")?>" alt="sad face logo ">
+                                <span>Click me!</span>
+                            </div>
+                        </div>
                     </div>
                 </div>
+           
             </div>
          
         </section>
@@ -165,66 +181,77 @@
 
         const descCard = document.querySelector('.desc__circle');
         const textShadows = document.querySelectorAll('.drop-shadow');
+        const sadLogo = document.querySelector('#js-color-change');
         const tl = gsap.timeline({paused: false});
 
+        randomBGcolor();
+
+        sadLogo.addEventListener('click', () => {
+            let x = Math.floor(Math.random() * 256) + 30;
+            let y = Math.floor(Math.random() * 256) + 30;
+            let z = Math.floor(Math.random() * 256) + 30;
+            let bgColor = "rgb(" + x  + ", " + y + ", " + z + ")";
+
+            descCard.style.background = bgColor;
+            console.log(descCard)
+        }
+        );
+
+
         function randomBGcolor() {
-            let x = Math.floor(Math.random() * 256);
-            let y = Math.floor(Math.random() * 256);
-            let z = Math.floor(Math.random() * 256);
+            let x = Math.floor(Math.random() * 256) + 30;
+            let y = Math.floor(Math.random() * 256) + 30;
+            let z = Math.floor(Math.random() * 256) + 30;
             let bgColor = "rgb(" + x  + ", " + y + ", " + z + ")";
 
             descCard.style.background = bgColor;
         } 
         
-        randomBGcolor();
+     
+      
         let pieceContainer = document.querySelector(".home__strive");
-        let xPos = pieceContainer.offsetWidth / 4;
-        let yPos = pieceContainer.offsetHeight / 4;
+        let xPos = pieceContainer.offsetWidth / 5;
+        let yPos = pieceContainer.offsetHeight / 3;
         let pieces = gsap.utils.toArray(".home__strive span");
       
         // console.log(pieces);
         pieces.forEach( item => {
             let xRandomPos = gsap.utils.random(0, xPos);
-            let yRandomPos = gsap.utils.random(-yPos/2, yPos);
-            let rRandom = gsap.utils.random(-45 , 45);
-            console.log(xRandomPos, yRandomPos)
+            let yRandomPos = gsap.utils.random(-yPos , yPos/3);
+            let rRandom = gsap.utils.random(-30 , 30);
             tl.to(item, {
                 scrollTrigger: {
                     trigger: ".home__strive",
                     toggleActions: "restart pause reverse none",
-                    markers: true,
-                    start: "-30% top",
-                    end: "80% center",
-                    scrub: 2,
-                    stagger: 1,
+                    start: "25% top",
+                    end: "bottom bottom",
+                    scrub: 1,
+                    
                 },
                 x: xRandomPos,
                 y: yRandomPos,
                 rotate: rRandom,
-                duration: 3,
+                duration: 5,
+                stagger: 1,
+                ease: "power2"
             })
         })
 
-      
-        // var random = gsap.utils.random(xPos, yPos);
-
-        // console.log(xRandomPos, yRandomPos)
         tl.to('.desc__circle', {
             scrollTrigger: {
-                trigger: ".desc__circle",
+                trigger: ".home__desc",
                 toggleActions: "restart pause reverse none",
-                // markers: true,
-                start: 'top 30%',
-                end: 'bottom bottom',
-                scrub: 2,
+                markers: true,
+                start: '-90% top',
+                end: 'center bottom',
+                scrub: 1,
             },
-            borderRadius: '12rem',
-            height: '70vh',
-            width: 'unset',
-            duration: 15,
+            ease: "expo",
+           scale: 1,
+            duration: 0.5,
         })
 
-        // tl.from('')
+
 
 
 
