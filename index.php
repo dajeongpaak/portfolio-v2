@@ -28,19 +28,24 @@
                         <span class="z-index">Developer</span>
                         <span class="z-index">
                         <div class="symbol">
-                                    &
-                                    <div class="symbol-inner"></div>
-                                    <div class="symbol-inner-2"></div>
-                            </div>
+                            &
+                            <div class="symbol-inner"></div>
+                            <div class="symbol-inner-2"></div>
+                        </div>
                         </span>
                         <span class="z-index">Designer</span>
                     </h1>
                 </div>
+                <div class="home__strive">
+                    <div class="desc__p">
+                    <span>to design</span> <span>and</span> <span>develop</span><br><span>immersive</span><br><span>web</span> <span>experiences</span><br> <span>that fully</span> <span>engage</span> <span>users,<span> </span> <span>creating</span> <span>an <span>emotional</span> <span>connection</span><br> <span>with the</span> <span>digital</span> <span>environment</span><br><br>
+                    <span>I </span> <span> STRIVE</span> <span>TO MAKE</span> <br><span>THE WEB</span> <br> <span>A PLACE OF</span>
+                    </div>
+                </div>
                 <div class="home__desc">
-                    <div class="flex desc__card z-index">
+                    <div class="flex desc__circle z-index">
                         <h2>
-                            <span class="desc__h2">I strive <br>to make the web <br> a place of<br></span>
-                        <div class="desc__card-anim flex">
+                        <div class="desc__circle-anim flex">
                             <span class="drop-shadow z-index">Wonder <br>and<br>
                                 excitement!
                             </span>
@@ -158,8 +163,9 @@
     <script>
         gsap.registerPlugin(ScrollTrigger);
 
-        const descCard = document.querySelector('.desc__card');
+        const descCard = document.querySelector('.desc__circle');
         const textShadows = document.querySelectorAll('.drop-shadow');
+        const tl = gsap.timeline({paused: false});
 
         function randomBGcolor() {
             let x = Math.floor(Math.random() * 256);
@@ -170,17 +176,42 @@
             descCard.style.background = bgColor;
         } 
         
-            // textShadows.forEach( item => {
-            //     item.style.textShadow = "2px -1px " + bgColor;
-            //     item.style.color = bgColor;
-            // })
         randomBGcolor();
+        let pieceContainer = document.querySelector(".home__strive");
+        let xPos = pieceContainer.offsetWidth / 4;
+        let yPos = pieceContainer.offsetHeight / 4;
+        let pieces = gsap.utils.toArray(".home__strive span");
+      
+        // console.log(pieces);
+        pieces.forEach( item => {
+            let xRandomPos = gsap.utils.random(0, xPos);
+            let yRandomPos = gsap.utils.random(-yPos/2, yPos);
+            let rRandom = gsap.utils.random(-45 , 45);
+            console.log(xRandomPos, yRandomPos)
+            tl.to(item, {
+                scrollTrigger: {
+                    trigger: ".home__strive",
+                    toggleActions: "restart pause reverse none",
+                    markers: true,
+                    start: "-30% top",
+                    end: "80% center",
+                    scrub: 2,
+                    stagger: 1,
+                },
+                x: xRandomPos,
+                y: yRandomPos,
+                rotate: rRandom,
+                duration: 3,
+            })
+        })
 
+      
+        // var random = gsap.utils.random(xPos, yPos);
 
-        const tl = gsap.timeline({paused: false});
-        tl.to('.desc__card', {
+        // console.log(xRandomPos, yRandomPos)
+        tl.to('.desc__circle', {
             scrollTrigger: {
-                trigger: ".desc__card",
+                trigger: ".desc__circle",
                 toggleActions: "restart pause reverse none",
                 // markers: true,
                 start: 'top 30%',

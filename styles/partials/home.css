@@ -27,11 +27,11 @@ h3 {
 
 .symbol {
     right: 0;
-    color: var(--black);
+    color: var(--white);
     font-size: 9vmin;
-    width: 17.9vmin;
-    height: 17.9vmin;
-    background: var(--white);
+    width: 17.5vmin;
+    height: 17.5vmin;
+    background: black;
     border-radius: 50%;
     display: flex;
     justify-content: center;
@@ -40,52 +40,54 @@ h3 {
     z-index: 2;
     transform-style: preserve-3d;
     animation: spin 5s linear infinite;
+    border: 1px solid white;
 }
 
 .symbol::before {
-    background-color: var(--white);
+    background: black;
     position: absolute;
     border-radius: 50%;
     content: '</>';
-    height: 18vmin;
-    width: 18vmin;
-    transform: translateZ(-0.73rem);
+    height: 17.2vmin;
+    width: 17.2vmin;
+    transform: translateZ(-3.7vmin);
     display: flex;
     justify-content: center;
     align-items: center;
+    border: 1px solid white;
     /* mix-blend-mode: difference; */
 }
 
 
 .symbol::after {
-    background-color: var(--white);
+    background: white;
     content: '';
     left: 30%;
     position: absolute;
     height: 18vmin;
-    width: .73rem;
+    width: 3.7vmin;
     transform: rotateY(-90deg);
     transform-origin: 100% 50%;
 }
 
 .symbol-inner {
-    background-color: var(--white);
+    background: white;
     position: absolute;
     border-radius: 50%;
     content: '';
     height: 18vmin;
     width: 18vmin;
-    transform: translateZ(-0.72rem);
+    transform: translateZ(-3.65vmin);
 }
 
 .symbol-inner-2 {
-    background-color: var(--white);
+    background: white;
     position: absolute;
     border-radius: 50%;
     content: '';
     height: 18vmin;
     width: 18vmin;
-    transform: translateZ(-0.01rem);
+    transform: translateZ(-0.1vmin);
 }
 
 @keyframes spin {
@@ -120,7 +122,20 @@ h3 {
 
 }
 
-.desc__card h2 {
+.home__strive {
+    height: 70vh;
+    display: flex;
+    align-items: center;
+}
+
+
+.desc__p span {
+    font-size: 1.5rem;
+    font-family: var(--sans-serif-2);
+    display: inline-block;
+}
+
+.desc__circle h2 {
     font-size: 1.2rem;
     mix-blend-mode: difference;
     color: var(--white);
@@ -134,7 +149,7 @@ h3 {
     font-weight: 300;
 }
 
-.desc__card {
+.desc__circle {
     width: 90vmin;
     height: 90vmin;
     border-radius: 25rem;
@@ -146,7 +161,7 @@ h3 {
     border: 1px solid var(--white);
 }
 
-.desc__card-anim span {
+.desc__circle-anim span {
     white-space: nowrap;
     animation: textAnim 25s infinite linear;
     padding: 0 1rem;
@@ -218,11 +233,6 @@ h3 {
         font-size: 1.5rem;
     }
 
-    .symbol::after {
-        left: 35%;
-    }
-
-
 }
 
 @media screen and (min-width: 768px) {
@@ -242,10 +252,6 @@ h3 {
         margin-bottom: unset;
         grid-column: span 6 / auto;
         height: 48vmin;
-    }
-
-    .symbol::after {
-        left: 40%;
     }
 }
 
