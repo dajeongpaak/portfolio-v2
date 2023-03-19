@@ -6,7 +6,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <?php 
-    $title_tag = 'Dajeong Park - Front-end developer, designer' ;
+    $title_tag = 'Dajeong Park | Front-end developer, designer' ;
     $partial_css = 'home';
 ?>
 <?php require_once(get_path("partials/global/head.php"));?>
@@ -38,14 +38,33 @@
                 </div>
                 <div class="home__strive">
                     <div class="desc__p">
-                    <span>to design</span> <span>and</span> <span>develop</span><br><span>immersive</span><br><span>web</span> <span>experiences</span><br> <span>that fully</span> <span>engage</span> <span>users,<span> </span> <span>creating</span> <span>an <span>emotional</span> <span>connection</span><br> <span>with the</span> <span>digital</span> <span>environment</span><br><br>
-                    <span>I </span> <span> STRIVE</span> <span>TO MAKE</span> <br><span>THE WEB</span> <br> <span>A PLACE OF</span>
+                    <span>to design</span> 
+                    <span>and</span> 
+                    <span>develop</span><br>
+                    <span>immersive</span><br>
+                    <span>web</span> 
+                    <span>experiences</span><br> 
+                    <span>that fully</span> 
+                    <span>engage</span> 
+                    <span>users,</span><br>
+                    <span>creating</span> 
+                    <span>an </span>
+                    <span>emotional</span> 
+                    <span>connection</span><br> 
+                    <span>with the</span> 
+                    <span>digital</span> 
+                    <span>environment</span><br><br>
+                    <span>I </span> 
+                    <span> STRIVE</span> 
+                    <span>TO MAKE</span><br>
+                    <span>THE WEB</span><br>
+                    <span>A PLACE OF</span>
                     </div>
                 </div>
                 <div class="home__desc">
                     <div class="desc__anim flex justify-center align-center">
                         <div class="desc__circle z-index"></div>     
-                        <div class="desc__circle-anim flex">
+                        <div class="desc__circle-text flex">
                                 <span class="drop-shadow z-index">Wonder <br>and<br>
                                     excitement!
                                 </span>
@@ -72,21 +91,19 @@
                                 </span> 
                         </div>                  
                     </div>
-                    <div class="desc__content w-100">
+                    <div class="desc__content">
                         <h2>
                             <div class="flex justify-between"><span class="desc__h2">through</span>
                             <span class="desc__h2 text-right">Creativity,
-                            </span>  </div>
+                            </span></div>
                             
                             <span class="desc__h2 text-right">Technology,</span> 
                             <span class="desc__h2 text-right">and Lifelong learning.</span>
                         </h2>
-                        <div id="js-color-change" class="flex align-center justify-center">
-                            <p>(what the hex the color is)</p>
-                            <div class="desc__img flex flex-column align-center">
-                                <img src="<?php echo get_url("images/sad-logo.svg")?>" alt="sad face logo ">
-                                <span>Click me!</span>
-                            </div>
+                        <div id="js-color-change" class="desc__logo flex flex-column align-center z-index">
+                        <p id="js-text-change">(don't like the color?)</p>
+                        <img src="<?php echo get_url("images/sad-logo.svg")?>" alt="pdj sad face logo">
+                        <span>Click me!</span>
                         </div>
                     </div>
                 </div>
@@ -187,21 +204,29 @@
         randomBGcolor();
 
         sadLogo.addEventListener('click', () => {
-            let x = Math.floor(Math.random() * 256) + 30;
-            let y = Math.floor(Math.random() * 256) + 30;
-            let z = Math.floor(Math.random() * 256) + 30;
-            let bgColor = "rgb(" + x  + ", " + y + ", " + z + ")";
+           
+            randomBGcolor()
+            sadLogo.innerHTML = '';
 
-            descCard.style.background = bgColor;
-            console.log(descCard)
-        }
-        );
+            let p = document.createElement('p');
+            p.innerText = '(There you go!)';
+            sadLogo.appendChild(p);
+
+            let logo = document.createElement('img');
+            logo.src = "<?php echo get_url("images/happy-logo.svg")?>";
+            logo.alt = "pdj happy face logo";
+            sadLogo.appendChild(logo);
+
+            let clickMe = document.createElement('span');
+            clickMe.innerText = 'Click me!';
+            sadLogo.appendChild(clickMe);
+        });
 
 
         function randomBGcolor() {
-            let x = Math.floor(Math.random() * 256) + 30;
-            let y = Math.floor(Math.random() * 256) + 30;
-            let z = Math.floor(Math.random() * 256) + 30;
+            let x = Math.floor(Math.random() * 256);
+            let y = Math.floor(Math.random() * 256);
+            let z = Math.floor(Math.random() * 256);
             let bgColor = "rgb(" + x  + ", " + y + ", " + z + ")";
 
             descCard.style.background = bgColor;
@@ -210,14 +235,13 @@
      
       
         let pieceContainer = document.querySelector(".home__strive");
-        let xPos = pieceContainer.offsetWidth / 5;
-        let yPos = pieceContainer.offsetHeight / 3;
+        let xPos = pieceContainer.offsetWidth / 2;
+        let yPos = pieceContainer.offsetHeight / 2;
         let pieces = gsap.utils.toArray(".home__strive span");
       
-        // console.log(pieces);
         pieces.forEach( item => {
-            let xRandomPos = gsap.utils.random(0, xPos);
-            let yRandomPos = gsap.utils.random(-yPos , yPos/3);
+            let xRandomPos = gsap.utils.random(-xPos/2, xPos);
+            let yRandomPos = gsap.utils.random(-yPos , yPos/2);
             let rRandom = gsap.utils.random(-30 , 30);
             tl.to(item, {
                 scrollTrigger: {
@@ -231,7 +255,7 @@
                 x: xRandomPos,
                 y: yRandomPos,
                 rotate: rRandom,
-                duration: 5,
+                duration: 0.5,
                 stagger: 1,
                 ease: "power2"
             })
@@ -241,13 +265,13 @@
             scrollTrigger: {
                 trigger: ".home__desc",
                 toggleActions: "restart pause reverse none",
-                markers: true,
+                // markers: true,
                 start: '-90% top',
                 end: 'center bottom',
                 scrub: 1,
             },
             ease: "expo",
-           scale: 1,
+            scale: 1,
             duration: 0.5,
         })
 

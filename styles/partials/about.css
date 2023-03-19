@@ -125,6 +125,12 @@ main {
     }
 }
 
+@media screen and (max-height: 600px) {
+    main {
+        height: 240vh;
+    }
+}
+
 @media screen and (min-width: 768px) {
     .img-container img {
         width: 15rem;
