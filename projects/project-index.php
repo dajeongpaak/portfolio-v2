@@ -19,13 +19,18 @@
                     <div class="col-12 title">
                         <h2 class="h4">Web Development</h2>
                     </div>
-                    <ul class="col-12" style="position:relative">
+                    <ul class="work__cards grid">
                         <li class="work__card work__note-taking">
                             <a href="<?php echo get_url("projects/note-taking-application-web-development-project.php"); ?>" class="work-card__subheading h6">Project 1</a>
                             <a class="work-card__content" href="<?php echo get_url("projects/note-taking-application-web-development-project.php"); ?>">
-                                <h3 class="work-card__title flex">
+                                <h3>
+                                    <div class="work-card__title flex">
                                         <span>Note-taking Web Application&nbsp;</span>
                                         <span>Note-taking Web Application</span>
+                                    </div>
+                                    <div class="work-card__title-desktop">
+                                    Note-taking Web Application
+                                    </div>
                                 </h3>
                                 <video class="js-video" playsinline autoplay loop muted>
                                     <source src="../images/note-taking-app-preview.mp4" type="video/mp4">
@@ -43,10 +48,15 @@
                         <li class="work__card work__symmetry">
                             <a href="<?php echo get_url("/projects/symmetry-photo-gallery-web-development-project.php"); ?>" class="work-card__subheading h6">Project 2</a>
                             <a class="work-card__content" href="<?php echo get_url("/projects/symmetry-photo-gallery-web-development-project.php"); ?>" >
-                                <h3 class="work-card__title flex">
-                                    <span>‘SYMMETRY’ Photo Gallery&nbsp;</span>
-                                    <span>‘SYMMETRY’ Photo Gallery&nbsp;</span>
-                                    <span>‘SYMMETRY’ Photo Gallery</span>
+                                <h3>
+                                    <div  class="work-card__title flex">
+                                        <span>‘SYMMETRY’ Photo Gallery&nbsp;</span>
+                                        <span>‘SYMMETRY’ Photo Gallery&nbsp;</span>
+                                        <span>‘SYMMETRY’ Photo Gallery</span>
+                                    </div>
+                                    <div class="work-card__title-desktop">
+                                    ‘SYMMETRY’ Photo Gallery
+                                    </div>
                                 </h3>
                                 <video class="js-video" playsinline autoplay loop muted>
                                     <source src="../images/symmetry-photo-gallery-preview.mp4" type="video/mp4">
@@ -64,10 +74,15 @@
                         <li class="work__card work__esnes">
                             <a href="<?php echo get_url("/projects/esnes-web-development-project.php"); ?>" class="work-card__subheading h6">Project 3</a>
                             <a class="work-card__content" href="<?php echo get_url("/projects/esnes-web-development-project.php"); ?>">
-                                <h3 class="work-card__title flex">
-                                <span>‘esnes’ Perfume Launching site&nbsp;</span>
-                                <span>‘esnes’ Perfume Launching site&nbsp;</span>
-                                <span>‘esnes’ Perfume Launching site </span>
+                                <h3>
+                                    <div class="work-card__title flex">
+                                        <span>‘esnes’ Perfume Launching site&nbsp;</span>
+                                        <span>‘esnes’ Perfume Launching site&nbsp;</span>
+                                        <span>‘esnes’ Perfume Launching site </span>
+                                    </div>
+                                    <div class="work-card__title-desktop">
+                                    ‘esnes’ Perfume Launching site
+                                    </div>
                                 </h3>
                                 <video class="js-video" playsinline autoplay loop muted>
                                     <source src="../images/esnes-launching-project-preview.mp4" type="video/mp4">
@@ -86,10 +101,15 @@
                         <li class="work__card work__burgersquad">
                             <a href="<?php echo get_url("/projects/burgersquad-web-development-project.php"); ?>" class="work-card__subheading h6">Project 4</a>
                             <a class="work-card__content" href="<?php echo get_url("/projects/burgersquad-web-development-project.php"); ?>">
-                            <h3 class="work-card__title flex">
-                                <span>‘Burgersquad’ Responsive Web Design &nbsp;</span>
-                                <span>‘Burgersquad’ Responsive Web Design &nbsp;</span>
-                                <span>‘Burgersquad’ Responsive Web Design </span>
+                                <h3>
+                                    <div class="work-card__title flex">
+                                        <span>‘Burgersquad’ Responsive Web Design &nbsp;</span>
+                                        <span>‘Burgersquad’ Responsive Web Design &nbsp;</span>
+                                        <span>‘Burgersquad’ Responsive Web Design </span>
+                                    </div>
+                                    <div class="work-card__title-desktop">
+                                    ‘Burgersquad’ Responsive Web Design 
+                                    </div>
                                 </h3>
                                 <img src="../images/burger-squad-web-development-project.jpg" alt="Burgersquad web site image"></img>
                                 <div class="flex wrap">
@@ -207,11 +227,11 @@
             scrollTrigger: {
                 trigger: ".work__burgersquad",
                         toggleActions: "play pause reverse none",
-                        start:"10% top",
+                        start:"top top",
                         end: "100% bottom",
                         scrub: 3,
                         duration: 50,
-                        // markers: true
+                        markers: true
             },
             x: "50vw",
             rotation: 360,

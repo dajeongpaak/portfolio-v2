@@ -122,9 +122,6 @@ h3 {
 
 .home__strive {
     height: 90vh;
-    display: flex;
-    align-items: flex-end;
-    position: relative;
 }
 
 .desc__p span {
@@ -135,7 +132,6 @@ h3 {
 
 .desc__h2 {
     font-family: var(--sans-serif-2);
-    /* padding: .5rem 0; */
     font-weight: 300;
     display: block;
 }
@@ -146,8 +142,8 @@ h3 {
     transform: scale(0);
     border-radius: 50%;
     margin: 0 auto;
-    mix-blend-mode: difference;
     border: 1px solid var(--white);
+    mix-blend-mode: difference;
     position: absolute;
 }
 
@@ -197,12 +193,11 @@ h3 {
 }
 
 .home__projects {
-    border-top-left-radius: 2rem;
-    border-top-right-radius: 2rem;
+    border-top-left-radius: 3rem;
+    border-top-right-radius: 3rem;
+    border: 1px solid var(--black);
     background: #fff9ee;
     padding: 4rem 0;
-    border: 1px solid black;
-    border-bottom: unset;
 }
 
 .projects__cards ul {
@@ -238,20 +233,20 @@ h3 {
 
 @media screen and (min-width: 576px) {
 
-
-
     h3 {
-        font-size: 1.4rem;
+        font-size: 1.5rem;
     }
 
     .title {
         padding: 0 2rem;
     }
 
+    .home__strive {
+        margin-left: 2rem;
+    }
+
     .desc__p span {
         font-size: 1.6rem;
-        font-family: var(--sans-serif-2);
-        display: inline-block;
     }
 
     .drop-shadow {
@@ -259,28 +254,52 @@ h3 {
     }
 
     .desc__content {
-        margin-top: 5rem;
+        margin: 5rem 2rem;
     }
 
     .desc__logo img {
         width: 3.5rem;
     }
+
+    .desc__logo span {
+        font-size: 1rem;
+    }
 }
 
 @media screen and (min-width: 768px) {
 
+    h3 {
+        font-size: 1.8rem;
+    }
+
+    .desc__p span {
+        font-size: 2rem;
+    }
+
     .drop-shadow {
-        font-size: 4.5rem;
+        font-size: 6rem;
+    }
+
+    .desc__content {
+        margin: 8rem 2rem;
+    }
+
+    .desc__logo span {
+        font-size: 1.2rem;
     }
 
     .projects__cards ul {
         gap: 1rem;
     }
 
+    .cards {
+        margin: 2rem;
+    }
+
     .card {
         margin-bottom: unset;
         grid-column: span 6 / auto;
-        height: 48vmin;
+        padding: 10rem 0;
     }
 }
 

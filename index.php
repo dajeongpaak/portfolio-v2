@@ -19,7 +19,6 @@
             <div class="container">
                 <div class="home__content flex">
                     <h1 class="home__title flex">
-                          
                         <span class="z-index">
                             Front-
                         </span>
@@ -36,7 +35,7 @@
                         <span class="z-index">Designer</span>
                     </h1>
                 </div>
-                <div class="home__strive">
+                <div class="home__strive flex align-end">
                     <div class="desc__p">
                     <span>to design</span> 
                     <span>and</span> 
@@ -118,7 +117,7 @@
                         <h2 class="h4">Featured Projects</h2>
                     </div>
                     <div class="projects__cards col-12 z-index">
-                        <ul class="grid">
+                        <ul class="grid cards">
                             <li class="card">
                                 <div class="card__content flex">
                                     <div class="card__title">
