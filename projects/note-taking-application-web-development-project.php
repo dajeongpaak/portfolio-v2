@@ -15,7 +15,7 @@
     <?php require_once(get_path("/partials/global/header.php"));?>  
     <main>
     <section>
-        <div class="project__container-2"></div>
+        <div class="js-slidein"></div>
         <div class="project__container">
             <div class="container">
                 <div class="back__btn">
@@ -25,7 +25,7 @@
                 </div>
                 <div class="grid project__overview">
                
-                <div class="col-12 title">
+                <div class="col-12 project__title title">
                     <h2 class="h6">Note-taking Application</h2>
                 </div>
                 <div class="col-12">
@@ -72,9 +72,9 @@
                         PROCESS
                         </div>
                     </div>
-                    <div class="col-12">
-                        <h3 class="h4">1.Planning & Design</h3>
-                        <img src="<?php echo get_url('/images/note-taking-design.png');?>" alt="note-taking application design image">
+                    <div class="col-12 grid">
+                        <h3 class="h4 col-12">1.Planning & Design</h3>
+                        <img class="project__image" src="<?php echo get_url('/images/note-taking-design.png');?>" alt="note-taking application design image">
                     </div>
                     <div class="col-12">
                         <p>To gain practical experience in JavaScript, I plan to build a 
@@ -82,9 +82,9 @@
                         <p>I have identified several JavaScript concepts to incorporate into the project, such as creating and modifying the DOM for the user interface, handling mouse events, using local storage, working with loops, and utilizing array methods. </p><br>
                         <p>I then moved on to the design phase where I created a wireframe in Figma to aid in the coding process, providing a visual blueprint and making use of Figma's inspector feature for improved efficiency.</p><br><br>
                     </div>
-                    <div class="col-12">
-                        <h3 class="h4">2.Coding</h3>
-                        <img src="<?php echo get_url('/images/note-taking-code.png');?>" alt="note-taking application code image">
+                    <div class="col-12 grid">
+                        <h3 class="col-12 h4">2.Coding</h3>
+                        <img class="project__image" src="<?php echo get_url('/images/note-taking-code.png');?>" alt="note-taking application code image">
                     </div>
                     <div class="col-12">
                         <p>In the code, I established the interface of the application by dividing it into two parts: one for displaying notes and the other for inputting notes. </p><br>
@@ -103,9 +103,15 @@
             </div>
         </div>
         <div class="project__symmetry">
-            <div class="grid">
-                <div class="col-12 title">
-                    <h4>Next Up</h4>
+            <div class="container">
+                <div class="grid">
+                    <div class="col-12 title">
+                        <h4>Next Up</h4>
+                    </div>
+                    <div class="project__image">
+                    <p class="text-center">‘SYMMETRY’ Photo Gallery</p>
+                    <img src="<?php echo get_url("images/gallery.jpeg")?>" alt="‘SYMMETRY’ Photo Gallery thumbnail">
+                    </div>
                 </div>
             </div>
         </div>
@@ -118,11 +124,18 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/ScrollToPlugin.min.js"></script>
     <script>
         const backBtn = document.querySelector(".back__btn");
+        let slideIn = document.querySelector('.js-slidein');
 
         backBtn.addEventListener('click', () => {
             window.history.back();
         })
         
+        
+        gsap.to( slideIn , {
+            height: 0,
+            ease: "expo",
+            duration: 1.5,
+        })
     </script>
 </body>
 

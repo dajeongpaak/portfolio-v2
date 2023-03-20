@@ -76,7 +76,7 @@ h5,
 
 h6,
 .h6 {
-    font-size: 1.2rem
+    font-size: 1rem
 }
 
 p,
@@ -228,6 +228,10 @@ section {
 
 .text-right {
     text-align: right;
+}
+
+.text-center {
+    text-align: center;
 }
 
 /* Header */
@@ -641,7 +645,7 @@ section {
 
     h6,
     .h6 {
-        font-size: 1.2rem
+        font-size: 1.5rem
     }
 
     p,
@@ -693,8 +697,8 @@ section {
     }
 
     .button-sm {
-        width: 4.5rem;
-        height: 4.5rem;
+        width: 4rem;
+        height: 4rem;
     }
 
     .button-sm i {
