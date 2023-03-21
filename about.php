@@ -393,7 +393,7 @@
         var logoChange = document.querySelector('#logoOrange');
         var logoBlack = document.querySelectorAll('.st2');
         var logoWhite = document.querySelector('#logoWhite');
-        var navColor = document.querySelector(".main-nav");
+        var navColor = document.querySelector(".main-nav--mobile");
         var skillsRect = skills.getBoundingClientRect();
 
         if (skillsRect.top <= window.innerHeight && skillsRect.bottom >= 0) {

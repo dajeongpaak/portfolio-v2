@@ -1,7 +1,7 @@
 <header class="header">  
-   <div class="grid">
+   <div class="grid menu--mobile">
         <nav class="col-12">
-            <ul id="js-navBar" class="main-nav flex">
+            <ul id="js-navBar" class="main-nav--mobile flex">
                 <li>
                     <div id="js-menu-open" class="menu__hamburger">
                         <span class="hamburger"></span>
@@ -71,5 +71,22 @@
                 </li>
             </ul>
         </div>
+    </div>
+    <div class="menu--desktop">
+        <nav class="main-nav--desktop">
+            <ul class="flex justify-between align-center h4">
+                <li>
+                    <a href="<?php echo get_url("about.php")?>">About</a>
+                </li>
+                <li>
+                <a class="desktop__menu-logo"href=<?php echo get_url("index.php");?>>
+                Home
+                </a>
+                </li>
+                <li>
+                    <a href="<?php echo get_url("projects/project-index.php")?>">Work</a>
+                </li>
+            </ul>
+        </nav>
     </div>
 </header>

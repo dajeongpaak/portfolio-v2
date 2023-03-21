@@ -83,6 +83,7 @@ main {
     background-position: center;
     background-repeat: no-repeat;
     height: 3rem;
+    mix-blend-mode: difference;
 }
 
 #skills-gap {

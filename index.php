@@ -13,7 +13,6 @@
 
 <body>
     <?php require_once(get_path("partials/global/header.php"));?>
-
     <main id="main">
         <section class="home__main">
             <div class="container">
@@ -69,9 +68,8 @@
                         <span class="h6">Click me!</span>
                     </div>
             </div>
-         
         </section>
-        <section class="home__projects mt-6">
+        <section class="home__projects-mobile mt-6">
             <div class="container">
                 <div class="grid">
                     <div class="col-12 title">
@@ -83,7 +81,7 @@
                                 <div class="card__content flex">
                                     <div class="card__title">
                                         <a href="<?php echo get_url("/projects/note-taking-application-web-development-project.php"); ?>">
-                                            <h3>Note-taking Web Application</h3>
+                                            <h3 class="h5">Note-taking Web Application</h3>
                                         </a>
                                     </div>
                                     <div class="card__btn">
@@ -97,7 +95,7 @@
                                 <div class="card__content flex">
                                     <div class="card__title">
                                         <a href="symmetry.html">
-                                            <h3>‘SYMMETRY’ Photo Gallery</h3>
+                                            <h3 class="h5">‘SYMMETRY’ Photo Gallery</h3>
                                         </a>
                                     </div>
                                     <div class="card__btn">
@@ -111,7 +109,7 @@
                                 <div class="card__content flex">
                                     <div class="card__title">
                                         <a href="esnes.html">
-                                            <h3>‘esnes’ Perfume
+                                            <h3 class="h5">‘esnes’ Perfume
                                                 Launching site</h3>
                                         </a>
                                     </div>
@@ -126,7 +124,7 @@
                                 <div class="card__content flex">
                                     <div class="card__title">
                                         <a href="burgersquad.html">
-                                            <h3>‘Burger Squad’ Responsive Web design </h3>
+                                            <h3 class="h5">‘Burger Squad’ Responsive Web design </h3>
                                         </a>
                                     </div>
                                     <div class="card__btn">
