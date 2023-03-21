@@ -42,10 +42,10 @@
                     </div>   
                     <h2 class="desc__h2">
                         I<br>
-                        STRIVE<br>
-                        TO MAKE<br>
-                        THE WEB<br>
-                        A PLACE OF<br>
+                        Strive<br>
+                        To Make<br>
+                        the Web<br>
+                        a Place of<br>
                     </h2>
                 </div>
                 <div class="home__wonder h-100 flex flex-column justify-evenly">
