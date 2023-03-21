@@ -23,7 +23,7 @@
                             Front-
                         </span>
                         <span class="z-index">end
-                        </span><br>
+                        </span>
                         <span class="z-index">Developer</span>
                         <span class="z-index">
                         <span>&</span><br>
@@ -207,8 +207,7 @@
             let xRandomPos = gsap.utils.random(-xPos, xPos);
             let yRandomPos = gsap.utils.random(-yPos, yPos);
             let rRandom = gsap.utils.random(-30 , 30);
-
-            console.log(xPos, yPos )
+            
             tl.to(item, {
                 scrollTrigger: {
                     trigger: ".home__wonder",
@@ -231,7 +230,7 @@
             scrollTrigger: {
                 trigger: ".home__wonder",
                 toggleActions: "restart pause reverse none",
-                markers: true,
+                // markers: true,
                 start: 'top 20%',
                 end: 'center bottom',
                 scrub: 1,
