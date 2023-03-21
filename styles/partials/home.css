@@ -16,99 +16,14 @@
     padding: 0 .9rem;
 }
 
-h3 {
+/* h3 {
     font-family: var(--sans-serif-2);
-}
+} */
 
-.p {
-    line-height: unset;
-    font-size: 4.5vmin;
-}
-
-.symbol {
-    right: 0;
-    color: var(--white);
-    font-size: 9vmin;
-    width: 17.5vmin;
-    height: 17.5vmin;
-    background: black;
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-    z-index: 2;
-    transform-style: preserve-3d;
-    animation: spin 5s linear infinite;
-    border: 1px solid white;
-}
-
-.symbol::before {
-    background: black;
-    position: absolute;
-    border-radius: 50%;
-    content: '</>';
-    height: 17.2vmin;
-    width: 17.2vmin;
-    transform: translateZ(-3.7vmin);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border: 1px solid white;
-    /* mix-blend-mode: difference; */
-}
-
-
-.symbol::after {
-    background: white;
-    content: '';
-    left: 30%;
-    position: absolute;
-    height: 18vmin;
-    width: 3.7vmin;
-    transform: rotateY(-90deg);
-    transform-origin: 100% 50%;
-}
-
-.symbol-inner {
-    background: white;
-    position: absolute;
-    border-radius: 50%;
-    content: '';
-    height: 18vmin;
-    width: 18vmin;
-    transform: translateZ(-3.65vmin);
-}
-
-.symbol-inner-2 {
-    background: white;
-    position: absolute;
-    border-radius: 50%;
-    content: '';
-    height: 18vmin;
-    width: 18vmin;
-    transform: translateZ(-0.1vmin);
-}
-
-@keyframes spin {
-    0% {
-        transform: rotateY(0deg);
-    }
-
-    100% {
-        transform: rotateY(360deg);
-    }
-}
-
-
-.home__content {
+.home__title {
     align-items: center;
     justify-content: center;
     height: 100vh;
-}
-
-.home__title {
-    flex-direction: column;
 }
 
 .home__title span {
@@ -116,29 +31,25 @@ h3 {
     color: white;
 }
 
-.home__desc {
-    margin: 4rem 0;
-}
-
 .home__strive {
-    height: 90vh;
+    margin-left: 1rem;
 }
 
-.desc__p span {
-    font-size: 1.5rem;
+.desc__p {
+    font-size: 1.3rem;
     font-family: var(--sans-serif-2);
-    display: inline-block;
 }
 
 .desc__h2 {
+    font-size: 1.6rem;
     font-family: var(--sans-serif-2);
     font-weight: 300;
-    display: block;
 }
 
-.desc__circle {
+.wonder__circle {
     width: 90vmin;
     height: 90vmin;
+    background: var(--neon-green-invert);
     transform: scale(0);
     border-radius: 50%;
     margin: 0 auto;
@@ -147,54 +58,34 @@ h3 {
     position: absolute;
 }
 
-
-.desc__circle-text span {
-
-    white-space: nowrap;
-    animation: textAnim 25s infinite linear;
-    padding: 0 1rem;
-    transform: translateX(-300%);
-}
-
-@keyframes textAnim {
-    100% {
-        transform: translateX(-400%);
-    }
-}
-
-.desc__content {
-    margin-top: 4rem;
-}
-
-.desc__logo {
-    margin-top: 3rem;
-}
-
-.desc__logo img {
+.home__color img {
     width: 3rem;
 }
 
-.desc__logo span {
+.home__color span {
     font-size: 0.8rem;
     min-width: 5rem;
     padding-top: .5rem;
 }
 
-.drop-shadow {
+.wonder__circle-text {
     text-align: center;
     text-shadow: 2px -1px white;
     font-weight: 800;
     mix-blend-mode: difference;
     color: var(--orange-invert);
-    margin-right: 2rem;
-    font-size: 3.5rem;
+    font-size: 2.5rem;
     position: relative;
     z-index: 1;
 }
 
+.wonder__circle-text span {
+    display: inline-block;
+}
+
 .home__projects {
-    border-top-left-radius: 3rem;
-    border-top-right-radius: 3rem;
+    border-top-left-radius: 2rem;
+    border-top-right-radius: 2rem;
     border: 1px solid var(--black);
     border-bottom: unset;
     background: #fff9ee;
@@ -246,17 +137,17 @@ h3 {
         margin-left: 2rem;
     }
 
-    .desc__p span {
+    .desc__p {
         font-size: 1.6rem;
     }
 
-    .drop-shadow {
+    .wonder__circle-text {
         font-size: 4.5rem;
     }
 
-    .desc__content {
+    /* .desc__content {
         margin: 5rem 2rem;
-    }
+    } */
 
     .desc__logo img {
         width: 3.5rem;
@@ -267,23 +158,30 @@ h3 {
     }
 }
 
+@media screen and (max-height: 600px) {
+    .wonder__circle-text {
+        font-size: 2.3rem;
+    }
+
+}
+
 @media screen and (min-width: 768px) {
 
     h3 {
         font-size: 1.8rem;
     }
 
-    .desc__p span {
+    .desc__p {
         font-size: 2rem;
     }
 
-    .drop-shadow {
+    .wonder__circle-text {
         font-size: 6rem;
     }
 
-    .desc__content {
+    /* .desc__content {
         margin: 8rem 2rem;
-    }
+    } */
 
     .desc__logo span {
         font-size: 1.2rem;
@@ -309,7 +207,13 @@ h3 {
         overflow: visible;
     }
 
-    .drop-shadow {
+    .wonder__circle {
+        width: 60vmin;
+        height: 60vmin;
+    }
+
+
+    .wonder__circle-text {
         font-size: 4.5rem;
     }
 

@@ -17,103 +17,70 @@
     <main id="main">
         <section class="home__main">
             <div class="container">
-                <div class="home__content flex">
-                    <h1 class="home__title flex">
+                <div class="home__title flex">
+                    <h1 class="flex flex-column">
                         <span class="z-index">
                             Front-
                         </span>
                         <span class="z-index">end
-                        </span>
+                        </span><br>
                         <span class="z-index">Developer</span>
                         <span class="z-index">
-                        <div class="symbol">
-                            &
-                            <div class="symbol-inner"></div>
-                            <div class="symbol-inner-2"></div>
-                        </div>
-                        </span>
+                        <span>&</span><br>
                         <span class="z-index">Designer</span>
                     </h1>
                 </div>
-                <div class="home__strive flex align-end">
+                <div class="home__desc flex flex-column">
                     <div class="desc__p">
-                    <span>to design</span> 
-                    <span>and</span> 
-                    <span>develop</span><br>
-                    <span>immersive</span><br>
-                    <span>web</span> 
-                    <span>experiences</span><br> 
-                    <span>that fully</span> 
-                    <span>engage</span> 
-                    <span>users,</span><br>
-                    <span>creating</span> 
-                    <span>an </span>
-                    <span>emotional</span> 
-                    <span>connection</span><br> 
-                    <span>with the</span> 
-                    <span>digital</span> 
-                    <span>environment</span><br><br>
-                    <span>I </span> 
-                    <span> STRIVE</span> 
-                    <span>TO MAKE</span><br>
-                    <span>THE WEB</span><br>
-                    <span>A PLACE OF</span>
+                        to design and develop<br>
+                        immersive<br>
+                        web experience<br>
+                        that fully engage users,<br>
+                        creating<br>
+                        an emotional connection<br>
+                        with the digital environment<br><br>
+                    </div>   
+                    <h2 class="desc__h2">
+                        I<br>
+                        STRIVE<br>
+                        TO MAKE<br>
+                        THE WEB<br>
+                        A PLACE OF<br>
+                    </h2>
+                </div>
+                <div class="home__wonder h-100 flex flex-column justify-evenly">
+                    <div class="flex justify-center align-center">
+                        <div id="js-circle-animation" class="wonder__circle z-index"></div>     
+                        <div id="js-text-animation" class="wonder__circle-text z-index h2">
+                                <span>W</span><span>o</span><span>n</span><span>d</span><span>e</span><span>r</span><br> 
+                                <span>a</span><span>n</span><span>d</span><br> 
+                                <span>E</span><span>x</span><span>c</span><span>i</span><span>t</span><span>e</span><span>m</span><span>e</span><span>n</span><span>t</span><span>!</span>
+                        </div>            
+                    </div>
+                    <div class="wonder__content">
+                        <h3 class="desc__h2 flex flex-column">
+                            <div class="flex justify-between desc__h2">
+                                through
+                                <span class="text-right">Creativity,
+                                </span>
+                            </div>
+                            <span class="text-right">Technology,</span><br> 
+                            <span class="text-right">and Lifelong learning.</span>
+                        </h3>
                     </div>
                 </div>
-                <div class="home__desc">
-                    <div class="desc__anim flex justify-center align-center">
-                        <div class="desc__circle z-index"></div>     
-                        <div class="desc__circle-text flex">
-                                <span class="drop-shadow z-index">Wonder <br>and<br>
-                                    excitement!
-                                </span>
-                                <span class="drop-shadow z-index">Wonder <br>and<br>
-                                    excitement!
-                                </span>
-                                <span class="drop-shadow z-index">Wonder <br>and<br>
-                                    excitement!
-                                </span>
-                                <span class="drop-shadow z-index">Wonder <br>and<br>
-                                    excitement!
-                                </span> 
-                                <span class="drop-shadow z-index">Wonder <br>and<br>
-                                    excitement!
-                                </span> 
-                                <span class="drop-shadow z-index">Wonder <br>and<br>
-                                    excitement!
-                                </span> 
-                                <span class="drop-shadow z-index">Wonder <br>and<br>
-                                    excitement!
-                                </span> 
-                                <span class="drop-shadow z-index">Wonder <br>and<br>
-                                    excitement!
-                                </span> 
-                        </div>                  
-                    </div>
-                    <div class="desc__content">
-                        <h2>
-                            <div class="flex justify-between"><span class="desc__h2">through</span>
-                            <span class="desc__h2 text-right">Creativity,
-                            </span></div>
-                            
-                            <span class="desc__h2 text-right">Technology,</span> 
-                            <span class="desc__h2 text-right">and Lifelong learning.</span>
-                        </h2>
-                        <div id="js-color-change" class="desc__logo flex flex-column align-center z-index">
+                <div id="js-color-change" class="home__color flex flex-column align-center z-index">
                         <p id="js-text-change">(don't like the color?)</p>
                         <img src="<?php echo get_url("images/sad-logo.svg")?>" alt="pdj sad face logo">
-                        <span>Click me!</span>
-                        </div>
+                        <span class="h6">Click me!</span>
                     </div>
-                </div>
-           
             </div>
          
         </section>
-        <section class="home__projects">
+        <section class="home__projects mt-6">
             <div class="container">
                 <div class="grid">
-                    <div class="col-12  title">
+                    <div class="col-12 title">
                         <h2 class="h4">Featured Projects</h2>
                     </div>
                     <div class="projects__cards col-12 z-index">
@@ -122,7 +89,7 @@
                                 <div class="card__content flex">
                                     <div class="card__title">
                                         <a href="<?php echo get_url("/projects/note-taking-application-web-development-project.php"); ?>">
-                                            <h3 class="">Note-taking Web Application</h3>
+                                            <h3>Note-taking Web Application</h3>
                                         </a>
                                     </div>
                                     <div class="card__btn">
@@ -195,12 +162,9 @@
     <script>
         gsap.registerPlugin(ScrollTrigger);
 
-        const descCard = document.querySelector('.desc__circle');
-        const textShadows = document.querySelectorAll('.drop-shadow');
+        const circle = document.querySelector('#js-circle-animation');
         const sadLogo = document.querySelector('#js-color-change');
         const tl = gsap.timeline({paused: false});
-
-        randomBGcolor();
 
         sadLogo.addEventListener('click', () => {
            
@@ -218,6 +182,7 @@
 
             let clickMe = document.createElement('span');
             clickMe.innerText = 'Click me!';
+            clickMe.className = 'h6';
             sadLogo.appendChild(clickMe);
         });
 
@@ -228,26 +193,28 @@
             let z = Math.floor(Math.random() * 256);
             let bgColor = "rgb(" + x  + ", " + y + ", " + z + ")";
 
-            descCard.style.background = bgColor;
+            circle.style.background = bgColor;
         } 
         
      
       
-        let pieceContainer = document.querySelector(".home__strive");
-        let xPos = pieceContainer.offsetWidth / 2;
-        let yPos = pieceContainer.offsetHeight / 2;
-        let pieces = gsap.utils.toArray(".home__strive span");
+        let pieceContainer = document.querySelector("#js-text-animation");
+        let xPos = window.innerWidth / 2;
+        let yPos = window.innerHeight / 2;
+        let pieces = gsap.utils.toArray("#js-text-animation span");
       
         pieces.forEach( item => {
-            let xRandomPos = gsap.utils.random(-xPos/2, xPos);
-            let yRandomPos = gsap.utils.random(-yPos , yPos/2);
+            let xRandomPos = gsap.utils.random(-xPos, xPos);
+            let yRandomPos = gsap.utils.random(-yPos, yPos);
             let rRandom = gsap.utils.random(-30 , 30);
+
+            console.log(xPos, yPos )
             tl.to(item, {
                 scrollTrigger: {
-                    trigger: ".home__strive",
+                    trigger: ".home__wonder",
                     toggleActions: "restart pause reverse none",
-                    start: "25% top",
-                    end: "bottom bottom",
+                    start: "top 20%",
+                    end: "center bottom",
                     scrub: 1,
                     
                 },
@@ -260,18 +227,18 @@
             })
         })
 
-        tl.to('.desc__circle', {
+        tl.to( circle, {
             scrollTrigger: {
-                trigger: ".home__desc",
+                trigger: ".home__wonder",
                 toggleActions: "restart pause reverse none",
-                // markers: true,
-                start: '-90% top',
+                markers: true,
+                start: 'top 20%',
                 end: 'center bottom',
                 scrub: 1,
             },
             ease: "expo",
             scale: 1,
-            duration: 0.5,
+            duration: 0.3,
         })
 
 

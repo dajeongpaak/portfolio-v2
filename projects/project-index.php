@@ -32,9 +32,11 @@
                                     Note-taking Web Application
                                     </div>
                                 </h3>
-                                <video class="js-video" playsinline autoplay loop muted>
+                                <div class="project__media">
+                                    <video class="js-video" playsinline autoplay loop muted>
                                     <source src="../images/note-taking-app-preview.mp4" type="video/mp4">
-                                </video>
+                                    </video>
+                                </div>
                                 <div class="flex wrap">
                                     <div class="button h4">
                                         Web Development
@@ -58,9 +60,12 @@
                                     ‘SYMMETRY’ Photo Gallery
                                     </div>
                                 </h3>
-                                <video class="js-video" playsinline autoplay loop muted>
+                                <div class="project__media">
+                                    <video class="js-video" playsinline autoplay loop muted>
                                     <source src="../images/symmetry-photo-gallery-preview.mp4" type="video/mp4">
                                 </video>
+                                </div>
+                                
                                 <div class="flex wrap">
                                     <div class="button h4">
                                         Web Development
@@ -84,9 +89,11 @@
                                     ‘esnes’ Perfume Launching site
                                     </div>
                                 </h3>
-                                <video class="js-video" playsinline autoplay loop muted>
-                                    <source src="../images/esnes-launching-project-preview.mp4" type="video/mp4">
-                                </video>
+                                <div class="project__media">
+                                    <video class="js-video" playsinline autoplay loop muted>
+                                        <source src="../images/esnes-launching-project-preview.mp4" type="video/mp4">
+                                    </video>
+                                </div>
                                 <div class="flex wrap">
                                     <div class="button h4">
                                     Web Development
@@ -111,7 +118,9 @@
                                     ‘Burgersquad’ Responsive Web Design 
                                     </div>
                                 </h3>
-                                <img src="../images/burger-squad-web-development-project.jpg" alt="Burgersquad web site image"></img>
+                                <div class="project__media">
+                                    <img src="../images/burger-squad-web-development-project.jpg" alt="Burgersquad web site image"></img>
+                                </div>
                                 <div class="flex wrap">
                                     <div class="button h4">
                                         Web Development

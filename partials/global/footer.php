@@ -4,17 +4,17 @@
         <div class="footer__content col-12">
             <ul>
                 <li>
-                    <span>
+                    <span class="h6">
                         <a href="https://www.linkedin.com/in/dajeong-park-4956bb255/">Linkedin</a>
                     </span>
                 </li>
                 <li>
-                    <span>
+                    <span class="h6">
                         <a href="tel:2368692819">236-869-2819</a>
                     </span>
                 </li>
                 <li>
-                    <span>
+                    <span class="h6">
                         <a href="mailto:dajeong2019@gmail.com">dajeong2019@gmail.com</a>
                     </span>
                 </li>

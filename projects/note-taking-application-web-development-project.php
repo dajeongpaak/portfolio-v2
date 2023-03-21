@@ -109,7 +109,7 @@
                         <h4>Next Up</h4>
                     </div>
                     <div class="project__image">
-                    <p class="text-center">‘SYMMETRY’ Photo Gallery</p>
+                    <h5 class="text-center">‘SYMMETRY’ Photo Gallery</h5>
                     <img src="<?php echo get_url("images/gallery.jpeg")?>" alt="‘SYMMETRY’ Photo Gallery thumbnail">
                     </div>
                 </div>
