@@ -64,7 +64,7 @@
                                 <span class="text-right">Creativity,
                                 </span>
                             </div>
-                            <span class="text-right">Technology,</span><br> 
+                            <span class="text-right">Technology,</span>
                             <span class="text-right">and Lifelong learning.</span>
                         </h3>
                     </div>
@@ -207,7 +207,7 @@
             let xRandomPos = gsap.utils.random(-xPos, xPos);
             let yRandomPos = gsap.utils.random(-yPos, yPos);
             let rRandom = gsap.utils.random(-30 , 30);
-            
+
             tl.to(item, {
                 scrollTrigger: {
                     trigger: ".home__wonder",
