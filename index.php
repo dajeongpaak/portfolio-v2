@@ -41,11 +41,8 @@
                         with the digital environment<br><br>
                     </div>   
                     <h2 class="desc__h2">
-                        I<br>
-                        Strive<br>
-                        To Make<br>
-                        the Web<br>
-                        a Place of<br>
+                        I strive to make<br>
+                        the web a place of<br>
                     </h2>
                 </div>
                 <div class="home__wonder h-100 flex flex-column justify-evenly">
@@ -59,13 +56,10 @@
                     </div>
                     <div class="wonder__content">
                         <h3 class="desc__h2 flex flex-column">
-                            <div class="flex justify-between desc__h2">
-                                through
-                                <span class="text-right">Creativity,
-                                </span>
-                            </div>
-                            <span class="text-right">Technology,</span>
-                            <span class="text-right">and Lifelong learning.</span>
+                                through<br><br>
+                                Creativity,<br>
+                                Technology,<br>
+                                and Lifelong learning.
                         </h3>
                     </div>
                 </div>
