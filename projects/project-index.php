@@ -37,7 +37,7 @@
                                     <source src="../images/note-taking-app-preview.mp4" type="video/mp4">
                                     </video>
                                 </div>
-                                <div class="flex wrap">
+                                <div class="flex flex-wrap">
                                     <div class="button h4">
                                         Web Development
                                     </div>
@@ -66,7 +66,7 @@
                                 </video>
                                 </div>
                                 
-                                <div class="flex wrap">
+                                <div class="flex flex-wrap">
                                     <div class="button h4">
                                         Web Development
                                     </div>
@@ -94,7 +94,7 @@
                                         <source src="../images/esnes-launching-project-preview.mp4" type="video/mp4">
                                     </video>
                                 </div>
-                                <div class="flex wrap">
+                                <div class="flex flex-wrap">
                                     <div class="button h4">
                                     Web Development
                                     </div>
@@ -121,7 +121,7 @@
                                 <div class="project__media">
                                     <img src="../images/burger-squad-web-development-project.jpg" alt="Burgersquad web site image"></img>
                                 </div>
-                                <div class="flex wrap">
+                                <div class="flex flex-wrap">
                                     <div class="button h4">
                                         Web Development
                                     </div>

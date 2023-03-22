@@ -68,11 +68,11 @@
     transition: visibility, position 0.1s, background-color 0.4s;
     -moz-transition: visibility, position 0.1s, background-color 0.4s;
     -webkit-transition: visibility, position 0.1s, background-color 0.4s;
-    top: 1rem;
+    top: 1.1rem;
 }
 
 .hamburger:last-child {
-    top: 1.5rem;
+    top: 1.7rem;
 }
 
 .active.hamburger {
@@ -161,7 +161,8 @@
 }
 
 #js-navBar--mobile,
-#js-navBar--desktop {
+#js-navBar--desktop,
+#js-backBtn {
     transition: all 0.4s ease-in-out;
     -moz-transition: all 0.4s ease-in-out;
     -webkit-transition: all 0.4s ease-in-out;
@@ -189,6 +190,23 @@
 .menu--desktop {
     display: none;
 }
+
+@media screen and (min-width:576px) {
+    .main-nav__list {
+        top: 29%;
+        left: 45%;
+    }
+}
+
+@media screen and (min-width:768px) {
+    .main-nav__list {
+        top: 29%;
+        left: 45%;
+        font-size: 3rem;
+    }
+
+}
+
 
 @media screen and (min-width: 1024px) {
     .menu--mobile {

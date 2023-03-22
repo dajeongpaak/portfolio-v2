@@ -44,7 +44,7 @@
                         the web a place of<br>
                     </h2>
                 </div>
-                <div class="home__wonder h-100 flex flex-column justify-evenly">
+                <div class="home__wonder h-100 flex flex-column justify-between">
                     <div class="flex justify-center align-center">
                         <div id="js-circle-animation" class="wonder__circle z-index"></div>     
                         <div id="js-text-animation" class="wonder__circle-text z-index h2">
@@ -54,23 +54,23 @@
                         </div>            
                     </div>
                     <div class="wonder__content">
-                        <h3 class="desc__h2 flex flex-column">
-                                through<br><br>
+                        <h3 class="desc__h2">
+                                through<br>
                                 Creativity,<br>
                                 Technology,<br>
                                 and Lifelong learning.
                         </h3>
-                        <div id="js-color-change" class="home__color flex flex-column align-center z-index">
-                        <p id="js-text-change">(don't like the color?)</p>
-                        <img src="<?php echo get_url("images/sad-logo.svg")?>" alt="pdj sad face logo">
-                        <span class="h6">Click me!</span>
-                    </div>
+                        <div id="js-color-change" class="home__color text-center mt-3 z-index">
+                            <p id="js-text-change">(don't like the color?)</p>
+                            <img src="<?php echo get_url("images/sad-logo.svg")?>" alt="pdj sad face logo">
+                            <p class="h6">Click me!</p>
+                        </div>
                     </div>
                 </div>
                
             </div>
         </section>
-        <section class="home__projects-mobile">
+        <section class="home__projects--mobile">
             <div class="container">
                 <div class="grid">
                     <div class="col-12 title">
@@ -140,12 +140,26 @@
                 </div>
             </div>
         </section>
+        <section class="home__projects--desktop">
+            <div class="drag-n-drop">
+            <div class="drag-item-container">
+                <div id="dragNote" class="note-drag-n-drop drag-item" draggable="true"></div>
+            </div>
+            <div class="drag-item-container">
+                <div id="dragGallery" class="gallery-drag-n-drop drag-item" draggable="true"></div>
+            </div>
+            <div class="drop-spot">
+                Drag & Drop Here!
+            </div>
+    </div>
+        </section>
         <div id="matter-container--home" class="matter-container--home"></div>
     </main>
 
     <?php require_once(get_path("/partials/global/footer.php"))?>
     
     <?php require_once(get_path("/partials/global/js-global.php"))?>
+    <?php require_once(get_path("/partials/home/js-home-drag-n-drop.php"))?>
     <!-- <script src="scripts/main.js"></script> -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/matter-js/0.19.0/matter.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
@@ -173,7 +187,7 @@
             logo.alt = "pdj happy face logo";
             sadLogo.appendChild(logo);
 
-            let clickMe = document.createElement('span');
+            let clickMe = document.createElement('p');
             clickMe.innerText = 'Click me!';
             clickMe.className = 'h6';
             sadLogo.appendChild(clickMe);
@@ -204,7 +218,7 @@
                 scrollTrigger: {
                     trigger: ".home__wonder",
                     toggleActions: "restart pause reverse none",
-                    start: "top 20%",
+                    start: "top 40%",
                     end: "center bottom",
                     scrub: 1,
                     
@@ -223,7 +237,7 @@
                 trigger: ".home__wonder",
                 toggleActions: "restart pause reverse none",
                 // markers: true,
-                start: 'top 20%',
+                start: 'top 40%',
                 end: 'center bottom',
                 scrub: 1,
             },
@@ -310,7 +324,6 @@
                 fillStyle:'rgba(255,255,255,1)'
             }});
 
-            console.log(matterContainer.clientHeight)
         var roof = Bodies.rectangle( 0, 0, 34234, 1, {   isStatic: true,
             render: {
                 fillStyle: 'rgba(0,0,0,0)'}});

@@ -18,46 +18,45 @@
         <div class="js-slidein"></div>
         <div class="project__container">
             <div class="container">
-                <div class="back__btn">
+                <div id="js-backBtn" class="back__btn">
                     <div class="button-sm">
                         <i class="fa-solid fa-arrow-right-long"></i>
                 </div>
                 </div>
                 <div class="grid project__overview">
-               
                 <div class="col-12 project__title title">
                     <h2 class="h6">Note-taking Application</h2>
                 </div>
-                <div class="col-12">
+                <div class="col-12 project__video">
                     <video class="js-video" playsinline autoplay loop muted>
                         <source src="../images/note-taking-app-preview.mp4" type="video/mp4">
                     </video>
                 </div>
-                <div class="col-4">
+                <div class="col-4 col-2-lg">
                     <div class="title title-sm">
                     ROLE
                     </div>
                 </div>
-                <div class="col-8 align-center">
+                <div class="col-8 col-4-lg align-center">
                     <p>Web developer / designer</p>
                 </div>
-                <div class="col-4">
+                <div class="col-4 col-2-lg">
                     <div class="title title-sm">
                     TIMELINE
                     </div>
                 </div>
-                <div class="col-8 align-center">
+                <div class="col-8 col-4-lg align-center">
                     <p>Feb 3 - 5, 2023</p>
                 </div>
-                <div class="col-4 align-center">
+                <div class="col-4 col-2-lg align-center">
                     <div class="title title-sm">
                     TOOLS
                     </div>
                 </div>
-                <div class="col-8 align-center">
+                <div class="col-8 col-4-lg align-center">
                     <p>HTML, CSS, JavaScript, Figma</p>
                 </div>
-                <div class="col-4 align-center">
+                <div class="col-4 col-1-12-lg align-center">
                     <div class="title title-sm">
                     OVERVIEW
                     </div>
@@ -65,7 +64,18 @@
                 <div class="col-12">
                     <p>The goal was to create a functional note-taking app to gain hands-on experience in building a practical application from scratch, improving my understanding of JavaScript syntax and JavaScript concepts as well as reinforcing best practices in coding.</p>
                 </div>
+                <div class="col-12">
+                    <div class="flex flex-grow justify-evenly">
+                        <a href="#">
+                            <div class="project__cta button h6">Launch Site</div>
+                        </a>
+                        <a href="#">
+                            <div class="project__cta button h6">View Code</div>
+                        </a>
+                    </div>
                 </div>
+                </div>
+                
                 <div class="grid project__process">
                     <div class="col-4 align-center">
                         <div class="title title-sm">
@@ -109,8 +119,10 @@
                         <h4>Next Up</h4>
                     </div>
                     <div class="project__image">
-                    <h5 class="text-center">‘SYMMETRY’ Photo Gallery</h5>
-                    <img src="<?php echo get_url("images/gallery.jpeg")?>" alt="‘SYMMETRY’ Photo Gallery thumbnail">
+                    <a class="work-card__content" href="<?php echo get_url("/projects/symmetry-photo-gallery-web-development-project.php"); ?>" >
+                        <h5 class="h2 text-center">‘SYMMETRY’ Photo Gallery</h5>
+                        <img src="<?php echo get_url("images/gallery.jpeg")?>" alt="‘SYMMETRY’ Photo Gallery thumbnail">
+                    </a>
                     </div>
                 </div>
             </div>

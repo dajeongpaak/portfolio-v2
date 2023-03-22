@@ -1,19 +1,29 @@
 /* Note-taking Web Application Project */
 
 .project__container {
-    padding-top: 7rem;
+    /* padding-top: 7rem; */
     max-width: 80rem;
     margin: 1rem auto;
     border: 1px solid var(--black);
     border-radius: 2rem;
     background-color: #efefef;
-
+    margin-top: 6rem;
 }
-
 
 .project__overview {
     border-bottom: 1px solid #7d7d7d;
-    padding-bottom: 2rem;
+    padding: 2rem 0;
+}
+
+.project__cta {
+    font-family: var(--sans-serif-1);
+    height: unset;
+    width: unset;
+    padding: 1.5rem;
+    margin: 2rem auto;
+    box-shadow: 1px 3px 0px 0px #000;
+    border-radius: 18rem;
+    border: black 1px solid;
 }
 
 .project__image {
@@ -26,11 +36,6 @@
 
 .js-slidein {
     height: 100vh;
-}
-
-
-.container {
-    margin: 0 auto;
 }
 
 .back__btn {
@@ -65,7 +70,7 @@ video {
 .title-sm {
     font-family: var(--sans-serif-1);
     font-size: .6rem;
-    box-shadow: 2px 5px 0px 0px var(--orange);
+    box-shadow: 2px 4px 0px 0px var(--orange);
     height: auto;
     width: auto;
     padding: 1rem 2rem;
@@ -75,7 +80,7 @@ video {
 
 
 .project__process {
-    margin-top: 3rem;
+    margin: 3rem 0;
 }
 
 img {
@@ -85,11 +90,8 @@ img {
     border-radius: 2rem;
 }
 
-.h4 {
-    font-weight: 600;
-}
-
 .project__symmetry {
+    margin: 0 auto;
     max-width: 80rem;
     border: 1px solid var(--black);
     border-bottom: unset;
@@ -105,12 +107,50 @@ img {
     }
 }
 
+@media screen and (max-height: 600px) {
+
+    .project__cta {
+        padding: .8rem;
+    }
+}
+
 @media screen and (min-width: 768px) {
+    /* .container {
+        padding: 0 2rem;
+    } */
+
+    .title-sm {
+        font-size: 1.1rem;
+    }
+
+    .project__video,
+    .project__image {
+        grid-column: 2 / span 10;
+    }
+
+    .project__cta {
+        padding: 2.2rem;
+    }
+}
+
+@media screen and (min-width: 1024px) {
     .title-sm {
         font-size: 1.1rem;
     }
 
     .project__image {
         grid-column: 2 / span 10;
+    }
+
+    .project__container {
+        padding-top: 2rem;
+        max-width: 80rem;
+        border: 1px solid var(--black);
+        border-radius: 2rem;
+        background-color: #efefef;
+    }
+
+    .back__btn {
+        display: none;
     }
 }

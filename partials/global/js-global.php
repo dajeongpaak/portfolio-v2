@@ -21,15 +21,22 @@ var prevScrollpos = window.pageYOffset;
 window.onscroll = function () {
     var currentScrollPos = window.pageYOffset;
     if (prevScrollpos > currentScrollPos - 1) {
-        document.getElementById("js-navBar--mobile").style.top = "0";
-        document.getElementById("js-navBar--desktop").style.top = "0";
+        if(window.innerWidth < 1024 ) {
+            document.getElementById("js-navBar--mobile").style.top = "0";
+        } else{
+            document.getElementById("js-navBar--desktop").style.top = "0";
+        }
     } else {
-        document.getElementById("js-navBar--mobile").style.top = "-6rem";
-        document.getElementById("js-navBar--desktop").style.top = "-6rem";
+        if(window.innerWidth < 1024) {
+            document.getElementById("js-navBar--mobile").style.top = "-6rem";
+        } else {
+            document.getElementById("js-navBar--desktop").style.top = "-6rem";
+        }
+        
+       
     }
     prevScrollpos = currentScrollPos;
 }
-
 
 const videos = document.querySelectorAll('.js-video');
 

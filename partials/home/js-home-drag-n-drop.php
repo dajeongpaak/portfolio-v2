@@ -1,3 +1,5 @@
+
+<script>
 const dragNote = document.querySelector('#dragNote');
 const dragGallery = document.querySelector('#dragGallery');
 const dragEsnes = document.querySelector('#dragEsnes');
@@ -48,19 +50,19 @@ function dragDrop(e) {
 
     switch (itemId) {
         case 'dragNote':
-            url = 'https://www.google.com';
+            url = '<?php echo get_url("/projects/note-taking-application-web-development-project.php"); ?>'
             break;
         case 'dragGallery':
-            url = 'https://www.yahoo.com';
+            url = '#';
             break;
         case 'dragEsnes':
-            url = 'https://www.bcit.ca';
+            url = '#';
             break;
         case 'dragBurger':
-            url = 'https://www.naver.com';
+            url = '#';
             break;
         default:
-            url = 'https://www.google.com';
+            url = '#';
             break;
     }
 
@@ -68,3 +70,4 @@ function dragDrop(e) {
 };
 
 // console.log(noteDrag);
+</script>
