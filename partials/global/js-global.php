@@ -39,14 +39,14 @@ window.onscroll = function () {
 }
 
 const videos = document.querySelectorAll('.js-video');
+const videoContainer = document.querySelector('.project__video');
 
 window.addEventListener("load", () => {
-window.addEventListener("load", () => {
-            videos.forEach(video => {
-                video.play();
-        });
-        });
-    })
+    videos.forEach(video => {
+        video.play();
+        video.classList.add('loading');
+    });
+});
       
 </script>
 

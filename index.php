@@ -30,7 +30,7 @@
                     </h1>
                 </div>
                 <div class="home__desc flex flex-column justify-center h-100">
-                    <div class="desc__p">
+                    <p>
                         to design and develop<br>
                         immersive<br>
                         web experience<br>
@@ -38,7 +38,7 @@
                         creating<br>
                         an emotional connection<br>
                         with the digital environment<br><br>
-                    </div>   
+                    </p>   
                     <h2 class="desc__h2">
                         I strive to make<br>
                         the web a place of<br>
@@ -70,7 +70,7 @@
                
             </div>
         </section>
-        <section class="home__projects--mobile">
+        <section class="home__projects--mobile border-radius">
             <div class="container">
                 <div class="grid">
                     <div class="col-12 title">
@@ -140,7 +140,7 @@
                 </div>
             </div>
         </section>
-        <section class="home__projects--desktop">
+        <section class="home__projects--desktop border-radius">
             <div class="drag-n-drop">
             <div class="drag-item-container">
                 <div id="dragNote" class="note-drag-n-drop drag-item" draggable="true"></div>

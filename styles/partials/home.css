@@ -35,16 +35,6 @@
     pointer-events: none;
 }
 
-.home__strive {
-    margin-left: 1rem;
-}
-
-
-.desc__p {
-    font-size: 1.5rem;
-    font-family: var(--sans-serif-2);
-}
-
 .desc__h2 {
     font-size: 1.9rem;
     font-family: var(--sans-serif-2);
@@ -75,10 +65,9 @@
 
 .wonder__circle-text {
     text-align: center;
-    text-shadow: 2px -1px white;
+    text-shadow: 2px -1px black;
     font-weight: 800;
-    mix-blend-mode: difference;
-    color: var(--orange-invert);
+    color: var(--orange);
     font-size: 2.5rem;
     position: relative;
     z-index: 1;
@@ -90,8 +79,6 @@
 
 .home__projects--mobile,
 .home__projects--desktop {
-    border-top-left-radius: 2rem;
-    border-top-right-radius: 2rem;
     border: 1px solid var(--black);
     border-bottom: unset;
     background: #fffbf2;
@@ -183,10 +170,6 @@
         padding: 0 2rem;
     }
 
-    .desc__p {
-        font-size: 1.7rem;
-    }
-
     .desc__h2 {
         font-size: 2.3rem;
     }
@@ -217,12 +200,8 @@
         padding: 0 2rem;
     }
 
-    .desc__p {
-        font-size: 2rem;
-    }
-
     .desc__h2 {
-        font-size: 2.1em;
+        font-size: 2.7em;
     }
 
     .wonder__circle {
@@ -269,7 +248,7 @@
 
 
     .wonder__circle-text {
-        font-size: 4.5rem;
+        font-size: 5.5rem;
     }
 
     .projects__cards ul {
