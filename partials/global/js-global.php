@@ -21,9 +21,11 @@ var prevScrollpos = window.pageYOffset;
 window.onscroll = function () {
     var currentScrollPos = window.pageYOffset;
     if (prevScrollpos > currentScrollPos - 1) {
-        document.getElementById("js-navBar").style.top = "0";
+        document.getElementById("js-navBar--mobile").style.top = "0";
+        document.getElementById("js-navBar--desktop").style.top = "0";
     } else {
-        document.getElementById("js-navBar").style.top = "-6rem";
+        document.getElementById("js-navBar--mobile").style.top = "-6rem";
+        document.getElementById("js-navBar--desktop").style.top = "-6rem";
     }
     prevScrollpos = currentScrollPos;
 }

@@ -379,7 +379,6 @@
         window.addEventListener("resize", () => handleResize(matterContainer));
 
         var body = document.querySelector('body');
-        var gap = document.querySelector('#skills-gap');
         var imgContainer = document.querySelector(".img-container");
         var aboutContent = document.querySelector(".about__content");
         var insideGap = false;

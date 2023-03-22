@@ -14,7 +14,7 @@
 <body>
     <?php require_once(get_path("partials/global/header.php"));?>
     <main id="main">
-        <section class="home__main">
+        <section id="matter-canvas" class="home__main">
             <div class="container">
                 <div class="home__title flex">
                     <h1 class="flex flex-column">
@@ -29,7 +29,7 @@
                         <span class="z-index">Designer</span>
                     </h1>
                 </div>
-                <div class="home__desc flex flex-column">
+                <div class="home__desc flex flex-column justify-center h-100">
                     <div class="desc__p">
                         to design and develop<br>
                         immersive<br>
@@ -60,16 +60,17 @@
                                 Technology,<br>
                                 and Lifelong learning.
                         </h3>
-                    </div>
-                </div>
-                <div id="js-color-change" class="home__color flex flex-column align-center z-index">
+                        <div id="js-color-change" class="home__color flex flex-column align-center z-index">
                         <p id="js-text-change">(don't like the color?)</p>
                         <img src="<?php echo get_url("images/sad-logo.svg")?>" alt="pdj sad face logo">
                         <span class="h6">Click me!</span>
                     </div>
+                    </div>
+                </div>
+               
             </div>
         </section>
-        <section class="home__projects-mobile mt-6">
+        <section class="home__projects-mobile">
             <div class="container">
                 <div class="grid">
                     <div class="col-12 title">
@@ -188,7 +189,6 @@
             circle.style.background = bgColor;
         } 
         
-     
       
         let pieceContainer = document.querySelector("#js-text-animation");
         let xPos = window.innerWidth / 2;
@@ -238,7 +238,7 @@
 
 
         const matterContainer = document.querySelector("#matter-container--home");
-        const mainHeight = document.querySelector("#main");
+        const mainHeight = document.querySelector("#matter-canvas");
         const SVG_WIDTH_IN_PX = 100;
         const SVG_WIDTH_AS_PERCENT_OF_CONTAINER_WIDTH = 0.20;
         var Engine = Matter.Engine,
@@ -305,11 +305,12 @@
                 }
             }
         });
-        var ground = Bodies.rectangle(width / 2, document.body.offsetHeight, 32848, 460, { isStatic: true,
+        var ground = Bodies.rectangle(width / 2, matterContainer.clientHeight, 32848, 1, { isStatic: true,
             render: {
-                fillStyle:'rgba(0,0,0,0)'
+                fillStyle:'rgba(255,255,255,1)'
             }});
 
+            console.log(matterContainer.clientHeight)
         var roof = Bodies.rectangle( 0, 0, 34234, 1, {   isStatic: true,
             render: {
                 fillStyle: 'rgba(0,0,0,0)'}});

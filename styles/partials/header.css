@@ -160,7 +160,8 @@
     transform: translate(2px, 6px);
 }
 
-#js-navBar {
+#js-navBar--mobile,
+#js-navBar--desktop {
     transition: all 0.4s ease-in-out;
     -moz-transition: all 0.4s ease-in-out;
     -webkit-transition: all 0.4s ease-in-out;
@@ -177,12 +178,12 @@
     width: 100%;
     z-index: 99;
     mix-blend-mode: difference;
-    /* color: var(--white); */
+    pointer-events: none;
 }
 
 .main-nav--desktop a {
     color: var(--white);
-
+    pointer-events: all;
 }
 
 .menu--desktop {

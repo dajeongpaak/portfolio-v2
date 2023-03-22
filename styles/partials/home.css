@@ -1,4 +1,8 @@
 /* Home__main */
+.home__main {
+    padding-bottom: 6rem;
+}
+
 .matter-container--home {
     width: 100%;
     height: auto;
@@ -28,11 +32,13 @@
 .home__title span {
     mix-blend-mode: difference;
     color: white;
+    pointer-events: none;
 }
 
 .home__strive {
     margin-left: 1rem;
 }
+
 
 .desc__p {
     font-size: 1.5rem;
