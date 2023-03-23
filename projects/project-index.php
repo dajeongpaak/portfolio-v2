@@ -33,7 +33,7 @@
                                     </div>
                                 </h3>
                                 <div class="project__media">
-                                    <video class="js-video" playsinline autoplay loop muted>
+                                    <video class="js-video loading" playsinline autoplay loop muted>
                                     <source src="../images/note-taking-app-preview.mp4" type="video/mp4">
                                     </video>
                                 </div>
@@ -61,7 +61,7 @@
                                     </div>
                                 </h3>
                                 <div class="project__media">
-                                    <video class="js-video" playsinline autoplay loop muted>
+                                    <video class="js-video loading" playsinline autoplay loop muted>
                                     <source src="../images/symmetry-photo-gallery-preview.mp4" type="video/mp4">
                                 </video>
                                 </div>
@@ -90,7 +90,7 @@
                                     </div>
                                 </h3>
                                 <div class="project__media">
-                                    <video class="js-video" playsinline autoplay loop muted>
+                                    <video class="js-video loading" playsinline autoplay loop muted>
                                         <source src="../images/esnes-launching-project-preview.mp4" type="video/mp4">
                                     </video>
                                 </div>

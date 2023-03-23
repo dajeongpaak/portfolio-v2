@@ -55,15 +55,13 @@ h3 {
     margin: unset;
 }
 
+
+
 .work-card__title-desktop {
     display: none;
 }
 
-@keyframes loop {
-    100% {
-        transform: translateX(-100%);
-    }
-}
+
 
 .project__media {
     position: relative;

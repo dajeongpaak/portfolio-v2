@@ -16,19 +16,27 @@
     <main id="main">
         <section id="matter-canvas" class="home__main">
             <div class="container">
-                <div class="home__title flex">
-                    <h1 class="flex flex-column">
+                <h1 class="flex flex-column justify-center h-100 w-100">
+                    <div class="text-reveal">
                         <span class="z-index">
-                            Front-
-                        </span>
+                        Front-
+                        </span><br>
+                    </div>
+                    <div class="text-reveal">
                         <span class="z-index">end
-                        </span>
-                        <span class="z-index">Developer</span>
+                        </span><br>
+                    </div>
+                    <div class="text-reveal">
+                        <span class="z-index">Developer</span><br>
+                    </div>
+                    <div class="text-reveal">
                         <span class="z-index">
-                        <span>&</span><br>
-                        <span class="z-index">Designer</span>
-                    </h1>
-                </div>
+                        &</span><br>
+                    </div>
+                    <div class="text-reveal">
+                        <span class="z-index">Designer</span><br>
+                    </div>
+                </h1>
                 <div class="home__desc flex flex-column justify-center h-100">
                     <p>
                         to design and develop<br>
@@ -172,6 +180,17 @@
         const circle = document.querySelector('#js-circle-animation');
         const sadLogo = document.querySelector('#js-color-change');
         const tl = gsap.timeline({paused: false});
+
+        tl.from(".text-reveal span", 1.8, {
+        y: 120,
+        ease: "power4.out",
+        delay: 1,
+        skewY: 7,
+        stagger: {
+            amount: 0.5
+        }
+        })
+
 
         sadLogo.addEventListener('click', () => {
            

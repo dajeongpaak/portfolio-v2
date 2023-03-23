@@ -24,15 +24,18 @@
     font-family: var(--sans-serif-2);
 } */
 
-.home__title {
-    align-items: center;
-    height: 100vh;
+.text-reveal {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    height: 4.5rem;
 }
 
-.home__title span {
+.text-reveal span {
     mix-blend-mode: difference;
     color: white;
     pointer-events: none;
+    position: absolute;
 }
 
 .desc__h2 {
@@ -170,6 +173,10 @@
         padding: 0 2rem;
     }
 
+    .text-reveal {
+        height: 6rem;
+    }
+
     .desc__h2 {
         font-size: 2.3rem;
     }
@@ -188,9 +195,16 @@
 }
 
 @media screen and (max-height: 600px) {
+
+    .text-reveal {
+        height: 4rem;
+    }
+
+
     .wonder__circle-text {
         font-size: 2.3rem;
     }
+
 
 }
 
@@ -198,6 +212,10 @@
 
     .container {
         padding: 0 2rem;
+    }
+
+    .text-reveal {
+        height: 7.5rem;
     }
 
     .desc__h2 {
