@@ -64,8 +64,17 @@ main {
 .about__intro .drop-shadow {
     text-shadow: 4px -3px var(--orange);
     margin-bottom: unset;
-    text-align: right;
+    right: 0;
     font-size: 1.6rem
+}
+
+.text-reveal span {
+    mix-blend-mode: unset;
+    color: unset;
+}
+
+.text-reveal {
+    height: 2.5rem;
 }
 
 .about__intro .drop-shadow.--bg-change {
@@ -112,23 +121,50 @@ main {
     }
 
     .about__intro .drop-shadow {
-        font-size: 2.5rem;
+        font-size: 2.3rem;
     }
 
     .skills__title {
         height: 4rem;
     }
+
+    .text-reveal {
+        height: 4rem;
+    }
+
 }
 
 @media screen and (max-height: 600px) {
     main {
         height: 260vh;
     }
+
+    .text-reveal {
+        height: 2rem;
+    }
 }
 
 @media screen and (min-width: 768px) {
+    .img-container {
+        width: 21.5rem;
+        height: 21.5rem;
+    }
+
     .img-container img {
         width: 15rem;
         height: 15rem;
     }
+
+    .about__intro {
+        margin: 2rem;
+    }
+
+    .about__intro .drop-shadow {
+        font-size: 2.8rem;
+    }
+
+    .about__desc {
+        margin: 2rem;
+    }
+
 }

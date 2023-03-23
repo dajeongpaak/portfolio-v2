@@ -54,7 +54,7 @@ h1,
 
 h2,
 .h2 {
-    font-size: 1.7rem;
+    font-size: 1.5rem;
 }
 
 h3,
@@ -69,7 +69,7 @@ h4,
 
 h5,
 .h5 {
-    font-size: 1.25rem;
+    font-size: 1.3rem;
     font-weight: 300;
 }
 
@@ -220,6 +220,10 @@ section {
     justify-content: space-evenly;
 }
 
+.justify-around {
+    justify-content: space-around;
+}
+
 .align-end {
     align-items: flex-end;
 }
@@ -257,14 +261,38 @@ section {
     margin: 1rem 0;
 }
 
+.pt-3 {
+    padding-top: 3rem;
+}
+
+
+
 .border-radius {
-    border-radius: 3rem;
+    border-top-right-radius: 3rem;
+    border-top-left-radius: 3rem;
+    border: 1px solid var(--black);
+    border-bottom: unset;
 }
 
 .mix-blend-mod {
     mix-blend-mode: difference;
 }
 
+.text-reveal {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    height: 4.5rem;
+
+}
+
+.text-reveal span {
+    mix-blend-mode: difference;
+    color: white;
+    pointer-events: none;
+    position: absolute;
+    z-index: 2;
+}
 
 /* Components */
 .button {
@@ -422,6 +450,14 @@ section {
         height: 9.5rem;
     }
 
+}
+
+@media screen and (max-height: 600px) {
+
+    h2,
+    .h2 {
+        font-size: 1.2rem;
+    }
 }
 
 @media screen and (min-width: 768px) {
@@ -610,6 +646,11 @@ section {
     h1,
     .h1 {
         font-size: 5.3rem;
+    }
+
+    h5,
+    .h5 {
+        font-size: 2rem;
     }
 
     h6,

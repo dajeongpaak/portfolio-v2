@@ -1,17 +1,17 @@
 /* Note-taking Web Application Project */
 
 .project__container {
-    padding: 4rem 0;
-    max-width: 80rem;
-    margin: 1rem auto;
-    border: 1px solid var(--black);
     background-color: #efefef;
-    margin-top: 6rem;
+    max-width: 80rem;
 }
 
 .project__overview {
     border-bottom: 1px solid #7d7d7d;
     /* padding: 2rem 0; */
+}
+
+.justify {
+    justify-content: space-around;
 }
 
 .project__cta {
@@ -92,10 +92,8 @@ img {
 }
 
 .project__symmetry {
-    padding: 4rem 0;
     margin: 0 auto;
     max-width: 80rem;
-    border: 1px solid var(--black);
     background-color: #fefaf2;
 }
 
@@ -106,6 +104,10 @@ img {
 
     .project__cta {
         margin-right: 1rem;
+    }
+
+    .justify {
+        justify-content: flex-end;
     }
 }
 

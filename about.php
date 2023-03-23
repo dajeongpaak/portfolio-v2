@@ -15,33 +15,45 @@
     
     <main id="matter-main">
         <section>
-            <div class="img-container z-index">
-                <img src="images/DJ.jpg" alt="photograph of dajeong park">
-            </div>
-            <div class="container">
-                <div class="grid">
-                    <div class="about__content col-12 z-index">
-                        <div class="about__intro flex h3">
-                            <div>Hey there! I’m</div>
-                            <span class="drop-shadow">Dajeong</span>
-                            <div>but you can call me</div>
-                            <span class="drop-shadow">DJ</span>
-                        </div>
-                        <div class="about__desc">
-                            <p>
-                            I'm a  front-end developer from Korea, currently based in Vancouver, and in training to become a professional in the field.
-                            </p>
-                            <br>
-                            <p>
-                            I'm on a mission to make the web a more fun and immersive place, one website at a time. With the true passion for crafting user journeys that feel like exciting adventures, 
-                            I'm always looking for ways to make web browsing a more engaging experience.
-                            </p>
+            <div class="grid">
+                <div class="col-12 col-6-lg img-container z-index">
+                    <img src="images/DJ.jpg" alt="photograph of dajeong park">
+                </div>
+                <div class="col-12 col-6-lg container">
+                    <div class="grid">
+                        <div class="about__content col-12 z-index">
+                            <h1 class="about__intro flex h2">
+                                <div class="text-reveal">
+                                    <span>Hey there! I’m</span>
+                                </div>
+                                <div class="text-reveal">
+                                    <span class="drop-shadow">Dajeong</span>
+                                </div>
+                                <div class="text-reveal">
+                                    <span>but you can call me</span>
+                                </div>
+                                <div class="text-reveal">
+                                    <span class="drop-shadow">DJ</span>
+                                </div>
+                            </h1>
+                            <div class="about__desc">
+                                <p>
+                                I'm a  front-end developer from Korea, currently based in Vancouver, and in training to become a professional in the field.
+                                </p>
+                                <br>
+                                <p>
+                                I'm on a mission to make the web a more fun and immersive place, one website at a time. With the true passion for crafting user journeys that feel like exciting adventures, 
+                                I'm always looking for ways to make web browsing a more engaging experience.
+                                </p>
+                            </div>
                         </div>
                     </div>
+
+                    <div id="skills" class="skills__title z-index"></div>
                 </div>
             </div>
             <!-- background-color change trigger -->
-            <div id="skills" class="skills__title z-index"></div>
+            
         </section>
         <div id="matter-container" class="matter-container">
         </div>
@@ -76,8 +88,24 @@
     </footer>
     <?php require_once(get_path("/partials/global/js-global.php"))?>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/matter-js/0.19.0/matter.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/ScrollToPlugin.min.js"></script>
    
     <script>
+
+    const tl = gsap.timeline({paused: false});
+
+    tl.from(".about__intro span", 1.8, {
+            y: 120,
+            ease: "power4.out",
+            delay: .3,
+            skewY: 7,
+            stagger: {
+                amount: 0.5
+            }
+        })
+
+    console.log(gsap)
     const matterContainer = document.querySelector("#matter-container");
     const mainHeight = document.querySelector("#matter-main");
     const THICCNESS = 60;

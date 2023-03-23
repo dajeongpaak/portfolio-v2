@@ -16,7 +16,7 @@
     <main>
     <section>
         <div class="js-slidein"></div>
-        <div class="project__container border-radius">
+        <div class="project__container border-radius pt-3 mt-6 mx-auto">
             <div class="container">
                 <div id="js-backBtn" class="back__btn">
                     <div class="button-sm">
@@ -65,7 +65,7 @@
                     <p>HTML, CSS, JavaScript, Figma</p>
                 </div>
                 <div class="col-12">
-                    <div class="flex justify-end">
+                    <div class="flex justify">
                         <a href="#">
                             <div class="project__cta button h6">Launch Site</div>
                         </a>
@@ -83,7 +83,7 @@
                         </div>
                     </div>
                     <div class="col-12 grid">
-                        <h3 class="h4 col-12 col-2-10-lg my-1">1.Planning & Design</h3>
+                        <h3 class="h2 col-12 col-2-10-lg my-1">1.Planning & Design</h3>
                         <img class="project__image" src="<?php echo get_url('/images/note-taking-design.png');?>" alt="note-taking application design image">
                     </div>
                     <div class="col-12 col-2-10-lg">
@@ -94,7 +94,7 @@
                         </p><br><br>
                     </div>
                     <div class="col-12 grid">
-                        <h3 class="col-12 h4 col-2-10-lg my-1">2.Coding</h3>
+                        <h3 class="col-12 h2 col-2-10-lg my-1">2.Coding</h3>
                         <img class="project__image" src="<?php echo get_url('/images/note-taking-code.png');?>" alt="note-taking application code image">
                     </div>
                     <div class="col-12 col-2-10-lg">
@@ -103,7 +103,7 @@
                         <p>and to display the data I rendered the data by using the createElement method to dynamically generate elements in the DOM.</p><br><br>
                     </div>
                     <div class="col-12 col-2-10-lg">
-                        <h3 class="h4 my-1">3. Takeaways</h3>
+                        <h3 class="h2 my-1">3. Takeaways</h3>
                     </div>
                     <div class="col-12 col-2-10-lg">
                         <p>While working on the project, the most I struggled with was thinking in a programming way. I had to encounter some errors when working with local storage so I tried to solve the errors using a console log as much as I can to check constantly what I got as a return also what was needed to operate the code properly. </p><br>
@@ -112,8 +112,7 @@
                     </div>
                 </div>
             </div>
-        </div>
-        <div class="project__symmetry border-radius">
+            <div class="project__symmetry border-radius pt-3">
             <div class="container">
                 <div class="grid">
                     <div class="col-12 title">
@@ -121,13 +120,15 @@
                     </div>
                     <div class="project__image text-center">
                     <a class="work-card__content " href="<?php echo get_url("/projects/symmetry-photo-gallery-web-development-project.php"); ?>" >
-                        <h5 class="h4 my-1">‘SYMMETRY’ Photo Gallery</h5>
+                        <h5 class="h4">‘SYMMETRY’ Photo Gallery</h5>
                         <img src="<?php echo get_url("images/gallery.jpeg")?>" alt="‘SYMMETRY’ Photo Gallery thumbnail">
                     </a>
                     </div>
                 </div>
             </div>
         </div>
+        </div>
+        
     </section>
     </main>
     <?php require_once(get_path("/partials/global/footer.php"));?>
