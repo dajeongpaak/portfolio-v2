@@ -16,7 +16,7 @@
     <main id="main">
         <section id="matter-canvas" class="home__main">
             <div class="container">
-                <h1 class="flex flex-column justify-center h-100 w-100">
+                <h1 class="home__title flex flex-column justify-center h-100 w-100">
                     <div class="text-reveal">
                         <span class="z-index">
                         Front-
@@ -38,7 +38,7 @@
                     </div>
                 </h1>
                 <div class="home__desc flex flex-column justify-center h-100">
-                    <p>
+                    <p class="h5">
                         to design and develop<br>
                         immersive<br>
                         web experience<br>
@@ -48,11 +48,20 @@
                         with the digital environment<br><br>
                     </p>   
                     <h2 class="desc__h2">
-                        I strive to make<br>
-                        the web a place of<br>
+                        <div class="text-reveal">
+                            <span>
+                            I strive to make
+                            </span>
+                        </div>
+                        <div class="text-reveal">
+                            <span>
+                            the web a place of
+                            </span>
+                        </div>
+                        
                     </h2>
                 </div>
-                <div class="home__wonder h-100 flex flex-column justify-between">
+                <div class="home__wonder flex flex-column justify-between">
                     <div class="flex justify-center align-center">
                         <div id="js-circle-animation" class="wonder__circle z-index"></div>     
                         <div id="js-text-animation" class="wonder__circle-text z-index h2">
@@ -61,12 +70,18 @@
                                 <span>E</span><span>x</span><span>c</span><span>i</span><span>t</span><span>e</span><span>m</span><span>e</span><span>n</span><span>t</span><span>!</span>
                         </div>            
                     </div>
-                    <div class="wonder__content">
+                    <div class="wonder__content mt-6">
                         <h3 class="desc__h2">
                                 through<br>
-                                Creativity,<br>
-                                Technology,<br>
-                                and Lifelong learning.
+                                <div class="text-reveal">
+                                    <span >Creativity,</span><br>
+                                </div>
+                                <div class="text-reveal">
+                                    <span>Technology, and </span><br>
+                                </div>
+                                <div class="text-reveal">
+                                    <span>Lifelong learning.</span>
+                                </div>
                         </h3>
                         <div id="js-color-change" class="home__color text-center mt-3 z-index">
                             <p id="js-text-change">(don't like the color?)</p>
@@ -181,14 +196,34 @@
         const sadLogo = document.querySelector('#js-color-change');
         const tl = gsap.timeline({paused: false});
 
-        tl.from(".text-reveal span", 1.8, {
-        y: 120,
-        ease: "power4.out",
-        delay: 1,
-        skewY: 7,
-        stagger: {
-            amount: 0.5
-        }
+        tl.from(".home__title span", 1.8, {
+                y: 120,
+                ease: "power4.out",
+                delay: 1,
+                skewY: 7,
+                stagger: {
+                    amount: 0.5
+                }
+            })
+
+        tl.from(".home__desc span", 1.8, {
+                y: 120,
+                ease: "power4.out",
+                delay: .5,
+                skewY: 7,
+                stagger: {
+                    amount: 0.5
+                }
+            })
+
+        tl.from(".wonder__content span", 1.8, {
+            y: 120,
+            ease: "power4.out",
+            delay: .5,
+            skewY: 7,
+            stagger: {
+                amount: 0.5
+            }
         })
 
 
@@ -240,7 +275,6 @@
                     start: "top 40%",
                     end: "center bottom",
                     scrub: 1,
-                    
                 },
                 x: xRandomPos,
                 y: yRandomPos,

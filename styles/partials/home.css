@@ -20,15 +20,16 @@
     padding: 0 .9rem;
 }
 
-/* h3 {
-    font-family: var(--sans-serif-2);
-} */
-
 .text-reveal {
     position: relative;
     overflow: hidden;
     width: 100%;
     height: 4.5rem;
+
+}
+
+.desc__h2 .text-reveal {
+    height: 3rem;
 }
 
 .text-reveal span {
@@ -36,6 +37,7 @@
     color: white;
     pointer-events: none;
     position: absolute;
+    z-index: 2;
 }
 
 .desc__h2 {
@@ -43,6 +45,7 @@
     font-family: var(--sans-serif-2);
     font-weight: 300;
 }
+
 
 .wonder__circle {
     width: 90vmin;
@@ -200,6 +203,9 @@
         height: 4rem;
     }
 
+    .desc__h2 .text-reveal {
+        height: 3rem;
+    }
 
     .wonder__circle-text {
         font-size: 2.3rem;
@@ -257,6 +263,10 @@
 @media screen and (min-width: 1024px) {
     .container {
         overflow: visible;
+    }
+
+    .desc__h2 {
+        font-size: 3.1rem;
     }
 
     .wonder__circle {

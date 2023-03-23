@@ -609,12 +609,17 @@ section {
 
     h1,
     .h1 {
-        font-size: 5rem;
+        font-size: 5.3rem;
     }
 
     h6,
     .h6 {
         font-size: 1.7rem
+    }
+
+    p,
+    .p {
+        font-size: 1.7rem;
     }
 
     .container {
