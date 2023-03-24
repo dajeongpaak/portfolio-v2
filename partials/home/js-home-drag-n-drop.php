@@ -4,8 +4,8 @@ const dragNote = document.querySelector('#dragNote');
 const dragGallery = document.querySelector('#dragGallery');
 const dragEsnes = document.querySelector('#dragEsnes');
 const dragBurger = document.querySelector('#dragBurger');
-const dragitems = document.querySelectorAll('.drag-item');
-const dropSpot = document.querySelector('.drop-spot');
+const dragitems = document.querySelectorAll('.drag__item');
+const dropSpot = document.querySelector('.drag__drop-spot');
 
 for (const dragitem of dragitems) {
     dragitem.addEventListener('dragstart', dragStart);

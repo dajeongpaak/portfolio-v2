@@ -16,10 +16,10 @@
     <main id="matter-main">
         <section>
             <div class="grid">
-                <div class="col-12 col-6-lg img-container z-index">
+                <div class="col-12 col-10-lg img-container z-index">
                     <img src="images/DJ.jpg" alt="photograph of dajeong park">
                 </div>
-                <div class="col-12 col-6-lg container">
+                <div class="col-12 col-7-lg container">
                     <div class="grid">
                         <div class="about__content col-12 z-index">
                             <h1 class="about__intro flex h2">

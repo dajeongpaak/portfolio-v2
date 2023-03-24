@@ -90,7 +90,6 @@
                         </div>
                     </div>
                 </div>
-               
             </div>
         </section>
         <section class="home__projects--mobile border-radius">
@@ -164,17 +163,22 @@
             </div>
         </section>
         <section class="home__projects--desktop border-radius">
-            <div class="drag-n-drop">
-            <div class="drag-item-container">
-                <div id="dragNote" class="note-drag-n-drop drag-item" draggable="true"></div>
+            <div class="title">
+                <h2 class="h4">Featured Projects</h2>
             </div>
-            <div class="drag-item-container">
-                <div id="dragGallery" class="gallery-drag-n-drop drag-item" draggable="true"></div>
+            <div class="projects__drag h-100 flex justify-end align-center">
+                <div class="flex flex-column h-100 justify-evenly">
+                    <div class="drag__container">
+                        <div id="dragNote" class="drag__note drag__item" draggable="true"></div>
+                    </div>
+                    <div class="drag__container">
+                        <div id="dragGallery" class="drag__gallery drag__item" draggable="true"></div>
+                    </div>
+                </div>
+                <div class="drag__drop-spot">
+                    Drag & Drop Here!
+                </div>
             </div>
-            <div class="drop-spot">
-                Drag & Drop Here!
-            </div>
-    </div>
         </section>
         <div id="matter-container--home" class="matter-container--home"></div>
     </main>
@@ -196,36 +200,27 @@
         const sadLogo = document.querySelector('#js-color-change');
         const tl = gsap.timeline({paused: false});
 
-        tl.from(".home__title span", 1.8, {
-                y: 120,
-                ease: "power4.out",
-                delay: 1,
-                skewY: 7,
-                stagger: {
-                    amount: 0.5
-                }
-            })
+        const selectors = [
+        ".home__title",
+        ".home__desc",
+        ".wonder__content"
+        ];
 
-        tl.from(".home__desc span", 1.8, {
-                y: 120,
-                ease: "power4.out",
-                delay: .5,
-                skewY: 7,
-                stagger: {
-                    amount: 0.5
-                }
-            })
-
-        tl.from(".wonder__content span", 1.8, {
+        selectors.forEach(selector => {
+        gsap.from(`${selector} span`, 1.8, {
+            scrollTrigger: {
+            trigger: selector,
+            toggleActions: "play complete restart reset",
+            },
             y: 120,
             ease: "power4.out",
-            delay: .5,
+            delay: 1,
             skewY: 7,
             stagger: {
-                amount: 0.5
+            amount: 0.5
             }
-        })
-
+        });
+        });
 
         sadLogo.addEventListener('click', () => {
            
@@ -289,7 +284,6 @@
             scrollTrigger: {
                 trigger: ".home__wonder",
                 toggleActions: "restart pause reverse none",
-                // markers: true,
                 start: 'top 40%',
                 end: 'center bottom',
                 scrub: 1,
@@ -298,11 +292,6 @@
             scale: 1,
             duration: 0.3,
         })
-
-
-
-
-
 
         const matterContainer = document.querySelector("#matter-container--home");
         const mainHeight = document.querySelector("#matter-canvas");
@@ -443,7 +432,7 @@
         if (mouseConstraint.body) {
         mouseConstraint.mouse.mousemove(e);
         }
-        });
+        }); 
 
         mouseConstraint.mouse.element.addEventListener('touchend', (e) => {
         if (mouseConstraint.body) {

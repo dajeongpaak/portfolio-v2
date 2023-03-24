@@ -25,8 +25,6 @@
     height: 3rem;
 }
 
-
-
 .desc__h2 {
     font-size: 1.9rem;
     font-family: var(--sans-serif-2);
@@ -111,31 +109,41 @@
     display: none;
 }
 
-
-.drag-n-drop {
+.projects__drag {
     font-family: var(--sans-serif-1);
-    height: 100vh;
     position: relative;
+    padding-right: 6rem;
 }
 
-.note-drag-n-drop {
+/* 
+.drag__container {
+    width: 18rem;
+    height: 18rem;
+    border-radius: 3rem;
+    border: 1px solid black;
+    overflow: hidden;
+} */
+
+.drag__note {
     background: url(../../images/note.jpeg);
 }
 
-.gallery-drag-n-drop {
+.drag__gallery {
     background: url(../../images/gallery.jpeg);
 }
 
-.note-drag-n-drop,
-.gallery-drag-n-drop {
+.drag__note,
+.drag__gallery {
     background-position: center;
     background-repeat: no-repeat;
-    background-size: contain;
+    background-size: cover;
     width: 16rem;
     height: 16rem;
+    border-radius: 3rem;
+    border: 1px solid black;
 }
 
-.drop-spot {
+.drag__drop-spot {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -143,15 +151,18 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 16rem;
-    height: 16rem;
+    width: 18rem;
+    height: 18rem;
     background: var(--orange);
     color: var(--white);
     padding: 0 6rem;
     text-align: center;
+    font-size: 1.5rem;
+    border-radius: 3rem;
+    border: 1px solid black;
 }
 
-.drop-spot.drag-over {
+.drag__drop-spot.drag-over {
     background: var(--light-orange);
 }
 
