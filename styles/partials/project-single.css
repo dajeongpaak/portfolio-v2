@@ -25,10 +25,6 @@
     border: black 1px solid;
 }
 
-.project__image {
-    grid-column: auto / span 12;
-}
-
 .js-slidein {
     height: 100vh;
 }
@@ -57,8 +53,8 @@ a {
 
 video {
     max-width: 100%;
-    border-radius: 1rem;
-    border: 1px solid var(--black);
+    border-radius: 2rem;
+    /* border: 1px solid var(--black); */
     width: 100%;
 }
 
@@ -115,17 +111,9 @@ img {
 }
 
 @media screen and (min-width: 768px) {
-    /* .container {
-        padding: 0 2rem;
-    } */
 
     .title-sm {
         font-size: 1.1rem;
-    }
-
-    .project__video,
-    .project__image {
-        grid-column: 2 / span 10;
     }
 
     .project__cta {

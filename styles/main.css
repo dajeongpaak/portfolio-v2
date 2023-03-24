@@ -339,8 +339,7 @@ section {
     justify-content: center;
     align-items: center;
     width: auto;
-    height: 3.875rem;
-    padding: 0 1rem;
+    padding: 1rem;
     margin: 0 auto 1rem auto;
     font-family: var(--sans-serif-1);
     box-shadow: 2px 4px 0px 0px var(--black);
@@ -448,8 +447,7 @@ section {
     }
 
     .title {
-        height: 4.875rem;
-        padding: 0 2rem;
+        padding: 2rem 3rem;
     }
 
     .card {
@@ -568,11 +566,6 @@ section {
         height: 9.5rem;
     }
 
-    .title {
-        height: 4.875rem;
-        padding: 0 2rem;
-    }
-
     .card {
         height: 9.5rem;
     }
@@ -655,7 +648,7 @@ section {
 
     h1,
     .h1 {
-        font-size: 5.3rem;
+        font-size: 5.5rem;
     }
 
     h5,

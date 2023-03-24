@@ -24,56 +24,56 @@
                 </div>
                 </div>
                 <div class="grid project__overview">
-                <div class="col-12 project__title title">
-                    <h2 class="h6">Note-taking Application</h2>
-                </div>
-                <div class="col-12 col-2-10-lg project__video">
-                    <video class="js-video loading" playsinline autoplay loop muted>
-                        <source src="../images/note-taking-app-preview.mp4" type="video/mp4">
-                    </video>
-                </div>
-                <div class="col-4 col-2-2-lg align-self">
-                    <div class="title title-sm">
-                    OVERVIEW
+                    <div class="col-12 js-project-title title">
+                        <h2 class="h4">Note-taking Application</h2>
                     </div>
-                </div>
-                <div class="col-12 col-2-10-lg">
-                    <p>The goal was to create a functional note-taking app to gain hands-on experience in building a practical application from scratch, improving my understanding of JavaScript syntax and JavaScript concepts as well as reinforcing best practices in coding.</p>
-                </div>
-                <div class="col-4 col-2-2-lg">
-                    <div class="title title-sm">
-                    ROLE
+                    <div class="col-12 col-2-10-lg js-project-video">
+                        <video class="js-video loading" playsinline autoplay loop muted>
+                            <source src="../images/note-taking-app-preview.mp4" type="video/mp4">
+                        </video>
                     </div>
-                </div>
-                <div class="col-8 col-4-lg align-self">
-                    <p>Web developer / designer</p>
-                </div>
-                <div class="col-4 col-2-2-lg">
-                    <div class="title title-sm">
-                    TIMELINE
+                    <div class="col-4 col-2-2-lg align-self">
+                        <div class="title title-sm">
+                        OVERVIEW
+                        </div>
                     </div>
-                </div>
-                <div class="col-8 col-4-lg align-self">
-                    <p>Feb 3 - 5, 2023</p>
-                </div>
-                <div class="col-4 col-2-2-lg align-self">
-                    <div class="title title-sm">
-                    TOOLS
+                    <div class="col-12 col-2-10-lg">
+                        <p>The goal was to create a functional note-taking app to gain hands-on experience in building a practical application from scratch, improving my understanding of JavaScript syntax and JavaScript concepts as well as reinforcing best practices in coding.</p>
                     </div>
-                </div>
-                <div class="col-8 col-4-lg align-self">
-                    <p>HTML, CSS, JavaScript, Figma</p>
-                </div>
-                <div class="col-12">
-                    <div class="flex justify">
-                        <a href="#">
-                            <div class="project__cta button h6">Launch Site</div>
-                        </a>
-                        <a href="#">
-                            <div class="project__cta button h6">View Code</div>
-                        </a>
+                    <div class="col-4 col-2-2-lg">
+                        <div class="title title-sm">
+                        ROLE
+                        </div>
                     </div>
-                </div>
+                    <div class="col-8 col-4-lg align-self">
+                        <p>Web developer / designer</p>
+                    </div>
+                    <div class="col-4 col-2-2-lg">
+                        <div class="title title-sm">
+                        TIMELINE
+                        </div>
+                    </div>
+                    <div class="col-8 col-4-lg align-self">
+                        <p>Feb 3 - 5, 2023</p>
+                    </div>
+                    <div class="col-4 col-2-2-lg align-self">
+                        <div class="title title-sm">
+                        TOOLS
+                        </div>
+                    </div>
+                    <div class="col-8 col-4-lg align-self">
+                        <p>HTML, CSS, JavaScript, Figma</p>
+                    </div>
+                    <div class="col-12">
+                        <div class="flex justify">
+                            <a href="#">
+                                <div class="project__cta button h6">Launch Site</div>
+                            </a>
+                            <a href="#">
+                                <div class="project__cta button h6">View Code</div>
+                            </a>
+                        </div>
+                    </div>
                 </div>
                 
                 <div class="grid project__process">
@@ -82,9 +82,9 @@
                         PROCESS
                         </div>
                     </div>
-                    <div class="col-12 grid">
-                        <h3 class="h2 col-12 col-2-10-lg my-1">1.Planning & Design</h3>
-                        <img class="project__image" src="<?php echo get_url('/images/note-taking-design.png');?>" alt="note-taking application design image">
+                    <div class="col-12 col-2-10-lg">
+                        <h3 class="h2 my-1">1.Planning & Design</h3>
+                        <img src="<?php echo get_url('/images/note-taking-design.png');?>" alt="note-taking application design image">
                     </div>
                     <div class="col-12 col-2-10-lg">
                         <p>To gain practical experience in JavaScript, I plan to build a 
@@ -93,9 +93,9 @@
                         <p>I then moved on to the design phase where I created a wireframe in Figma to aid in the coding process, providing a visual blueprint and making use of Figma's inspector feature for improved efficiency.
                         </p><br><br>
                     </div>
-                    <div class="col-12 grid">
-                        <h3 class="col-12 h2 col-2-10-lg my-1">2.Coding</h3>
-                        <img class="project__image" src="<?php echo get_url('/images/note-taking-code.png');?>" alt="note-taking application code image">
+                    <div class="col-12 col-2-10-lg">
+                        <h3 class="h2 my-1">2.Coding</h3>
+                        <img src="<?php echo get_url('/images/note-taking-code.png');?>" alt="note-taking application code image">
                     </div>
                     <div class="col-12 col-2-10-lg">
                         <p>In the code, I established the interface of the application by dividing it into two parts: one for displaying notes and the other for inputting notes. </p><br>
@@ -131,9 +131,11 @@
     <?php require_once(get_path("/partials/global/footer.php"));?>
     <?php require_once(get_path("/partials/global/js-global.php"))?>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/Flip.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/ScrollTrigger.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/ScrollToPlugin.min.js"></script>
     <script>
+
         const backBtn = document.querySelector(".back__btn");
         let slideIn = document.querySelector('.js-slidein');
 
@@ -141,12 +143,16 @@
             window.history.back();
         })
         
-        
         gsap.to( slideIn , {
             height: 0,
             ease: "expo",
             duration: 1.5,
         })
+
+
+
+       
+       
     </script>
 </body>
 

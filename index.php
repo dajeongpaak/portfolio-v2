@@ -166,8 +166,8 @@
             <div class="title">
                 <h2 class="h4">Featured Projects</h2>
             </div>
-            <div class="projects__drag h-100 flex justify-end align-center">
-                <div class="flex flex-column h-100 justify-evenly">
+            <div class="projects__drag flex justify-end align-center">
+                <div class="flex flex-column h-100 justify-center">
                     <div class="drag__container">
                         <div id="dragNote" class="drag__note drag__item" draggable="true"></div>
                     </div>
@@ -212,7 +212,7 @@
             trigger: selector,
             toggleActions: "play complete restart reset",
             },
-            y: 120,
+            y: 130,
             ease: "power4.out",
             delay: 1,
             skewY: 7,

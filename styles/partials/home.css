@@ -16,11 +16,6 @@
     overflow: hidden;
 }
 
-.title {
-    padding: 0 .9rem;
-}
-
-
 .desc__h2 .text-reveal {
     height: 3rem;
 }
@@ -112,17 +107,13 @@
 .projects__drag {
     font-family: var(--sans-serif-1);
     position: relative;
-    padding-right: 6rem;
+    padding-right: 10rem;
+    height: 70vh;
 }
 
-/* 
 .drag__container {
-    width: 18rem;
-    height: 18rem;
-    border-radius: 3rem;
-    border: 1px solid black;
-    overflow: hidden;
-} */
+    margin: 3rem;
+}
 
 .drag__note {
     background: url(../../images/note.jpeg);
@@ -168,9 +159,6 @@
 
 
 @media screen and (min-width: 576px) {
-    .title {
-        padding: 0 2rem;
-    }
 
     .text-reveal {
         height: 6rem;
@@ -198,6 +186,10 @@
 }
 
 @media screen and (max-height: 600px) {
+
+    .title {
+        padding: 0.9rem;
+    }
 
     .text-reveal {
         height: 4rem;
@@ -273,6 +265,10 @@
         font-size: 3.1rem;
     }
 
+    .text-reveal {
+        height: 8rem;
+    }
+
     .wonder__circle {
         width: 60vmin;
         height: 60vmin;
@@ -299,5 +295,9 @@
 
     .home__projects--desktop {
         display: block;
+    }
+
+    .title {
+        width: 30%;
     }
 }
