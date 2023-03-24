@@ -137,8 +137,8 @@
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    width: 16rem;
-    height: 16rem;
+    width: 17rem;
+    height: 17rem;
     border-radius: 3rem;
     border: 1px solid black;
 }
@@ -151,8 +151,8 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 18rem;
-    height: 18rem;
+    width: 19rem;
+    height: 19rem;
     background: var(--orange);
     color: var(--white);
     padding: 0 6rem;

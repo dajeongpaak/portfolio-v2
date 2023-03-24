@@ -29,10 +29,6 @@
     grid-column: auto / span 12;
 }
 
-.align-center {
-    align-self: center;
-}
-
 .js-slidein {
     height: 100vh;
 }
@@ -86,7 +82,6 @@ video {
 
 img {
     max-width: 100%;
-    margin: 1rem 0;
     border: 1px solid var(--black);
     border-radius: 2rem;
 }
@@ -95,6 +90,7 @@ img {
     margin: 0 auto;
     max-width: 80rem;
     background-color: #fefaf2;
+    padding: 3rem 0;
 }
 
 @media screen and (min-width: 576px) {

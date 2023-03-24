@@ -69,5 +69,4 @@ function dragDrop(e) {
     window.location.href = url;
 };
 
-// console.log(noteDrag);
 </script>

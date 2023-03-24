@@ -228,6 +228,10 @@ section {
     align-items: flex-end;
 }
 
+.align-self {
+    align-self: center;
+}
+
 .w-100 {
     width: 100vw;
 }
@@ -338,9 +342,11 @@ section {
     height: 3.875rem;
     padding: 0 1rem;
     margin: 0 auto 1rem auto;
+    font-family: var(--sans-serif-1);
     box-shadow: 2px 4px 0px 0px var(--black);
     background-color: var(--white);
     border-radius: 18rem;
+    text-align: center;
 }
 
 @media screen and (min-width: 576px) {
@@ -624,6 +630,10 @@ section {
 
     .col-2-2-lg {
         grid-column: 2 /span 2;
+    }
+
+    .col-2-3-lg {
+        grid-column: 2 /span 3;
     }
 
     .col-2-10-lg {

@@ -32,7 +32,7 @@
                         <source src="../images/note-taking-app-preview.mp4" type="video/mp4">
                     </video>
                 </div>
-                <div class="col-4 col-2-2-lg align-center">
+                <div class="col-4 col-2-2-lg align-self">
                     <div class="title title-sm">
                     OVERVIEW
                     </div>
@@ -45,7 +45,7 @@
                     ROLE
                     </div>
                 </div>
-                <div class="col-8 col-4-lg align-center">
+                <div class="col-8 col-4-lg align-self">
                     <p>Web developer / designer</p>
                 </div>
                 <div class="col-4 col-2-2-lg">
@@ -53,15 +53,15 @@
                     TIMELINE
                     </div>
                 </div>
-                <div class="col-8 col-4-lg align-center">
+                <div class="col-8 col-4-lg align-self">
                     <p>Feb 3 - 5, 2023</p>
                 </div>
-                <div class="col-4 col-2-2-lg align-center">
+                <div class="col-4 col-2-2-lg align-self">
                     <div class="title title-sm">
                     TOOLS
                     </div>
                 </div>
-                <div class="col-8 col-4-lg align-center">
+                <div class="col-8 col-4-lg align-self">
                     <p>HTML, CSS, JavaScript, Figma</p>
                 </div>
                 <div class="col-12">
@@ -77,7 +77,7 @@
                 </div>
                 
                 <div class="grid project__process">
-                    <div class="col-4 col-2-2-lg align-center">
+                    <div class="col-4 col-2-2-lg align-self">
                         <div class="title title-sm">
                         PROCESS
                         </div>
@@ -113,20 +113,17 @@
                 </div>
             </div>
             <div class="project__symmetry border-radius pt-3">
-            <div class="container">
-                <div class="grid">
-                    <div class="col-12 title">
-                        <h4>Next Up</h4>
-                    </div>
-                    <div class="project__image text-center">
-                    <a class="work-card__content " href="<?php echo get_url("/projects/symmetry-photo-gallery-web-development-project.php"); ?>" >
-                        <h5 class="h4">‘SYMMETRY’ Photo Gallery</h5>
-                        <img src="<?php echo get_url("images/gallery.jpeg")?>" alt="‘SYMMETRY’ Photo Gallery thumbnail">
-                    </a>
+                <div class="container">
+                    <div class="grid">
+                        <div class="col-12 col-2-3-lg align-self">
+                            <h4 class="h2">Up Next:</h4>
+                        </div>
+                        <a class="work-card__content h4 grid col-12 col-8-lg align-self title" href="<?php echo get_url("/projects/symmetry-photo-gallery-web-development-project.php"); ?>" >
+                        ‘SYMMETRY' Photo Gallery
+                        </a>
                     </div>
                 </div>
             </div>
-        </div>
         </div>
         
     </section>
