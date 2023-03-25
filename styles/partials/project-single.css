@@ -2,7 +2,6 @@
 
 .project__container {
     background-color: #efefef;
-    max-width: 80rem;
 }
 
 .project__overview {
@@ -84,9 +83,8 @@ img {
 
 .project__symmetry {
     margin: 0 auto;
-    max-width: 80rem;
     background-color: #fefaf2;
-    padding: 3rem 0;
+    padding: 6rem 0;
 }
 
 @media screen and (min-width: 576px) {

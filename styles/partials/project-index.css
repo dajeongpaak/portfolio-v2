@@ -81,27 +81,6 @@ h3 {
     transform: translate(-50%, -50%);
 }
 
-.logo-circle {
-    fill: rgba(0, 0, 0, 0);
-    stroke: #000;
-    stroke-miterlimit: 10;
-    stroke-width: 1.2px;
-    stroke-dasharray: 430;
-    stroke-dashoffset: 430;
-    animation: preloader 5s ease alternate infinite;
-}
-
-@keyframes preloader {
-    90% {
-        fill: rgba(0, 0, 0, 0);
-    }
-
-    100% {
-        stroke-dashoffset: 0;
-        fill: rgba(0, 0, 0, 1);
-    }
-}
-
 .work__card video,
 .work__card img {
     width: 100%;
@@ -207,9 +186,14 @@ h3 {
 
     .work-card__title-desktop {
         display: block;
-        font-family: var(--sans-serif-2);
-        font-size: 1.3rem;
-        margin-bottom: .5rem;
+        font-family: var(--sans-serif-1);
+        font-size: 1rem;
+        /* margin-bottom: .5rem; */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: auto;
+        margin: 0 auto 1rem auto;
     }
 
     .work__card .button {
@@ -226,5 +210,20 @@ h3 {
 
     .js-bottom-logo {
         width: 10rem;
+    }
+}
+
+@media screen and (min-width:1024px) {
+    .work__card {
+        height: 70vh;
+    }
+
+
+    .work-card__title-desktop {
+        font-size: 1.9rem;
+    }
+
+    .work__card .button {
+        font-size: 1.2rem;
     }
 }

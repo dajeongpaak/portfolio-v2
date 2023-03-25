@@ -6,6 +6,35 @@ const dragEsnes = document.querySelector('#dragEsnes');
 const dragBurger = document.querySelector('#dragBurger');
 const dragitems = document.querySelectorAll('.drag__item');
 const dropSpot = document.querySelector('.drag__drop-spot');
+const hoverText = document.getElementById("hover-text");
+
+document.addEventListener("mousemove", function(event) {
+  const target = event.target;
+  if (target.classList.contains("drag__item")) {
+    const hoverText = document.getElementById("hover-text");
+    hoverText.style.display = "block";
+    hoverText.style.left = event.pageX + 10 + "px";
+    hoverText.style.top = event.pageY - target.offsetTop + target.scrollTop + 10 + "px";
+  }
+});
+
+const content = [
+  "Description 1",
+  "Description 2"
+];
+
+
+dragitems.forEach(function(item) {
+  item.addEventListener("mouseenter", function() {
+    const index = parseInt(this.getAttribute("data-index"));
+    hoverText.textContent = content[index];
+    hoverText.style.display = "block";
+  });
+
+  item.addEventListener("mouseleave", function() {
+    hoverText.style.display = "none";
+  });
+});
 
 for (const dragitem of dragitems) {
     dragitem.addEventListener('dragstart', dragStart);
@@ -22,13 +51,13 @@ function dragEnd() {
 }
 
 dropSpot.addEventListener('dragenter', (e) => {
-    if (e.target.classList.contains('drop-spot')) {
+    if (e.target.classList.contains('drag__drop-spot')) {
         e.target.classList.add('drag-over');
     }
 });
 
 dropSpot.addEventListener('dragleave', (e) => {
-    if (e.target.classList.contains('drop-spot')) {
+    if (e.target.classList.contains('drag__drop-spot')) {
         e.target.classList.remove('drag-over');
     }
 });
@@ -39,10 +68,6 @@ dropSpot.addEventListener('dragover', (e) => {
 
 dropSpot.addEventListener('drop', dragDrop);
 
-// function dragDrop(e) {
-//     e.preventDefault();
-//     // window.location.href = "https://www.google.com";
-// };
 function dragDrop(e) {
     e.preventDefault();
     const itemId = e.dataTransfer.getData('text/plain');
@@ -68,5 +93,6 @@ function dragDrop(e) {
 
     window.location.href = url;
 };
+
 
 </script>

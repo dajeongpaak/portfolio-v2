@@ -34,7 +34,7 @@
                                 </h3>
                                 <div class="project__media">
                                     <video class="js-video loading" playsinline autoplay loop muted>
-                                    <source src="../images/note-taking-app-preview.mp4" type="video/mp4">
+                                    <source src="<?php echo get_url("images/note-taking-app-preview.mp4");?>" type="video/mp4">
                                     </video>
                                 </div>
                                 <div class="flex flex-wrap">
@@ -62,7 +62,7 @@
                                 </h3>
                                 <div class="project__media">
                                     <video class="js-video loading" playsinline autoplay loop muted>
-                                    <source src="../images/symmetry-photo-gallery-preview.mp4" type="video/mp4">
+                                    <source src="<?php echo get_url("images/symmetry-photo-gallery-preview.mp4");?>" type="video/mp4">
                                 </video>
                                 </div>
                                 
@@ -91,7 +91,7 @@
                                 </h3>
                                 <div class="project__media">
                                     <video class="js-video loading" playsinline autoplay loop muted>
-                                        <source src="../images/esnes-launching-project-preview.mp4" type="video/mp4">
+                                        <source src="<?php echo get_url("images/esnes-launching-project-preview.mp4"); ?>" type="video/mp4">
                                     </video>
                                 </div>
                                 <div class="flex flex-wrap">
@@ -119,7 +119,7 @@
                                     </div>
                                 </h3>
                                 <div class="project__media">
-                                    <img src="../images/burger-squad-web-development-project.jpg" alt="Burgersquad web site image"></img>
+                                    <img src="<?php echo get_url("images/burger-squad-web-development-project.jpg"); ?>" alt="Burgersquad web site image"></img>
                                 </div>
                                 <div class="flex flex-wrap">
                                     <div class="button h4">
@@ -240,7 +240,6 @@
                         end: "100% bottom",
                         scrub: 3,
                         duration: 50,
-                        markers: true
             },
             x: "50vw",
             rotation: 360,

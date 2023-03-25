@@ -63,10 +63,13 @@
     display: inline-block;
 }
 
-.home__projects--mobile,
-.home__projects--desktop {
+.home__projects--mobile {
     background: #fffbf2;
     padding: 4rem 0;
+}
+
+.home__projects--desktop {
+    background: #fffbf2;
 }
 
 .projects__cards ul {
@@ -95,7 +98,6 @@
     max-width: 70%;
 }
 
-
 .card__btn {
     max-width: 30%;
 }
@@ -107,12 +109,33 @@
 .projects__drag {
     font-family: var(--sans-serif-1);
     position: relative;
-    padding-right: 10rem;
-    height: 70vh;
+    height: 90vh;
 }
 
 .drag__container {
-    margin: 3rem;
+    margin: 2rem 9rem;
+}
+
+.drag__title-top,
+.drag__title-bottom {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 4.5rem;
+    font-weight: 800;
+}
+
+.drag__title-top {
+    top: 17%;
+}
+
+.drag__title-bottom {
+    bottom: 18%;
+}
+
+video {
+    max-width: 34rem;
+    border-bottom: 1px solid black;
 }
 
 .drag__note {
@@ -126,12 +149,21 @@
 .drag__note,
 .drag__gallery {
     background-position: center;
-    background-repeat: no-repeat;
     background-size: cover;
-    width: 17rem;
-    height: 17rem;
-    border-radius: 3rem;
-    border: 1px solid black;
+    width: 20rem;
+    height: 20rem;
+}
+
+#hover-text {
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: none;
+    padding: 10px;
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    white-space: nowrap;
 }
 
 .drag__drop-spot {
@@ -142,15 +174,15 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 19rem;
-    height: 19rem;
+    width: 20rem;
+    height: 20rem;
     background: var(--orange);
     color: var(--white);
     padding: 0 6rem;
     text-align: center;
     font-size: 1.5rem;
-    border-radius: 3rem;
-    border: 1px solid black;
+    /* border-radius: 3rem;
+    border: 1px solid black; */
 }
 
 .drag__drop-spot.drag-over {
@@ -295,9 +327,11 @@
 
     .home__projects--desktop {
         display: block;
+        overflow: hidden;
     }
 
     .title {
-        width: 30%;
+        width: 40%;
+        margin: unset;
     }
 }

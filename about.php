@@ -15,7 +15,7 @@
     
     <main id="matter-main">
         <section>
-            <div class="grid">
+            <div class="grid h-100">
                 <div class="col-12 col-10-lg img-container z-index">
                     <img src="images/DJ.jpg" alt="photograph of dajeong park">
                 </div>
@@ -48,13 +48,14 @@
                             </div>
                         </div>
                     </div>
-
                     <div id="skills" class="skills__title z-index"></div>
                 </div>
+                
             </div>
             <!-- background-color change trigger -->
             
         </section>
+       
         <div id="matter-container" class="matter-container">
         </div>
     </main>

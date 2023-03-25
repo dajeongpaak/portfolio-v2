@@ -163,21 +163,22 @@
             </div>
         </section>
         <section class="home__projects--desktop border-radius">
-            <div class="title">
-                <h2 class="h4">Featured Projects</h2>
-            </div>
-            <div class="projects__drag flex justify-end align-center">
-                <div class="flex flex-column h-100 justify-center">
-                    <div class="drag__container">
-                        <div id="dragNote" class="drag__note drag__item" draggable="true"></div>
+            <div class="container">
+            <div class="projects__drag flex justify-between align-center">
+                <div class="flex w-100 justify-between">
+                    <div id="dragNote" class="drag__note drag__item" draggable="true" data-index="0">
                     </div>
-                    <div class="drag__container">
-                        <div id="dragGallery" class="drag__gallery drag__item" draggable="true"></div>
+                    <div id="dragGallery" class="drag__gallery drag__item" draggable="true" data-index="1">
                     </div>
+                    <div id="hover-text">sdfsdf</div>
                 </div>
                 <div class="drag__drop-spot">
-                    Drag & Drop Here!
+                    Drag<br> &<br> Drop Here!
                 </div>
+                <div class="drag__title-top">Featured</div>
+                <div class="drag__title-bottom">Projects</div>
+               
+            </div>
             </div>
         </section>
         <div id="matter-container--home" class="matter-container--home"></div>
