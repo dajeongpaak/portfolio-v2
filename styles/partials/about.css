@@ -10,18 +10,18 @@ main {
     display: flex;
     justify-content: center;
     align-items: center;
-
+    border-radius: 3rem;
+    border: 1px solid black;
+    width: 12rem;
+    height: 12rem;
 }
 
 .img-container img {
-    width: 10rem;
-    height: 10rem;
-    border-radius: 50%;
-    border: 1px solid black;
+    max-width: 100%;
+    border-radius: 3rem;
 }
 
 .about__content {
-    margin: 2rem 0;
     padding: 2rem 0;
     background: rgba(255, 255, 255, 0.4);
     border: 1px solid var(--black);
@@ -94,14 +94,11 @@ main {
 }
 
 @media screen and (min-width: 576px) {
-    .img-container {
-        width: 17.5rem;
-        height: 17.5rem;
-    }
 
-    .img-container img {
-        width: 12rem;
-        height: 12rem;
+    .img-container {
+        margin-bottom: 1rem;
+        width: 15rem;
+        height: 15rem;
     }
 
     .about__intro .drop-shadow {
@@ -129,14 +126,11 @@ main {
 }
 
 @media screen and (min-width: 768px) {
-    .img-container {
-        width: 21.5rem;
-        height: 21.5rem;
-    }
 
-    .img-container img {
-        width: 15rem;
-        height: 15rem;
+    .img-container {
+        margin-bottom: 1.5rem;
+        width: 17rem;
+        height: 17rem;
     }
 
     .about__intro {
@@ -155,18 +149,14 @@ main {
 
 @media screen and (min-width: 1024px) {
     .img-container {
-        width: auto;
-        height: 30rem;
-        align-self: self-start;
-        /* margin-top: 6rem; */
-        border-top-right-radius: 16rem;
-        border-bottom-right-radius: 16rem;
-    }
-
-    .img-container img {
         width: 25rem;
         height: 25rem;
+        align-self: self-start;
+        /* margin-top: 6rem; */
+
     }
+
+
 
     .skills__title {
         height: 6rem;

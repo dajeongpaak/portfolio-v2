@@ -640,6 +640,10 @@ section {
         grid-column: 2 /span 10;
     }
 
+    .col-5-8-lg {
+        grid-column: 5 / span 8;
+    }
+
     body {
         background: url(../images/desktop-bg.svg);
         background-repeat: repeat;

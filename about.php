@@ -15,42 +15,43 @@
     
     <main id="matter-main">
         <section>
-            <div class="grid h-100">
-                <div class="col-12 col-10-lg img-container z-index">
-                    <img src="images/DJ.jpg" alt="photograph of dajeong park">
-                </div>
-                <div class="col-12 col-7-lg container">
-                    <div class="grid">
-                        <div class="about__content col-12 z-index">
-                            <h1 class="about__intro flex h2">
-                                <div class="text-reveal">
-                                    <span>Hey there! I’m</span>
+            <div class="container">
+                <div class="grid h-100">
+                    <div class="col-12 col-7-sm col-5-lg img-container z-index">
+                        <img src="images/DJ.jpg" alt="photograph of dajeong park">
+                    </div>
+                    <div class="col-12 col-5-8-lg">
+                        <div class="grid">
+                            <div class="about__content col-12 z-index">
+                                <h1 class="about__intro flex h2">
+                                    <div class="text-reveal">
+                                        <span>Hey there! I’m</span>
+                                    </div>
+                                    <div class="text-reveal">
+                                        <span class="drop-shadow">Dajeong</span>
+                                    </div>
+                                    <div class="text-reveal">
+                                        <span>but you can call me</span>
+                                    </div>
+                                    <div class="text-reveal">
+                                        <span class="drop-shadow">DJ</span>
+                                    </div>
+                                </h1>
+                                <div class="about__desc">
+                                    <p>
+                                    I'm a  front-end developer from Korea, currently based in Vancouver, and in training to become a professional in the field.
+                                    </p>
+                                    <br>
+                                    <p>
+                                    I'm on a mission to make the web a more fun and immersive place, one website at a time. With the true passion for crafting user journeys that feel like exciting adventures, 
+                                    I'm always looking for ways to make web browsing a more engaging experience.
+                                    </p>
                                 </div>
-                                <div class="text-reveal">
-                                    <span class="drop-shadow">Dajeong</span>
-                                </div>
-                                <div class="text-reveal">
-                                    <span>but you can call me</span>
-                                </div>
-                                <div class="text-reveal">
-                                    <span class="drop-shadow">DJ</span>
-                                </div>
-                            </h1>
-                            <div class="about__desc">
-                                <p>
-                                I'm a  front-end developer from Korea, currently based in Vancouver, and in training to become a professional in the field.
-                                </p>
-                                <br>
-                                <p>
-                                I'm on a mission to make the web a more fun and immersive place, one website at a time. With the true passion for crafting user journeys that feel like exciting adventures, 
-                                I'm always looking for ways to make web browsing a more engaging experience.
-                                </p>
                             </div>
                         </div>
                     </div>
-                    <div id="skills" class="skills__title z-index"></div>
+                    <div id="skills" class="col-12 skills__title z-index"></div>
                 </div>
-                
             </div>
             <!-- background-color change trigger -->
             
