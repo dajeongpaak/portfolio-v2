@@ -38,7 +38,7 @@
                         </div>
                     </div>
                     <div class="col-12 col-2-10-lg">
-                        <p>The goal was to create a functional note-taking app to gain hands-on experience in building a practical application from scratch, improving my understanding of JavaScript syntax and JavaScript concepts as well as reinforcing best practices in coding.</p>
+                        <p>The goal was to create a functional note-taking app to gain hands-on experience in building a practical application from scratch, improving my understanding of JavaScript syntax and JavaScript concepts as well as demonstrating how to use HTML, CSS, and JavaScript to create a simple web application that stores and retrieves data from local storage.</p>
                     </div>
                     <div class="col-4 col-2-2-lg">
                         <div class="title title-sm">
