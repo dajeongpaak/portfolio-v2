@@ -9,7 +9,7 @@
     <meta name="robots" content="all" />
     <meta name="description" content="Front-end developer who designs and develops immersive web experience that fully engages users.">
     <meta name="author" content="Dajeong Park">
-    <meta name="keywords" content="Developer, Designer,front-end, Vancouver">
+    <meta name="keywords" content="Developer, Designer, front-end, Vancouver">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
    
 

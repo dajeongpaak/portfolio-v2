@@ -5,17 +5,17 @@
             <ul>
                 <li>
                     <span class="h6">
-                        <a href="https://www.linkedin.com/in/dajeong-park-4956bb255/">Linkedin</a>
+                        <a href="https://www.linkedin.com/in/dajeong-park-4956bb255/" target="_blank" title="Dajeong Park Linkedin">Linkedin</a>
                     </span>
                 </li>
                 <li>
                     <span class="h6">
-                        <a href="tel:2368692819">236-869-2819</a>
+                        <a href="https://github.com/dajeongpaak" target="_blank" title="Dajeong Park Github">Github</a>
                     </span>
                 </li>
                 <li>
                     <span class="h6">
-                        <a href="mailto:dajeong2019@gmail.com">dajeong2019@gmail.com</a>
+                        <a href="mailto:hello@dajeongpark.com">hello@dajeongpark.com</a>
                     </span>
                 </li>
             </ul>
