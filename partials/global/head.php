@@ -13,7 +13,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
    
 
-    <meta property="og:title" content="Dajeong Park |front-end developer portfolio" />
+    <meta property="og:title" content="Dajeong Park | Front-end developer portfolio" />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://dajeongpark.com" />
     <meta property="og:image" content="<?php echo get_url("/images/main-logo.png"); ?>"/>
