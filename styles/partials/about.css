@@ -149,16 +149,11 @@ main {
 
 @media screen and (min-width: 1024px) {
     .img-container {
-        width: 25rem;
-        height: 25rem;
-        align-self: self-start;
-        /* margin-top: 6rem; */
-
+        width: 23rem;
+        height: 23rem;
     }
 
-
-
     .skills__title {
-        height: 6rem;
+        height: 7rem;
     }
 }

@@ -213,12 +213,12 @@
             trigger: selector,
             toggleActions: "play complete restart reset",
             },
-            y: 130,
+            y: 150,
             ease: "power4.out",
             delay: 1,
-            skewY: 7,
+            skewY: 10,
             stagger: {
-            amount: 0.5
+            amount: 0.7
             }
         });
         });

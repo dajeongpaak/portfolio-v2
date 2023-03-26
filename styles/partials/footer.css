@@ -19,7 +19,6 @@
 
 @media screen and (min-width: 576px) {
     .footer {
-        font-size: 1.3rem;
         padding-top: 7rem;
     }
 
@@ -32,13 +31,25 @@
 
 @media screen and (min-width: 768px) {
     .footer {
-        font-size: 1.7rem;
-        padding-top: 7rem;
+        padding-top: 10rem;
     }
 
 
     .footer__copy {
         font-size: 1.3rem;
+    }
+
+}
+
+
+@media screen and (min-width: 1024px) {
+    .footer {
+        padding-top: 13rem;
+    }
+
+
+    .footer__copy {
+        font-size: 1.5rem;
     }
 
 }
