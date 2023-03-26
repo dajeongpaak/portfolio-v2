@@ -437,7 +437,7 @@
             logoBlack.forEach( item =>
             item.style.fill = "#fff");
             navColor.style.backgroundColor = "#000";
-            navColor.style.border = "2px solid #fff";
+            navColor.style.border = "1px solid #fff";
             logoWhite.style.fill = "#000";
         } else if (skillsRect.bottom > 0) {
             body.classList.remove('--bg-change');
@@ -451,7 +451,7 @@
             logoBlack.forEach( item =>
             item.style.fill = "#010101");
             navColor.style.backgroundColor = "#fff";
-            navColor.style.border = "2px solid #000";
+            navColor.style.border = "1px solid #000";
             logoWhite.style.fill = "#fff";
         }
         });
