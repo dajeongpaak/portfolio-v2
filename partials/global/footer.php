@@ -24,5 +24,5 @@
     </div>
 
     </div>
-    <span class="footer__copy h6">© 2023 Dajeong Park </span>
+    <span class="footer__copy h6">© <?php echo date("Y")?> Dajeong Park </span>
 </footer>
