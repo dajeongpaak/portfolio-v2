@@ -24,5 +24,5 @@
     </div>
 
     </div>
-    <span class="footer__copy h6">© Dajeong Park 2023</span>
+    <span class="footer__copy h6">© 2023 Dajeong Park </span>
 </footer>
