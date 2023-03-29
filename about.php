@@ -72,12 +72,12 @@
                         </li>
                         <li>
                             <span class="h6">
-                                <a href="tel:2368692819">236-869-2819</a>
+                                <a href="https://github.com/dajeongpaak" target="_blank" title="Dajeong Park GitHub">GitHub</a>
                             </span>
                         </li>
                         <li>
                             <span class="h6">
-                                <a href="mailto:dajeong2019@gmail.com">dajeong2019@gmail.com</a>
+                                <a href="mailto:hello@dajeongpark.com">hello@dajeongpark.com</a>
                             </span>
                         </li>
                     </ul>
@@ -86,7 +86,7 @@
             </div>
 
         </div>
-        <span class="footer__copy h6">© Dajeong Park 2023</span>
+        <span class="footer__copy h6">© <?php echo date("Y")?> Dajeong Park</span>
     </footer>
     <?php require_once(get_path("/partials/global/js-global.php"))?>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/matter-js/0.19.0/matter.min.js"></script>
@@ -151,22 +151,10 @@
                 scaleFactor = (matterContainer.clientWidth * SVG_WIDTH_AS_PERCENT_OF_CONTAINER_WIDTH) / SVG_WIDTH_IN_PX;
             }
 
-        let ScaleCircle = scaleFactor/4.5;
-        let ScaleRec = scaleFactor/4;
+        let ScaleCircle = scaleFactor/5;
+        let ScaleRec = scaleFactor/4.2;
         let startingPoint =  (mainHeight.clientHeight)*3 /5;
         
-        var css = Bodies.rectangle(matterContainer.clientWidth / 2 , startingPoint , scaleFactor * 7, scaleFactor * 8, {
-            density: 0.04,
-		    friction: 0.01,
-		    frictionAir: 0.000001,
-		    restitution: 0.8,
-            render: { 
-            sprite: { 
-                texture: "images/css.png", 
-                xScale: ScaleRec, 
-                yScale: ScaleRec}}
-        });
-
         var sass = Bodies.circle(300, startingPoint, scaleFactor * 40,  {
             density: 0.04,
 		    friction: 0.01,
@@ -203,7 +191,7 @@
                 yScale: ScaleCircle }}
             });
 
-        var php = Bodies.rectangle(matterContainer.clientWidth / 2 , startingPoint , scaleFactor * 90, scaleFactor * 100, {
+        var php = Bodies.rectangle(matterContainer.clientWidth / 2 , startingPoint , scaleFactor * 80, scaleFactor * 80, {
             density: 0.04,
 		    friction: 0.01,
 		    frictionAir: 0.000001,
@@ -211,11 +199,11 @@
             render: { 
             sprite: { 
                 texture: "images/php.png", 
-                xScale: ScaleRec, 
-                yScale: ScaleRec}}
+                xScale: ScaleRec/1.2, 
+                yScale: ScaleRec/1.2}}
         });
 
-        var gsap = Bodies.rectangle(matterContainer.clientWidth / 2 , startingPoint , scaleFactor * 70, scaleFactor * 80, {
+        var gsap = Bodies.rectangle(matterContainer.clientWidth / 2 , startingPoint , scaleFactor * 70, scaleFactor * 70, {
             density: 0.04,
 		    friction: 0.01,
 		    frictionAir: 0.000001,
@@ -227,7 +215,19 @@
                 yScale: ScaleRec}}
         });
 
-        var jquery = Bodies.polygon(matterContainer.clientWidth / 2, startingPoint, 3, scaleFactor *50, {
+        var adobe = Bodies.rectangle(matterContainer.clientWidth / 1.3 , startingPoint , scaleFactor * 80, scaleFactor * 80, {
+            density: 0.04,
+		    friction: 0.01,
+		    frictionAir: 0.000001,
+		    restitution: 0.8,
+            render: { 
+            sprite: { 
+                texture: "images/adobe.png", 
+                xScale: ScaleRec/2.35, 
+                yScale: ScaleRec/2.35}}
+        });
+
+        var jquery = Bodies.rectangle(matterContainer.clientWidth / 2 , startingPoint , scaleFactor * 70, scaleFactor * 70, {
             density: 0.04,
 		    friction: 0.01,
 		    frictionAir: 0.000001,
@@ -235,11 +235,11 @@
             render: { 
             sprite: { 
                 texture: "images/jquery.png", 
-                xScale: ScaleCircle, 
-                yScale: ScaleRec}}
+                xScale: ScaleRec/2.7, 
+                yScale: ScaleRec/2.7}}
         });
 
-        var js = Bodies.rectangle(matterContainer.clientWidth / 2 , startingPoint , scaleFactor * 150, scaleFactor * 100, {
+        var js = Bodies.rectangle(matterContainer.clientWidth / 2 , startingPoint , scaleFactor * 110, scaleFactor * 70, {
             density: 0.04,
 		    friction: 0.01,
 		    frictionAir: 0.000001,
@@ -247,8 +247,8 @@
             render: { 
             sprite: { 
                 texture: "images/js.png", 
-                xScale: scaleFactor/2.7, 
-                yScale: scaleFactor/2.2}}
+                xScale: ScaleRec*1.2, 
+                yScale: ScaleRec*1.4}}
         });
 
         var responsive = Bodies.rectangle(matterContainer.clientWidth / 4 , startingPoint , scaleFactor * 100, scaleFactor * 100, {
@@ -263,20 +263,19 @@
                 yScale: ScaleRec}}
         });
 
-        var htmlR = Bodies.circle(300, startingPoint, scaleFactor * 50,  {
+        var bootstrap = Bodies.rectangle(matterContainer.clientWidth / 4 , startingPoint , scaleFactor * 80, scaleFactor * 80, {
             density: 0.04,
 		    friction: 0.01,
 		    frictionAir: 0.000001,
 		    restitution: 0.8,
             render: { 
             sprite: { 
-                texture: "images/html.png", 
-                xScale: ScaleRec, 
-                yScale: ScaleRec }}
-            });
-         
+                texture: "images/bootstrap.png", 
+                xScale: ScaleRec/2.2, 
+                yScale: ScaleRec/2.2}}
+        });
 
-        var cssR = Bodies.rectangle(matterContainer.clientWidth / 2 , startingPoint , scaleFactor * 80, scaleFactor * 80, {
+        var css = Bodies.rectangle(matterContainer.clientWidth / 2 , startingPoint , scaleFactor * 77, scaleFactor * 77, {
             density: 0.04,
 		    friction: 0.01,
 		    frictionAir: 0.000001,
@@ -315,7 +314,7 @@
         fillStyle: 'rgba(0,0,0,0)'}});
 
         // add all of the bodies to the world
-        Composite.add(world, [sass, figma, matter, php, gsap, jquery, js, responsive, html, cssR, ground, leftwall, rightwall]);
+        Composite.add(world, [sass, figma, matter, php, gsap, jquery, js, responsive, html, adobe, css,bootstrap, ground, leftwall, rightwall]);
 
         var canvas = render.canvas;
 

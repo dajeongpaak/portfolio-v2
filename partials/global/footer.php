@@ -10,7 +10,7 @@
                 </li>
                 <li>
                     <span class="h4">
-                        <a href="https://github.com/dajeongpaak" target="_blank" title="Dajeong Park Github">Github</a>
+                        <a href="https://github.com/dajeongpaak" target="_blank" title="Dajeong Park GitHub">GitHub</a>
                     </span>
                 </li>
                 <li>

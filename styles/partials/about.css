@@ -76,6 +76,7 @@ main {
     background-position: center;
     background-repeat: no-repeat;
     height: 3rem;
+    pointer-events: none;
 }
 
 .matter-container {
