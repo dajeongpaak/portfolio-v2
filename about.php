@@ -138,7 +138,7 @@
                 width: matterContainer.clientWidth,
                 height: mainHeight.clientHeight,
                 // pixelRatio: 2,
-                wireframes: true,
+                wireframes: false,
                 background: 'transparent'
             }
         });
