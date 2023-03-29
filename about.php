@@ -271,8 +271,8 @@
             render: { 
             sprite: { 
                 texture: "images/bootstrap.png", 
-                xScale: ScaleRec/2.2, 
-                yScale: ScaleRec/2.2}}
+                xScale: ScaleRec/2.1, 
+                yScale: ScaleRec/2.1}}
         });
 
         var css = Bodies.rectangle(matterContainer.clientWidth / 2 , startingPoint , scaleFactor * 77, scaleFactor * 77, {

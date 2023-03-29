@@ -1,8 +1,12 @@
+<script src="https://cdn.jsdelivr.net/npm/vanilla-lazyload@17.8.3/dist/lazyload.min.js"></script>
 <script>
 const menuOpen = document.querySelector('#js-menu-open');
 const jsMenu = document.querySelector('#js-menu');
 const hamburgers = document.querySelectorAll('.hamburger');
 const menuList = document.querySelector('#menuList');
+
+const lazyLoadInstance = new LazyLoad({
+        });
 
 
 menuOpen.addEventListener('click', () => {
@@ -44,7 +48,6 @@ const videoContainer = document.querySelector('.project__video');
 window.addEventListener("load", () => {
     videos.forEach(video => {
         video.play();
-        video.classList.add('loading');
     });
 });
       

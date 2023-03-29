@@ -33,8 +33,7 @@
                                     </div>
                                 </h3>
                                 <div class="project__media">
-                                    <video class="js-video loading" playsinline autoplay loop muted>
-                                    <source src="<?php echo get_url("images/note-taking-app-preview.mp4");?>" type="video/mp4">
+                                    <video class="lazy"  data-src=<?php echo get_url("/images/note-taking-app-preview.mp4");?> data-poster="<?php echo get_url("/images/note-taking-app-blur.jpg")?>" playsinline autoplay loop muted>
                                     </video>
                                 </div>
                                 <div class="flex flex-wrap">
@@ -61,11 +60,9 @@
                                     </div>
                                 </h3>
                                 <div class="project__media">
-                                    <video class="js-video loading" playsinline autoplay loop muted>
-                                    <source src="<?php echo get_url("images/symmetry-photo-gallery-preview.mp4");?>" type="video/mp4">
-                                </video>
+                                    <video class="lazy"  data-src=<?php echo get_url("images/symmetry-photo-gallery-preview.mp4");?> data-poster="<?php echo get_url("/images/symmetry-photo-gallery-blur.jpg")?>" playsinline autoplay loop muted>
+                                    </video>
                                 </div>
-                                
                                 <div class="flex flex-wrap">
                                     <div class="button h4">
                                         Web Development
@@ -90,8 +87,7 @@
                                     </div>
                                 </h3>
                                 <div class="project__media">
-                                    <video class="js-video loading" playsinline autoplay loop muted>
-                                        <source src="<?php echo get_url("images/esnes-launching-project-preview.mp4"); ?>" type="video/mp4">
+                                    <video class="lazy"  data-src=<?php echo get_url("images/esnes-launching-project-preview.mp4");?> data-poster="<?php echo get_url("/images/esnes-launching-project-blur.jpg")?>" playsinline autoplay loop muted>
                                     </video>
                                 </div>
                                 <div class="flex flex-wrap">
@@ -150,16 +146,13 @@
     <?php require_once(get_path("/partials/global/footer.php"));?>
 
  
-    <script src="https://cdn.jsdelivr.net/npm/vanilla-lazyload@17.8.3/dist/lazyload.min.js"></script>
+   
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/ScrollTrigger.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/ScrollToPlugin.min.js"></script>
     <?php require_once(get_path("/partials/global/js-global.php"))?>
     <script>
-        const lazyLoadInstance = new LazyLoad({
-        // Your custom settings go here
-        });
-
+    
         // const workCards = document.querySelectorAll(".work__card");
 
         // workCards.forEach( workCard => {

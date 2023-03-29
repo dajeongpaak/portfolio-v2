@@ -28,8 +28,10 @@
                         <h2 class="h4">Note-taking Application</h2>
                     </div>
                     <div class="col-12 col-2-10-lg js-project-video">
-                        <video class="js-video loading" playsinline autoplay loop muted>
+                        <!-- <video class="js-video loading" playsinline autoplay loop muted>
                             <source src="../images/note-taking-app-preview.mp4" type="video/mp4">
+                        </video> -->
+                        <video class="lazy"  data-src=<?php echo get_url("/images/note-taking-app-preview.mp4");?> data-poster="<?php echo get_url("/images/note-taking-app-blur.jpg")?>" playsinline autoplay loop muted>
                         </video>
                     </div>
                     <div class="col-4 col-2-2-lg align-self">
@@ -129,12 +131,14 @@
     </section>
     </main>
     <?php require_once(get_path("/partials/global/footer.php"));?>
-    <?php require_once(get_path("/partials/global/js-global.php"))?>
+    
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/Flip.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/ScrollTrigger.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/ScrollToPlugin.min.js"></script>
+    <?php require_once(get_path("/partials/global/js-global.php"))?>
     <script>
+
 
         const backBtn = document.querySelector(".back__btn");
         let slideIn = document.querySelector('.js-slidein');
