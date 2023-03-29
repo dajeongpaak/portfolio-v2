@@ -20,7 +20,7 @@
             <div class="container">
                 <div id="js-backBtn" class="back__btn">
                     <div class="button-sm">
-                        <i class="fa-solid fa-arrow-right-long"></i>
+                        <img src="<?php echo get_url("images/right-arrow.svg")?>" alt="call to action button for project">
                 </div>
                 </div>
                 <div class="grid project__overview">

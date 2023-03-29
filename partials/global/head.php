@@ -24,8 +24,6 @@
     <link rel="stylesheet" href="<?php echo get_url('styles/partials/footer.css'); ?>">
     <link rel="stylesheet" href="<?php echo get_url('styles/partials/' . $partial_css . '.css'); ?>">
     <link rel="icon" sizes="16x16" type="image/svg+xml" href="<?php echo get_url("/images/favicon.svg");?>">
-    
-    <script src="https://kit.fontawesome.com/0a2ba5e508.js" crossorigin="anonymous"></script>
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-6WX1XL9Z33"></script>
     <script>
     window.dataLayer = window.dataLayer || [];

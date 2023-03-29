@@ -31,7 +31,6 @@
 .back__btn {
     position: fixed;
     top: 2rem;
-    mix-blend-mode: difference;
     color: white;
 }
 
@@ -42,12 +41,14 @@ a {
 
 .button-sm {
     color: unset;
-    border: 1px solid white;
-    box-shadow: 2px 4px 0px 0px #009cff;
+    border: 1px solid var(--black);
+    box-shadow: 2px 4px 0px 0px var(--orange);
 }
 
-.back__btn i {
+.back__btn img {
     transform: rotate(-180deg);
+    fill: var(--white);
+    border: unset;
 }
 
 video {

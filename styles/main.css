@@ -324,8 +324,8 @@ section {
     color: var(--black);
 }
 
-.button-sm i {
-    font-size: 1.5rem;
+.button-sm img {
+    width: 2rem;
 }
 
 .button-sm:hover,

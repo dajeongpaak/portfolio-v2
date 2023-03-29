@@ -109,7 +109,7 @@
                                     </div>
                                     <div class="card__btn">
                                         <a href="<?php echo get_url("/projects/note-taking-application-web-development-project.php"); ?>" class="button-sm">
-                                            <i class="fa-solid fa-arrow-right-long"></i>
+                                        <img src="<?php echo get_url("images/right-arrow.svg")?>" alt="call to action button for project">
                                         </a>
                                     </div>
                                 </div>
@@ -123,7 +123,7 @@
                                     </div>
                                     <div class="card__btn">
                                         <a href="symmetry.html" class="button-sm">
-                                            <i class="fa-solid fa-arrow-right-long"></i>
+                                            <img src="<?php echo get_url("images/right-arrow.svg")?>" alt="call to action button for project">
                                         </a>
                                     </div>
                                 </div>
@@ -138,7 +138,7 @@
                                     </div>
                                     <div class="card__btn">
                                         <a href="esnes.html" class="button-sm">
-                                            <i class="fa-solid fa-arrow-right-long"></i>
+                                            <img src="<?php echo get_url("images/right-arrow.svg")?>" alt="call to action button for project">
                                         </a>
                                     </div>
                                 </div>
@@ -152,7 +152,7 @@
                                     </div>
                                     <div class="card__btn">
                                         <a href="burgersquad.html" class="button-sm">
-                                            <i class="fa-solid fa-arrow-right-long"></i>
+                                            <img src="<?php echo get_url("images/right-arrow.svg")?>" alt="call to action button for project">
                                         </a>
                                     </div>
                                 </div>
