@@ -300,7 +300,7 @@ section {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 1rem;
+    padding: 2rem;
     background-color: var(--white);
     box-shadow: 2px 6px 0px 0px var(--black);
     border-radius: 18rem;
