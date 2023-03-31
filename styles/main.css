@@ -100,7 +100,6 @@ body {
     transition: background-color 0.4s ease-in-out;
     -moz-transition: background-color 0.4s ease-in-out;
     -webkit-transition: background-color 0.4s ease-in-out;
-
 }
 
 body.--bg-change {
@@ -269,8 +268,6 @@ section {
     padding-top: 3rem;
 }
 
-
-
 .border-radius {
     border-top-right-radius: 3rem;
     border-top-left-radius: 3rem;
@@ -303,22 +300,27 @@ section {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 12.5rem;
-    height: 5.5rem;
+    padding: 1rem;
     background-color: var(--white);
-    box-shadow: 2px 6px 0px 0px #000000;
+    box-shadow: 2px 6px 0px 0px var(--black);
     border-radius: 18rem;
     border: black 2px solid;
+}
+
+.button:hover,
+.button:active {
+    transform: translate(2px, 6px);
+    box-shadow: unset;
 }
 
 .button-sm {
     display: flex;
     justify-content: center;
     align-items: center;
-    box-shadow: 2px 4px 0px 0px #FD5602;
+    box-shadow: 2px 4px 0px 0px var(--orange);
     width: 3.125rem;
     height: 3.125rem;
-    border: 1px solid #000000;
+    border: 1px solid var(--black);
     border-radius: 50%;
     text-decoration: none;
     color: var(--black);
@@ -346,6 +348,10 @@ section {
     background-color: var(--white);
     border-radius: 18rem;
     text-align: center;
+}
+
+.snap {
+    overflow: hidden;
 }
 
 @keyframes loop {
@@ -449,8 +455,7 @@ section {
 
     /* Components */
     .button {
-        width: 16.5rem;
-        height: 7.5rem;
+        padding: 1.5rem;
     }
 
     .title {
@@ -569,8 +574,7 @@ section {
 
     /* Components */
     .button {
-        width: 19.5rem;
-        height: 9.5rem;
+        padding: 2rem;
     }
 
     .card {
@@ -653,10 +657,6 @@ section {
         -webkit-transition: background-color 0.4s ease-in-out;
     }
 
-    main {
-        overflow: hidden;
-    }
-
     h1,
     .h1 {
         font-size: 5.5rem;
@@ -680,4 +680,16 @@ section {
     .container {
         padding: 0 4rem;
     }
+
+    .button {
+        padding: 3rem;
+        box-shadow: 4px 7px 0px 0px var(--black);
+    }
+
+    .button:hover,
+    .button:active {
+        transform: translate(4px, 7px);
+        box-shadow: unset;
+    }
+
 }

@@ -43,7 +43,7 @@
                         immersive<br>
                         web experience<br>
                         that fully engage users,<br>
-                        creating<br>
+                        creating 
                         an emotional connection<br>
                         with the digital environment<br><br>
                     </p>   
@@ -70,8 +70,8 @@
                                 <span>E</span><span>x</span><span>c</span><span>i</span><span>t</span><span>e</span><span>m</span><span>e</span><span>n</span><span>t</span><span>!</span>
                         </div>            
                     </div>
-                    <div class="wonder__content mt-6">
-                        <h3 class="desc__h2">
+                    <div class="wonder__content mt-6 justify-between align-end">
+                        <h3 class="desc__h2 flex-grow">
                                 through<br>
                                 <div class="text-reveal">
                                     <span >Creativity,</span><br>
@@ -83,7 +83,7 @@
                                     <span>Lifelong learning.</span>
                                 </div>
                         </h3>
-                        <div id="js-color-change" class="home__color text-center mt-3 z-index">
+                        <div id="js-color-change" class="home__color text-center mt-3 z-index ">
                             <p id="js-text-change">(don't like the color?)</p>
                             <img src="<?php echo get_url("images/sad-logo.svg")?>" alt="pdj sad face logo">
                             <p class="h6">Click me!</p>
@@ -162,7 +162,7 @@
                 </div>
             </div>
         </section>
-        <section class="home__projects--desktop border-radius">
+        <section class="home__projects--desktop border-radius snap">
             <div class="container">
             <div class="projects__drag flex justify-between align-center">
                 <div class="flex w-100 justify-between">
@@ -177,26 +177,62 @@
                 </div>
                 <div class="drag__title-top">Featured</div>
                 <div class="drag__title-bottom">Projects</div>
-               
             </div>
             </div>
         </section>
         <div id="matter-container--home" class="matter-container--home"></div>
     </main>
-
-    <?php require_once(get_path("/partials/global/footer.php"))?>
+    <footer class="footer border-radius snap">
+        <div class="container h-100 flex flex-column justify-between">
+            <div class="footer__cta flex flex-column justify-center align-center h2">
+                <div id="js-footer-text" class="footer__cta--text text-center">
+                    <span>G</span><span>e</span><span>t</span><br><span>I</span><span>n</span><br><span>T</span><span>o</span><span>u</span><span>c</span><span>h</span><span>!</span>
+                </div>
+                <div class="footer__cta--email text-center mt-3">
+                    <a href="mailto:hello@dajeongpark.com" title="dajeong park email contact me!" class="button">hello@dajeongpark.com</a>
+                </div> 
+            </div>
+            <div id="js-color-change" class="footer__color text-center z-index ">
+                <p id="js-text-change">(Yellow is ugly!)</p>
+                <img src="<?php echo get_url("images/sad-logo.svg")?>" alt="pdj sad face logo">
+                <p class="h6">Click me!</p>
+            </div>  
+            <div class="footer__links flex justify-between align-center">
+                <p class="home-footer__copy h6">© <?php echo date("Y")?> Dajeong Park</p>
+                <ul class="footer__social flex">
+                    <li class="h6">
+                        <span>
+                            <a href="https://www.linkedin.com/in/dajeong-park-4956bb255/">Linkedin</a>
+                        </span>
+                    </li>
+                    <li class="h6">
+                        <span>
+                            <a href="https://github.com/dajeongpaak" target="_blank" title="Dajeong Park GitHub">GitHub</a>
+                        </span>
+                    </li>
+                    <li>
+                        <a href="#" class="h6">
+                           Back To Top
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        
+    </footer>
+   
+   
     
-    <?php require_once(get_path("/partials/global/js-global.php"))?>
+  
     <?php require_once(get_path("/partials/home/js-home-drag-n-drop.php"))?>
     <!-- <script src="scripts/main.js"></script> -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/matter-js/0.19.0/matter.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/ScrollTrigger.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/ScrollToPlugin.min.js"></script>
-
+    <?php require_once(get_path("/partials/global/js-global.php"))?>
     <script>
         gsap.registerPlugin(ScrollTrigger);
-
         const circle = document.querySelector('#js-circle-animation');
         const sadLogo = document.querySelector('#js-color-change');
         const tl = gsap.timeline({paused: false});
@@ -258,6 +294,7 @@
         let xPos = window.innerWidth / 2;
         let yPos = window.innerHeight / 2;
         let pieces = gsap.utils.toArray("#js-text-animation span");
+        let getintough = gsap.utils.toArray("#js-footer-text span")
       
         pieces.forEach( item => {
             let xRandomPos = gsap.utils.random(-xPos, xPos);
@@ -293,6 +330,43 @@
             scale: 1,
             duration: 0.3,
         })
+
+        getintough.forEach( item => {
+            let xRandomPos = gsap.utils.random(-xPos, xPos);
+            let yRandomPos = gsap.utils.random(-yPos, yPos);
+            let rRandom = gsap.utils.random(-30 , 30);
+
+            tl.from(item, {
+                scrollTrigger: {
+                    trigger: ".footer",
+                    toggleActions: "restart pause reverse none",
+                    start: "top 40%",
+                    end: "bottom bottom",
+                    scrub: 1,
+                },
+                x: xRandomPos,
+                y: yRandomPos,
+                rotate: rRandom,
+                duration: .5,
+                stagger: 1,
+                ease: "power2"
+            })
+        })
+
+
+        let snaps = gsap.utils.toArray(".snap");
+
+        gsap.to(snaps, {
+            ease: "expo",
+            scrollTrigger: {
+                trigger: snaps,
+                pin: true,
+                pinSpacing: false,
+                scrub: 1,
+                duration: 1
+            },
+        })
+
 
         const matterContainer = document.querySelector("#matter-container--home");
         const mainHeight = document.querySelector("#matter-canvas");

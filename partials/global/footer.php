@@ -1,4 +1,4 @@
-<footer class="footer">
+<footer class="footer border-radius">
     <div class="container">
     <div class="grid">
         <div class="footer__content col-12">

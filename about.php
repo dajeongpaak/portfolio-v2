@@ -60,39 +60,11 @@
         <div id="matter-container" class="matter-container">
         </div>
     </main>
-    <footer class="footer about-footer">
-        <div class="container">
-            <div class="grid">
-                <div class="footer__content col-12">
-                    <ul>
-                        <li>
-                            <span class="h6">
-                                <a href="https://www.linkedin.com/in/dajeong-park-4956bb255/">Linkedin</a>
-                            </span>
-                        </li>
-                        <li>
-                            <span class="h6">
-                                <a href="https://github.com/dajeongpaak" target="_blank" title="Dajeong Park GitHub">GitHub</a>
-                            </span>
-                        </li>
-                        <li>
-                            <span class="h6">
-                                <a href="mailto:hello@dajeongpark.com">hello@dajeongpark.com</a>
-                            </span>
-                        </li>
-                    </ul>
-
-                </div>
-            </div>
-
-        </div>
-        <span class="footer__copy h6">© <?php echo date("Y")?> Dajeong Park</span>
-    </footer>
-    <?php require_once(get_path("/partials/global/js-global.php"))?>
+    <?php require_once(get_path("/partials/global/footer.php"))?>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/matter-js/0.19.0/matter.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/ScrollToPlugin.min.js"></script>
-   
+    <?php require_once(get_path("/partials/global/js-global.php"))?>
     <script>
 
     const tl = gsap.timeline({paused: false});
@@ -106,8 +78,7 @@
                 amount: 0.5
             }
         })
-
-    console.log(gsap)
+        
     const matterContainer = document.querySelector("#matter-container");
     const mainHeight = document.querySelector("#matter-main");
     const THICCNESS = 60;

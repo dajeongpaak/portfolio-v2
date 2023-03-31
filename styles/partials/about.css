@@ -1,9 +1,26 @@
 /*--- ABOUT ---*/
+body {
+    scroll-snap-type: y proximity;
+    overflow-y: scroll;
+}
+
+header {
+    scroll-snap-align: end;
+    scroll-snap-stop: always;
+}
 
 main {
     position: relative;
     height: 230vh;
     padding-top: 7rem;
+    scroll-snap-align: end;
+    scroll-snap-stop: always;
+}
+
+
+footer {
+    scroll-snap-align: end;
+    scroll-snap-stop: always;
 }
 
 .img-container {

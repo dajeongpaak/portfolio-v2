@@ -1,5 +1,7 @@
 <script src="https://cdn.jsdelivr.net/npm/vanilla-lazyload@17.8.3/dist/lazyload.min.js"></script>
 <script>
+
+    
 const menuOpen = document.querySelector('#js-menu-open');
 const jsMenu = document.querySelector('#js-menu');
 const hamburgers = document.querySelectorAll('.hamburger');
@@ -42,8 +44,7 @@ window.onscroll = function () {
     prevScrollpos = currentScrollPos;
 }
 
-const videos = document.querySelectorAll('.js-video');
-const videoContainer = document.querySelector('.project__video');
+const videos = document.querySelectorAll('video');
 
 window.addEventListener("load", () => {
     videos.forEach(video => {
