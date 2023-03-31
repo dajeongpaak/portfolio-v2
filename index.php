@@ -192,7 +192,7 @@
                     <a href="mailto:hello@dajeongpark.com" title="dajeong park email contact me!" class="button">hello@dajeongpark.com</a>
                 </div> 
             </div>
-            <div id="js-color-change" class="footer__color text-center z-index ">
+            <div id="js-color-change--footer" class="footer__color text-center z-index ">
                 <p id="js-text-change">(Yellow is ugly!)</p>
                 <img src="<?php echo get_url("images/sad-logo.svg")?>" alt="pdj sad face logo">
                 <p class="h6">Click me!</p>
