@@ -88,11 +88,11 @@ footer {
 }
 
 .skills__title {
-    margin-top: 10rem;
+    margin-top: 28vmin;
     background-image: url(../../images/skills.svg);
     background-position: center;
     background-repeat: no-repeat;
-    height: 3rem;
+    height: 12vmin;
     pointer-events: none;
 }
 
@@ -163,6 +163,9 @@ footer {
         margin: 2rem;
     }
 
+    .skills__title {
+        height: 12vmin;
+    }
 }
 
 @media screen and (min-width: 1024px) {
@@ -172,6 +175,6 @@ footer {
     }
 
     .skills__title {
-        height: 7rem;
+        height: 14vmin;
     }
 }

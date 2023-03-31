@@ -455,7 +455,7 @@ section {
 
     /* Components */
     .button {
-        padding: 1.5rem;
+        padding: 2.5rem;
     }
 
     .title {
@@ -573,8 +573,16 @@ section {
 
 
     /* Components */
+
     .button {
-        padding: 2rem;
+        padding: 3rem;
+        box-shadow: 4px 7px 0px 0px var(--black);
+    }
+
+    .button:hover,
+    .button:active {
+        transform: translate(4px, 7px);
+        box-shadow: unset;
     }
 
     .card {
@@ -681,15 +689,5 @@ section {
         padding: 0 4rem;
     }
 
-    .button {
-        padding: 3rem;
-        box-shadow: 4px 7px 0px 0px var(--black);
-    }
-
-    .button:hover,
-    .button:active {
-        transform: translate(4px, 7px);
-        box-shadow: unset;
-    }
 
 }
