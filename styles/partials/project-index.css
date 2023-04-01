@@ -55,7 +55,12 @@ h3 {
     margin: unset;
 }
 
+@keyframes loop {
+    100% {
+        transform: translateX(-100%);
+    }
 
+}
 
 .work-card__title-desktop {
     display: none;
@@ -89,17 +94,17 @@ h3 {
     object-fit: fill;
 }
 
-.work__card .button {
+.work__card .title {
     margin-right: .5rem;
     margin-bottom: .5rem;
+    margin-left: unset;
     justify-content: center;
     width: auto;
-    height: 18vmin;
     box-shadow: 2px 5px 0px var(--orange);
-    padding: 1rem;
+    padding: 1.3rem;
     border: 1px solid var(--black);
     line-height: 1.5;
-    font-size: 3.5vmin;
+    font-size: 3vmin;
 }
 
 .work__note-taking {
@@ -145,6 +150,10 @@ h3 {
         padding: 1rem;
     }
 
+    .work__card .button {
+        padding: 1.7rem;
+    }
+
     .js-bottom-logo {
         width: 9rem;
     }
@@ -152,60 +161,38 @@ h3 {
 
 @media screen and (min-width:768px) {
     .work__cards {
-        grid-column: auto / span 12;
-        margin: 2rem;
-        margin-bottom: 22rem;
-        display: grid;
+        grid-column: 2 / span 10;
     }
+
 
     .work__card {
-        grid-column: auto / span 6;
-        height: 45vh;
+        height: 70vh;
         overflow: hidden;
-        padding: 2rem 1rem;
-        position: relative;
-        margin-bottom: unset;
-        top: unset;
-        transition: all .3s ease-in-out;
+        top: 18vh;
     }
 
-    .work-card__subheading {
-        display: none;
+    .work__card .title {
+        font-size: 2.4vmin;
     }
 
-    .work-card__content {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-evenly;
-        height: 100%;
+    .work__note-taking {
+        background: #efefef;
+        margin-bottom: 136%;
     }
 
-    .work-card__title {
-        display: none;
+    .work__symmetry {
+        background: #fefaf2;
+        margin-bottom: 124%;
     }
 
-    .work-card__title-desktop {
-        display: block;
-        font-family: var(--sans-serif-1);
-        font-size: 1rem;
-        /* margin-bottom: .5rem; */
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        width: auto;
-        margin: 0 auto 1rem auto;
+    .work__esnes {
+        background: #c76d6d;
+        margin-bottom: 112%;
     }
 
-    .work__card .button {
-        margin-right: .5rem;
-        margin-bottom: .5rem;
-        justify-content: center;
-        width: auto;
-        height: 8vmin;
-        padding: 1rem;
-        border: 1px solid var(--black);
-        line-height: 1.5;
-        font-size: 1.4vmin;
+    .work__burgersquad {
+        background: #15121f;
+        margin-bottom: 100%;
     }
 
     .js-bottom-logo {
@@ -215,14 +202,59 @@ h3 {
 
 @media screen and (min-width:1024px) {
     .work__card {
-        height: 70vh;
+        height: 73vh;
+        grid-column: auto / span 12;
+        top: 20vh;
     }
 
-    .work-card__title-desktop {
-        font-size: 1.9rem;
+    .work__cards {
+        grid-column: span 12;
+    }
+
+    .project__media {
+        position: relative;
+        border-radius: 1rem;
+        overflow: hidden;
+        margin-bottom: 0.5rem;
+        height: fit-content;
+        margin: 0.5rem 6.5rem;
+        width: auto;
+    }
+
+    .work-card__title {
+        display: flex;
+        font-size: 5vmin;
+    }
+
+    .work-card__title span {
+        font-size: 5vmax;
     }
 
     .work__card .button {
         font-size: 1.2rem;
+    }
+
+    .work__note-taking {
+        background: #efefef;
+        margin-bottom: 91%;
+    }
+
+    .work__symmetry {
+        background: #fefaf2;
+        margin-bottom: 84%;
+    }
+
+    .work__esnes {
+        background: #c76d6d;
+        margin-bottom: 77%;
+    }
+
+    .work__burgersquad {
+        background: #15121f;
+        margin-bottom: 70%;
+    }
+
+    .js-bottom-logo {
+        width: 12rem;
     }
 }

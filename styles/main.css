@@ -354,12 +354,7 @@ section {
     overflow: hidden;
 }
 
-@keyframes loop {
-    100% {
-        transform: translateX(-100%);
-    }
 
-}
 
 @media screen and (min-width: 576px) {
 
@@ -670,6 +665,11 @@ section {
         font-size: 5.5rem;
     }
 
+    h2,
+    .h2 {
+        font-size: 3.5rem;
+    }
+
     h5,
     .h5 {
         font-size: 2rem;
@@ -689,5 +689,8 @@ section {
         padding: 0 4rem;
     }
 
+    .title {
+        padding: 3rem;
+    }
 
 }

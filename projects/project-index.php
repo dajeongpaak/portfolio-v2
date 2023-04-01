@@ -17,7 +17,7 @@
             <div class="container">
                 <div class="grid">
                     <div class="col-12 title">
-                        <h2 class="h4">Web Development</h2>
+                        <h2>Web Development</h2>
                     </div>
                     <ul class="work__cards grid">
                         <li class="work__card work__note-taking">
@@ -26,10 +26,8 @@
                                 <h3>
                                     <div class="work-card__title flex">
                                         <span>Note-taking Web Application&nbsp;</span>
-                                        <span>Note-taking Web Application</span>
-                                    </div>
-                                    <div class="work-card__title-desktop">
-                                    Note-taking Web Application
+                                        <span>Note-taking Web Application&nbsp;</span>
+                                        <span>Note-taking Web Application&nbsp;</span>
                                     </div>
                                 </h3>
                                 <div class="project__media">
@@ -37,10 +35,10 @@
                                     </video>
                                 </div>
                                 <div class="flex flex-wrap">
-                                    <div class="button h4">
+                                    <div class="title h4">
                                         Web Development
                                     </div>
-                                    <div class="button h4">
+                                    <div class="title h4">
                                         Web Design
                                     </div>
                                 </div>
@@ -64,10 +62,10 @@
                                     </video>
                                 </div>
                                 <div class="flex flex-wrap">
-                                    <div class="button h4">
+                                    <div class="title h4">
                                         Web Development
                                     </div>
-                                    <div class="button h4">
+                                    <div class="title h4">
                                         Web Design
                                     </div>
                                 </div>
@@ -91,13 +89,13 @@
                                     </video>
                                 </div>
                                 <div class="flex flex-wrap">
-                                    <div class="button h4">
+                                    <div class="title h4">
                                     Web Development
                                     </div>
-                                    <div class="button h4">
+                                    <div class="title h4">
                                     Web Design
                                     </div>
-                                    <div class="button h4">Branding</div>
+                                    <div class="title h4">Branding</div>
                                 </div>
                             </a>
                         </li>
@@ -118,10 +116,10 @@
                                     <img src="<?php echo get_url("images/burger-squad-web-development-project.jpg"); ?>" alt="Burgersquad web site image"></img>
                                 </div>
                                 <div class="flex flex-wrap">
-                                    <div class="button h4">
+                                    <div class="title h4">
                                         Web Development
                                     </div>
-                                    <div class="button h4">
+                                    <div class="title h4">
                                         Responsive  Design
                                     </div>
                                 </div>
