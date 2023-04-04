@@ -62,16 +62,9 @@ h3 {
 
 }
 
-.work-card__title-desktop {
-    display: none;
-}
-
-
-
 .project__media {
     position: relative;
     border-radius: 1rem;
-    /* border: 1px solid var(--black); */
     overflow: hidden;
     margin-bottom: 0.5rem;
     height: fit-content;
@@ -202,9 +195,9 @@ h3 {
 
 @media screen and (min-width:1024px) {
     .work__card {
-        height: 73vh;
+        height: 75vh;
         grid-column: auto / span 12;
-        top: 20vh;
+        top: 16vh;
     }
 
     .work__cards {
@@ -217,17 +210,16 @@ h3 {
         overflow: hidden;
         margin-bottom: 0.5rem;
         height: fit-content;
-        margin: 0.5rem 6.5rem;
+        margin: 0.5rem 7.5rem;
         width: auto;
     }
 
     .work-card__title {
         display: flex;
-        font-size: 5vmin;
     }
 
     .work-card__title span {
-        font-size: 5vmax;
+        font-size: 5rem;
     }
 
     .work__card .button {
@@ -236,22 +228,22 @@ h3 {
 
     .work__note-taking {
         background: #efefef;
-        margin-bottom: 91%;
+        margin-bottom: 68%;
     }
 
     .work__symmetry {
         background: #fefaf2;
-        margin-bottom: 84%;
+        margin-bottom: 62%;
     }
 
     .work__esnes {
         background: #c76d6d;
-        margin-bottom: 77%;
+        margin-bottom: 56%;
     }
 
     .work__burgersquad {
         background: #15121f;
-        margin-bottom: 70%;
+        margin-bottom: 50%;
     }
 
     .js-bottom-logo {

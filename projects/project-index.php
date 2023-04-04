@@ -51,10 +51,8 @@
                                     <div  class="work-card__title flex">
                                         <span>‘SYMMETRY’ Photo Gallery&nbsp;</span>
                                         <span>‘SYMMETRY’ Photo Gallery&nbsp;</span>
-                                        <span>‘SYMMETRY’ Photo Gallery</span>
-                                    </div>
-                                    <div class="work-card__title-desktop">
-                                    ‘SYMMETRY’ Photo Gallery
+                                        <span>‘SYMMETRY’ Photo Gallery&nbsp;</span>
+                                        <span>‘SYMMETRY’ Photo Gallery&nbsp;</span>
                                     </div>
                                 </h3>
                                 <div class="project__media">
@@ -78,10 +76,8 @@
                                     <div class="work-card__title flex">
                                         <span>‘esnes’ Perfume Launching site&nbsp;</span>
                                         <span>‘esnes’ Perfume Launching site&nbsp;</span>
-                                        <span>‘esnes’ Perfume Launching site </span>
-                                    </div>
-                                    <div class="work-card__title-desktop">
-                                    ‘esnes’ Perfume Launching site
+                                        <span>‘esnes’ Perfume Launching site&nbsp; </span>
+                                        <span>‘esnes’ Perfume Launching site&nbsp;</span>
                                     </div>
                                 </h3>
                                 <div class="project__media">
@@ -106,10 +102,8 @@
                                     <div class="work-card__title flex">
                                         <span>‘Burgersquad’ Responsive Web Design &nbsp;</span>
                                         <span>‘Burgersquad’ Responsive Web Design &nbsp;</span>
-                                        <span>‘Burgersquad’ Responsive Web Design </span>
-                                    </div>
-                                    <div class="work-card__title-desktop">
-                                    ‘Burgersquad’ Responsive Web Design 
+                                        <span>‘Burgersquad’ Responsive Web Design &nbsp;</span>
+                                        <span>‘Burgersquad’ Responsive Web Design &nbsp;</span>
                                     </div>
                                 </h3>
                                 <div class="project__media">
