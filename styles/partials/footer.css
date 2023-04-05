@@ -38,7 +38,7 @@
 
 @media screen and (min-width: 768px) {
     .footer {
-        padding-top: 10rem;
+        padding-top: 13rem;
     }
 
 
@@ -51,7 +51,7 @@
 
 @media screen and (min-width: 1024px) {
     .footer {
-        padding-top: 13rem;
+        padding-top: 10rem;
     }
 
 

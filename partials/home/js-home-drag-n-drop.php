@@ -6,22 +6,6 @@ const dragEsnes = document.querySelector('#dragEsnes');
 const dragBurger = document.querySelector('#dragBurger');
 const dragitems = document.querySelectorAll('.drag__item');
 const dropSpot = document.querySelector('.drag__drop-spot');
-const hoverText = document.getElementById("hover-text");
-
-document.addEventListener("mousemove", function(event) {
-  const target = event.target;
-  if (target.classList.contains("drag__item")) {
-    const hoverText = document.getElementById("hover-text");
-    hoverText.style.display = "block";
-    hoverText.style.left = event.pageX + 10 + "px";
-    hoverText.style.top = event.pageY - target.offsetTop + target.scrollTop + 10 + "px";
-  }
-});
-
-const content = [
-  "Description 1",
-  "Description 2"
-];
 
 
 dragitems.forEach(function(item) {

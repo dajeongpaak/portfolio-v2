@@ -17,7 +17,7 @@
             <div class="container">
                 <div class="grid">
                     <div class="col-12 title">
-                        <h2>Web Development</h2>
+                        <h1 class="h2">Web Development</h1>
                     </div>
                     <ul class="work__cards grid">
                         <li class="work__card work__note-taking">
@@ -107,7 +107,7 @@
                                     </div>
                                 </h3>
                                 <div class="project__media">
-                                    <img src="<?php echo get_url("images/burger-squad-web-development-project.jpg"); ?>" alt="Burgersquad web site image"></img>
+                                    <img class="lazy" src="<?php echo get_url("images/burger-squad-web-development-project-blur.jpg"); ?>" data-src="<?php echo get_url("images/burger-squad-web-development-project.jpg"); ?>" alt="Burgersquad web site image"></img>
                                 </div>
                                 <div class="flex flex-wrap">
                                     <div class="title h4">

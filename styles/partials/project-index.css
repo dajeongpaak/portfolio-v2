@@ -64,27 +64,19 @@ h3 {
 
 .project__media {
     position: relative;
-    border-radius: 1rem;
     overflow: hidden;
-    margin-bottom: 0.5rem;
     height: fit-content;
-    width: 100%;
-}
-
-.project__media svg {
-    width: 5rem;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    width: fit-content;
+    margin: 0 auto;
 }
 
 .work__card video,
 .work__card img {
+    border-radius: 1rem;
     width: 100%;
     height: 100%;
     max-width: 100%;
-    object-fit: fill;
+    aspect-ratio: auto;
 }
 
 .work__card .title {
@@ -157,7 +149,6 @@ h3 {
         grid-column: 2 / span 10;
     }
 
-
     .work__card {
         height: 70vh;
         overflow: hidden;
@@ -196,22 +187,11 @@ h3 {
 @media screen and (min-width:1024px) {
     .work__card {
         height: 75vh;
-        grid-column: auto / span 12;
         top: 16vh;
     }
 
     .work__cards {
-        grid-column: span 12;
-    }
-
-    .project__media {
-        position: relative;
-        border-radius: 1rem;
-        overflow: hidden;
-        margin-bottom: 0.5rem;
-        height: fit-content;
-        margin: 0.5rem 7.5rem;
-        width: auto;
+        grid-column: 2 / span 10;
     }
 
     .work-card__title {
@@ -219,7 +199,11 @@ h3 {
     }
 
     .work-card__title span {
-        font-size: 5rem;
+        font-size: 5.5rem;
+    }
+
+    .project__media {
+        padding-bottom: 2rem;
     }
 
     .work__card .button {

@@ -169,6 +169,11 @@ footer {
 }
 
 @media screen and (min-width: 1024px) {
+
+    .text-reveal {
+        height: 5rem;
+    }
+
     .img-container {
         width: 23rem;
         height: 23rem;
@@ -176,5 +181,6 @@ footer {
 
     .skills__title {
         height: 14vmin;
+        margin-top: 20vmin;
     }
 }

@@ -4,7 +4,7 @@ main {
 }
 
 .home__main {
-    padding-bottom: 13rem;
+    padding-bottom: 18rem;
 }
 
 .matter-container--home {
@@ -16,11 +16,11 @@ main {
     z-index: 1;
 }
 
-.desc__h2 .text-reveal {
+.mission__h2 .text-reveal {
     height: 3rem;
 }
 
-.desc__h2 {
+.mission__h2 {
     font-size: 1.9rem;
     font-family: var(--sans-serif-2);
     font-weight: 300;
@@ -64,12 +64,12 @@ main {
 }
 
 .home__projects--mobile {
-    background: #fffbf2;
+    background: var(--beige);
     padding: 4rem 0;
 }
 
 .home__projects--desktop {
-    background: #fffbf2;
+    background: var(--beige);
 }
 
 .projects__cards ul {
@@ -119,23 +119,24 @@ main {
 .drag__title-top,
 .drag__title-bottom {
     position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-    font-size: 4.5rem;
-    font-weight: 800;
 }
 
 .drag__title-top {
-    top: 17%;
+    top: 10%;
+    left: 0;
+}
+
+.drag__title-top svg,
+.drag__title-bottom svg {
+    width: 50rem;
+    display: block;
+    stroke: var(--orange);
+    fill: none;
 }
 
 .drag__title-bottom {
-    bottom: 18%;
-}
-
-video {
-    max-width: 34rem;
-    border-bottom: 1px solid black;
+    bottom: 10%;
+    right: 0;
 }
 
 .drag__note {
@@ -154,18 +155,6 @@ video {
     height: 20rem;
 }
 
-#hover-text {
-    position: fixed;
-    top: 0;
-    left: 0;
-    display: none;
-    padding: 10px;
-    background-color: #f0f0f0;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    white-space: nowrap;
-}
-
 .drag__drop-spot {
     display: flex;
     justify-content: center;
@@ -181,8 +170,6 @@ video {
     padding: 0 6rem;
     text-align: center;
     font-size: 1.5rem;
-    /* border-radius: 3rem;
-    border: 1px solid black; */
 }
 
 .drag__drop-spot.drag-over {
@@ -195,8 +182,8 @@ video {
     position: relative;
 }
 
-footer .container {
-    padding-top: 20vmin;
+.footer__cta {
+    margin-bottom: 3rem;
 }
 
 .footer__cta--text {
@@ -210,6 +197,12 @@ footer .container {
 
 .footer__links {
     flex-direction: column;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    padding: 0 2rem;
 }
 
 .footer__social {
@@ -220,9 +213,6 @@ footer .container {
     flex-direction: column;
 }
 
-.footer__social li {
-    padding-left: 2rem;
-}
 
 .footer__color img {
     width: 3rem;
@@ -234,11 +224,11 @@ footer .container {
         height: 6rem;
     }
 
-    .desc__h2 .text-reveal {
+    .mission__h2 .text-reveal {
         height: 4rem;
     }
 
-    .desc__h2 {
+    .mission__h2 {
         font-size: 2.3rem;
     }
 
@@ -258,10 +248,6 @@ footer .container {
         font-size: 1.2rem;
     }
 
-    footer .container {
-        padding-top: 39vmin;
-    }
-
     .footer__cta--text {
         font-size: 4rem;
     }
@@ -273,6 +259,11 @@ footer .container {
     .footer__social {
         flex-direction: unset;
     }
+
+    .footer__social li {
+        padding-left: 2rem;
+    }
+
 
 }
 
@@ -287,7 +278,7 @@ footer .container {
     }
 
 
-    .desc__h2 .text-reveal {
+    .mission__h2 .text-reveal {
         height: 3rem;
     }
 
@@ -295,12 +286,12 @@ footer .container {
         font-size: 2.3rem;
     }
 
-    footer .container {
-        padding-top: 10vmin;
+    footer .mt-3 {
+        margin-top: 1rem;
     }
 
-    footer .mt-3 {
-        margin-top: 2rem;
+    .footer__cta {
+        margin-bottom: 5rem;
     }
 
     .footer__cta--text {
@@ -319,11 +310,11 @@ footer .container {
         height: 7.5rem;
     }
 
-    .desc__h2 .text-reveal {
+    .mission__h2 .text-reveal {
         height: 4.5rem;
     }
 
-    .desc__h2 {
+    .mission__h2 {
         font-size: 2.7em;
     }
 
@@ -366,10 +357,6 @@ footer .container {
         padding: 10rem 0;
     }
 
-    footer .container {
-        padding-top: 20vmin;
-    }
-
     .footer__color {
         position: unset;
         right: unset;
@@ -394,7 +381,7 @@ footer .container {
         overflow: visible;
     }
 
-    .desc__h2 {
+    .mission__h2 {
         font-size: 3.1rem;
     }
 
@@ -443,8 +430,8 @@ footer .container {
 
     .footer__color {
         position: absolute;
-        top: 50%;
-        right: 19vmin;
+        top: 46%;
+        right: 15vmin;
         transform: translateY(-50%);
     }
 

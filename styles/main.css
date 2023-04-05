@@ -9,6 +9,7 @@
     --neon-green-invert: #1b00a1;
     --yellow: #ffaf42;
     --yellow-invert: #0050bd;
+    --beige: #fffbf2;
     --white: #fff;
     --black: #000000;
     --sans-serif-1: 'Michroma', sans-serif;
@@ -96,7 +97,7 @@ a {
 body {
     background: url(../images/mobile-bg.svg);
     background-repeat: repeat;
-    background-color: white;
+    background-color: var(--white);
     transition: background-color 0.4s ease-in-out;
     -moz-transition: background-color 0.4s ease-in-out;
     -webkit-transition: background-color 0.4s ease-in-out;
@@ -252,6 +253,10 @@ section {
     text-align: center;
 }
 
+.mt-2 {
+    margin-top: 2rem;
+}
+
 .mt-3 {
     margin-top: 3rem;
 }
@@ -300,16 +305,16 @@ section {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 2rem;
+    padding: 1rem;
     background-color: var(--white);
-    box-shadow: 2px 6px 0px 0px var(--black);
+    box-shadow: 2px 4px 0px 0px var(--black);
     border-radius: 18rem;
-    border: black 2px solid;
+    border: var(--black) 1px solid;
 }
 
 .button:hover,
 .button:active {
-    transform: translate(2px, 6px);
+    transform: translate(2px, 4px);
     box-shadow: unset;
 }
 
@@ -450,7 +455,7 @@ section {
 
     /* Components */
     .button {
-        padding: 2.5rem;
+        padding: 2rem 1.6rem;
     }
 
     .title {
