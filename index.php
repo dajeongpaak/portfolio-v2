@@ -175,7 +175,6 @@
                     Drag<br> &<br> Drop Here!
                 </div>
                 <div class="drag__title-top">
-                <?xml version="1.0" encoding="utf-8"?>
                     <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
                     viewBox="0 0 544 86.5" style="enable-background:new 0 0 544 86.5;" xml:space="preserve">
                     <path class="st0" d="M13.6,72.5v-66h63.2v6.9h-55v22H74v6.9H21.8v30.2H13.6z M114,73.4c-5.5,0-10.2-0.4-14-1.1
