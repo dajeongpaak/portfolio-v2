@@ -128,7 +128,7 @@ main {
 
 .drag__title-top svg,
 .drag__title-bottom svg {
-    width: 50rem;
+    width: 53rem;
     display: block;
     stroke: var(--orange);
     fill: none;

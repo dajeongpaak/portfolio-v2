@@ -19,7 +19,7 @@
                 <h1 class="home__title flex flex-column justify-center h-100 w-100">
                     <div class="text-reveal">
                         <span class="z-index">
-                        Front-end
+                        Front
                         </span><br>
                     </div>
                     <div class="text-reveal">

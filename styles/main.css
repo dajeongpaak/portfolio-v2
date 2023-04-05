@@ -659,7 +659,7 @@ section {
     body {
         background: url(../images/desktop-bg.svg);
         background-repeat: repeat;
-        background-color: white;
+        background-color: var(--white);
         transition: background-color 0.4s ease-in-out;
         -moz-transition: background-color 0.4s ease-in-out;
         -webkit-transition: background-color 0.4s ease-in-out;
