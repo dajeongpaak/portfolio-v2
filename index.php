@@ -288,7 +288,7 @@
                     <a href="mailto:hello@dajeongpark.com" title="dajeong park email contact me!" class="button">hello@dajeongpark.com</a>
                 </div> 
                 <div id="js-color-change--footer" class="footer__color text-center z-index mt-3">
-                <p id="js-text-change">(Yellow is ugly!)</p>
+                <p id="js-text-change--footer">(Yellow is ugly!)</p>
                 <img src="<?php echo get_url("images/sad-logo.svg")?>" alt="pdj sad face logo">
                 <p class="h6">Click me!</p>
             </div>
@@ -310,9 +310,9 @@
                         </span>
                     </li>
                     <li>
-                        <a href="#" class="h6">
+                        <div class="h6" onclick="backtotop()">
                            Back To Top
-                        </a>
+                        </div>
                     </li>
                 </ul>
             </div>
@@ -322,7 +322,6 @@
     
   
     <?php require_once(get_path("/partials/home/js-home-drag-n-drop.php"))?>
-    <!-- <script src="scripts/main.js"></script> -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/matter-js/0.19.0/matter.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/ScrollTrigger.min.js"></script>
@@ -332,6 +331,7 @@
         gsap.registerPlugin(ScrollTrigger);
         const circle = document.querySelector('#js-circle-animation');
         const sadLogo = document.querySelector('#js-color-change');
+        const sadLogoFooter = document.querySelector('#js-color-change--footer');
         const tl = gsap.timeline({paused: false});
 
         const selectors = [
@@ -376,6 +376,25 @@
             sadLogo.appendChild(clickMe);
         });
 
+        sadLogoFooter.addEventListener('click', () => {
+           
+           randomRootColor();
+           sadLogoFooter.innerHTML = '';
+
+           let p = document.createElement('p');
+           p.innerText = '(There you go!)';
+           sadLogoFooter.appendChild(p);
+
+           let logo = document.createElement('img');
+           logo.src = "<?php echo get_url("images/happy-logo.svg")?>";
+           logo.alt = "pdj happy face logo";
+           sadLogoFooter.appendChild(logo);
+
+           let clickMe = document.createElement('p');
+           clickMe.innerText = 'Click me!';
+           clickMe.className = 'h6';
+           sadLogoFooter.appendChild(clickMe);
+       });
 
         function randomBGcolor() {
             let x = Math.floor(Math.random() * 256);
@@ -386,6 +405,47 @@
             circle.style.background = bgColor;
         } 
         
+        var r = document.documentElement;
+        var colorArr = [
+            {
+                '--orange': '#5b8001',
+                '--neon-green-invert': '#e7c0f6',
+                '--yellow': '#3e5701',
+                '--beige': '#defea4',
+                '--white': '#faffe7',
+            },
+            {
+                '--orange': '#2745F2',
+                '--neon-green-invert': '#f2e29b',
+                '--yellow': '#415CF2',
+                '--beige': '#BDC5F2',
+                '--white': '#daeefa',
+            },
+            {
+                '--orange': '#ff6300',
+                '--neon-green-invert': '#1b00a1',
+                '--yellow': '#ffaf42',
+                '--beige': '#fffbf2',
+                '--white': '#fff',
+            }
+        ];
+        
+        var i = 0;
+        function randomRootColor() {
+            var colorSet = colorArr[i];
+            if( i === colorArr.length - 1){
+                i = 0;
+            } else {
+                i++
+            }
+           
+            let colorProp = Object.keys(colorSet);
+
+            colorProp.forEach((property) => {
+                r.style.setProperty(`${property}`, `${colorSet[property]}`);
+                console.log(`${colorSet[property]}`, `${property}`);
+            })
+        };
       
         let pieceContainer = document.querySelector("#js-text-animation");
         let xPos = window.innerWidth / 2;
@@ -463,160 +523,9 @@
                 duration: 1
             },
         })
-
-
-        const matterContainer = document.querySelector("#matter-container--home");
-        const mainHeight = document.querySelector("#matter-canvas");
-        const SVG_WIDTH_IN_PX = 100;
-        const SVG_WIDTH_AS_PERCENT_OF_CONTAINER_WIDTH = 0.20;
-        var Engine = Matter.Engine,
-            Render = Matter.Render,
-            Runner = Matter.Runner,
-            Bodies = Matter.Bodies,
-            Composite = Matter.Composite,
-            Body = Matter.Body,
-            World = Matter.World;
-
-        var engine = Engine.create(),
-            world = engine.world;
-
-        world.gravity.x = 0;
-        world.gravity.y = - 0.09;
-
-        let width = matterContainer.clientWidth;
-        let height = matterContainer.clientHeight;
-
-        let scaleFactor;
-            if (window.innerWidth >= window.innerHeight*0.6) {
-                scaleFactor = (window.innerHeight * (SVG_WIDTH_AS_PERCENT_OF_CONTAINER_WIDTH - 0.08)) / SVG_WIDTH_IN_PX;
-            } else {
-                scaleFactor = (width * SVG_WIDTH_AS_PERCENT_OF_CONTAINER_WIDTH) / SVG_WIDTH_IN_PX;
-            }
-
-
-        var render = Render.create({
-            element: matterContainer,
-            engine: engine,
-            options: {
-                width: width,
-                height: mainHeight.clientHeight,
-                pixelRatio: 2,  
-                wireframes: false,
-                background: "transparent"
-            }
-        });
-
-        var ball = Bodies.circle(width*(1/4), mainHeight.clientHeight*(1/7), scaleFactor*50, {
-            density: 0.04,
-            friction: 0.01,
-            frictionAir: 0.000001,
-            restitution: 0.8,
-            render: {
-                sprite: {
-                    texture: "images/ball.png",
-                    xScale: scaleFactor*0.6,
-                    yScale: scaleFactor*0.6
-                }
-            }
-        });
-
-        var logo = Bodies.circle(width*(3/4), mainHeight.clientHeight*(2/5), scaleFactor*50, {
-            density: 0.04,
-            friction: 0.01,
-            frictionAir: 0.000001,
-            restitution: 0.8,
-            render: {
-                sprite: {
-                    texture: "images/logosm.png",
-                    xScale: scaleFactor*0.6,
-                    yScale: scaleFactor*0.6
-                }
-            }
-        });
-        var ground = Bodies.rectangle(width / 2, matterContainer.clientHeight, 32848, 1, { isStatic: true,
-            render: {
-                fillStyle:'rgba(255,255,255,1)'
-            }});
-
-        var roof = Bodies.rectangle( 0, 0, 34234, 1, {   isStatic: true,
-            render: {
-                fillStyle: 'rgba(0,0,0,0)'}});
-
-        var leftwall = Bodies.rectangle( 0, 0 , 1 , 11254, {
-            isStatic: true,
-            render: {
-                fillStyle:'rgba(0,0,0,0)'
-            }
-        });
-
-        var rightwall = Bodies.rectangle( width , height , 1 , 11254, {
-            isStatic: true,
-            render: {
-                fillStyle:'rgba(0,0,0,0)'
-            }
-        });
-
-        Composite.add(world, [ball, logo, ground, roof, leftwall, rightwall]);
-
-        let mouse = Matter.Mouse.create(render.canvas);
-        let mouseConstraint = Matter.MouseConstraint.create(engine, {
-            mouse: mouse,
-            constraint: {
-                stiffness: 0.2,
-                render: {
-                    visible: false
-                }
-            }
-        });
-
-        Composite.add(world, mouseConstraint);
-
-        mouseConstraint.mouse.element.removeEventListener(
-            'mousewheel',
-            mouseConstraint.mouse.mousewheel
-        );
-
-        mouseConstraint.mouse.element.removeEventListener(
-            'DOMMouseScroll',
-            mouseConstraint.mouse.mousewheel
-        );
-
-        mouseConstraint.mouse.element.removeEventListener(
-            'touchstart', 
-            mouseConstraint.mouse.mousedown
-        );
-
-        mouseConstraint.mouse.element.removeEventListener(
-            'touchmove',
-            mouseConstraint.mouse.mousemove
-        );
-
-        mouseConstraint.mouse.element.removeEventListener(
-            'touchend', 
-            mouseConstraint.mouse.mouseup
-        );
-
-        mouseConstraint.mouse.element.addEventListener(
-            'touchstart', 
-            mouseConstraint.mouse.mousedown, { passive: true });
-
-        mouseConstraint.mouse.element.addEventListener('touchmove', (e) => {
-        if (mouseConstraint.body) {
-        mouseConstraint.mouse.mousemove(e);
-        }
-        }); 
-
-        mouseConstraint.mouse.element.addEventListener('touchend', (e) => {
-        if (mouseConstraint.body) {
-        mouseConstraint.mouse.mouseup(e);
-        }
-        });
-
-        Render.run(render);
-
-        var runner = Runner.create();
-
-        Runner.run(runner, engine);
+       
+        <?php require_once(get_path("/partials/home/js-home-matter.php"))?>
+        <?php require_once(get_path("/partials/global/js-mouse-control.php"))?>
     </script>
 </body>
 

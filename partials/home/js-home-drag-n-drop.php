@@ -7,19 +7,6 @@ const dragBurger = document.querySelector('#dragBurger');
 const dragitems = document.querySelectorAll('.drag__item');
 const dropSpot = document.querySelector('.drag__drop-spot');
 
-
-dragitems.forEach(function(item) {
-  item.addEventListener("mouseenter", function() {
-    const index = parseInt(this.getAttribute("data-index"));
-    hoverText.textContent = content[index];
-    hoverText.style.display = "block";
-  });
-
-  item.addEventListener("mouseleave", function() {
-    hoverText.style.display = "none";
-  });
-});
-
 for (const dragitem of dragitems) {
     dragitem.addEventListener('dragstart', dragStart);
     dragitem.addEventListener('dragend', dragEnd);

@@ -44,6 +44,11 @@ window.onscroll = function () {
     prevScrollpos = currentScrollPos;
 }
 
+    function backtotop() {
+        document.body.scrollTop= '0';
+        document.documentElement.scrollTop = 0;
+    }
+
 const videos = document.querySelectorAll('video');
 
 window.addEventListener("load", () => {

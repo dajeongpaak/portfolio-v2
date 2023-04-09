@@ -17,9 +17,9 @@
                 </li>
             </ul>
             <div> 
-                <a href="#" class="h6">
-                        Back To Top
-                </a>
+                <div class="h6" onclick="backtotop()">
+                    Back To Top
+                </div>
             </div>
         </div>
     </div>
