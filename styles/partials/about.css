@@ -11,7 +11,7 @@ header {
 
 main {
     position: relative;
-    height: 260vh;
+    height: 280vh;
     padding-top: 7rem;
     scroll-snap-align: end;
     scroll-snap-stop: always;
