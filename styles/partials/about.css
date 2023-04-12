@@ -11,7 +11,7 @@ header {
 
 main {
     position: relative;
-    height: 230vh;
+    height: 260vh;
     padding-top: 7rem;
     scroll-snap-align: end;
     scroll-snap-stop: always;
@@ -171,7 +171,11 @@ footer {
 @media screen and (min-width: 1024px) {
 
     .text-reveal {
-        height: 5rem;
+        height: 4.6rem;
+    }
+
+    .about__intro .drop-shadow {
+        font-size: 3.3rem;
     }
 
     .img-container {

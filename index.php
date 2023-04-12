@@ -310,7 +310,7 @@
                         </span>
                     </li>
                     <li>
-                        <div class="h6" onclick="backtotop()">
+                        <div class="footer__back-to-top h6" onclick="backtotop()">
                            Back To Top
                         </div>
                     </li>
@@ -409,20 +409,23 @@
         var colorArr = [
             {
                 '--orange': '#5b8001',
+                '--light-orange': '#7b9a31',
                 '--neon-green-invert': '#e7c0f6',
                 '--yellow': '#3e5701',
-                '--beige': '#defea4',
+                '--beige': '#e3fab9',
                 '--white': '#faffe7',
             },
             {
                 '--orange': '#2745F2',
+                '--light-orange': '#5b70e8',
                 '--neon-green-invert': '#f2e29b',
                 '--yellow': '#415CF2',
                 '--beige': '#BDC5F2',
-                '--white': '#daeefa',
+                '--white': '#f3f8fb',
             },
             {
                 '--orange': '#ff6300',
+                '--light-orange': '#ff883c',
                 '--neon-green-invert': '#1b00a1',
                 '--yellow': '#ffaf42',
                 '--beige': '#fffbf2',
@@ -443,7 +446,6 @@
 
             colorProp.forEach((property) => {
                 r.style.setProperty(`${property}`, `${colorSet[property]}`);
-                console.log(`${colorSet[property]}`, `${property}`);
             })
         };
       

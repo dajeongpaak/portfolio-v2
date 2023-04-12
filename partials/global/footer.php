@@ -17,7 +17,7 @@
                 </li>
             </ul>
             <div> 
-                <div class="h6" onclick="backtotop()">
+                <div class="footer__back-to-top h6" onclick="backtotop()">
                     Back To Top
                 </div>
             </div>

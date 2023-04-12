@@ -24,12 +24,5 @@
     <link rel="stylesheet" href="<?php echo get_url('styles/partials/footer.css'); ?>">
     <link rel="stylesheet" href="<?php echo get_url('styles/partials/' . $partial_css . '.css'); ?>">
     <link rel="icon" sizes="16x16" type="image/svg+xml" href="<?php echo get_url("/images/favicon.svg");?>">
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-6WX1XL9Z33"></script>
-    <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-
-    gtag('config', 'G-6WX1XL9Z33');
-    </script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism-themes/1.9.0/prism-vsc-dark-plus.min.css" integrity="sha512-ML8rkwYTFNcblPFx+VLgFIT2boa6f8DDP6p6go4+FT0/mJ8DCbCgi6S0UdjtzB3hKCr1zhU+YVB0AHhIloZP8Q==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>

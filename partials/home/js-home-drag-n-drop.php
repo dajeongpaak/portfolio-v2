@@ -46,10 +46,10 @@ function dragDrop(e) {
 
     switch (itemId) {
         case 'dragNote':
-            url = '<?php echo get_url("/projects/note-taking-application-web-development-project.php"); ?>'
+            url = '<?php echo get_url("/projects/ny-times-api-project.php"); ?>'
             break;
         case 'dragGallery':
-            url = '#';
+            url = '<?php echo get_url("/projects/symmetry-web-development-project.php"); ?>';
             break;
         case 'dragEsnes':
             url = '#';

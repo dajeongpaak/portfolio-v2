@@ -1,3 +1,6 @@
+<div id="loadOverlay" style="background-color:#fff; position:absolute; top:0px; left:0px; width:100%; height:100%; z-index:99999;"></div>
+
+
 <header class="header">  
    <div class="grid menu--mobile">
         <nav class="col-12">
@@ -74,7 +77,7 @@
     </div>
     <div class="menu--desktop">
         <nav id="js-navBar--desktop" class="main-nav--desktop">
-            <ul class="flex justify-between align-center h4">
+            <ul class="flex justify-between align-center h6">
                 <li>
                     <a href="<?php echo get_url("about.php")?>">About</a>
                 </li>

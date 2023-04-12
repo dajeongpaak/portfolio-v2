@@ -17,36 +17,36 @@
             <div class="container">
                 <div class="grid">
                     <div class="col-12 title">
-                        <h1 class="h2">Web Development</h1>
+                        <h1 class="h4">Web Development</h1>
                     </div>
                     <ul class="work__cards grid">
-                        <li class="work__card work__note-taking">
-                            <a href="<?php echo get_url("projects/note-taking-application-web-development-project.php"); ?>" class="work-card__subheading h6">Project 1</a>
-                            <a class="work-card__content" href="<?php echo get_url("projects/note-taking-application-web-development-project.php"); ?>">
+                        <li class="work__card work__nytimes">
+                            <a href="<?php echo get_url("/projects/ny-times-api-project.php"); ?>" class="work-card__subheading h6">Project 1</a>
+                            <a class="work-card__content" href="<?php echo get_url("/projects/ny-times-api-project.php"); ?>">
                                 <h3>
                                     <div class="work-card__title flex">
-                                        <span>Note-taking Web Application&nbsp;</span>
-                                        <span>Note-taking Web Application&nbsp;</span>
-                                        <span>Note-taking Web Application&nbsp;</span>
+                                        <span>New York Times the most viewed articles&nbsp;</span>
+                                        <span>New York Times the most viewed articles&nbsp;</span>
+                                        <span>New York Times the most viewed articles&nbsp; </span>
+                                        <span>New York Times the most viewed articles&nbsp;</span>
                                     </div>
                                 </h3>
                                 <div class="project__media">
-                                    <video class="lazy"  data-src=<?php echo get_url("/images/note-taking-app-preview.mp4");?> data-poster="<?php echo get_url("/images/note-taking-app-blur.jpg")?>" playsinline autoplay loop muted>
-                                    </video>
+                                    <img src="<?php echo get_url("images/nytime-api-project-preview.jpg"); ?>"  alt="New York Times API Project image"></img>
                                 </div>
                                 <div class="flex flex-wrap">
                                     <div class="title h4">
-                                        Web Development
+                                    Web Development
                                     </div>
                                     <div class="title h4">
-                                        Web Design
+                                    Web Design
                                     </div>
                                 </div>
                             </a>
                         </li>
                         <li class="work__card work__symmetry">
-                            <a href="<?php echo get_url("/projects/symmetry-photo-gallery-web-development-project.php"); ?>" class="work-card__subheading h6">Project 2</a>
-                            <a class="work-card__content" href="<?php echo get_url("/projects/symmetry-photo-gallery-web-development-project.php"); ?>" >
+                            <a href="<?php echo get_url("/projects/symmetry-web-development-project.php"); ?>" class="work-card__subheading h6">Project 2</a>
+                            <a class="work-card__content" href="<?php echo get_url("/projects/symmetry-web-development-project.php"); ?>" >
                                 <h3>
                                     <div  class="work-card__title flex">
                                         <span>‘SYMMETRY’ Photo Gallery&nbsp;</span>
@@ -69,29 +69,28 @@
                                 </div>
                             </a>
                         </li>
-                        <li class="work__card work__esnes">
-                            <a href="<?php echo get_url("/projects/esnes-web-development-project.php"); ?>" class="work-card__subheading h6">Project 3</a>
-                            <a class="work-card__content" href="<?php echo get_url("/projects/esnes-web-development-project.php"); ?>">
+                        <li class="work__card work__note-taking">
+                            <a href="<?php echo get_url("projects/note-taking-application-web-development-project.php"); ?>" class="work-card__subheading h6">Project 3</a>
+                            <a class="work-card__content" href="<?php echo get_url("projects/note-taking-application-web-development-project.php"); ?>">
                                 <h3>
                                     <div class="work-card__title flex">
-                                        <span>‘esnes’ Perfume Launching site&nbsp;</span>
-                                        <span>‘esnes’ Perfume Launching site&nbsp;</span>
-                                        <span>‘esnes’ Perfume Launching site&nbsp; </span>
-                                        <span>‘esnes’ Perfume Launching site&nbsp;</span>
+                                        <span>Note-taking Web Application&nbsp;</span>
+                                        <span>Note-taking Web Application&nbsp;</span>
+                                        <span>Note-taking Web Application&nbsp;</span>
+                                        <span>Note-taking Web Application&nbsp;</span>
                                     </div>
                                 </h3>
                                 <div class="project__media">
-                                    <video class="lazy"  data-src=<?php echo get_url("images/esnes-launching-project-preview.mp4");?> data-poster="<?php echo get_url("/images/esnes-launching-project-blur.jpg")?>" playsinline autoplay loop muted>
+                                    <video class="lazy"  data-src=<?php echo get_url("/images/note-taking-app-preview.mp4");?> data-poster="<?php echo get_url("/images/note-taking-app-blur.jpg")?>" playsinline autoplay loop muted>
                                     </video>
                                 </div>
                                 <div class="flex flex-wrap">
                                     <div class="title h4">
-                                    Web Development
+                                        Web Development
                                     </div>
                                     <div class="title h4">
-                                    Web Design
+                                        Web Design
                                     </div>
-                                    <div class="title h4">Branding</div>
                                 </div>
                             </a>
                         </li>

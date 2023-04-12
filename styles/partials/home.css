@@ -16,6 +16,10 @@ main {
     z-index: 1;
 }
 
+.text-reveal {
+    height: 5.4rem;
+}
+
 .mission__h2 .text-reveal {
     height: 3rem;
 }
@@ -140,7 +144,7 @@ main {
 }
 
 .drag__note {
-    background: url(../../images/note.jpeg);
+    background: url(../../images/nytimes-drag-preview.jpg);
 }
 
 .drag__gallery {
@@ -216,6 +220,10 @@ main {
 
 .footer__color img {
     width: 3rem;
+}
+
+.footer__back-to-top {
+    cursor: pointer;
 }
 
 @media screen and (min-width: 576px) {

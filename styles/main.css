@@ -67,6 +67,7 @@ h3,
 h4,
 .h4 {
     font-size: 1.333rem;
+    font-weight: 300;
 }
 
 h5,
@@ -83,8 +84,8 @@ h6,
 p,
 .p {
     font-size: 1.2rem;
-    font-weight: 300;
-    line-height: 1.7;
+    font-weight: 200;
+    line-height: 1.6;
 }
 
 a {
@@ -286,6 +287,10 @@ section {
     mix-blend-mode: difference;
 }
 
+.font-bold {
+    font-weight: bold;
+}
+
 .text-reveal {
     position: relative;
     overflow: hidden;
@@ -302,12 +307,18 @@ section {
     z-index: 2;
 }
 
+.code-snippet {
+    overflow-y: scroll;
+    height: 32rem;
+    border-radius: 2rem;
+}
+
 /* Components */
 .button {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 1rem;
+    padding: 1.5rem;
     background-color: var(--white);
     box-shadow: 2px 4px 0px 0px var(--black);
     border-radius: 18rem;
@@ -446,8 +457,6 @@ section {
     p,
     .p {
         font-size: 1.3rem;
-        font-weight: 300;
-        line-height: 1.7;
     }
 
 
@@ -561,13 +570,6 @@ section {
         font-size: 1.5rem
     }
 
-    p,
-    .p {
-        font-size: 1.5rem;
-        font-weight: 300;
-        line-height: 1.7;
-    }
-
     .container {
         padding: 0 3rem;
     }
@@ -650,12 +652,28 @@ section {
         grid-column: 2 /span 3;
     }
 
+    .col-2-5-lg {
+        grid-column: 2 /span 5;
+    }
+
+    .col-2-8-lg {
+        grid-column: 2 /span 8;
+    }
+
     .col-2-10-lg {
         grid-column: 2 /span 10;
     }
 
+    .col-3-8-lg {
+        grid-column: 3 /span 9;
+    }
+
     .col-5-8-lg {
         grid-column: 5 / span 8;
+    }
+
+    .col-5-5-lg {
+        grid-column: 5 / span 5;
     }
 
     body {
@@ -674,7 +692,12 @@ section {
 
     h2,
     .h2 {
-        font-size: 3.5rem;
+        font-size: 3.3rem;
+    }
+
+    h4,
+    .h4 {
+        font-size: 2.7rem;
     }
 
     h5,
@@ -684,20 +707,12 @@ section {
 
     h6,
     .h6 {
-        font-size: 1.7rem
-    }
-
-    p,
-    .p {
-        font-size: 1.7rem;
+        font-size: 1.8rem
     }
 
     .container {
         padding: 0 4rem;
     }
 
-    .title {
-        padding: 3rem;
-    }
 
 }

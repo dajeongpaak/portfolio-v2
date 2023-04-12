@@ -20,6 +20,10 @@
     transform: translateX(-50%);
 }
 
+.footer__back-to-top {
+    cursor: pointer;
+}
+
 @media screen and (min-width: 576px) {
     .footer {
         padding-top: 7rem;
@@ -43,12 +47,6 @@
     .footer {
         padding-top: 13rem;
     }
-
-
-    /* .footer__copy {
-        font-size: 1.3rem;
-    } */
-
 }
 
 
@@ -57,9 +55,5 @@
         padding-top: 10rem;
     }
 
-
-    /* .footer__copy {
-        font-size: 1.5rem;
-    } */
 
 }
