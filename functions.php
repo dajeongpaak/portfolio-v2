@@ -14,6 +14,4 @@ function get_path($path = "/") {
     return PROJECT_ROOT . $path;
 }
 
-// function get_sub_path($path = )
-//     if($path)
 ?>

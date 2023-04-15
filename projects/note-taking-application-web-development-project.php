@@ -16,7 +16,7 @@
     <main>
     <section>
         <div class="js-slidein"></div>
-        <div class="project__container border-radius pt-3 mt-6 mx-auto">
+        <div class="note-project__container border-radius pt-3 mt-6 mx-auto">
             <div class="container">
                 <div id="js-backBtn" class="back__btn">
                     <div class="button-sm">
@@ -190,35 +190,8 @@
     </section>
     </main>
     <?php require_once(get_path("/partials/global/footer.php"));?>
-    <script src="
-    https://cdn.jsdelivr.net/npm/prismjs@1.29.0/prism.min.js
-    "></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/Flip.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/ScrollTrigger.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/ScrollToPlugin.min.js"></script>
     <?php require_once(get_path("/partials/global/js-global.php"))?>
-    <script>
-
-
-        const backBtn = document.querySelector(".back__btn");
-        let slideIn = document.querySelector('.js-slidein');
-
-        backBtn.addEventListener('click', () => {
-            window.history.back();
-        })
-        
-        gsap.to( slideIn , {
-            height: 0,
-            ease: "expo",
-            duration: 1.5,
-        })
-
-
-
-       
-       
-    </script>
+    <?php require_once(get_path("/partials/projects/js-single-project.php"))?>
 </body>
 
 </html>

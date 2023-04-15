@@ -122,7 +122,7 @@
     position: fixed;
     font-family: var(--sans-serif-1);
     top: 27%;
-    left: 32%;
+    left: 40%;
     height: 100px;
     font-size: 2rem;
     opacity: 1;
@@ -166,7 +166,7 @@
 }
 
 .main-nav--desktop a {
-    color: var(--white);
+    color: white;
     pointer-events: all;
 }
 

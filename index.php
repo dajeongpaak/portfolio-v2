@@ -13,7 +13,7 @@
 
 <body>
     <?php require_once(get_path("partials/global/header.php"));?>
-    <main id="main">
+    <main>
         <section id="matter-canvas" class="home__main">
             <div class="container">
                 <h1 class="home__title flex flex-column justify-center h-100 w-100">
@@ -103,12 +103,12 @@
                             <li class="card">
                                 <div class="card__content flex">
                                     <div class="card__title">
-                                        <a href="<?php echo get_url("/projects/note-taking-application-web-development-project.php"); ?>">
-                                            <h3 class="h5">Note-taking Web Application</h3>
+                                        <a href="<?php echo get_url("/projects/ny-times-api-project.php"); ?>" title="View New York Times API Project">
+                                            <h3 class="h5">New York Times API Project</h3>
                                         </a>
                                     </div>
                                     <div class="card__btn">
-                                        <a href="<?php echo get_url("/projects/note-taking-application-web-development-project.php"); ?>" class="button-sm">
+                                        <a href="<?php echo get_url("/projects/ny-times-api-project.php"); ?>" title="View New York Times API Project" class="button-sm">
                                         <img src="<?php echo get_url("images/right-arrow.svg")?>" alt="call to action button for project">
                                         </a>
                                     </div>
@@ -117,12 +117,12 @@
                             <li class="card">
                                 <div class="card__content flex">
                                     <div class="card__title">
-                                        <a href="symmetry.html">
+                                        <a  href="<?php echo get_url("/projects/symmetry-web-development-project.php"); ?>" title="View SYMMETRY Gallery Project">
                                             <h3 class="h5">‘SYMMETRY’ Photo Gallery</h3>
                                         </a>
                                     </div>
                                     <div class="card__btn">
-                                        <a href="symmetry.html" class="button-sm">
+                                        <a  href="<?php echo get_url("/projects/symmetry-web-development-project.php"); ?>" class="button-sm" title="View SYMMETRY Gallery Project">
                                             <img src="<?php echo get_url("images/right-arrow.svg")?>" alt="call to action button for project">
                                         </a>
                                     </div>
@@ -131,13 +131,12 @@
                             <li class="card">
                                 <div class="card__content flex">
                                     <div class="card__title">
-                                        <a href="esnes.html">
-                                            <h3 class="h5">‘esnes’ Perfume
-                                                Launching site</h3>
+                                        <a href="<?php echo get_url("projects/note-taking-application-web-development-project.php"); ?>" title="View Note-taking App Project">
+                                            <h3 class="h5">Note-taking Web Application</h3>
                                         </a>
                                     </div>
                                     <div class="card__btn">
-                                        <a href="esnes.html" class="button-sm">
+                                        <a href="<?php echo get_url("projects/note-taking-application-web-development-project.php"); ?>" title="View Note-taking App Project" class="button-sm">
                                             <img src="<?php echo get_url("images/right-arrow.svg")?>" alt="call to action button for project">
                                         </a>
                                     </div>
@@ -146,12 +145,12 @@
                             <li class="card">
                                 <div class="card__content flex">
                                     <div class="card__title">
-                                        <a href="burgersquad.html">
+                                        <a href="<?php echo get_url("/projects/burgersquad-web-development-project.php"); ?>" title="View 'Burgersquad' Web Design Project" >
                                             <h3 class="h5">‘Burger Squad’ Responsive Web design </h3>
                                         </a>
                                     </div>
                                     <div class="card__btn">
-                                        <a href="burgersquad.html" class="button-sm">
+                                        <a href="<?php echo get_url("/projects/burgersquad-web-development-project.php"); ?>" title="View 'Burgersquad' Web Design Project"  class="button-sm">
                                             <img src="<?php echo get_url("images/right-arrow.svg")?>" alt="call to action button for project">
                                         </a>
                                     </div>
@@ -279,13 +278,13 @@
         <div id="matter-container--home" class="matter-container--home"></div>
     </main>
     <footer class="footer border-radius snap">
-        <div class="container h-100 flex flex-column justify-center">
-            <div class="footer__cta flex flex-column justify-center align-center h2">
+        <div class="container h-100 flex flex-column justify-center h2">
+            <div class="footer__cta flex flex-column justify-center align-center">
                 <div id="js-footer-text" class="footer__cta--text text-center">
                     <span>G</span><span>e</span><span>t</span><br><span>I</span><span>n</span><br><span>T</span><span>o</span><span>u</span><span>c</span><span>h</span><span>!</span>
                 </div>
                 <div class="footer__cta--email text-center mt-3">
-                    <a href="mailto:hello@dajeongpark.com" title="dajeong park email contact me!" class="button">hello@dajeongpark.com</a>
+                    <a href="mailto:hello@dajeongpark.com" title="dajeong park email contact me!" class="button h4">hello@dajeongpark.com</a>
                 </div> 
                 <div id="js-color-change--footer" class="footer__color text-center z-index mt-3">
                 <p id="js-text-change--footer">(Yellow is ugly!)</p>
@@ -322,210 +321,9 @@
     
   
     <?php require_once(get_path("/partials/home/js-home-drag-n-drop.php"))?>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/matter-js/0.19.0/matter.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/ScrollTrigger.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/ScrollToPlugin.min.js"></script>
     <?php require_once(get_path("/partials/global/js-global.php"))?>
     <script>
-        gsap.registerPlugin(ScrollTrigger);
-        const circle = document.querySelector('#js-circle-animation');
-        const sadLogo = document.querySelector('#js-color-change');
-        const sadLogoFooter = document.querySelector('#js-color-change--footer');
-        const tl = gsap.timeline({paused: false});
-
-        const selectors = [
-        ".home__title",
-        ".home__desc",
-        ".wonder__content"
-        ];
-
-        selectors.forEach(selector => {
-        gsap.from(`${selector} span`, 1.8, {
-            scrollTrigger: {
-            trigger: selector,
-            toggleActions: "play complete restart reset",
-            },
-            y: 150,
-            ease: "power4.out",
-            delay: 1,
-            skewY: 10,
-            stagger: {
-            amount: 0.7
-            }
-        });
-        });
-
-        sadLogo.addEventListener('click', () => {
-           
-            randomBGcolor()
-            sadLogo.innerHTML = '';
-
-            let p = document.createElement('p');
-            p.innerText = '(There you go!)';
-            sadLogo.appendChild(p);
-
-            let logo = document.createElement('img');
-            logo.src = "<?php echo get_url("images/happy-logo.svg")?>";
-            logo.alt = "pdj happy face logo";
-            sadLogo.appendChild(logo);
-
-            let clickMe = document.createElement('p');
-            clickMe.innerText = 'Click me!';
-            clickMe.className = 'h6';
-            sadLogo.appendChild(clickMe);
-        });
-
-        sadLogoFooter.addEventListener('click', () => {
-           
-           randomRootColor();
-           sadLogoFooter.innerHTML = '';
-
-           let p = document.createElement('p');
-           p.innerText = '(There you go!)';
-           sadLogoFooter.appendChild(p);
-
-           let logo = document.createElement('img');
-           logo.src = "<?php echo get_url("images/happy-logo.svg")?>";
-           logo.alt = "pdj happy face logo";
-           sadLogoFooter.appendChild(logo);
-
-           let clickMe = document.createElement('p');
-           clickMe.innerText = 'Click me!';
-           clickMe.className = 'h6';
-           sadLogoFooter.appendChild(clickMe);
-       });
-
-        function randomBGcolor() {
-            let x = Math.floor(Math.random() * 256);
-            let y = Math.floor(Math.random() * 256);
-            let z = Math.floor(Math.random() * 256);
-            let bgColor = "rgb(" + x  + ", " + y + ", " + z + ")";
-
-            circle.style.background = bgColor;
-        } 
-        
-        var r = document.documentElement;
-        var colorArr = [
-            {
-                '--orange': '#5b8001',
-                '--light-orange': '#7b9a31',
-                '--neon-green-invert': '#e7c0f6',
-                '--yellow': '#3e5701',
-                '--beige': '#e3fab9',
-                '--white': '#faffe7',
-            },
-            {
-                '--orange': '#2745F2',
-                '--light-orange': '#5b70e8',
-                '--neon-green-invert': '#f2e29b',
-                '--yellow': '#415CF2',
-                '--beige': '#BDC5F2',
-                '--white': '#f3f8fb',
-            },
-            {
-                '--orange': '#ff6300',
-                '--light-orange': '#ff883c',
-                '--neon-green-invert': '#1b00a1',
-                '--yellow': '#ffaf42',
-                '--beige': '#fffbf2',
-                '--white': '#fff',
-            }
-        ];
-        
-        var i = 0;
-        function randomRootColor() {
-            var colorSet = colorArr[i];
-            if( i === colorArr.length - 1){
-                i = 0;
-            } else {
-                i++
-            }
-           
-            let colorProp = Object.keys(colorSet);
-
-            colorProp.forEach((property) => {
-                r.style.setProperty(`${property}`, `${colorSet[property]}`);
-            })
-        };
-      
-        let pieceContainer = document.querySelector("#js-text-animation");
-        let xPos = window.innerWidth / 2;
-        let yPos = window.innerHeight / 2;
-        let pieces = gsap.utils.toArray("#js-text-animation span");
-        let getintough = gsap.utils.toArray("#js-footer-text span")
-      
-        pieces.forEach( item => {
-            let xRandomPos = gsap.utils.random(-xPos, xPos);
-            let yRandomPos = gsap.utils.random(-yPos, yPos);
-            let rRandom = gsap.utils.random(-30 , 30);
-
-            tl.to(item, {
-                scrollTrigger: {
-                    trigger: ".home__wonder",
-                    toggleActions: "restart pause reverse none",
-                    start: "top top",
-                    end: "center bottom",
-                    scrub: 1,
-                },
-                x: xRandomPos,
-                y: yRandomPos,
-                rotate: rRandom,
-                duration: 0.5,
-                stagger: 1,
-                ease: "power2"
-            })
-        })
-
-        tl.to( circle, {
-            scrollTrigger: {
-                trigger: ".home__wonder",
-                toggleActions: "restart pause reverse none",
-                start: 'top top',
-                end: 'center bottom',
-                scrub: 1,
-            },
-            ease: "expo",
-            scale: 1,
-            duration: 0.3,
-        })
-
-        getintough.forEach( item => {
-            let xRandomPos = gsap.utils.random(-xPos, xPos);
-            let yRandomPos = gsap.utils.random(-yPos, yPos);
-            let rRandom = gsap.utils.random(-30 , 30);
-
-            tl.from(item, {
-                scrollTrigger: {
-                    trigger: ".footer",
-                    toggleActions: "restart pause reverse none",
-                    start: "top 40%",
-                    end: "bottom bottom",
-                    scrub: 1,
-                },
-                x: xRandomPos,
-                y: yRandomPos,
-                rotate: rRandom,
-                duration: .5,
-                stagger: 1,
-                ease: "power2"
-            })
-        })
-
-
-        let snaps = gsap.utils.toArray(".snap");
-
-        gsap.to(snaps, {
-            ease: "expo",
-            scrollTrigger: {
-                trigger: snaps,
-                pin: true,
-                pinSpacing: false,
-                scrub: 1,
-                duration: 1
-            },
-        })
-       
+        <?php require_once(get_path("/partials/home/js-home.php"))?>
         <?php require_once(get_path("/partials/home/js-home-matter.php"))?>
         <?php require_once(get_path("/partials/global/js-mouse-control.php"))?>
     </script>

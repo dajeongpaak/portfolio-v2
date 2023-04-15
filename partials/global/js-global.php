@@ -1,13 +1,17 @@
 <script src="https://cdn.jsdelivr.net/npm/vanilla-lazyload@17.8.3/dist/lazyload.min.js"></script>
-
+<script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/prism.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/matter-js/0.19.0/matter.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/ScrollTrigger.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/ScrollToPlugin.min.js"></script>
 
 <script>
 
-    
 const menuOpen = document.querySelector('#js-menu-open');
 const jsMenu = document.querySelector('#js-menu');
 const hamburgers = document.querySelectorAll('.hamburger');
 const menuList = document.querySelector('#menuList');
+const videos = document.querySelectorAll('video');
 
 const lazyLoadInstance = new LazyLoad({
         });
@@ -15,6 +19,19 @@ const lazyLoadInstance = new LazyLoad({
 
 menuOpen.addEventListener('click', () => {
 
+    menuHamburger();
+
+});
+
+var prevScrollpos = window.pageYOffset;
+
+window.addEventListener("scroll", () => {
+    
+    scrollMenuHidden();
+    
+});
+
+function menuHamburger() {
     jsMenu.classList.toggle('js-menu--hidden');
 
     for (const hamburger of hamburgers) {
@@ -23,12 +40,8 @@ menuOpen.addEventListener('click', () => {
 
     menuList.classList.toggle('main-nav__list--hidden');
     document.body.classList.toggle('no-scroll');
-});
 
-var prevScrollpos = window.pageYOffset;
-window.addEventListener("scroll", () => {
-    scrollMenuHidden();
-});
+};
 
 function scrollMenuHidden() {
 
@@ -48,14 +61,12 @@ function scrollMenuHidden() {
        
     }
     prevScrollpos = currentScrollPos;
-}
+};
 
 function backtotop() {
     document.body.scrollTop= '0';
     document.documentElement.scrollTop = 0;
 }
-
-const videos = document.querySelectorAll('video');
 
 window.addEventListener("load", () => {
     videos.forEach(video => {

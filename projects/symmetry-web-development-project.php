@@ -255,7 +255,7 @@
                         </pre>
                     </div>
                     <div class="col-12 col-2-10-lg mt-3">
-                        <h3 class="h2 my-1">3. Takeaways</h3>
+                        <h3 class="h2 my-1">4. Takeaways</h3>
                     </div>
                     <div class="col-12 col-2-10-lg mt-3">
                         <p>
@@ -282,36 +282,11 @@
         
     </section>
     </main>
+    <div class="symmetry-footer">
     <?php require_once(get_path("/partials/global/footer.php"));?>
-    <script src="
-    https://cdn.jsdelivr.net/npm/prismjs@1.29.0/prism.min.js
-    "></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/Flip.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/ScrollTrigger.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/ScrollToPlugin.min.js"></script>
+    </div>
     <?php require_once(get_path("/partials/global/js-global.php"))?>
-    <script>
-
-
-        const backBtn = document.querySelector(".back__btn");
-        let slideIn = document.querySelector('.js-slidein');
-
-        backBtn.addEventListener('click', () => {
-            window.history.back();
-        })
-        
-        gsap.to( slideIn , {
-            height: 0,
-            ease: "expo",
-            duration: 1.5,
-        })
-
-
-
-       
-       
-    </script>
+    <?php require_once(get_path("/partials/projects/js-single-project.php"))?>
 </body>
 
 </html>

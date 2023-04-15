@@ -1,26 +1,9 @@
 /*--- ABOUT ---*/
-body {
-    scroll-snap-type: y proximity;
-    overflow-y: scroll;
-}
-
-header {
-    scroll-snap-align: end;
-    scroll-snap-stop: always;
-}
 
 main {
     position: relative;
     height: 280vh;
     padding-top: 7rem;
-    scroll-snap-align: end;
-    scroll-snap-stop: always;
-}
-
-
-footer {
-    scroll-snap-align: end;
-    scroll-snap-stop: always;
 }
 
 .img-container {
@@ -40,7 +23,6 @@ footer {
 
 .about__content {
     padding: 2rem 0;
-    background: rgba(255, 255, 255, 0.4);
     border: 1px solid var(--black);
     border-radius: 2rem;
     margin-bottom: .5rem;
@@ -49,12 +31,6 @@ footer {
     transition: all 0.4s ease-in-out;
     -moz-transition: all 0.4s ease-in-out;
     -webkit-transition: all 0.4s ease-in-out;
-}
-
-.about__content.--bg-change {
-    background: rgba(0, 0, 0, 0.5);
-    color: var(--white);
-    border: 1px solid var(--white);
 }
 
 .about__intro {
@@ -76,10 +52,6 @@ footer {
 
 .text-reveal {
     height: 2.5rem;
-}
-
-.about__intro .drop-shadow.--bg-change {
-    text-shadow: 4px -3px var(--neon-green);
 }
 
 .about__desc {

@@ -1,5 +1,3 @@
-<div id="loadOverlay" style="background-color:#fff; position:absolute; top:0px; left:0px; width:100%; height:100%; z-index:99999;"></div>
-
 
 <header class="header">  
    <div class="grid menu--mobile">

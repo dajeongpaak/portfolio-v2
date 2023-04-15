@@ -5,6 +5,11 @@
     padding-bottom: 3rem;
     background: var(--yellow);
     line-height: 1.6;
+    color: black;
+}
+
+.footer a {
+    color: black;
 }
 
 .footer__content {

@@ -1,15 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;700&display=swap');
 
 
-/* Note-taking Web Application Project */
-
-.project__container {
-    background-color: #efefef;
-}
-
-.project__overview {
-    border-bottom: 1px solid #7d7d7d;
-}
+/* Project CSS global */
 
 .justify {
     justify-content: space-around;
@@ -83,6 +75,17 @@ img {
     border-radius: 2rem;
 }
 
+/* Note-taking Web Application Project */
+
+.note-project__container {
+    background-color: #efefef;
+}
+
+.project__overview {
+    border-bottom: 1px solid #7d7d7d;
+}
+
+
 /* NY Times API Project */
 
 .ny-project__container {
@@ -90,7 +93,8 @@ img {
 }
 
 /* SYMMETRY Project */
-.symmetry-project__container {
+.symmetry-project__container,
+.symmetry-footer {
     background: #fff8ef;
 }
 
@@ -240,45 +244,21 @@ span {
 
 }
 
-/* .logo-wrapper:hover .top-anim p {
-  animation: topAnimHover 1s cubic-bezier(.75, .49, .32, .83) forwards;
+/* Burgersquad */
+
+.bg-project__container {
+    background: #0e0b18;
+    color: var(--white);
 }
 
-.logo-wrapper:hover .left-m {
-  animation: leftHover 1.5s 1s forwards;
+.bg-project__container .title,
+.bg-project__container .button {
+    color: var(--black);
 }
 
-.logo-wrapper:hover .right-m {
-  animation: rightHover 1.5s 1s forwards;
+.bs-footer {
+    background: #0e0b18;
 }
-
-.logo-wrapper:hover .bottom-hidden {
-  animation: bottonAnimHover 1s cubic-bezier(.75, .49, .32, .83) forwards;
-}
-
-@keyframes topAnimHover {
-  100% {
-    transform: translateY(-98px);
-  }
-}
-
-@keyframes leftHover {
-  100% {
-    transform: translateX(0px);
-  }
-}
-
-@keyframes rightHover {
-  100% {
-    transform: translateX(0px);
-  }
-}
-
-@keyframes bottonAnimHover {
-  100% {
-    transform: translateY(203px);
-  }
-} */
 
 @media screen and (min-width: 576px) {
     .title-sm {
