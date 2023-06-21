@@ -1,6 +1,6 @@
 {
-  "name": "portfolio-ver2",
-  "homepage": "https://dajeongpaak.github.io/portfolio-ver2/",
+  "name": "portfolio",
+  "homepage": "https://www.dajeongpark.com",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
