@@ -1,0 +1,119 @@
+@use '../abstracts' as *;
+
+@for $i from 1 through 6 {
+    h#{$i},
+    .h#{$i} {
+        font-family: $font-inter;
+    }
+}
+
+h1, 
+.h1 {
+    font-size:  2.5rem;
+
+    @include mq(small) {
+        font-size:  2.6rem;
+    }
+
+    @include mq(medium) {
+        font-size: 4rem;
+    }
+
+}
+  
+h2, 
+.h2 {
+    font-size: 2rem;
+
+    @include mq(small) {
+        font-size: 2.1rem;
+    }
+
+    @include mq(medium) {
+        font-size: 2.3rem;
+    }
+
+    @include mq(large) {
+        font-size: 2.5rem;
+    }
+}
+  
+h3, 
+.h3 {
+    font-size: 1.75rem;
+
+    @include mq(small) {
+        font-size: 1.85rem;
+    }
+
+    @include mq(medium) {
+        font-size: 2rem;
+    }
+
+    @include mq(large) {
+        font-size: 2.2rem;
+    }
+}
+  
+h4, 
+.h4 {
+    font-size: 1.5rem;
+
+    @include mq(small) {
+        font-size: 1.6rem;
+    }
+
+    @include mq(medium) {
+        font-size: 1.8rem;
+    }
+
+    @include mq(large) {
+        font-size: 2rem;
+    }
+}
+  
+h5, 
+.h5 {
+    font-size: 1.25rem;
+
+    @include mq(small) {
+        font-size: 1.45rem;
+    }
+
+    @include mq(medium) {
+        font-size: 1.5rem;
+    }
+
+    @include mq(large) {
+        font-size: 1.55rem;
+    }
+}
+  
+h6, 
+.h6 {
+    font-size: 1rem;
+}
+
+p,
+.p {
+    font-family: $font-inter;
+    font-weight: 400;
+    font-size: 1rem;
+}
+
+span {
+    font-style: $font-ital;
+    font-weight: $font-weight-500;
+}
+
+.description {
+    font-size: 0.875rem;
+
+    @include mq(small) {
+        font-size: 1rem;
+    }
+
+    @include mq(medium) {
+        font-size: 1.1rem;
+    }
+}

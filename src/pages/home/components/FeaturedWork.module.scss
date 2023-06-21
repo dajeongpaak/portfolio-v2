@@ -1,0 +1,32 @@
+@use '../../../styles/abstracts' as *;
+
+.container {
+    background: $color-primary-dark;
+    grid-template-rows: 30vh 100vh 100vh 100vh 100vh;
+    @include grid;
+
+    @include mq(xsmall) {
+        grid-template-rows: 30vh 70vh 70vh 70vh 70vh;
+    }
+
+    @include mq(small) {
+        grid-template-rows: 20vh 80vh 80vh 80vh 80vh;
+    }
+
+    @include mq(medium) {
+        grid-template-rows: 30vh 45vh 45vh 45vh 45vh;
+    }
+
+    @include mq(large) {
+        grid-template-rows: 35vh 60vh 60vh 60vh 60vh;
+    }
+}
+
+.title {
+    color: $color-primary-light;
+    align-self: end;
+
+    @include gridCol(auto, 12);
+}
+
+

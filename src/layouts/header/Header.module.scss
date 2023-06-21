@@ -1,0 +1,51 @@
+@use '../../styles/abstracts' as *;
+
+.container {
+    width: 100%;
+    position: fixed;
+    z-index: 999;
+    mix-blend-mode: difference;
+    @include mq(large){
+        bottom: unset;
+    }
+
+    a {
+        color: $color-primary-light;
+    }
+}
+
+.nav {
+   font-size: $font-size-h5;
+
+    .logo {
+        fill: $color-primary-light;
+        width: 1rem;
+        margin-left: 0.25rem;
+    }
+
+   &__item {
+    font-weight: $font-weight-400;
+   }
+
+   ul {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    @include mq(large){
+        padding: 0 1rem;
+    }
+   }
+
+   li {
+    padding: 0.5rem;
+
+    @include mq(large){
+        padding: 1rem 1rem 0;
+    }
+   }
+
+   a {
+    padding: .5rem 0;
+   }
+}

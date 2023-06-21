@@ -1,0 +1,44 @@
+@use '../abstracts' as *;
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    transition: all 0.5s ease-in-out;
+}
+
+@for $i from 1 through 12 {
+    .col-#{$i} {
+        grid-column: span #{$i};
+    }
+}
+
+@include mq(small) {
+
+    @for $i from 1 through 12 {
+    .col-sm-#{$i} {
+        grid-column: span #{$i};
+    }
+    
+    }
+
+}
+
+@include mq(medium) {
+
+    @for $i from 1 through 12 {
+    .col-md-#{$i} {
+        grid-column: span #{$i};
+    }
+    }
+    
+}
+
+@include mq(large) {
+
+    @for $i from 1 through 12 {
+    .col-lg-#{$i} {
+        grid-column: span #{$i};
+    }
+    }
+    
+}

@@ -1,0 +1,22 @@
+@use '../../styles/abstracts' as *;
+
+.btn {
+    padding: 1rem;
+    box-shadow: 0px 0px 19px rgba(0, 0, 0, 0.2);
+    border-radius: 0.7rem;
+    border: 0.1px $color-primary-light solid;
+    @include flex-center;
+    transition: all 0.3s ease;
+
+    p {
+        text-transform: uppercase;
+        font-weight: 300;
+        color: $color-primary-dark;
+        margin-bottom: unset;
+        font-size: $font-size-14p;
+    }
+
+    &:hover, &:active {
+        box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.4);
+    }
+}

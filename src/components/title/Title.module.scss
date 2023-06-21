@@ -1,0 +1,11 @@
+@use '../../styles/abstracts' as *;
+
+.title {
+    text-transform: uppercase;
+    font-weight: 500;
+    padding: 1rem;
+
+    @include mq(large) {
+        font-size: 5.1875rem;
+    }
+}

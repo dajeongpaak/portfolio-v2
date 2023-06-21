@@ -1,0 +1,79 @@
+@use '../../styles/abstracts' as *;
+
+footer {
+    background: $color-primary-dark;
+
+}
+
+.container {
+    @include mq(medium){
+        height: 35vh;
+    }
+
+    @include mq(large){
+        height: 50vh;
+    }
+}
+
+.get_in_touch {
+    @include block($color-primary-light, $color-primary-dark);
+    @include flex-center;
+    text-transform: uppercase;
+    padding: 2.5rem 1.5rem;
+    color: $color-primary-dark;
+}
+
+.contact { 
+    position: relative;
+    @include block($color-highlight-orange, $color-primary-light);
+    @include flex-center;
+    padding: 6rem 1.5rem;
+
+    @include mq(large){
+        margin-bottom: unset;
+    }
+    a {
+        color: $color-primary-light;
+    }
+}
+
+.social_media {
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    margin: .5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: $color-primary-light;
+
+    p {
+        margin-left: 2rem;
+
+        @include mq(medium) {
+            margin-left: 4rem;
+        }
+    }
+
+    &_icon {
+        display: flex;
+        margin-right: 2rem;
+        svg {
+            width: 1.5rem;
+            fill: $color-primary-light;
+            padding-left: 1rem;
+
+            @include mq(medium) {
+                padding-left: 1.5rem;
+            }
+
+            @include mq(large) {
+                width: 1.8rem;
+            }
+        }
+        
+        @include mq(medium) {
+            margin-right: 4rem;
+        }
+    }
+}

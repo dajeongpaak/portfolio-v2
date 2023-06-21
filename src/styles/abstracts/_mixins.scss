@@ -1,0 +1,63 @@
+@use './variables' as *;
+@use './breakpoints' as *;
+
+@mixin flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin flex-column {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+@mixin flex($align, $justify, $direction: false) {
+    display: flex;
+    align-items: $align;
+    justify-content: $justify;
+
+    @if $direction {
+        flex-direction: $direction;
+    }
+}
+
+@mixin grid {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+}
+
+@mixin gridCol($col-start, $span) {
+    grid-column: $col-start / span $span;
+}
+
+@mixin block-padding {
+
+    padding: 5rem 2rem;
+
+    @include mq(small) {
+        padding: 7rem 2rem;
+    }
+    
+    @include mq(medium) {
+        padding: 8rem;
+    }
+
+    @include mq(large) {
+        padding: 6rem;
+    }
+
+}
+
+@mixin block($bgColor, $fontColor) {
+    border-radius: $border-radious-sm;
+    position: relative;
+    background: $bgColor;
+    color: $fontColor;
+
+    @include mq(medium) {
+        border-radius: $border-radious-md;
+    }
+}
+

@@ -1,0 +1,45 @@
+@use '../../styles/abstracts' as *;
+
+.container {
+    background: $color-primary-dark;
+    @include grid;
+    grid-template-rows: 30vh repeat(4, 100vh) repeat(2, 50vh);
+   
+
+    @include mq(xsmall) {
+        grid-template-rows: 30vh repeat(4, 70vh) repeat(2, 40vh);
+    }
+
+    // @include mq(small) {
+    //     grid-template-rows: 20vh 80vh 80vh 80vh 80vh;
+    // }
+
+    @include mq(medium) {
+        grid-template-rows: 30vh repeat(5, 35vh);
+    }
+
+    @include mq(large) {
+        grid-template-rows: 40vh 60vh 60vh 60vh 60vh 50vh;
+    }
+}
+
+.title {
+    grid-column: span 12;
+    align-self: flex-end;
+    color: $color-primary-light;
+}
+
+.work {
+    @include block($color-primary-light, $color-primary-dark);
+    grid-column: span 12;
+    @include flex-center;
+
+    @include mq(medium) {
+        grid-column: span 6;
+    }
+
+    h4 {
+        font-weight: 500;
+    }
+}
+

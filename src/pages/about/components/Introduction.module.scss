@@ -1,0 +1,186 @@
+@use '../../../styles/abstracts' as *;
+
+
+.section {
+    grid-template-rows: 30vh 70vh 2fr 0.8fr 0.8fr;
+    @include mq(xsmall) {
+        grid-template-rows: 40vh 60vh 2fr 1.1fr 1.1fr;
+    }
+
+    @include mq(small) {
+        grid-template-rows: 40vh 60vh 2.3fr 1.3fr 1.3fr;
+    }
+
+    @include mq(medium) {
+        grid-template-rows: 50vh 50vh 2fr 1.3fr;
+    }
+
+    @include mq(large) {
+        grid-template-rows: repeat(3, 1fr);
+        height: 100vh;
+    }
+}
+
+
+.introduction, .hobby {
+    @include block($color-secondary-white, $color-primary-dark);
+    @include flex-center;
+    padding: 2rem;
+}
+
+.introduction {
+   
+    @include mq(large) {
+        height: 100%;
+        padding: unset;
+        flex-direction: unset;
+        justify-content: center;
+        grid-area: 2 / 1 / span 1 / span 6;
+        align-self: end;
+    }
+}
+
+.title {
+    align-self: flex-end;
+    @include mq(large) {
+        grid-area: 1 / 1 / span 1 / span 3;
+        align-self: end;
+    }
+}
+
+.profile {
+    @include flex-column;
+
+    @include mq(medium) {
+        flex-direction: unset;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+
+    &_content {
+        @include mq(medium) {
+            width: 50%;
+        }
+
+        @include mq(large) {
+            width: 60%;
+        }
+    }
+ 
+    span {
+        margin-bottom: 1.5rem;
+
+        @include mq(large) {
+            margin-bottom: unset;
+        }
+    }
+
+    img {
+        max-width: 100%;
+    }
+
+    span, img {
+        width: 190px;
+        height: 190px;
+        border-radius: 4rem;
+
+        @include mq(small) {
+            width: 250px;
+            height: 250px;
+        }
+
+        @include mq(large) {
+            width: 170px;
+            height: 170px;
+        }
+
+    }
+
+}
+
+
+.h2 {
+    font-weight: 600;
+    margin-bottom: .5rem;
+}
+
+.more_about_me {
+    @include block($color-primary-dark, $color-primary-light);
+    @include flex-center;
+
+    @include mq(large) {
+        height: 100%;
+        grid-row: 2 / span 2;
+        align-self: self-end;
+    }
+
+    &_content {
+        @include block-padding;
+
+        @include mq(large) {
+            padding: 6rem;
+        }
+       
+    }
+}
+
+.hobby {
+   
+    @include mq(large) {
+        grid-row: 3;
+    }
+
+    img {
+        width: 200px;
+        transition: all ease .3s;
+
+        &:hover, &:active {
+            transform: scale(1.1)
+        }
+    }
+
+}
+
+.click {
+    @include block($color-highlight-orange, $color-primary-light);
+    @include flex-center;
+    flex-direction: column;
+    padding: 2rem;
+
+    @include mq(medium) {
+        flex-direction: unset;
+        align-items: center;
+    }
+
+    @include mq(large) {
+        grid-row: 3;
+    }
+
+    &_content {
+        @include flex-column;
+    }
+    svg {
+        top: 20%;
+        left: 50%;
+        width: 1.5rem;
+        height: auto;
+        fill: $color-primary-light;
+        stroke: $color-primary-light;
+        transform: translateX(-50%) rotate(-45deg);
+        margin-bottom: 1rem;
+
+        @include mq(medium) {
+            top: 50%;
+            left: 20%;
+            transform: translateY(-50%) rotate(-135deg);
+            margin-bottom: unset;
+            margin-right: 2rem;
+        }
+
+    }
+
+    span {
+        font-style: normal;
+        text-decoration: underline;
+    }
+}

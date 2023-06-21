@@ -1,0 +1,73 @@
+@use '../../../styles/abstracts' as *;
+
+.container {
+    position: relative;
+    padding: 3rem 0;
+    height: 80vh;
+    overflow: hidden;
+    @include grid;
+
+    @include mq(large) {
+        height: 100vh;
+    }
+}
+
+.statement, .values {
+    padding: 0 2rem;
+    @include gridCol(auto, 12);
+
+    @include mq(large) {
+        @include gridCol(auto, 6);
+        justify-self: center;
+    }
+}
+
+.statement {
+    font-weight: 300;
+    color: $color-primary-dark;
+    align-self: center;
+ 
+    @include mq(large) {
+        justify-self: center;
+    }
+}
+
+
+.values {
+    color: $color-primary-light;
+    align-self: self-start;
+    mix-blend-mode: difference;
+    z-index: 1;
+
+    @include mq(large) {
+        align-self: center;
+    }
+
+}
+
+.js_animation {
+    position: absolute;
+    bottom: -30%;
+    left: 50%;
+    transform: translate(-50%, 0);
+    width: 120vw;
+    height: 15rem;
+    border-radius: 50%;
+    background: $color-primary-dark;
+
+    @include mq(xsmall){
+        bottom: -20%;
+    }
+
+    @include mq(small) {
+        bottom: -10%;
+    }
+
+    @include mq(large) {
+        bottom: -25%;
+        height: 24rem;
+    }
+
+    
+}
+

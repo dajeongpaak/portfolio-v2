@@ -1,0 +1,155 @@
+@use '../../styles/abstracts' as *;
+
+* {
+    scroll-behavior: auto;
+    
+}
+
+// ::-webkit-scrollbar {
+//   width: 0.5em;
+// }
+// ::-webkit-scrollbar-thumb {
+//   background-color: transparent;
+// }
+
+// body {
+//   overflow: hidden;
+// }
+
+.canvas {
+    @include grid;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    gap: 1rem;
+    
+    .hobby {
+      grid-area: 11 / 5 / span 4 / span 5;
+      align-self: center;
+      justify-self: center;
+    
+      // position: fixed;
+      // top: 50%;
+      // left: 50%;
+      // transform: translate(-50%, -10%);
+      z-index: -1;
+
+      span {
+        font-family: $font-reenie;
+        font-style: normal;
+      }
+    }
+    @include mq(large) {
+      grid-template-columns: repeat(20, 1fr);
+      grid-template-rows: repeat(20, 1fr);
+      width: 3000px;
+      height: 2000px;
+    }
+
+    img {
+        max-width: 100%;
+        height: auto;
+        position: relative;
+        transition: all ease ;
+    }
+
+    .img_1:hover {
+      transform: scale(2);
+    }
+
+    .img_1, 
+    .img_2,
+    .img_3,
+    .img_4,
+    .img_5,
+    .img_6,
+    .img_7,
+    .img_8,
+    .img_9,
+    .img_10 {
+      @include gridCol(1 , 12)
+    }
+
+    .img_1 {
+
+      @include mq(large) {
+        grid-area: 3 / 2 / span 2 / span 2;
+      }
+    }
+
+    .img_2 {
+      @include mq(large) {
+      grid-area: 4 / 15 / span 2 / span 2;
+      }
+    }
+
+    .img_3 {
+      @include mq(large) {
+      grid-area: 1 / 6 / span 2 / span 2;
+      }
+    }
+
+    .img_4 {
+      @include mq(large) {
+      grid-area: 15 / 6 / span 2 / span 2;
+      }
+    }
+
+    .img_5 {
+      @include mq(large) {
+      grid-area: 14 / 10 / span 3 / span 2;
+      }
+    }
+
+    .img_6 {
+      @include mq(large) {
+      grid-area: 12 / 3 / span 3 / span 2;
+      }
+    }
+
+    .img_7 {
+      @include mq(large) {
+      grid-area: 8 / 5 / span 3 / span 3;
+      }
+    }
+
+    .img_8 {
+      @include mq(large) {
+      grid-area: 11 / 14 / span 3 / span 2;
+      }
+    }
+    
+    .img_9 {
+      @include mq(large) {
+        grid-area: 2 / 11 / span 2 / span 3;
+      }
+    }
+  
+    .img_10 {
+      @include mq(large) {
+      grid-area: 7 / 10 / span 3 / span 2;
+      }
+    }
+
+}
+
+
+// html.lenis {
+//     height: auto;
+//   }
+  
+//   .lenis.lenis-smooth {
+//     scroll-behavior: auto;
+//   }
+  
+//   .lenis.lenis-smooth [data-lenis-prevent] {
+//     overscroll-behavior: contain;
+//   }
+  
+//   .lenis.lenis-stopped {
+//     overflow: hidden;
+//   }
+  
+//   .lenis.lenis-scrolling iframe {
+//      pointer-events: none;
+//   } 

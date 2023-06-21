@@ -1,0 +1,21 @@
+@use '../../styles/abstracts/' as *;
+
+.icon {
+        position: absolute;
+        top: 2rem;
+        right: 2rem;
+        width: 1.3rem;
+        fill: $color-primary-dark;
+    
+        @include mq(small) {
+            top: 2.5rem;
+            right: 2.5rem;  
+            width: 1.5rem;
+        }
+    
+        @include mq(medium) {
+            top: 3rem;
+            right: 3rem;
+            width: 1.7rem;
+        }
+}

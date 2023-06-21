@@ -1,0 +1,45 @@
+@use '../abstracts' as *;
+
+* {
+    scroll-behavior: smooth;
+
+}
+
+body {
+    height: 100%;
+    background: $color-primary-light;
+    font-family: $font-inter;
+    line-height: 1.5;
+    position: relative;
+}
+
+
+.wrapper {
+    padding: 0 .5rem;
+    margin: 0 auto;
+
+    @include mq(large) {
+        padding: 0 1rem;
+    }
+}  
+
+a {
+    text-decoration: none;
+    color: $color-primary-dark;
+}
+
+.flex {
+    display: flex;
+}
+
+.lignt {
+    background: $color-primary-light !important;
+}
+
+.dark {
+    background: $color-primary-dark !important;
+}
+
+.white {
+    background: $color-secondary-white !important;
+}

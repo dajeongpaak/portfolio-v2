@@ -1,0 +1,58 @@
+@use '../../../styles/abstracts' as *;
+
+.section {
+    grid-template-rows: 1.2fr 1.2fr 2fr ;
+
+    @include mq(large) {
+        grid-template-rows: repeat(2, 50vh);
+    }
+}
+
+.interests, .belief {
+    @include block($color-secondary-white, $color-primary-dark);
+    @include flex-center;
+    flex-direction: column;
+    padding:2rem;
+}
+
+.hobbies, .belief li {
+    font-weight: 500;
+    font-size: 1.35rem
+}
+
+.belief {
+
+    ul {
+        @include flex-column;
+    }
+}
+
+.values {
+    @include block($color-primary-dark, $color-primary-light);
+    @include flex-column;
+    @include block-padding;
+    
+
+    h4 {
+        font-weight: 500;
+        margin-bottom: 1rem;
+    }
+
+    ul {
+        @include flex-column;
+        justify-content: space-between;
+
+        @include mq(large) {
+            flex-direction: unset;
+        }
+    }
+
+    li {
+        margin-bottom: 2rem;
+
+        @include mq(large) {
+            margin-bottom: unset;
+            width: 25%;
+        }
+    }
+}

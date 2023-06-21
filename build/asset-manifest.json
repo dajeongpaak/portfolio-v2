@@ -1,0 +1,28 @@
+{
+  "files": {
+    "main.css": "/portfolio-ver2/static/css/main.6aef73ae.css",
+    "main.js": "/portfolio-ver2/static/js/main.83fb3c67.js",
+    "static/media/film-camera.png": "/portfolio-ver2/static/media/film-camera.8a4ce63ab7502ca674d4.png",
+    "static/media/6.jpg": "/portfolio-ver2/static/media/6.e7168d4f56af86761510.jpg",
+    "static/media/1.jpg": "/portfolio-ver2/static/media/1.6d90f293b7ab5dec53ee.jpg",
+    "static/media/8.jpg": "/portfolio-ver2/static/media/8.7d7904837fe33a7ae48d.jpg",
+    "static/media/4.jpg": "/portfolio-ver2/static/media/4.9c40d81db3f203697333.jpg",
+    "static/media/2.jpg": "/portfolio-ver2/static/media/2.84a8e031a397e3d8782f.jpg",
+    "static/media/9.jpg": "/portfolio-ver2/static/media/9.739cbd4f097e2e2096e7.jpg",
+    "static/media/10.jpg": "/portfolio-ver2/static/media/10.3d8ea013318fa67151bf.jpg",
+    "static/media/7.jpg": "/portfolio-ver2/static/media/7.95658c51b7c9ae0e5ac3.jpg",
+    "static/media/3.jpg": "/portfolio-ver2/static/media/3.7a745dcdba2ccb062c77.jpg",
+    "static/media/5.jpg": "/portfolio-ver2/static/media/5.0210887c2ee34bf7b31b.jpg",
+    "static/media/DJ.jpg": "/portfolio-ver2/static/media/DJ.d142f012ff3260d5db41.jpg",
+    "static/media/placeholder-1.jpg": "/portfolio-ver2/static/media/placeholder-1.ef70eb971c44e9905753.jpg",
+    "static/media/placeholder-2.jpg": "/portfolio-ver2/static/media/placeholder-2.9b501cecd16dee9c30fb.jpg",
+    "static/media/placeholder-3.jpg": "/portfolio-ver2/static/media/placeholder-3.c608dedd3b694526cd34.jpg",
+    "index.html": "/portfolio-ver2/index.html",
+    "main.6aef73ae.css.map": "/portfolio-ver2/static/css/main.6aef73ae.css.map",
+    "main.83fb3c67.js.map": "/portfolio-ver2/static/js/main.83fb3c67.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.6aef73ae.css",
+    "static/js/main.83fb3c67.js"
+  ]
+}
