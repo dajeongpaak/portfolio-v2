@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.6aef73ae.css",
-    "main.js": "/static/js/main.86766980.js",
+    "main.js": "/static/js/main.84fc6257.js",
     "static/media/film-camera.png": "/static/media/film-camera.8a4ce63ab7502ca674d4.png",
     "static/media/6.jpg": "/static/media/6.e7168d4f56af86761510.jpg",
     "static/media/1.jpg": "/static/media/1.6d90f293b7ab5dec53ee.jpg",
@@ -19,10 +19,10 @@
     "static/media/placeholder-3.jpg": "/static/media/placeholder-3.c608dedd3b694526cd34.jpg",
     "index.html": "/index.html",
     "main.6aef73ae.css.map": "/static/css/main.6aef73ae.css.map",
-    "main.86766980.js.map": "/static/js/main.86766980.js.map"
+    "main.84fc6257.js.map": "/static/js/main.84fc6257.js.map"
   },
   "entrypoints": [
     "static/css/main.6aef73ae.css",
-    "static/js/main.86766980.js"
+    "static/js/main.84fc6257.js"
   ]
 }

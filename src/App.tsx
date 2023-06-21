@@ -6,10 +6,8 @@ import './App.scss'
 import Home from './pages/home/Home'
 import About from './pages/about/About'
 import Work from './pages/work/Work'
-import WorkHome from './pages/work/WorkHome'
 import Jade from './pages/work/projects/Jade-bookmark-manager-project'
 import Header from './layouts/header/Header'
-import Footer from './layouts/footer/Footer'
 import Gallery from './pages/gallery/Gallery'
 
 

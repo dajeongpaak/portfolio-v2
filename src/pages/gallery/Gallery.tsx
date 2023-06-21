@@ -55,7 +55,7 @@ const handleMouseMove = (event: MouseEvent) => {
     const constrain  = 10
     imgs.forEach((item: HTMLImageElement): void => {
     const itemRect = item.getBoundingClientRect()
-    let calcX = -(offsetY/2 - (itemRect.y)/2 - (item.height / 2)) / constrain;
+    //let calcX = -(offsetY/2 - (itemRect.y)/2 - (item.height / 2)) / constrain;
     let calcY = (offsetX/2 - (itemRect.x)/2 - (item.width / 2)) / constrain;
     item.style.transform = `skewX(${calcY/20}deg)` 
     })

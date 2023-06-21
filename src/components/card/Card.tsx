@@ -3,7 +3,6 @@ import { Link } from 'react-router-dom'
 import styles from './Card.module.scss'
 import projects from '../../data/projects'
 import Arrow from '../../assets/icons/Arrow'
-import Button from '../button/Button'
 
 
 interface Item {
