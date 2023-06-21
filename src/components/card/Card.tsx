@@ -34,7 +34,7 @@ const items: Item[] = projects as Item[]
                             <div className={`${styles.content}`}>
                                 <h4>{item.name}</h4>
                                 <div className={`${styles.discipline}`}>
-                                    <div>web devleopment</div>
+                                    <div>web devleopent</div>
                                     <div>web design</div>
                                 </div>
                                 <p className={styles.description}>{item.desc}</p>
