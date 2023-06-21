@@ -13,6 +13,7 @@
     "@types/react": "^18.2.6",
     "@types/react-dom": "^18.2.4",
     "animate-css-grid": "^1.5.1",
+    "cross-env": "^7.0.3",
     "gh-pages": "^5.0.0",
     "gsap": "^3.11.5",
     "locomotive-scroll": "^4.1.4",
@@ -29,7 +30,7 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "react-scripts build"
+    "build": "cross-env CI=false react-scripts build"
   },
   "eslintConfig": {
     "extends": [
