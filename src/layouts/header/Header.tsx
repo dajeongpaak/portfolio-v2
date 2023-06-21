@@ -1,6 +1,5 @@
-import React from 'react'
-import { ReactDOM } from 'react'
-import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom'
+
+import { BrowserRouter as Router, Link } from 'react-router-dom'
 
 
 // import Navbar from '../navigation/Navbar'

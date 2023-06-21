@@ -1,6 +1,6 @@
-import { useState ,useEffect, useRef, useCallback } from 'react'
+import { useState ,useEffect, useRef } from 'react'
 
-import { Bodies, Composite, Engine, Runner, Render, Body, Vector, Mouse, MouseConstraint } from "matter-js"
+import { Composite, Runner, Mouse, MouseConstraint } from "matter-js"
 import Matter from 'matter-js';
 
 import imageHey from '../../../assets/images/hey.png'
@@ -11,7 +11,6 @@ import imageFrontEnd from '../../../assets/images/frontend.png'
 import imageCircle from '../../../assets/images/cir-1.png'
 import imageCircle2 from '../../../assets/images/cir-2.png'
 import imageCircle3 from '../../../assets/images/cir-3.png'
-import debounce from 'lodash.debounce';
 
 
 
@@ -34,7 +33,6 @@ function Hero() {
 
         let Engine = Matter.Engine;
         let Render = Matter.Render;
-        let World = Matter.World;
         let Bodies = Matter.Bodies;
 
         const heroWidth = heroRef.current.clientWidth

@@ -1,7 +1,6 @@
 
 import { LazyLoadImage } from "react-lazy-load-image-component"
 import { Link } from 'react-router-dom'
-import { wrapGrid } from 'animate-css-grid'
 
 import styles from './Introduction.module.scss'
 import Title from "../../../components/title/Title"

@@ -1,16 +1,10 @@
-
-import { CSSProperties } from 'react';
-
-
-import LocomotiveScroll from 'locomotive-scroll';
-import styles from './Gallery.module.scss'
-
-
-
-import images from '../../data/gallery'
-import useScrollSmooth from '../../hooks/useScrollSmooth'
 import { useRef } from 'react'
-import { useEffect, useState } from 'react'
+import { useEffect } from 'react'
+
+import styles from './Gallery.module.scss'
+import images from '../../data/gallery'
+
+
 
 type HandleScrollType = () => void
 
