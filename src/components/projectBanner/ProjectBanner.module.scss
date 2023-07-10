@@ -24,8 +24,8 @@
     }
 
     img {
-        width: 330px;
-        // max-width: 80%;
+        // width: 330px;
+        max-width: 80%;
         height: 100%;
 
         @include mq(xsmall) {
