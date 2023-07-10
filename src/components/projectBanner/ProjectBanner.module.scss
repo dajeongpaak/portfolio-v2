@@ -25,10 +25,9 @@
 
     img {
         max-width: 80%;
-        height: 100%;
 
         @include mq(xsmall) {
-            // max-width: 85%;
+            max-width: 85%;
         }
 
         @include mq(small) {
