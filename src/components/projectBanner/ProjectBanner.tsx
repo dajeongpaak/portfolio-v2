@@ -5,6 +5,7 @@ import { gsap } from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 
 import styles from './ProjectBanner.module.scss'
+import image from '../../assets/images/articles-banner-m.png'
 
 interface ProjectBannerType {
   
@@ -87,7 +88,8 @@ export default function ProjectBanner({data}: any) {
                             media="(min-width: 768px)"
                             srcSet={typeof bannerSrc_m === 'string' ? bannerSrc_m : bannerSrc_m.default}
                         />
-                        <img src={typeof bannerSrc_m === 'string' ? bannerSrc_m : bannerSrc_m.default} alt="Articles of the week banner image" />
+                        {/* <img src={typeof bannerSrc_m === 'string' ? bannerSrc_m : bannerSrc_m.default} alt="Articles of the week banner image" /> */}
+                        <img src={image} alt="" />
                     </picture>
                 </div>
                 <div 
