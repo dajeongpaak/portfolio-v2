@@ -16,7 +16,6 @@ import Jade from './pages/work/projects/Jade-bookmark-manager-project'
 import Header from './layouts/header/Header'
 import Footer from './layouts/footer/Footer';
 import Gallery from './pages/gallery/Gallery'
-import WorkHome from './pages/work/WorkHome';
 import ArticlesOfTheWeek from './pages/work/projects/articlesOfTheWeek/ArticlesOfTheWeek';
 import TLSI from './pages/work/projects/tl;si/TLSI';
 // Variable name is camelCase
@@ -36,8 +35,8 @@ function App() {
             <Route path="/" element={<Home />}/>
             <Route index element={<Home />}/>
             <Route path="/about" element={<About />} />
-            <Route path="/work/*" element={<Work />}>
-              <Route index element={<WorkHome />}/>
+            <Route  path="/work/*">
+              <Route index element={<Work />}/>
               <Route path='articles-of-the-week-from-ny-times' element={<ArticlesOfTheWeek />} />
               <Route path='tlsi-text-summarizer' element={<TLSI />} />
               <Route path='jade-bookmark-manager' element={<Jade />} />

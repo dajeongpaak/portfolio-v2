@@ -1,5 +1,5 @@
-import { useRef, useLayoutEffect } from 'react'
-import { Navigate, useNavigate, useMatch } from 'react-router-dom'
+import { useRef, useLayoutEffect, useEffect } from 'react'
+import { Navigate, useNavigate, useMatch, useLocation } from 'react-router-dom'
 
 import { gsap } from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
@@ -11,13 +11,29 @@ gsap.registerPlugin(ScrollTrigger)
 export default function ScrollNavigation({title, navigateTo }: any) {
     const progressRef: any = useRef()
     const navigate = useNavigate();
-
+    // const location = useLocation
+    console.log(navigateTo)
     const handleScroll = () => {
       window.scrollTo({
         top: 0, 
         behavior: 'smooth'
       });
     }  
+
+    useEffect(() => {
+      const handleGoBack = (e: any) => {
+        if(e.state && e.state.goBack) {
+          navigate(-1)
+        }
+      }
+
+      window.history.pushState({ goBack: true }, '');
+      window.addEventListener('popstate', handleGoBack);
+      return () => {
+        window.removeEventListener('popstate', handleGoBack);
+      };
+    }, [navigate]);
+  
 
     useLayoutEffect(() => { 
 
@@ -28,6 +44,7 @@ export default function ScrollNavigation({title, navigateTo }: any) {
               duration: 0.01, 
               onComplete: () => {
                 console.log(navigateTo)
+                // navigate(1)
                 navigate(`/work/${navigateTo}`)
               }
             })

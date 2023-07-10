@@ -1,6 +1,5 @@
-import { useRef, useLayoutEffect } from 'react'
+import { useRef, useLayoutEffect, useEffect } from 'react'
 import { Navigate, useNavigate, useMatch } from 'react-router-dom'
-
 
 import { gsap } from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
@@ -25,7 +24,22 @@ from '../../../../data/code';
 export default function ArticlesOfTheWeek() {
   setBodyColor({color: '#1c1c1e'})
   const progressRef: any = useRef()
-  const navigate = useNavigate();
+  const navigate = useNavigate()
+
+  useEffect(() => {
+    const handleGoBack = (e: any) => {
+      if(e.state && e.state.goBack) {
+        navigate(-1)
+      }
+    }
+
+    window.history.pushState({ goBack: true }, '');
+    window.addEventListener('popstate', handleGoBack);
+    return () => {
+      window.removeEventListener('popstate', handleGoBack);
+    };
+  }, [navigate]);
+
 
   const handleScroll = () => {
     window.scrollTo({
@@ -34,32 +48,9 @@ export default function ArticlesOfTheWeek() {
     });
   }  
 
-  // useLayoutEffect(() => { 
-
-  //     let ctx = gsap.context(() => {
-  //       const tl = gsap.timeline()
-  //       tl.to( '#js-progress-animation', {
-  //           width: '100%',
-  //           duration: 0.01, 
-  //           onComplete: () => {
-  //             navigate(`/work/`)
-  //           }
-  //         })
-  
-  //       ScrollTrigger.create({
-  //         animation: tl,
-  //         trigger: progressRef.current,
-  //         start: "top 30%",
-  //         end: "100% 100%",
-  //         scrub: true,
-  //         pin:  progressRef.current,
-  //       })
-  //     }, progressRef)
-  
-  //     return () => ctx.revert()
-  
-  //   }, [])
-
+  const handlenavigate = () => {
+    navigate('/work/tlsi-text-summarizer')
+  }
 
   return (
     <>
@@ -164,10 +155,13 @@ export default function ArticlesOfTheWeek() {
               </p>
             </ProjectText>
           </ProjectContent>
+          <button onClick={handlenavigate}>navigate</button>
           <ScrollNavigation 
             navigateTo="tlsi-text-summarizer"
             title="TL;si - Too Long Summarize It"
           />
+
+          {/* <div }></div> */}
       </Transition>
     </>
   )
