@@ -12,8 +12,8 @@ function Work() {
       <Routes>
         <Route path="/" element={<WorkHome />}/>
         <Route path='/articles-of-the-week-from-ny-times' element={<ArticlesOfTheWeek />}/>
-        <Route path='/jade-bookmark-manager' element={<Jade />}/>
         <Route path='/tlsi-text-summarizer' element={<TLSI />} />
+        <Route path='/jade-bookmark-manager' element={<Jade />}/>
       </Routes>
     </>
   )
