@@ -371,7 +371,7 @@ function Hero() {
     <section
         ref={heroRef}
         style={{ 
-            height: '100dvh',
+            height: "100vh",
             width: '100vw',
             cursor: 'grab'
         }}
