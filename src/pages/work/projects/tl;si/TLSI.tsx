@@ -135,7 +135,7 @@ export default function TLSI() {
             </ProjectText>
             </ProjectContent>
             <ScrollNavigation 
-                navigateTo="jade-bookmark-manager"
+                navigateTo="jade-bookmark-"
                 title="JADE - Bookmark Manager"
             />
         </Transition>

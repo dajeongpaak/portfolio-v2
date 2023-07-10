@@ -1,5 +1,5 @@
 import { useRef, useLayoutEffect } from 'react'
-import { Navigate, useNavigate, Link } from 'react-router-dom'
+import { Navigate, useNavigate, useMatch } from 'react-router-dom'
 
 import { gsap } from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
@@ -11,7 +11,7 @@ gsap.registerPlugin(ScrollTrigger)
 export default function ScrollNavigation({title, navigateTo }: any) {
     const progressRef: any = useRef()
     const navigate = useNavigate();
-  
+
     const handleScroll = () => {
       window.scrollTo({
         top: 0, 
@@ -27,6 +27,7 @@ export default function ScrollNavigation({title, navigateTo }: any) {
               width: '100%',
               duration: 0.01, 
               onComplete: () => {
+                console.log(navigateTo)
                 navigate(`/work/${navigateTo}`)
               }
             })
@@ -43,7 +44,7 @@ export default function ScrollNavigation({title, navigateTo }: any) {
     
         return () => ctx.revert()
     
-      }, [])
+      }, [navigateTo])
  
       
   return (

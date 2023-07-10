@@ -1,3 +1,9 @@
+import { useRef, useLayoutEffect } from 'react'
+import { Navigate, useNavigate, useMatch } from 'react-router-dom'
+
+
+import { gsap } from 'gsap'
+import { ScrollTrigger } from 'gsap/ScrollTrigger'
 
 import styles from './ArticlesOfTheWeek.module.scss'
 import { articlesOfTheWeek } from '../../../../data/projects';
@@ -18,6 +24,42 @@ from '../../../../data/code';
 
 export default function ArticlesOfTheWeek() {
   setBodyColor({color: '#1c1c1e'})
+  const progressRef: any = useRef()
+  const navigate = useNavigate();
+
+  const handleScroll = () => {
+    window.scrollTo({
+      top: 0, 
+      behavior: 'smooth'
+    });
+  }  
+
+  // useLayoutEffect(() => { 
+
+  //     let ctx = gsap.context(() => {
+  //       const tl = gsap.timeline()
+  //       tl.to( '#js-progress-animation', {
+  //           width: '100%',
+  //           duration: 0.01, 
+  //           onComplete: () => {
+  //             navigate(`/work/`)
+  //           }
+  //         })
+  
+  //       ScrollTrigger.create({
+  //         animation: tl,
+  //         trigger: progressRef.current,
+  //         start: "top 30%",
+  //         end: "100% 100%",
+  //         scrub: true,
+  //         pin:  progressRef.current,
+  //       })
+  //     }, progressRef)
+  
+  //     return () => ctx.revert()
+  
+  //   }, [])
+
 
   return (
     <>

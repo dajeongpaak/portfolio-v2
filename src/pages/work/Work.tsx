@@ -1,5 +1,5 @@
 
-import { Routes, Route } from 'react-router-dom'
+import { Routes, Route, Outlet } from 'react-router-dom'
 
 import WorkHome from './WorkHome'
 import Jade from './projects/Jade-bookmark-manager-project'
@@ -11,10 +11,12 @@ function Work() {
     <>
       <Routes>
         <Route path="/" element={<WorkHome />}/>
-        <Route path='/articles-of-the-week-from-ny-times' element={<ArticlesOfTheWeek />}/>
+        {/* <Route path='/articles-of-the-week-from-ny-times' element={<ArticlesOfTheWeek />}/>
         <Route path='/tlsi-text-summarizer' element={<TLSI />} />
         <Route path='/jade-bookmark-manager' element={<Jade />}/>
-      </Routes>
+        */}
+      </Routes> 
+      <Outlet />
     </>
   )
 }

@@ -40,7 +40,7 @@ function App() {
               <Route index element={<WorkHome />}/>
               <Route path='articles-of-the-week-from-ny-times' element={<ArticlesOfTheWeek />} />
               <Route path='tlsi-text-summarizer' element={<TLSI />} />
-              <Route path='jade-bookmark-manager' element={<Jade />} />
+              {/* <Route path='jade-bookmark-manager' element={<Jade />} /> */}
             </Route>
             <Route path="/gallery" element={<Gallery />} />
             {/* <Route path="*" element={<NotFound />} /> */}
