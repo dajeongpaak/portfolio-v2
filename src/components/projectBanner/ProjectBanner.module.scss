@@ -1,0 +1,185 @@
+@use '../../styles/abstracts' as *;
+
+.project {
+    color: $color-primary-light;
+   // margin-bottom: -100vh;
+    a {
+        color: $color-primary-light;
+    }
+}
+
+.banner {
+    @include gridCol(auto, 12);
+    @include flex-center;
+    align-items: flex-end;
+    text-align: center;
+    max-width: 90rem;
+    margin: 0 auto;
+    height: 90vh;
+    padding-top: 1rem;
+    background: $color-primary-dark;
+
+    @include mq(large) {
+        align-items: center;
+    }
+
+    img {
+        max-width: 80%;
+        height: 100%;
+
+        @include mq(xsmall) {
+            max-width: 85%;
+        }
+
+        @include mq(small) {
+            max-width: 65%;
+        }
+
+        @include mq(medium) {
+            max-width: 60%;
+        }
+
+        @include mq(large) {
+            max-width: 80%;
+        }
+
+        @include mq(xlarge) {
+            max-width: 90%;
+        }
+    }
+}
+
+.container {
+    width: 100%;
+    background: $color-primary-dark;
+    position: relative;
+    @include flex(center, center, column);
+
+    @include mq(small) {
+        height: 100vh;
+    }
+}
+
+.scrollDown {
+    height: 10vh;
+    position: absolute;
+    top: 0;
+    display: flex;
+    left: 50%;
+    transform: translateX(-50%);
+
+    span {
+        @include flex-center;
+        // color: $color-primary-light;
+        font-weight: 400;
+      }
+
+}
+
+.grid {
+    @include grid;
+    margin-top: 10vh;
+    max-width: 80rem;
+    padding: 0 1rem;
+
+    @include mq(medium) {
+        padding: 0 2rem;
+    }
+}
+
+.title {
+    padding: 3rem 0;
+    @include gridCol(auto, 12);
+
+    @include mq(large) {
+        @include gridCol(2, 6);
+    }
+
+}
+
+.stacks {
+    @include stackList;
+}
+
+.links {
+    @include gridCol(auto ,12);
+    margin-bottom: 1rem;
+
+    @include mq(large) {
+        @include gridCol(auto, 4);
+        justify-self: end;
+        align-self: end;    
+    }
+    ul {
+        display: flex;
+    }
+
+
+    li {
+        padding-right: 1rem;
+    }
+}
+
+.overview {
+    @include grid;
+    @include gridCol(auto, 12);
+    border-top: 1px solid $color-primary-light;
+
+    @include mq(large) {
+        @include gridCol(2, 10);
+    }
+
+    &__heading {
+        @include flex(start, space-between, column);
+        @include gridCol(auto, 12);
+
+        @include mq(large) {
+            @include gridCol(1, 6);
+            margin-bottom: unset;
+        }
+    }
+
+    &__datails {
+        margin: 2rem 0;
+        li:not(:last-child) {
+            padding-bottom: 0.5rem;
+        }
+    
+        h3 {
+            font-weight: 500;
+            font-size: $font-size-14p;
+            color: $color-secondary-silver;
+        }
+
+        @include mq(medium) {
+            margin-left: auto;
+            text-align: right;
+        }
+
+        @include mq(large) {
+            @include gridCol(1, 6);
+            margin: unset;
+            text-align: left;
+        }
+    }
+
+    &__description {
+        @include gridCol(auto, 12);
+
+        @include mq(medium) {
+            @include gridCol(4, 9);
+        }
+        
+    p {
+        margin-top: 1rem;
+        @include mq(large) {
+            @include gridCol(7, 6);
+        }
+    }
+
+        @include mq(large) {
+            @include gridCol(7, 6);
+        }
+    }
+
+}

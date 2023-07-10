@@ -1,0 +1,34 @@
+@use '../../styles/abstracts/' as *;
+
+.grid {
+    @include grid;
+    max-width: 80rem;
+    padding: 2rem 1rem;
+    color: $color-primary-light;
+    margin: 0 auto;
+    z-index: 1;
+    position: relative;
+
+    @include mq(medium) {
+        padding: 2rem 2rem;
+    }
+
+    .heading {
+        @include gridCol(auto, 12);
+        border-top: 1px solid $color-primary-light;
+        margin-bottom: 2rem;
+
+        h2 {
+            width: 100%;
+
+            @include mq(large) {
+                width: 50%;
+            }
+        }
+
+        @include mq(large) {
+            @include gridCol(2, 10);
+        }
+    
+    }
+}

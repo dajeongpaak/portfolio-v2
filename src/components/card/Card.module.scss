@@ -34,6 +34,7 @@
         max-width: 100%;
         margin-bottom: 1.5rem;
         @include gridCol(auto, 12);
+        align-self: center;
 
         @include mq(medium){
             margin-bottom: unset;
@@ -55,16 +56,8 @@
 }
 
 .discipline {
-    display: flex;
-    flex-wrap: wrap;
-
-    div {
-        font-size: $font-size-14p;
-        font-weight: 300;
-        text-transform: uppercase;
-        text-decoration: underline;
-        padding: 0.1rem 0.5rem 0.3rem 0 ;
-    }
+    margin-bottom: 1rem;
+    @include stackList;
 }
 
 .description {

@@ -1,3 +1,4 @@
+import { useEffect, useRef } from "react";
 
 import styles from './FeaturedWork.module.scss'
 import Title from '../../../components/title/Title'
@@ -9,7 +10,8 @@ function FeaturedWork() {
     <section 
       className={`${styles.container} wrapper`}
     >
-        <div className={`${styles.title}`}>
+        <div className={`${styles.title}`}
+          >
             <Title title='featured work'/>
         </div>
         <Card />

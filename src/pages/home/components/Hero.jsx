@@ -13,11 +13,6 @@ import imageCircle2 from '../../../assets/images/cir-2.png'
 import imageCircle3 from '../../../assets/images/cir-3.png'
 
 
-
-
-
-
-
 function Hero() {
     const heroRef = useRef();
     // const canvas = useRef();
@@ -43,9 +38,8 @@ function Hero() {
         let scaleFactor = 
             heroWidth > heroHeight ? 
             (heroWidth * expectedRatio) / actualPixel : 
-            heroHeight * (expectedRatio * 1.25) / actualPixel
+            heroHeight * (expectedRatio * 1.15) / actualPixel
         let scaleFactorCircle = scaleFactor * 0.8
-        let desktop = heroWidth > heroHeight 
         // create an engine
         var engine = Engine.create(),
             world = engine.world;
@@ -70,9 +64,9 @@ function Hero() {
         var hey = Bodies.rectangle(heroWidth / 1.11, 0, 200 * scaleFactor ,200 * scaleFactor
 ,  {
             density: 0.04,
-		    friction: 0.01,
-		    frictionAir: 0.00001,
-		    restitution: 0.8,
+		    friction: 0.1,
+		    frictionAir: 0.005,
+		    restitution: 0.3,
             render: { 
             sprite: { 
                 texture: imageHey, 
@@ -80,11 +74,11 @@ function Hero() {
                 yScale: scaleFactor  }}
             });
 
-        var name = Bodies.rectangle(heroWidth / 1.47, 0, 340 * scaleFactor, 200 * scaleFactor,  {
+        var name = Bodies.rectangle(heroWidth / 1.47, 0, 340 * scaleFactor, 185 * scaleFactor,  {
             density: 0.04,
-            friction: 1,
-            frictionAir: 0.00001,
-            restitution: 0.8,
+            friction: 0.1,
+            frictionAir: 0.005,
+            restitution: 0.3,
             render: { 
             sprite: { 
                 texture: imageName, 
@@ -95,7 +89,7 @@ function Hero() {
         var dj = Bodies.circle(heroWidth / 1.2, -200, 130 * scaleFactorCircle, {
             density: 0.04,
             friction: 2,
-            frictionAir: 0.000001,
+            frictionAir: 0.01,
             restitution: 0.1,
             render: { 
             sprite: { 
@@ -106,11 +100,11 @@ function Hero() {
             
    
         
-        var iam = Bodies.rectangle(heroWidth /  4, -200, 340 * scaleFactor, 200 * scaleFactor,  {
+        var iam = Bodies.rectangle(heroWidth /  4, -300, 340 * scaleFactor, 185 * scaleFactor,  {
             density: 0.04,
             friction: 1,
             frictionAir: 0.000001,
-            restitution: 0.8,
+            restitution: 0.7,
             render: { 
             sprite: { 
                 texture: imageIam, 
@@ -118,12 +112,12 @@ function Hero() {
                 yScale: scaleFactor  }}
             });
     
-        var frontend = Bodies.rectangle(heroWidth / 8, -1000, 540 * scaleFactor, 200 * scaleFactor,  {
+        var frontend = Bodies.rectangle(heroWidth / 8, -600, 540 * scaleFactor, 200 * scaleFactor,  {
             density: 0.04,
             friction: 1,
             frictionAir: 0.000001,
-            restitution: 0.8,
-            timeScale: 0.7,
+            restitution: 0.6,
+            timeScale: 0.5,
             render: { 
             sprite: { 
                 texture: imageFrontEnd, 
@@ -134,30 +128,30 @@ function Hero() {
         var circle = Bodies.circle(
             heroWidth / 2.85, 
             heroHeight / 1.43, 
-            desktop ? 30 : 12, {
+            35*scaleFactorCircle, {
             isStatic: true,
             render: { 
             sprite: { 
                 texture: imageCircle, 
                 xScale: 
-                desktop ? 1 : 0.7, 
+                scaleFactorCircle, 
                 yScale: 
-                desktop ? 1 : 0.7
+                scaleFactorCircle
             }}
             });
          
         var drag = Bodies.circle(
             heroWidth / 5.3, 
             heroHeight / 2, 
-            desktop ? 30 : 12, {
+            35*scaleFactorCircle, {
             isStatic: true,
             render: { 
                 sprite: { 
                     texture: imageCircle2, 
                     xScale: 
-                    desktop ? 1 : 0.7, 
+                    scaleFactorCircle, 
                     yScale: 
-                    desktop ? 1 : 0.7 
+                    scaleFactorCircle 
                     }
                 }
             }); 
@@ -165,15 +159,15 @@ function Hero() {
         var scroll = Bodies.circle(
             heroWidth / 1.95, 
             heroHeight / 1.1 , 
-            desktop ? 30 : 12, {
+            35*scaleFactorCircle, {
             isStatic: true,
             render: { 
                 sprite: { 
                     texture: imageCircle3, 
                     xScale: 
-                    desktop ? 1 : 0.7, 
+                    scaleFactorCircle, 
                     yScale: 
-                    desktop ? 1 : 0.7 
+                    scaleFactorCircle
                     }
                 }
             });
@@ -207,8 +201,6 @@ function Hero() {
         const cwidth = canvas.width;
         const cheight = canvas.height;
 
-        console.log(cwidth); // Output: the width value
-        console.log(cheight);
         let mouse = Mouse.create(canvas);
         let mouseConstraint = MouseConstraint.create(engine, {
             mouse: mouse,
@@ -304,36 +296,21 @@ function Hero() {
         //         )
         //     );
         // }
-        console.log(scaleFactor)
+    
         // window.addEventListener("resize", () => handleResize(matterContainer));
         const handleResize = () => {
             setWindowSize({ width: window.innerWidth, height: window.innerHeight });
             const widthHero = heroRef.current.clientWidth
             const heightHero = heroRef.current.clientHeight
-            console.log(widthHero)
+
             const canvashero = document.querySelector("canvas");
-            console.log(canvashero)
 
             canvashero.style.width = `${widthHero}px`
             canvashero.style.height = `${heightHero}px`
 
-   
-            // canvashero.style.width = windowSize.width
-            // if(heroRef.current) {
-            // const heroWidth = ref.current.clientWidth;
-            // const heroHeight = ref.current.clientHeight;
             render.canvas.width = widthHero;
             render.canvas.height = heightHero;
-            // render.canvas.width = window.innerWidth;
-            // render.canvas.height = window.innerHeight;    
 
-            console.log(render.canvas.width, render.canvas.height) 
-           // console.log(heroRef.current.clientWidth, heroRef.clientHeight)
-            // setWindowSize({ 
-            //   // const heroWidth = heroRef.current.clientWidth
-            //   // const heroHeight = heroRef.current.clientHeight
-            //   width: window.innerWidth,
-            //   height: window.innerHeight, 
             Matter.Body.setPosition(groundBody, 
                 Matter.Vector.create(
                     widthHero / 2,

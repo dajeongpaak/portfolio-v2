@@ -1,0 +1,18 @@
+@use '../../styles/abstracts' as *;
+
+.text {
+    @include gridCol(auto, 12);
+
+    p {
+        margin-top: 1rem;
+    }
+
+    @include mq(medium) {
+        @include gridCol(4, 9);
+    }
+
+    @include mq(large) {
+        @include gridCol(6, 6);
+    }
+}
+

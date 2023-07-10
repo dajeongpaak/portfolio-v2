@@ -1,0 +1,48 @@
+@use '../../../../styles/abstracts' as *;
+
+.components {
+    @include grid;
+    @include gridCol(2, 10);
+    margin-top: 1rem;
+
+    @include mq(small) {
+        @include gridCol(5, 4);
+    }
+
+    @include mq(large) {
+        @include gridCol(2, 4);
+        justify-self: center
+    }
+
+}
+
+.copy, .clear {
+    @include gridCol(1, 12);
+    justify-self: self-start;
+    margin-bottom: 1rem;
+    font-size: 1.5rem
+}
+
+.download {
+    @include gridCol(1, 12);
+    justify-self: self-end;
+    margin-bottom: 1rem;
+    font-size: 1.5rem
+}
+
+.button {
+    @include flex(center, center);
+    @include gridCol(1,12);
+    cursor: pointer;
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+    justify-self: center;
+    text-align: center;
+    width:8rem;
+    height: 3rem;
+    padding: 0 1rem;
+    background: $color-primary-dark;
+    border: 1px solid $color-secondary-silver;
+    border-radius: 0.75rem;
+    color: $color-primary-light;
+}

@@ -1,16 +1,17 @@
 @use '../abstracts' as *;
 
-* {
-    scroll-behavior: smooth;
-
+:root {
+    --bodyColor: "#fcf8f4";
 }
 
 body {
     height: 100%;
-    background: $color-primary-light;
+    background: var(--bodyColor);
+    transition: background ease-in 300ms;
     font-family: $font-inter;
     line-height: 1.5;
     position: relative;
+    scroll-behavior: smooth;
 }
 
 
@@ -42,4 +43,11 @@ a {
 
 .white {
     background: $color-secondary-white !important;
+}
+
+.banner img {
+    max-width: 90%;
+    height: 100%;
+
+
 }

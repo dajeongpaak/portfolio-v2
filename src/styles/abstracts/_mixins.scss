@@ -61,3 +61,12 @@
     }
 }
 
+@mixin stackList {
+    display: flex;
+    flex-wrap: wrap;
+
+    p:not(:last-child)::after{
+        padding-right: 0.5rem;
+        content: " ·";
+    }
+}

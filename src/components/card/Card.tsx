@@ -1,13 +1,14 @@
 import { Link } from 'react-router-dom'
 
 import styles from './Card.module.scss'
-import projects from '../../data/projects'
+import {projects} from '../../data/projects'
 import Arrow from '../../assets/icons/Arrow'
 
 
 interface Item {
     name: string;
     desc: string;
+    stacks: string[];
     src: string | { default: string };
     url: string;
 }
@@ -34,8 +35,9 @@ const items: Item[] = projects as Item[]
                             <div className={`${styles.content}`}>
                                 <h4>{item.name}</h4>
                                 <div className={`${styles.discipline}`}>
-                                    <div>web devleopent</div>
-                                    <div>web design</div>
+                                    {item.stacks.map((stack, stackIndex) => (
+                                     <p key={stackIndex}>{stack}</p>
+                                     ))}
                                 </div>
                                 <p className={styles.description}>{item.desc}</p>
                             </div>

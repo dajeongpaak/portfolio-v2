@@ -8,7 +8,8 @@ function Footer({bgColor, bgColor_title}: {
   const email = 'hello@dajeongpark.com' 
 
   return (
-    <footer className={`${styles.container} grid wrapper ${bgColor}`}>
+    <footer 
+      className={`${styles.container} grid wrapper ${bgColor}`}>
        <div className={`${styles.get_in_touch} col-12 col-md-6 col-lg-6 ${bgColor_title}`}>
           <p className='h4'>Get In Touch!</p>
        </div>

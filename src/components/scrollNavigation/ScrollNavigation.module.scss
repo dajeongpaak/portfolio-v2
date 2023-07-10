@@ -1,0 +1,69 @@
+@use '../../styles/abstracts' as *;
+
+.container {
+    @include grid;
+    max-width: 80rem;
+    padding: 0 1rem;
+    margin: 0 auto;
+    color: $color-primary-light;
+    position: relative;
+
+    @include mq(medium) {
+        padding: 0 2rem;
+    }
+}
+
+.pin {
+    @include gridCol(1, 12);
+    @include grid;
+    grid-template-rows: 10vh 50vh;
+    margin-top: 1rem;
+    height: 150vh;
+
+    @include mq(large) {
+        @include gridCol(2, 10);
+        margin-top: 10rem;
+        grid-template-rows: 10vh 30vh;
+    }
+}
+
+.progressBar {
+    width: 0px;
+    height: 1px;
+    background: $color-primary-light;
+    @include gridCol(1, 12);
+    position: absolute;
+
+    @include mq(large) {
+        @include gridCol(2, 10);
+    }
+}
+
+.nextProject {
+    @include flex(start, space-between, column);
+    @include gridCol(1, 12);
+    height: 10%;
+    @include mq(large) {
+        @include flex(start, space-between);
+    }
+
+    p {
+        margin-top: 1rem;
+    }
+}
+
+.nextProject__title {
+    justify-self: end;
+    align-self: center;
+    @include gridCol(1, 12);
+    @include mq(large) {
+    }
+}
+
+.scrollToTop {
+    @include gridCol(1, 12);
+    justify-self: end;
+    margin-top: 1rem;
+    cursor: pointer;
+    color: $color-secondary-silver;
+}

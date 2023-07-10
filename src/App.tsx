@@ -1,5 +1,11 @@
 // Built-in 
-import { Routes, Route } from 'react-router-dom'
+import { BrowserRouter as 
+  Router, Routes,
+  Route, Link } from 'react-router-dom'
+import { useLocation } from 'react-router-dom';
+
+// External
+import { AnimatePresence } from 'framer-motion';
 
 // Internal
 import './App.scss'
@@ -8,28 +14,39 @@ import About from './pages/about/About'
 import Work from './pages/work/Work'
 import Jade from './pages/work/projects/Jade-bookmark-manager-project'
 import Header from './layouts/header/Header'
+import Footer from './layouts/footer/Footer';
 import Gallery from './pages/gallery/Gallery'
-
-
+import WorkHome from './pages/work/WorkHome';
+import ArticlesOfTheWeek from './pages/work/projects/articlesOfTheWeek/ArticlesOfTheWeek';
+import TLSI from './pages/work/projects/tl;si/TLSI';
 // Variable name is camelCase
 // Component name is PascalCase
 // Double Quote for JSX single quote for js 
 
+
 function App() {
+  const location = useLocation()
+
+
   return (
     <>
-      <Header />
-      <Routes>
-        <Route path="/" element={<Home />}/>
-        <Route index element={<Home />}/>
-        <Route path="/about" element={<About />} />
-        <Route path="/work" element={<Work />}>
-          <Route index element={<Work />}/>
-          <Route path='jade-bookmark-manager-project' element={<Jade />}/>
-        </Route>
-        <Route path="/gallery" element={<Gallery />} />
-        {/* <Route path="*" element={<NotFound />} /> */}
-      </Routes>
+        <Header />
+        <AnimatePresence initial={false} mode="wait" onExitComplete={() => window.scrollTo(0,0)}>
+          <Routes location={location} key={location.pathname}>
+            <Route path="/" element={<Home />}/>
+            <Route index element={<Home />}/>
+            <Route path="/about" element={<About />} />
+            <Route path="/work/*" element={<Work />}>
+              <Route index element={<WorkHome />}/>
+              <Route path='articles-of-the-week-from-ny-times' element={<ArticlesOfTheWeek />} />
+              <Route path='tlsi-text-summarizer' element={<TLSI />} />
+              <Route path='jade-bookmark-manager' element={<Jade />} />
+            </Route>
+            <Route path="/gallery" element={<Gallery />} />
+            {/* <Route path="*" element={<NotFound />} /> */}
+          </Routes>
+        </AnimatePresence>
+        {/* <Footer bgColor='dark' bgColor_title='light'/> */}
     </>
   );
 }

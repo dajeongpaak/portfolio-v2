@@ -29,7 +29,10 @@ function Mission() {
   }, []);
 
   return (
-    <section className={`${styles.container}`} ref={bgAnimation}>
+    <section 
+      className={`${styles.container}`} 
+      ref={bgAnimation}
+    >
       <div className={`${styles.statement}`}>
           <h2 className='h4'>I <span>develop and design</span> <br /> engaging user experiences <br /> that brings <br/><span>emotional connection</span> through
          </h2>

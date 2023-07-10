@@ -1,12 +1,9 @@
-import { useRef } from 'react'
-import { useEffect } from 'react'
+import { useRef, useEffect, useState } from 'react'
 
+import LazyImage from '../../config/lazyLoading/lazyImage';
 import styles from './Gallery.module.scss'
 import images from '../../data/gallery'
-
-
-
-type HandleScrollType = () => void
+import Arrow from '../../assets/icons/Arrow';
 
 interface GalleryImagesType {
   id: number;
@@ -14,9 +11,9 @@ interface GalleryImagesType {
 }
 
 function Gallery() {
+
   const imageContainer = useRef<HTMLDivElement>(null)
   const galleryImages: GalleryImagesType[] = images as GalleryImagesType[]
-
 
   //useScrollSmooth()
   // useEffect(() => {
@@ -45,18 +42,18 @@ function Gallery() {
   //   positionX: 0,
   //   positionY: 0
   // })
+ 
 
 const handleMouseMove = (event: MouseEvent) => {
     const { clientX, clientY } = event;
-    const offsetX = (clientX / window.innerWidth) * 1000;
+    const offsetX = (clientX / window.innerWidth) * 1000
     const offsetY = (clientY / window.innerHeight) * 1000
   
     const imgs: HTMLImageElement[] = Array.from(document.querySelectorAll('.img'))
     const constrain  = 10
     imgs.forEach((item: HTMLImageElement): void => {
     const itemRect = item.getBoundingClientRect()
-    //let calcX = -(offsetY/2 - (itemRect.y)/2 - (item.height / 2)) / constrain;
-    let calcY = (offsetX/2 - (itemRect.x)/2 - (item.width / 2)) / constrain;
+    let calcY = (offsetX/2 - (itemRect.x)/2 - (item.width / 2)) / constrain
     item.style.transform = `skewX(${calcY/20}deg)` 
     })
 
@@ -66,6 +63,7 @@ const handleMouseMove = (event: MouseEvent) => {
 
   useEffect(() => {
     window.addEventListener('mousemove', handleMouseMove)
+  
   
     return () => {
       window.removeEventListener('mousemove', handleMouseMove)
@@ -91,25 +89,32 @@ const handleMouseMove = (event: MouseEvent) => {
   // })
 
   return (
-
       <div 
       ref={imageContainer} 
       className={`${styles.canvas}`}
       >
         {images.map((item: any) => (
-          <img 
-            className={`img ${styles[`img_${item.id}`]}`} 
-            src={item.src} 
-            key={item.id} 
+          <div key={item.id} className={styles[`img_${item.id}`]}>
+            <LazyImage
+              src={item.src}
+              className='lazy img'
+              data-src={item.placeholderSrc}
             />
+          </div>
+          // <img 
+          //   className={`img ${styles[`img_${item.id}`]}`} 
+          //   src={item.src} 
+          //   key={item.id} 
+          //   />
         ))}
         <div className={styles.hobby}>
           <span className='h3'>Film photography</span><br />
          has been one of my favorite hobbies for almost half of my life
           <br />Hope you enjoy the pieces!
         </div>
+        <Arrow />
+        <Arrow />
       </div>
-
   )
 }
 

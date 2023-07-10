@@ -1,10 +1,11 @@
 @use 'sass:map';
 
 $breakpoints: (
-    xsmall: 375px,
+    xsmall: 376px,
     small: 576px,
     medium: 768px,
-    large: 1240px
+    large: 1240px,
+    xlarge: 1560px
 );
 
 @mixin mq($key) {
