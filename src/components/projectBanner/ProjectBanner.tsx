@@ -44,29 +44,29 @@ export default function ProjectBanner({data}: any) {
 
     const snapRef: any = useRef()
 
-    useLayoutEffect(() => { 
+    // useLayoutEffect(() => { 
 
-        let ctx = gsap.context(() => {
-          const tl = gsap.timeline()
-          tl.to( "#js-containerAnim", {
-              yPercent: -100,
-              duration: 4,
-            })
+    //     let ctx = gsap.context(() => {
+    //       const tl = gsap.timeline()
+    //       tl.to( "#js-containerAnim", {
+    //           yPercent: -100,
+    //           duration: 4,
+    //         })
     
-          ScrollTrigger.create({
-            animation: tl,
-            trigger: snapRef.current,
-            start: "top top",
-            end: "bottom bottom",
-            scrub: 1,
-            pin: true,
-            pinSpacing: false
-          })
-        }, snapRef)
+    //       ScrollTrigger.create({
+    //         animation: tl,
+    //         trigger: snapRef.current,
+    //         start: "top top",
+    //         end: "bottom bottom",
+    //         scrub: 1,
+    //         pin: true,
+    //         pinSpacing: false
+    //       })
+    //     }, snapRef)
     
-        return () => ctx.revert()
+    //     return () => ctx.revert()
     
-      }, [])
+    //   }, [])
 
   return (
     <>
