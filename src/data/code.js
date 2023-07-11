@@ -358,4 +358,27 @@ app.post('/summarize', async (req, res) => {
 
 `
 
-export { contextCode, mailChimpCode, nodeMailerCode, validationCode }
+const scrollCode = `
+
+
+const handleMouseMove = (event: MouseEvent) => {
+    const { clientX, clientY } = event;
+    const offsetX = (clientX / window.innerWidth) * 1000
+    const offsetY = (clientY / window.innerHeight) * 1000
+  
+    const imgs: HTMLImageElement[] = Array.from(document.querySelectorAll('.img'))
+    const constrain  = 10
+    imgs.forEach((item: HTMLImageElement): void => {
+    const itemRect = item.getBoundingClientRect()
+    const calcY = (offsetX/2 - (itemRect.x)/2 - (item.width / 2)) / constrain
+    item.style.transform = 'skewX(\${calcY/20}deg)' 
+    })
+
+    window.scrollTo(offsetX, offsetY);
+  }
+
+
+
+`
+
+export { contextCode, mailChimpCode, nodeMailerCode, validationCode, scrollCode }

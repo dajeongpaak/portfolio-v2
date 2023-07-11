@@ -8,8 +8,9 @@ import styles from './ScrollNavigation.module.scss'
 
 gsap.registerPlugin(ScrollTrigger)
 
-export default function ScrollNavigation({title, navigateTo }: any) {
+export default function ScrollNavigation({title, navigateTo, navigatePrev }: any) {
     const progressRef: any = useRef()
+    const animRef: any = useRef()
     const navigate = useNavigate();
     // const location = useLocation
     console.log(navigateTo)
@@ -20,35 +21,24 @@ export default function ScrollNavigation({title, navigateTo }: any) {
       });
     }  
 
-    useEffect(() => {
-      const handleGoBack = (e: any) => {
-        if(e.state && e.state.goBack) {
-          navigate(-1)
-        }
-      }
-
-      window.history.pushState({ goBack: true }, '');
-      window.addEventListener('popstate', handleGoBack);
-      return () => {
-        window.removeEventListener('popstate', handleGoBack);
-      };
-    }, [navigate]);
-  
-
     useLayoutEffect(() => { 
 
         let ctx = gsap.context(() => {
           const tl = gsap.timeline()
-          tl.to( '#js-progress-animation', {
+          tl.to(  '#js-progress-animation', {
               width: '100%',
-              duration: 0.01, 
               onComplete: () => {
+                if (
+                  animRef.current &&
+                  animRef.current.style.width === '100%'
+                ) {
                 console.log(navigateTo)
                 // navigate(1)
                 navigate(`/work/${navigateTo}`)
+                }
               }
             })
-    
+      
           ScrollTrigger.create({
             animation: tl,
             trigger: progressRef.current,
@@ -61,7 +51,7 @@ export default function ScrollNavigation({title, navigateTo }: any) {
     
         return () => ctx.revert()
     
-      }, [navigateTo])
+      }, [])
  
       
   return (
@@ -71,6 +61,7 @@ export default function ScrollNavigation({title, navigateTo }: any) {
     <div className={styles.pin}>
       <div 
         id='js-progress-animation'
+        ref={animRef}
         className={styles.progressBar}
       >
       </div>
@@ -81,10 +72,18 @@ export default function ScrollNavigation({title, navigateTo }: any) {
       <div className={styles.nextProject__title}>
         <h3 className='h2'>{title}</h3>
       </div>
-      <p 
-        onClick={handleScroll}
-        className={styles.scrollToTop}
-    >Scroll To Top</p>
+      <div className={styles.prevProject}>
+        <div onClick={() => navigate(`/work/${navigatePrev}`)}
+          className='h5'
+        >
+          Previous Project
+        </div>
+        <p 
+          onClick={handleScroll}
+          className={styles.scrollToTop}
+      >Scroll To Top</p>
+      </div>
+     
     </div>
 </div>
   )

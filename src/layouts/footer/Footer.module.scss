@@ -6,12 +6,13 @@ footer {
 }
 
 .container {
+    grid-template-rows: 25vh 25vh;
     @include mq(medium){
-        height: 35vh;
+        grid-template-rows: 35vh;
     }
 
     @include mq(large){
-        height: 50vh;
+        grid-template-rows: 50vh;
     }
 }
 
@@ -21,6 +22,10 @@ footer {
     text-transform: uppercase;
     padding: 2.5rem 1.5rem;
     color: $color-primary-dark;
+
+    p {
+        font-weight: 500;
+    }
 }
 
 .contact { 

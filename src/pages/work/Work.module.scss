@@ -7,7 +7,7 @@
    
 
     @include mq(xsmall) {
-        grid-template-rows: 30vh repeat(4, 70vh) repeat(2, 40vh);
+        grid-template-rows: 20vh repeat(4, 80vh) repeat(2, 40vh);
     }
 
     // @include mq(small) {

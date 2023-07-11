@@ -1,9 +1,12 @@
 import { useRef, useEffect, useState } from 'react'
+import { Link } from 'react-router-dom';
 
+import Transition from '../../config/framerMotion/Transiton';
 import LazyImage from '../../config/lazyLoading/lazyImage';
 import styles from './Gallery.module.scss'
 import images from '../../data/gallery'
 import Arrow from '../../assets/icons/Arrow';
+import setBodyColor from '../../utils/setBodyColor';
 
 interface GalleryImagesType {
   id: number;
@@ -12,37 +15,9 @@ interface GalleryImagesType {
 
 function Gallery() {
 
+  setBodyColor({color: '#fcf8f4'})
   const imageContainer = useRef<HTMLDivElement>(null)
   const galleryImages: GalleryImagesType[] = images as GalleryImagesType[]
-
-  //useScrollSmooth()
-  // useEffect(() => {
-  //   const lenis = new Lenis({
-  //     duration: 3,
-  //     easing: (t) => (t === 1 ? 1 : 1 - Math.pow(2, -10 * t)), // https://easings.net/
-  //     smooth: true,
-  //     direction: "vertical"
-  //   });
-
-  //   //get scroll value
-  //   lenis.on("scroll", (e: MouseEvent ) => {
-  //     console.log(e);
-  //   });
-
-  //   function raf(time: any) {
-  //     lenis.raf(time);
-  //     requestAnimationFrame(raf);
-  //   }
-
-  //   requestAnimationFrame(raf);
-
-  //   return () => lenis.destroy();
-  // }, []);
-  // const [scrollPosition, setScrollPosition] = useState({
-  //   positionX: 0,
-  //   positionY: 0
-  // })
- 
 
 const handleMouseMove = (event: MouseEvent) => {
     const { clientX, clientY } = event;
@@ -53,7 +28,7 @@ const handleMouseMove = (event: MouseEvent) => {
     const constrain  = 10
     imgs.forEach((item: HTMLImageElement): void => {
     const itemRect = item.getBoundingClientRect()
-    let calcY = (offsetX/2 - (itemRect.x)/2 - (item.width / 2)) / constrain
+    const calcY = (offsetX/2 - (itemRect.x)/2 - (item.width / 2)) / constrain
     item.style.transform = `skewX(${calcY/20}deg)` 
     })
 
@@ -64,31 +39,14 @@ const handleMouseMove = (event: MouseEvent) => {
   useEffect(() => {
     window.addEventListener('mousemove', handleMouseMove)
   
-  
     return () => {
       window.removeEventListener('mousemove', handleMouseMove)
-     // scroll.destroy()
     }
   }, [])
-  
 
-  // const handleScroll:HandleScrollType = () => {
-  //   setScrollPosition({
-  //     positionX: window.scrollX || document.documentElement.scrollLeft,
-  //     positionY: window.scrollY || document.documentElement.scrollTop
-  //   })
-    
-  // }
-  // console.log(scrollPosition)
-  // useEffect(() => {
-  //   window.addEventListener('scroll', handleScroll)
-
-  //   return () => window.removeEventListener('scroll', handleScroll)
-
-  //   handleScroll()
-  // })
 
   return (
+    <Transition>
       <div 
       ref={imageContainer} 
       className={`${styles.canvas}`}
@@ -101,20 +59,23 @@ const handleMouseMove = (event: MouseEvent) => {
               data-src={item.placeholderSrc}
             />
           </div>
-          // <img 
-          //   className={`img ${styles[`img_${item.id}`]}`} 
-          //   src={item.src} 
-          //   key={item.id} 
-          //   />
         ))}
         <div className={styles.hobby}>
           <span className='h3'>Film photography</span><br />
-         has been one of my favorite hobbies for almost half of my life
+          has been one of my favorite hobbies for almost half of my life
           <br />Hope you enjoy the pieces!
         </div>
-        <Arrow />
-        <Arrow />
+        <Link to="/about" className={styles.about}>
+          <Arrow />
+          <div className={styles.about}>Go To About</div>
+        </Link>
+        <Link to="/work/photo-gallery" className={styles.project}>
+          <Arrow />
+          <div>Go To This Project</div>
+        </Link>
+  
       </div>
+    </Transition>
   )
 }
 

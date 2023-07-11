@@ -14,11 +14,11 @@ const projects = [
         url: "/work/tlsi-text-summarizer"
     },
     {
-        name: "JADE - Bookmark Manager",
-        desc: "Lorem ipsum dolor sit amet consectetur. Id porta lectus sit feugiat libero blandit augue.",
-        stacks: ["MongoDB", "Express.js", "React", "Node.js"],
-        src: require('../assets/images/placeholder-3.jpg'),
-        url: "/work/jade-bookmark-manager"
+        name: "Photo Gallery",
+        desc: "a digital photo gallery where you can explore with mouse interaction",
+        stacks: ["React", "JavaScript", "CSS Grid Layout"],
+        src: require('../assets/images/photo-gallery-image-min.png'),
+        url: "/work/photo-gallery"
     },
     {
         name: "Id porta lectus sit feugiat libero",
@@ -59,4 +59,19 @@ const tlsi = [
     }
 ]
 
-export { projects, articlesOfTheWeek, tlsi }
+const gallery = [
+    {
+        bannerSrc: require('../assets/images/photo-gallery-image-min.png'),
+        bannerSrc_m: require('../assets/images/photo-gallery-image-min.png'),
+        name: "Photo Gallery",
+        timeline: "June 2023",
+        stacks: ["React", "JavaScript", "CSS Grid Layout"],
+        role: ["Front developer", " & designer"],
+        site: "https://dajeongpark.com/#/gallery",
+        github: "https://github.com/dajeongpaak/text-summarizer",
+        description: ["The Interactive Digital Photo Gallery is a distinctive project that seamlessly blends my personal touch, expertise in frontend development, and my passion and love for photography.",
+        "This project introduces an interactive feature that allows users to navigate through the gallery using the position of their mouse (desktop only, sadly)."]
+    }
+]
+
+export { projects, articlesOfTheWeek, tlsi, gallery }

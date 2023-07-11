@@ -40,7 +40,7 @@ function Introduction() {
                 <SubTitle title='More About Me'/>
                 <div className={`${styles.more_about_me_content}`}> 
                     <p>
-                    I am a front-end developer with a keen interest in React and TypeScript. My ultimate goal is to become a full-stack developer within the next two years. While my primary focus is currently on front-end development, I am genuinely passionate about crafting useful and practical applications.
+                    I am a front-end developer with a keen interest in React and Node.js. My ultimate goal is to become a full-stack developer within the next two years. While my primary focus is currently on front-end development, I am genuinely passionate about crafting useful and practical applications.
                     </p>
                     <br/>
                     <p>
@@ -59,9 +59,8 @@ function Introduction() {
             </div>
             <div className={`col-12 col-md-6 col-lg-3 ${styles.click}`}>
                 <Arrow />
-                <div className={styles.click_content}>
-                    <span className='h5'>Click here</span>
-                </div>
+                <Arrow />
+                <Arrow />
             </div>
         </section>
     </>

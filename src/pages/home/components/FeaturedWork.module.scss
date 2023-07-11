@@ -2,23 +2,19 @@
 
 .container {
     background: $color-primary-dark;
-    grid-template-rows: 30vh 100vh 100vh 100vh 100vh;
+    grid-template-rows: 30vh repeat(4, 100vh);
     @include grid;
 
-    @include mq(xsmall) {
-        grid-template-rows: 25vh 75vh 75vh 75vh 75vh;
-    }
-
     @include mq(small) {
-        grid-template-rows: 20vh 80vh 80vh 80vh 80vh;
+        grid-template-rows: 20vh repeat(4, 80vh);
     }
 
     @include mq(medium) {
-        grid-template-rows: 30vh 45vh 45vh 45vh 45vh;
+        grid-template-rows: 30vh repeat(4, 45vh);
     }
 
     @include mq(large) {
-        grid-template-rows: 35vh 60vh 60vh 60vh 60vh;
+        grid-template-rows: 35vh repeat(4, 60vh);
     }
 }
 

@@ -1,11 +1,9 @@
-import { useEffect } from 'react';
 
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import Tippy from '@tippyjs/react';
 import 'tippy.js/dist/tippy.css';
 
-import { useNavigate } from 'react-router-dom';
 import styles from './TLSI.module.scss'
 import setBodyColor from '../../../../utils/setBodyColor'
 import Transition from '../../../../config/framerMotion/Transiton';
@@ -17,23 +15,10 @@ import ProjectBanner from '../../../../components/projectBanner/ProjectBanner';
 import ProjectContent from '../../../../components/projectContent/ProjectContent';
 import ProjectText from '../../../../components/projectText/ProjectText';
 
+
 export default function TLSI() {
     setBodyColor({color: '#1c1c1e'})
-    const navigate = useNavigate()
 
-    useEffect(() => {
-      const handleGoBack = (e: any) => {
-        if(e.state && e.state.goBack) {
-          navigate(-1)
-        }
-      }
-  
-      window.history.pushState({ goBack: true }, '');
-      window.addEventListener('popstate', handleGoBack);
-      return () => {
-        window.removeEventListener('popstate', handleGoBack);
-      };
-    }, [navigate]);
     const handleToast = () => {
         toast('Hi I am toast!')
     }
@@ -149,10 +134,10 @@ export default function TLSI() {
                 </p>
             </ProjectText>
             </ProjectContent>
-            <div onClick={() => navigate('/work/jade-bookmark-manager')}>navigate</div>
             <ScrollNavigation 
-                navigateTo="jade-bookmark-manager"
-                title="JADE - Bookmark Manager"
+                navigateTo="photo-gallery"
+                title="Photo Gallery"
+                navigatePrev="articles-of-the-week-from-ny-times"
             />
         </Transition>
     </>

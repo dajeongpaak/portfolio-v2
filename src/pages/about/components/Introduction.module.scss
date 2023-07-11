@@ -128,10 +128,11 @@
    
     @include mq(large) {
         grid-row: 3;
+        @include gridCol(1, 4);
     }
 
     img {
-        width: 200px;
+        width: 210px;
         transition: all ease .3s;
 
         &:hover, &:active {
@@ -150,6 +151,7 @@
     @include mq(medium) {
         flex-direction: unset;
         align-items: center;
+        @include gridCol(5, 2);
     }
 
     @include mq(large) {
@@ -162,7 +164,7 @@
     svg {
         top: 20%;
         left: 50%;
-        width: 1.5rem;
+        width: 1rem;
         height: auto;
         fill: $color-primary-light;
         stroke: $color-primary-light;
@@ -171,13 +173,33 @@
 
         @include mq(medium) {
             top: 50%;
-            left: 20%;
-            transform: translateY(-50%) rotate(-135deg);
+            left: 50%;
+            transform: translate(-50%, -50%) rotate(-135deg);
             margin-bottom: unset;
             margin-right: 2rem;
         }
-
     }
+
+    svg:first-child {
+        @include mq(medium) {
+            top: 30%;
+            left: 50%;
+            transform: translate(-50%, -50%) rotate(-160deg);
+            margin-bottom: unset;
+            margin-right: 2rem;
+        }
+    }
+
+    svg:last-child {
+        @include mq(medium) {
+            top: 70%;
+            left: 50%;
+            transform: translate(-50%, -50%) rotate(-110deg);
+            margin-bottom: unset;
+            margin-right: 2rem;
+        }
+    }
+
 
     span {
         font-style: normal;

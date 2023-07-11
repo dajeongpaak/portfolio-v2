@@ -1,8 +1,3 @@
-import { useRef, useLayoutEffect, useEffect } from 'react'
-import { Navigate, useNavigate, useMatch } from 'react-router-dom'
-
-import { gsap } from 'gsap'
-import { ScrollTrigger } from 'gsap/ScrollTrigger'
 
 import styles from './ArticlesOfTheWeek.module.scss'
 import { articlesOfTheWeek } from '../../../../data/projects';
@@ -19,38 +14,8 @@ import {
   nodeMailerCode } 
 from '../../../../data/code';
 
-
-
 export default function ArticlesOfTheWeek() {
   setBodyColor({color: '#1c1c1e'})
-  const progressRef: any = useRef()
-  const navigate = useNavigate()
-
-  useEffect(() => {
-    const handleGoBack = (e: any) => {
-      if(e.state && e.state.goBack) {
-        navigate(-1)
-      }
-    }
-
-    window.history.pushState({ goBack: true }, '');
-    window.addEventListener('popstate', handleGoBack);
-    return () => {
-      window.removeEventListener('popstate', handleGoBack);
-    };
-  }, [navigate]);
-
-
-  const handleScroll = () => {
-    window.scrollTo({
-      top: 0, 
-      behavior: 'smooth'
-    });
-  }  
-
-  const handlenavigate = () => {
-    navigate('/work/tlsi-text-summarizer')
-  }
 
   return (
     <>
@@ -155,13 +120,12 @@ export default function ArticlesOfTheWeek() {
               </p>
             </ProjectText>
           </ProjectContent>
-          <button onClick={handlenavigate}>navigate</button>
+      
           <ScrollNavigation 
             navigateTo="tlsi-text-summarizer"
             title="TL;si - Too Long Summarize It"
-          />
-
-          {/* <div }></div> */}
+            navigatePrev=""
+          /> 
       </Transition>
     </>
   )

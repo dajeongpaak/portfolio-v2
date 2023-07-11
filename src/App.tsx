@@ -18,6 +18,7 @@ import Footer from './layouts/footer/Footer';
 import Gallery from './pages/gallery/Gallery'
 import ArticlesOfTheWeek from './pages/work/projects/articlesOfTheWeek/ArticlesOfTheWeek';
 import TLSI from './pages/work/projects/tl;si/TLSI';
+import PhotoGallery from './pages/work/projects/photoGallery/PhotoGallery';
 // Variable name is camelCase
 // Component name is PascalCase
 // Double Quote for JSX single quote for js 
@@ -39,6 +40,7 @@ function App() {
               <Route index element={<Work />}/>
               <Route path='articles-of-the-week-from-ny-times' element={<ArticlesOfTheWeek />} />
               <Route path='tlsi-text-summarizer' element={<TLSI />} />
+              <Route path='photo-gallery' element={<PhotoGallery />} />
               <Route path='jade-bookmark-manager' element={<Jade />} />
             </Route>
             <Route path="/gallery" element={<Gallery />} />
