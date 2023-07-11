@@ -11,7 +11,7 @@ function Jade() {
         
        <ScrollNavigation 
             navigateTo=""
-            title="Go To The List"
+            title="List of All Projects"
             navigatePrev="photo-gallery"
         />
     </div>
