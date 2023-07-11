@@ -71,7 +71,7 @@ export default function PhotoGallery() {
     <ScrollNavigation 
         navigateTo="jade-bookmark-manager"
         title="JADE - Bookmark Manager"
-        navigatePrev="articles-of-the-week-from-ny-times"
+        navigatePrev="tlsi-text-summarizer"
     />
 </Transition>
   )

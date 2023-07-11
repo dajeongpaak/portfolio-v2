@@ -11,8 +11,8 @@ function Jade() {
         
        <ScrollNavigation 
             navigateTo=""
-            title="JADE - Bookmark Manager"
-            navigatePrev="tlsi-text-summarizer"
+            title="Go To The List"
+            navigatePrev="photo-gallery"
         />
     </div>
   )
