@@ -1,0 +1,101 @@
+@use '../../../../styles/abstracts' as *;
+
+.window {
+    display: none;
+    @include mq(large) {
+        display: block;
+        @include gridCol(2, 10);
+        position: relative;
+        height: 28rem;
+        border: 1px solid $color-secondary-silver;
+        border-radius: 1rem;
+        overflow: scroll;
+        
+    }
+}
+
+.canvas {
+    width: 100rem;
+    height: 70rem;
+    display: grid;
+    grid-template-columns: repeat(20, 1fr);
+    grid-template-rows: repeat(20, 1fr);
+}
+
+@for $i from 1 through 12 {
+    .box_#{$i} {
+        width: 10rem;
+        height: 14rem;
+        border: 1px solid $color-secondary-silver;
+        border-radius: 1rem;
+    }
+}
+
+.box_1 {
+    @include mq(large) {
+        grid-area: 17/19/span 2/span 2;
+    }
+}
+
+.box_2 {
+    @include mq(large) {
+        grid-area: 1 / 18 / span 2 / span 2;
+     }
+}
+
+.box_3 {
+    @include mq(large) {
+        grid-area: 9/4/span 3/span 2;
+     }
+}
+
+.box_4 {
+    @include mq(large) {
+        grid-area: 14 / 10 / span 2 / span 2;
+     }
+}
+
+.box_5 {
+    @include mq(large) {
+        grid-area: 8/14/span 3/span 2;
+     }
+}
+
+.box_6 {
+    @include mq(large) {
+        grid-area: 1 / 8 / span 2 / span 2;
+     }
+}
+
+.box_7 {
+    @include mq(large) {
+        grid-area: 18/2/span 2/span 2;
+     }
+}
+
+.code {
+    height: 30rem;
+    overflow: scroll;
+    @include gridCol(auto, 12);
+    font-size: 0.7rem;
+    border-radius: 1rem;
+    margin-bottom: 1rem;
+   
+    @include mq(medium) {
+        height: 23rem;
+        @include gridCol(1, 12);
+        margin-top: 1rem;
+    }
+
+    @include mq(large){
+        background: $color-primary-dark !important;
+        position: absolute;
+        top: 20%;
+        left: 30%;
+        z-index: -1;
+    }
+}
+
+// .codeContainer {
+//     position: absolute;
+// }

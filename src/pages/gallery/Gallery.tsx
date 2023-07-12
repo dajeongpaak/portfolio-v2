@@ -29,7 +29,7 @@ function Gallery() {
     let ctx = gsap.context(() => {
 
       let proxy = { skew: 0 },
-      skewSetter = gsap.quickSetter(".img", "skewY", "deg"), // fast
+      skewSetter = gsap.quickSetter(".img", "skewY", "deg"), 
     clamp = gsap.utils.clamp(-5, 5); 
 
     ScrollTrigger.create({
@@ -38,7 +38,7 @@ function Gallery() {
 
         if (Math.abs(skew) > Math.abs(proxy.skew)) {
           proxy.skew = skew;
-          gsap.to(proxy, {skew: 0, duration: 1, ease: "power3", overwrite: true, onUpdate: () => skewSetter(proxy.skew)});
+          gsap.to(proxy, {skew: 0, duration: 1, ease: "expo", overwrite: true, onUpdate: () => skewSetter(proxy.skew)});
         }
       }
     });
@@ -55,14 +55,6 @@ const handleMouseMove = (event: MouseEvent) => {
     const offsetX = (clientX / window.innerWidth) * 1000
     const offsetY = (clientY / window.innerHeight) * 1000
   
-    const imgs: HTMLImageElement[] = Array.from(document.querySelectorAll('.img'))
-    const constrain  = 10
-    imgs.forEach((item: HTMLImageElement): void => {
-    const itemRect = item.getBoundingClientRect()
-    const calcY = (offsetX/2 - (itemRect.x)/2 - (item.width / 2)) / constrain
-    item.style.transform = `skewX(${calcY/20}deg)` 
-    })
-
     window.scrollTo(offsetX, offsetY);
   }
   

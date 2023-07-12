@@ -62,11 +62,11 @@ const tlsi = [
 const gallery = [
     {
         bannerSrc: require('../assets/images/photo-gallery-image-min.png'),
-        bannerSrc_m: require('../assets/images/photo-gallery-image-min.png'),
+        bannerSrc_m: require('../assets/images/photo-gallery-mobile-min.png'),
         name: "Photo Gallery",
         timeline: "June 2023",
         stacks: ["React", "JavaScript", "CSS Grid Layout"],
-        role: ["Front developer", " & designer"],
+        role: ["Frontend developer", " & designer"],
         site: "https://dajeongpark.com/#/gallery",
         github: "https://github.com/dajeongpaak/text-summarizer",
         description: ["The Interactive Digital Photo Gallery is a distinctive project that seamlessly blends my personal touch, expertise in frontend development, and my passion and love for photography.",

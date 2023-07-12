@@ -1,8 +1,11 @@
+import { useEffect, useRef } from 'react'
+
+import Prism from "prismjs";
+import '../../../../styles/prismTheme/prism-vsc-dark-plus.css'
+
 import styles from './PhotoGallery.module.scss'
 import Transition from '../../../../config/framerMotion/Transiton'
 import setBodyColor from '../../../../utils/setBodyColor'
-import Code from '../../../../config/prism/Code'
-import { scrollCode } from '../../../../data/code'
 import ScrollNavigation from '../../../../components/scrollNavigation/ScrollNavigation'
 import { gallery } from '../../../../data/projects'
 import ProjectBanner from '../../../../components/projectBanner/ProjectBanner'
@@ -11,36 +14,94 @@ import ProjectText from '../../../../components/projectText/ProjectText'
 
 export default function PhotoGallery() {
     setBodyColor({color: '#1c1c1e'})
+    const imageContainer: any = useRef()
+    const code = `
+    const handleMouseMove = (event: MouseEvent) => {
+        const { clientX, clientY } = event;
+        const offsetX = (clientX / window.innerWidth) * 1000
+        const offsetY = (clientY / window.innerHeight) * 1000
+      
+        window.scrollTo(offsetX, offsetY);
+      }
+      
+    
+      useEffect(() => {
+        window.addEventListener('mousemove', handleMouseMove)
+      
+        return () => {
+          window.removeEventListener('mousemove', handleMouseMove)
+        }
+      }, [])
+
+    `
+
+    const handleMouseMove = (event: MouseEvent) => {
+      
+        const { clientX, clientY } = event;
+        const offsetX = (clientX / imageContainer.current?.clientWidth) * 500
+        const offsetY = (clientY / imageContainer.current?.scrollHeight) * 1000
+      
+        imageContainer.current?.scrollTo(offsetX, offsetY);
+      }
+      
+    
+      useEffect(() => {
+        imageContainer.current?.addEventListener('mousemove', handleMouseMove)
+      
+        return () => {
+            imageContainer.current?.removeEventListener('mousemove', handleMouseMove)
+        }
+      }, [])
+
+      useEffect(() => {
+        Prism.highlightAll();
+      }, []);
+      
   return (
     <Transition>
     <ProjectBanner data={gallery}/>
     <ProjectContent
         heading='Mouse Interaction'    
     >   
-    <Code 
-            language="javascript"
-            code={scrollCode}
-        />
+        <div 
+            className={styles.window}
+            ref={imageContainer}
+        >
+            <div className={styles.canvas}>
+                {Array.from({ length: 8 }).map((_, i) => (
+                    <div key={i} className={styles[`box_${i}`]}></div>
+                ))}
+          
+            </div>
+        </div>
+        <pre className={styles.code}>
+            <code className="language-javascript">
+            {code}
+            </code>
+        </pre>
         <ProjectText>
+   
             <p>
-                To enhance the interactive element of the project, I integrated mouse movement as a key navigation tool, creating a seamless and joyful experience while users explore the collection of photographs. As users move their mouse, the images in the gallery react dynamically, transforming and skewing in response to the cursor's position.
+                To enhance the interactive element of the project, I integrated mouse movement as a key navigation tool, creating a seamless and joyful experience while users explore the collection of photographs. 
+                By calculating the coordinates of the cursor and the offsetX, and offsetY values based on the cursor's position and the window dimensions, I was able to achieve the interactive mouse event that works as the scroll.
             </p>
             <p>
-                By calculating the coordinates of the cursor and the offsetX, and offsetY values based on the cursor's position and the window dimemsions, I was able to achieve the interactive mouse event that works as the scroll.
+                Also, by integrating GSAP library, I was able to implement dynamic interactions, transforming and skewing the images in response to the scroll.
             </p>
         </ProjectText>
     </ProjectContent>
     <ProjectContent
         heading="CSS Grid Layout"  
     >   
-       
         <ProjectText>
             <p>
-                By utilizing Grid-based layout I was able to display each images in the desired position, also thanks to its flexibility, making it responsive with ease
-                
+                By leveraging CSS Grid, I was able to position each element precisely, ensuring that they appeared exactly where I wanted them on the page.
             </p>
             <p>
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Autem, consequatur. Nostrum excepturi, veniam voluptas nulla hic est voluptatibus eligendi, et perspiciatis tenetur sit iusto animi iste quidem eius odio sapiente?
+                One of the key advantages of using CSS Grid was its flexibility. I could easily define the grid structure, specifying the number of rows and columns, and aligning the images vertically and horizontally with ease. CSS Grid allowed me to establish the desired layout and maintain consistency throughout the grid.
+            </p>
+            <p>
+                Additionally, CSS Grid's responsiveness was a significant benefit. With media queries, I could adapt the grid layout based on different screen sizes and devices.
             </p>
         </ProjectText>
     </ProjectContent>
@@ -61,7 +122,7 @@ export default function PhotoGallery() {
     >
     <ProjectText>
         <p>
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nihil voluptatum quod temporibus cupiditate ipsa minima sunt culpa libero, dolore unde praesentium, iste porro? Dolores veniam nihil impedit recusandae consequuntur repellendus!
+            What I was primarily focused on during the development of this project was crafting a visually engaging experience that would captivate users, considering user experience as well.
         </p>
         <p>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis, totam animi consequuntur autem ratione, nobis qui dolore voluptatibus quasi sequi placeat ex unde expedita! Magnam facilis autem ipsum repudiandae ea.

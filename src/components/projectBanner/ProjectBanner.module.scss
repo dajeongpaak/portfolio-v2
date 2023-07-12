@@ -16,10 +16,13 @@
     max-width: 90rem;
     margin: 0 auto;
     height: 90vh;
-    padding-top: 1rem;
     background: $color-primary-dark;
 
-    @include mq(large) {
+    @include mq(xsmall) {
+        padding-top: 2rem;
+    }
+
+    @include mq(small) {
         align-items: center;
     }
 

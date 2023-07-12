@@ -30,12 +30,12 @@
 
       }
    
-
       span {
         font-family: $font-reenie;
         font-style: normal;
       }
     }
+    
     @include mq(large) {
       grid-template-columns: repeat(20, 1fr);
       grid-template-rows: repeat(20, 1fr);
@@ -47,7 +47,6 @@
         max-width: 100%;
         height: auto;
         position: relative;
-        transition: all ease ;
     }
 
     .img_1, 
@@ -101,7 +100,7 @@
 
     .img_6 {
       @include mq(large) {
-      grid-area:       1 / 5 / span 2 / span 2;
+      grid-area: 1 / 5 / span 2 / span 2;
       }
     }
 
@@ -125,7 +124,7 @@
   
     .img_10 {
       @include mq(large) {
-      grid-area:7/11/span 3/span 2;
+        grid-area:7/11/span 3/span 2;
       }
     }
 

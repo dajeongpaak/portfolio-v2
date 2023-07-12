@@ -40,7 +40,8 @@ function Introduction() {
                 <SubTitle title='More About Me'/>
                 <div className={`${styles.more_about_me_content}`}> 
                     <p>
-                    I am a front-end developer with a keen interest in React and Node.js. My ultimate goal is to become a full-stack developer within the next two years. While my primary focus is currently on front-end development, I am genuinely passionate about crafting useful and practical applications.
+                    I am a front-end developer with a strong passion in JavaScript, React and Node.js. While my primary focus remains on frontend development, my growing interest in backend development with Node.js has led me to set a long-term goal of becoming a full-stack developer within the next two years.
+                    By expanding my skills to encompass both frontend and backend development, I aim to contribute to the creation of practical and impactful applications from end to end.
                     </p>
                     <br/>
                     <p>
