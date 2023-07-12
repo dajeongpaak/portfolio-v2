@@ -125,7 +125,14 @@
 }
 
 .hobby {
-   
+   @include mq(small) {
+    @include gridCol(1, 12);
+   }
+
+   @include mq(medium) {
+    @include gridCol(1, 8);
+   }
+
     @include mq(large) {
         grid-row: 3;
         @include gridCol(1, 4);
@@ -151,11 +158,12 @@
     @include mq(medium) {
         flex-direction: unset;
         align-items: center;
-        @include gridCol(5, 2);
+        @include gridCol(9, 4);
     }
 
     @include mq(large) {
         grid-row: 3;
+        @include gridCol(5, 2);
     }
 
     &_content {

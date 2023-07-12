@@ -3,6 +3,7 @@ import { Navigate, useNavigate, useMatch, useLocation } from 'react-router-dom'
 
 import { gsap } from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
+import { debounce } from 'lodash'
 
 import styles from './ScrollNavigation.module.scss'
 
@@ -13,6 +14,7 @@ export default function ScrollNavigation({title, navigateTo, navigatePrev }: any
     const animRef: any = useRef()
     const navigate = useNavigate();
     // const location = useLocation
+
     console.log(navigateTo)
     const handleScroll = () => {
       window.scrollTo({
@@ -23,34 +25,38 @@ export default function ScrollNavigation({title, navigateTo, navigatePrev }: any
 
     useLayoutEffect(() => { 
 
+      const handleNavigate = debounce(() => {
+          if (
+            animRef.current &&
+            animRef.current.style.width === '100%'
+          ) {
+            console.log(navigateTo);
+            // navigate(1);
+            navigate(`/work/${navigateTo}`);
+          }
+        }, 100);
+      
         let ctx = gsap.context(() => {
           const tl = gsap.timeline()
           tl.to(  '#js-progress-animation', {
               width: '100%',
-              onComplete: () => {
-                if (
-                  animRef.current &&
-                  animRef.current.style.width === '100%'
-                ) {
-                console.log(navigateTo)
-                // navigate(1)
-                navigate(`/work/${navigateTo}`)
-                }
-              }
+              onComplete: handleNavigate,
             })
       
           ScrollTrigger.create({
             animation: tl,
             trigger: progressRef.current,
             start: "top 30%",
-            end: "100% 100%",
+            end: "+=3000px",
             scrub: true,
             pin:  progressRef.current,
           })
         }, progressRef)
     
-        return () => ctx.revert()
-    
+        return () => {
+          handleNavigate.cancel()
+          ctx.revert()
+        }
       }, [])
  
       

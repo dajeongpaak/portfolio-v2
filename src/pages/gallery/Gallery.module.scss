@@ -11,10 +11,23 @@
     width: 100%;
     height: 100%;
     gap: 1rem;
+    padding: 0 1rem;
+
+    @include mq(large) {
+      padding: unset;
+    }
     
     .hobby {
-      grid-area: 11/5/span 3/span 5;
+
+      grid-area: 1/1/span 3/span 12;
       align-self: center;
+      margin: 5rem 1rem 0;
+
+      @include mq(large) {
+        grid-area: 11/5/span 3/span 5;
+
+      }
+   
 
       span {
         font-family: $font-reenie;
@@ -44,11 +57,16 @@
     .img_7,
     .img_8,
     .img_9,
-    .img_10 {
+    .img_10,
+    .img_11,
+    .img_12 {
       @include gridCol(1 , 12)
     }
 
     .img_1 {
+      @include mq(medium) {
+        grid-area: 4 / 1 / span 2 / span 6;
+      }
 
       @include mq(large) {
         grid-area: 2 / 1 / span 2 / span 2;
@@ -56,6 +74,10 @@
     }
 
     .img_2 {
+      @include mq(medium) {
+        grid-area: 5 / 7 / span 2 / span 6;
+      }
+      
       @include mq(large) {
       grid-area: 1 / 14 / span 2 / span 2;
       }

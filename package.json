@@ -16,6 +16,7 @@
     "animate-css-grid": "^1.5.1",
     "cross-env": "^7.0.3",
     "curtainsjs": "^8.1.4",
+    "debounce": "^1.2.1",
     "framer-motion": "^10.12.17",
     "gh-pages": "^5.0.0",
     "gsap": "^3.11.5",

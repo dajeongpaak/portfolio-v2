@@ -23,7 +23,7 @@
     @include mq(xsmall) {
         grid-template-rows: 10vh 50vh;
     }
-    
+
     @include mq(large) {
         @include gridCol(2, 10);
         margin-top: 10rem;
@@ -39,7 +39,7 @@
     position: absolute;
 
     @include mq(large) {
-        @include gridCol(2, 10);
+        @include gridCol(1, 10);
     }
 }
 
