@@ -1,4 +1,4 @@
-import { useRef, useLayoutEffect, useEffect } from 'react'
+import { useRef, useLayoutEffect } from 'react'
 import { Navigate, useNavigate, useMatch, useLocation } from 'react-router-dom'
 
 import { gsap } from 'gsap'
@@ -15,7 +15,6 @@ export default function ScrollNavigation({title, navigateTo, navigatePrev }: any
     const navigate = useNavigate();
     // const location = useLocation
 
-    console.log(navigateTo)
     const handleScroll = () => {
       window.scrollTo({
         top: 0, 
@@ -47,7 +46,7 @@ export default function ScrollNavigation({title, navigateTo, navigatePrev }: any
             animation: tl,
             trigger: progressRef.current,
             start: "top 30%",
-            end: "+=3000px",
+            end: "+=2500px",
             scrub: true,
             pin:  progressRef.current,
           })

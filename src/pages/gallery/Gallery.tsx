@@ -1,5 +1,8 @@
-import { useRef, useEffect, useState } from 'react'
+import { useRef, useEffect, useState, useLayoutEffect } from 'react'
 import { Link } from 'react-router-dom';
+
+import { gsap } from 'gsap'
+import { ScrollTrigger } from 'gsap/ScrollTrigger'
 
 import Transition from '../../config/framerMotion/Transiton';
 import LazyImage from '../../config/lazyLoading/lazyImage';
@@ -13,11 +16,39 @@ interface GalleryImagesType {
   src: typeof import("*.jpg")
 }
 
+gsap.registerPlugin(ScrollTrigger)
+
 function Gallery() {
 
   setBodyColor({color: '#fcf8f4'})
   const imageContainer = useRef<HTMLDivElement>(null)
   const galleryImages: GalleryImagesType[] = images as GalleryImagesType[]
+
+  useLayoutEffect(() => {
+
+    let ctx = gsap.context(() => {
+
+      let proxy = { skew: 0 },
+      skewSetter = gsap.quickSetter(".img", "skewY", "deg"), // fast
+    clamp = gsap.utils.clamp(-5, 5); 
+
+    ScrollTrigger.create({
+      onUpdate: (self) => {
+        let skew = clamp(self.getVelocity() / -1000);
+
+        if (Math.abs(skew) > Math.abs(proxy.skew)) {
+          proxy.skew = skew;
+          gsap.to(proxy, {skew: 0, duration: 1, ease: "power3", overwrite: true, onUpdate: () => skewSetter(proxy.skew)});
+        }
+      }
+    });
+
+    gsap.set(".img", {transformOrigin: "right center", force3D: true});
+
+    }, imageContainer)
+
+    return () => ctx.revert()
+  }, [])
 
 const handleMouseMove = (event: MouseEvent) => {
     const { clientX, clientY } = event;
@@ -52,10 +83,10 @@ const handleMouseMove = (event: MouseEvent) => {
       className={`${styles.canvas}`}
       >
         {images.map((item: any) => (
-          <div key={item.id} className={styles[`img_${item.id}`]}>
+          <div key={item.id} className={`img ${styles[`img_${item.id}`]}`}>
             <LazyImage
               src={item.src}
-              className='lazy img'
+              className='lazy'
               data-src={item.placeholderSrc}
             />
           </div>
@@ -71,7 +102,7 @@ const handleMouseMove = (event: MouseEvent) => {
         </Link>
         <Link to="/work/photo-gallery" className={styles.project}>
           <Arrow />
-          <div>Go To This Project</div>
+          <div>View Project Detail</div>
         </Link>
   
       </div>

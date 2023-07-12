@@ -18,7 +18,7 @@
     @include grid;
     grid-template-rows: 10vh 40vh;
     margin-top: 1rem;
-    height: 150vh;
+    height: 100vh;
 
     @include mq(xsmall) {
         grid-template-rows: 10vh 50vh;
