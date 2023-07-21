@@ -13,9 +13,9 @@ import setBodyColor from '../../utils/setBodyColor';
 
 interface GalleryImagesType {
   id: number;
-  src: typeof import("*.jpg")
-  placeholderSrc: typeof import("*.jpg")
-  alt: string
+  src: typeof import("*.jpg");
+  placeholderSrc: typeof import("*.jpg");
+  alt: string;
 }
 
 gsap.registerPlugin(ScrollTrigger)
@@ -69,18 +69,11 @@ const handleMouseMove = (event: MouseEvent) => {
     }
   }, [])
 
-  // const [{
-  //   id,
-  //   src,
-  //   placeholderSrc,
-  //   alt
-  // }] = galleryImages
-
   return (
     <Transition>
       <div 
       ref={imageContainer} 
-      className={`${styles.canvas}`}
+      className={styles.canvas}
       >
         {images.map((item: any) => (
           <div key={item.id} className={`img ${styles[`img_${item.id}`]}`}>

@@ -10,8 +10,8 @@ interface Item {
     name: string;
     desc: string;
     stacks: string[];
-    src: typeof import("*.png")
-    placeholderSrc: typeof import("*.webp")
+    src: typeof import("*.png");
+    placeholderSrc: typeof import("*.webp");
     url: string;
 }
 

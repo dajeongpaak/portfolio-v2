@@ -63,12 +63,13 @@
 
     &_content {
         @include gridCol(1, 12);
+        justify-self: center;
         @include mq(medium) {
-            width: 50%;
+            @include gridCol(7, 6);
         }
 
         @include mq(large) {
-            width: 60%;
+            @include gridCol(6, 6);
         }
     }
  
@@ -77,6 +78,20 @@
         max-width: 100%;
         border-radius: 4rem;
         margin-bottom: 1rem;
+        max-width: 17rem;
+        justify-self: center;
+        @include mq(small) {
+            @include gridCol(1, 6);
+        }
+
+        @include mq(medium) {
+            @include gridCol(1, 5);
+        }
+
+        @include mq(large) {
+            max-width: 13rem;
+        }
+
     }
 
 }
