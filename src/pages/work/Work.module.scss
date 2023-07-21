@@ -7,19 +7,19 @@
    
 
     @include mq(xsmall) {
-        grid-template-rows: 20vh repeat(4, 80vh) repeat(2, 40vh);
+        grid-template-rows: 20vh repeat(6, 80vh);
     }
 
     // @include mq(small) {
     //     grid-template-rows: 20vh 80vh 80vh 80vh 80vh;
     // }
 
-    @include mq(medium) {
-        grid-template-rows: 30vh repeat(5, 35vh);
-    }
+    // @include mq(medium) {
+    //     grid-template-rows: 30vh repeat(5, 35vh);
+    // }
 
     @include mq(large) {
-        grid-template-rows: 40vh 60vh 60vh 60vh 60vh 50vh;
+        grid-template-rows: 40vh repeat(6, 60vh);
     }
 }
 
@@ -35,7 +35,7 @@
     @include flex-center;
 
     @include mq(medium) {
-        grid-column: span 6;
+        grid-column: span 12;
     }
 
     h4 {

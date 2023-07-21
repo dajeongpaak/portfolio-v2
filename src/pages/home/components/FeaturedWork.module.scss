@@ -8,11 +8,7 @@
     @include mq(small) {
         grid-template-rows: 20vh repeat(4, 80vh);
     }
-
-    @include mq(medium) {
-        grid-template-rows: 30vh repeat(4, 45vh);
-    }
-
+    
     @include mq(large) {
         grid-template-rows: 35vh repeat(4, 60vh);
     }

@@ -1,5 +1,4 @@
 
-import { LazyLoadImage } from "react-lazy-load-image-component"
 import { Link } from 'react-router-dom'
 
 import styles from './Introduction.module.scss'

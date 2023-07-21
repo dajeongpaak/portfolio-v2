@@ -18,25 +18,25 @@
     @include mq(large) {
         padding: 0 5.5rem;
     }
-
-
-    
 }
 
 .preview {
     @include grid;
+    width: 100%;
+
 
     h4 {
         font-weight: 500;
     }
 
     img {
-        max-width: 100%;
+        max-width: 42rem;
         margin-bottom: 1.5rem;
         @include gridCol(auto, 12);
         align-self: center;
-
-        @include mq(medium){
+        justify-self: center;
+        @include mq(large){
+            max-width: 90%;
             margin-bottom: unset;
             @include gridCol(auto, 6);
         }
@@ -48,7 +48,7 @@
 .content {
     @include gridCol(auto, 12);
 
-    @include mq(medium){
+    @include mq(large){
         align-self: self-end;
         padding-left: 1.5rem;
         @include gridCol(7, 6);
@@ -62,4 +62,4 @@
 
 .description {
     margin-bottom: 1.5rem;
-}
+} 

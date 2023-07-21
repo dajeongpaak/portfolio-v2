@@ -22,27 +22,25 @@ const items: Item[] = projects as Item[]
     return (
         <>
             {items.map((item, index) => (
-                <article  key={index} className={`${styles.card}`}>
-                    <Link to={item.url} key={index} >
-                        <div className={styles.preview}>
-                            <Arrow />
-                            <LazyImg 
-                                src={typeof item.src === 'string' ? item.src : item.src.default} 
-                                placeholderSrc={typeof item.placeholderSrc === 'string' ? item.placeholderSrc : item.placeholderSrc.default}
-                                alt={item.name}
-                            />
-                            <div className={`${styles.content}`}>
-                                <h4>{item.name}</h4>
-                                <div className={`${styles.discipline}`}>
-                                    {item.stacks.map((stack, stackIndex) => (
-                                     <p key={stackIndex}>{stack}</p>
-                                     ))}
-                                </div>
-                                <p className={styles.description}>{item.desc}</p>
+                <Link to={item.url} key={index} className={styles.card}>
+                    <div className={styles.preview}>
+                        <Arrow />
+                        <LazyImg 
+                            src={typeof item.src === 'string' ? item.src : item.src.default} 
+                            placeholderSrc={typeof item.placeholderSrc === 'string' ? item.placeholderSrc : item.placeholderSrc.default}
+                            alt={item.name}
+                        />
+                        <div className={`${styles.content}`}>
+                            <h4>{item.name}</h4>
+                            <div className={`${styles.discipline}`}>
+                                {item.stacks.map((stack, stackIndex) => (
+                                    <p key={stackIndex}>{stack}</p>
+                                    ))}
                             </div>
+                            <p className={styles.description}>{item.desc}</p>
                         </div>
-                    </Link>
-                </article>
+                    </div>
+                </Link>
             ))}  
         </>
       )

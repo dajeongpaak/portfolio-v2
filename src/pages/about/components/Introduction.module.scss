@@ -78,7 +78,7 @@
         max-width: 100%;
         border-radius: 4rem;
         margin-bottom: 1rem;
-        max-width: 17rem;
+        max-width: 16rem;
         justify-self: center;
         @include mq(small) {
             @include gridCol(1, 6);
@@ -89,7 +89,7 @@
         }
 
         @include mq(large) {
-            max-width: 13rem;
+            max-width: 11rem;
         }
 
     }
