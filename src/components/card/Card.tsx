@@ -1,3 +1,5 @@
+import { useRef, useEffect } from 'react'
+
 import { Link } from 'react-router-dom'
 
 import styles from './Card.module.scss'
@@ -18,7 +20,7 @@ interface Item {
 const Card: React.FC = () => {
 
 const items: Item[] = projects as Item[]
-    
+
     return (
         <>
             {items.map((item, index) => (
@@ -30,9 +32,9 @@ const items: Item[] = projects as Item[]
                             placeholderSrc={typeof item.placeholderSrc === 'string' ? item.placeholderSrc : item.placeholderSrc.default}
                             alt={item.name}
                         />
-                        <div className={`${styles.content}`}>
+                        <div className={styles.content}>
                             <h4>{item.name}</h4>
-                            <div className={`${styles.discipline}`}>
+                            <div className={styles.discipline}>
                                 {item.stacks.map((stack, stackIndex) => (
                                     <p key={stackIndex}>{stack}</p>
                                     ))}

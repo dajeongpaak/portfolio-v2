@@ -105,11 +105,13 @@
 .more_about_me {
     @include block($color-primary-dark, $color-primary-light);
     @include flex-center;
+    @include gridCol(1, 12);
 
     @include mq(large) {
         height: 100%;
         grid-row: 2 / span 2;
         align-self: self-end;
+        @include gridCol(auto, 6);
     }
 
     &_content {
@@ -167,6 +169,7 @@
     &_content {
         @include flex-column;
     }
+    
     svg {
         top: 20%;
         left: 50%;
@@ -185,28 +188,6 @@
             margin-right: 2rem;
         }
     }
-
-    svg:first-child {
-        @include mq(medium) {
-            top: 30%;
-            left: 50%;
-            transform: translate(-50%, -50%) rotate(-160deg);
-            margin-bottom: unset;
-            margin-right: 2rem;
-        }
-    }
-
-    svg:last-child {
-        @include mq(medium) {
-            top: 70%;
-            left: 50%;
-            transform: translate(-50%, -50%) rotate(-110deg);
-            margin-bottom: unset;
-            margin-right: 2rem;
-        }
-    }
-
-
     span {
         font-style: normal;
         text-decoration: underline;

@@ -6,6 +6,7 @@
     @include block($color-primary-light, $color-primary-dark);
     @include gridCol(1, 12);
     padding: 0 1.5rem;
+
     
     @include mq(small) {
         padding: 0 2.5rem;
@@ -18,31 +19,36 @@
     @include mq(large) {
         padding: 0 5.5rem;
     }
+
+    img {
+        transition: all 300ms ease-in-out;
+    }
+
+    &:hover img {
+        transform: translateY(-5px);
+    }
 }
 
 .preview {
     @include grid;
     width: 100%;
 
-
     h4 {
         font-weight: 500;
     }
 
     img {
+        width: 100%;
         max-width: 42rem;
         margin-bottom: 1.5rem;
         @include gridCol(auto, 12);
         align-self: center;
         justify-self: center;
         @include mq(large){
-            max-width: 90%;
             margin-bottom: unset;
             @include gridCol(auto, 6);
         }
-      
     }
-
 }
 
 .content {

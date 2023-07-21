@@ -37,7 +37,7 @@ function Introduction() {
                     </div>
                 </div>
             </div>
-            <div className={`col-12 col-lg-6 ${styles.more_about_me}`}>
+            <div className={styles.more_about_me}>
                 <SubTitle title='More About Me'/>
                 <div className={`${styles.more_about_me_content}`}> 
                     <p>
@@ -64,8 +64,6 @@ function Introduction() {
                 </Link>
             </div>
             <div className={`col-12 col-md-6 col-lg-3 ${styles.click}`}>
-                <Arrow />
-                <Arrow />
                 <Arrow />
             </div>
         </section>
