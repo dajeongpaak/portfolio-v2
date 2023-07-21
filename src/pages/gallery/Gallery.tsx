@@ -5,7 +5,7 @@ import { gsap } from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 
 import Transition from '../../config/framerMotion/Transiton';
-import LazyImage from '../../config/lazyLoading/lazyImage';
+import LazyImg from '../../config/lazyLoading/LazyImg';
 import styles from './Gallery.module.scss'
 import images from '../../data/gallery'
 import Arrow from '../../assets/icons/Arrow';
@@ -14,6 +14,8 @@ import setBodyColor from '../../utils/setBodyColor';
 interface GalleryImagesType {
   id: number;
   src: typeof import("*.jpg")
+  placeholderSrc: typeof import("*.jpg")
+  alt: string
 }
 
 gsap.registerPlugin(ScrollTrigger)
@@ -67,6 +69,12 @@ const handleMouseMove = (event: MouseEvent) => {
     }
   }, [])
 
+  // const [{
+  //   id,
+  //   src,
+  //   placeholderSrc,
+  //   alt
+  // }] = galleryImages
 
   return (
     <Transition>
@@ -76,10 +84,10 @@ const handleMouseMove = (event: MouseEvent) => {
       >
         {images.map((item: any) => (
           <div key={item.id} className={`img ${styles[`img_${item.id}`]}`}>
-            <LazyImage
+            <LazyImg
               src={item.src}
-              className='lazy'
-              data-src={item.placeholderSrc}
+              placeholderSrc={item.placeholderSrc}
+              alt={item.alt}
             />
           </div>
         ))}

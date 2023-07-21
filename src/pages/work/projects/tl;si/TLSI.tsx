@@ -135,8 +135,8 @@ export default function TLSI() {
             </ProjectText>
             </ProjectContent>
             <ScrollNavigation 
-                navigateTo="photo-gallery"
-                title="Photo Gallery"
+                navigateTo="definition"
+                title="Definition - Vocabulary Wordbook"
                 navigatePrev="articles-of-the-week-from-ny-times"
             />
         </Transition>

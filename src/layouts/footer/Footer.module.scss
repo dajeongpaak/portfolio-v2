@@ -6,7 +6,7 @@ footer {
 }
 
 .container {
-    grid-template-rows: 25vh 25vh;
+    grid-template-rows: 30vh 30vh;
     @include mq(medium){
         grid-template-rows: 35vh;
     }
@@ -20,7 +20,6 @@ footer {
     @include block($color-primary-light, $color-primary-dark);
     @include flex-center;
     text-transform: uppercase;
-    padding: 2.5rem 1.5rem;
     color: $color-primary-dark;
 
     p {
@@ -32,7 +31,6 @@ footer {
     position: relative;
     @include block($color-highlight-orange, $color-primary-light);
     @include flex-center;
-    padding: 6rem 1.5rem;
 
     @include mq(large){
         margin-bottom: unset;
@@ -47,9 +45,7 @@ footer {
     position: absolute;
     bottom: 0;
     margin: .5rem;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    @include flex(center, space-between);
     color: $color-primary-light;
 
     p {

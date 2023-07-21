@@ -68,7 +68,7 @@ export default function ArticlesOfTheWeek() {
               
                 <h3 className='h4'>Nodemailer Module</h3>
                 <p>
-                  With the Nodemailer module in place, I successfully completed the newsletter functionality in my application. Subscribed users receive personalized newsletters containing the latest articles and updates from the New York Times, delivered directly to their email inboxes.
+                  With the Nodemailer module in place, I successfully completed the newsletter functionality in my application. Subscribed users receive custom newsletters containing the latest articles and updates from the New York Times, delivered directly to their email inboxes.
                 </p>
               </div>
             </ProjectText>

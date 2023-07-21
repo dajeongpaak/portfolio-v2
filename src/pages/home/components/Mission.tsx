@@ -30,26 +30,31 @@ function Mission() {
 
   return (
     <section 
-      className={`${styles.container}`} 
+      className={styles.container} 
       ref={bgAnimation}
     >
-      <div className={`${styles.statement}`}>
-          <h2 className='h4'>I <span>develop and design</span> <br /> engaging user experiences <br /> that brings <br/><span>emotional connection</span> through
+      <div className={styles.statement}>
+          <h2 className='h4'>
+          I 
+          <span>develop and design</span><br /> 
+          engaging user experiences <br /> 
+          that brings <br/>
+          <span>emotional connection</span> 
          </h2>
       </div>
-      <div className={`${styles.values}`}>
-          <span className='h4'>Creativity,</span> 
+      <h3 className={`h4 ${styles.values}`}>
+          through<br/>
+          <span>
+          Creativity, 
           <br />
-          <span className='h4'>Lifelong Learning,
-         </span>
+          Lifelong Learning,
          <br />
-         <span className='h4'>Technology Skills
-         </span>
+         Technology Skills
          <br />
-         <span className='h4'>& Passion
+         & Passion
          </span>
-      </div>
-      <div id='js-animation' className={`${styles.js_animation} col-12`}></div>
+      </h3>
+      <div id='js-animation' className={styles.js_animation}></div>
    </section> 
   )
 }

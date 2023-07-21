@@ -2,6 +2,7 @@
 
 
 .section {
+    @include grid;
     grid-template-rows: 30vh 70vh 2fr 0.8fr 0.8fr;
     @include mq(xsmall) {
         grid-template-rows: 40vh 60vh 2fr 1.1fr 1.1fr;
@@ -29,6 +30,7 @@
 }
 
 .introduction {
+    @include gridCol(1, 12);
    
     @include mq(large) {
         height: 100%;
@@ -41,7 +43,9 @@
 }
 
 .title {
+    @include gridCol(1, 12);
     align-self: flex-end;
+
     @include mq(large) {
         grid-area: 1 / 1 / span 1 / span 3;
         align-self: end;
@@ -49,7 +53,7 @@
 }
 
 .profile {
-    @include flex-column;
+    @include grid;
 
     @include mq(medium) {
         flex-direction: unset;
@@ -58,6 +62,7 @@
     }
 
     &_content {
+        @include gridCol(1, 12);
         @include mq(medium) {
             width: 50%;
         }
@@ -67,33 +72,11 @@
         }
     }
  
-    span {
-        margin-bottom: 1.5rem;
-
-        @include mq(large) {
-            margin-bottom: unset;
-        }
-    }
-
     img {
+        @include gridCol(1, 9);
         max-width: 100%;
-    }
-
-    span, img {
-        width: 190px;
-        height: 190px;
         border-radius: 4rem;
-
-        @include mq(small) {
-            width: 250px;
-            height: 250px;
-        }
-
-        @include mq(large) {
-            width: 170px;
-            height: 170px;
-        }
-
+        margin-bottom: 1rem;
     }
 
 }

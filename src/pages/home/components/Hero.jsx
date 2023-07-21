@@ -380,7 +380,7 @@ function Hero() {
             position: 'absolute', 
             color: 'transparent'
             }}
-        >He there, I ams DJ and I am a front-end developer
+        >Hey there, I am DJ and I am a front-end developer
         </h1>
     </section>
     

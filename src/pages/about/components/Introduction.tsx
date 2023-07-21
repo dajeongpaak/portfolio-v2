@@ -3,10 +3,12 @@ import { LazyLoadImage } from "react-lazy-load-image-component"
 import { Link } from 'react-router-dom'
 
 import styles from './Introduction.module.scss'
+import LazyImg from "../../../config/lazyLoading/LazyImg"
 import Title from "../../../components/title/Title"
 import myImage from '../../../assets/images/DJ.jpg'
 import placeholderImg from '../../../assets/images/DJ-blurred.jpg'
 import cameraImage from '../../../assets/images/film-camera.png'
+import camaraBlurred from '../../../assets/images/film-camera_blurred.png'
 import Arrow from "../../../assets/icons/Arrow"
 import SubTitle from "./shared/SubTitle"
 
@@ -14,16 +16,16 @@ function Introduction() {
 
   return (
     <>
-        <section className={`${styles.section} wrapper grid`}>
-            <div className={`${styles.title} col-12`}>
+        <section className={`${styles.section} wrapper`}>
+            <div className={styles.title}>
                 <Title title='hello!'/>
             </div>
-            <div className={`${styles.introduction} col-12`}>
-                <div className={`${styles.profile}`}>
-                    <LazyLoadImage 
+            <div className={styles.introduction}>
+                <div className={styles.profile}>
+                    <LazyImg 
                         src={myImage}
-                        alt="Dajeong Park Profile Image"
                         placeholderSrc={placeholderImg}
+                        alt="Dajeong Park Profile Image"
                     />
                     <div className={`${styles.profile_content}`}>
                         <h2 className={`${styles.h2} h4`}>
@@ -55,7 +57,11 @@ function Introduction() {
             </div>
             <div className={`col-12 col-md-6 col-lg-3 ${styles.hobby}`}>
                 <Link to={"/gallery"}>
-                    <img src={cameraImage} alt="" />
+                    <LazyImg 
+                        src={cameraImage} 
+                        placeholderSrc={camaraBlurred} 
+                        alt="an image of a film camera" 
+                    />
                 </Link>
             </div>
             <div className={`col-12 col-md-6 col-lg-3 ${styles.click}`}>

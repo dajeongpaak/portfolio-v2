@@ -4,35 +4,42 @@ const projects = [
         desc: "a web application with a newsletter subscription feature to view the most popular articles for the week.",
         stacks: ["React", "TypeScript", "Node.js", "Express.js", "Bootstrap"],
         src: require('../assets/images/articles-of-the-week-banner.png'),
+        placeholderSrc: require('../assets/images/articles-of-the-week-banner-blurred.webp'),
         url: "/work/articles-of-the-week-from-ny-times"
     },
     {
         name: "TL;si - Too Long Summarize It",
         desc: "a web application that uses OpenAI's text summarization capabilities to condense lengthy texts into concise summaries",
         stacks: ["React", "Node.js", "Express.js", "Tailwind", "OpenAI"],
-        src: require('../assets/images/too-long-summarize-it-image.png'),
+        src: require('../assets/images/too-long-summarize-it-banner.png'),
+        placeholderSrc: require('../assets/images/too-long-summarize-it-banner-blurred.webp'),
         url: "/work/tlsi-text-summarizer"
+    },
+    {
+        name: "Definition - Vocabulary Wordbook",
+        desc: "Lorem ipsum dolor sit amet consectetur. Id porta lectus sit feugiat libero blandit augue.",
+        stacks: ["HTML", "TypeScript", "SASS"],
+        src: require('../assets/images/definition-banner.png'),
+        placeholderSrc: require('../assets/images/definition-banner-blurred.webp'),
+        url: "/work/definition"
     },
     {
         name: "Photo Gallery",
         desc: "a digital photo gallery where you can explore with mouse interaction",
         stacks: ["React", "JavaScript", "CSS Grid Layout"],
-        src: require('../assets/images/photo-gallery-image-min.png'),
+        src: require('../assets/images/photo-gallery-banner.png'),
+        placeholderSrc: require('../assets/images/photo-gallery-banner-blurred.webp'),
         url: "/work/photo-gallery"
-    },
-    {
-        name: "Id porta lectus sit feugiat libero",
-        desc: "Lorem ipsum dolor sit amet consectetur. Id porta lectus sit feugiat libero blandit augue.",
-        stacks: ["MongoDB", "Express.js", "React", "Node.js"],
-        src: require('../assets/images/placeholder-3.jpg'),
-        url: "/work/project-3"
     }
+
 ]
 
 const articlesOfTheWeek = [
     {
-        bannerSrc: require('../assets/images/articles-of-the-week-banner.png'),
-        bannerSrc_m: require('../assets/images/articles-banner-m.png'),
+        src: require('../assets/images/articles-of-the-week-banner.png'),
+        placeholderSrc: require('../assets/images/articles-of-the-week-banner-blurred.webp'),
+        src_m: require('../assets/images/articles-of-the-week-banner--mobile.png'),
+        placeholderSrc_m: require('../assets/images/articles-of-the-week-banner--mobile-blurred.webp'),
         name: "Articles of the Week from NY Times",
         timeline: "May - June 2023",
         stacks: ["React", "TypeScript", "Node.js", "Express.js", "Bootstrap"],
@@ -46,8 +53,10 @@ const articlesOfTheWeek = [
 
 const tlsi = [
     {
-        bannerSrc: require('../assets/images/too-long-summarize-it-image.png'),
-        bannerSrc_m: require('../assets/images/too-long-summarize-it-mobile.png'),
+        src: require('../assets/images/too-long-summarize-it-banner.png'),
+        placeholderSrc: require('../assets/images/too-long-summarize-it-banner-blurred.webp'),
+        src_m: require('../assets/images/too-long-summarize-it-banner--mobile.png'),
+        placeholderSrc_m: require('../assets/images/too-long-summarize-it-banner--mobile-blurred.webp'),
         name: "TL;si - Too Long Summarize It",
         timeline: "June 2023",
         stacks: ["React", "Node.js", "Express.js", "Tailwind", "OpenAI"],
@@ -61,8 +70,10 @@ const tlsi = [
 
 const gallery = [
     {
-        bannerSrc: require('../assets/images/photo-gallery-image-min.png'),
-        bannerSrc_m: require('../assets/images/photo-gallery-mobile-min.png'),
+        src: require('../assets/images/photo-gallery-banner.png'),
+        placeholderSrc: require('../assets/images/photo-gallery-banner-blurred.webp'),
+        src_m: require('../assets/images/photo-gallery-banner--mobile.png'),
+        placeholderSrc_m: require('../assets/images/photo-gallery-banner--mobile-blurred.webp'),
         name: "Photo Gallery",
         timeline: "June 2023",
         stacks: ["React", "JavaScript", "CSS Grid Layout"],
@@ -74,4 +85,21 @@ const gallery = [
     }
 ]
 
-export { projects, articlesOfTheWeek, tlsi, gallery }
+const definition = [
+    {
+        src: require('../assets/images/definition-banner.png'),
+        placeholderSrc: require('../assets/images/definition-banner-blurred.webp'),
+        src_m: require('../assets/images/definition-banner--mobile.png'),
+        placeholderSrc_m: require('../assets/images/definition-banner--mobile-blurred.webp'),
+        name: "Definition - Vocabulary Wordbook",
+        timeline: "July 2023",
+        stacks: ["HTML", "TypeScript", "SASS"],
+        role: ["Frontend developer", " & designer"],
+        site: "https://definition.dajeongpark.com",
+        github: "https://github.com/dajeongpaak/text-summarizer",
+        description: ["The Interactive Digital Photo Gallery is a distinctive project that seamlessly blends my personal touch, expertise in frontend development, and my passion and love for photography.",
+        "This project introduces an interactive feature that allows users to navigate through the gallery using the position of their mouse (desktop only, sadly)."]
+    }
+]
+
+export { projects, articlesOfTheWeek, tlsi, gallery, definition }

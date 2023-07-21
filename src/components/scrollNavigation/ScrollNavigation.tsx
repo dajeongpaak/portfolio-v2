@@ -31,15 +31,21 @@ export default function ScrollNavigation({title, navigateTo, navigatePrev }: any
           ) {
             console.log(navigateTo);
             // navigate(1);
-            navigate(`/work/${navigateTo}`);
+            // navigate(`/work/${navigateTo}`);
           }
         }, 100);
       
         let ctx = gsap.context(() => {
+
+
           const tl = gsap.timeline()
           tl.to(  '#js-progress-animation', {
               width: '100%',
-              onComplete: handleNavigate,
+              onComplete: function() {
+
+          console.log('context');
+                console.log(navigateTo);
+                navigate(`/work/${navigateTo}`)},
             })
       
           ScrollTrigger.create({

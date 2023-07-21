@@ -5,12 +5,14 @@ import { gsap } from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 
 import styles from './ProjectBanner.module.scss'
-import image from '../../assets/images/articles-banner-m.png'
-
+import LazyImg from '../../config/lazyLoading/LazyImg';
+import LazySrc from '../../config/lazyLoading/LazySrc';
 interface ProjectBannerType {
   
-    bannerSrc: string | { default: string };
-    bannerSrc_m: string | { default: string };
+    src: typeof import("*.png")
+    placeholderSrc: typeof import("*.webp")
+    src_m: typeof import("*.png")
+    placeholderSrc_m: typeof import("*.webp")
     name: string;
     timeline: string;
     stacks: string[];
@@ -30,8 +32,10 @@ export default function ProjectBanner({data}: any) {
 
     const [
             {
-                bannerSrc,
-                bannerSrc_m,
+                src,
+                placeholderSrc,
+                src_m,
+                placeholderSrc_m,
                 name,
                 timeline,
                 stacks,
@@ -80,15 +84,20 @@ export default function ProjectBanner({data}: any) {
                     className={`banner ${styles.banner}`}
                 >
                     <picture>
-                        <source 
+                        <LazySrc 
                             media="(min-width: 1024px)"
-                            srcSet={typeof bannerSrc === 'string' ? bannerSrc : bannerSrc.default}
+                            srcSet={typeof src === 'string' ? src : src.default}
+                            placeholderSrc={typeof placeholderSrc === 'string' ? placeholderSrc : placeholderSrc.default}
                         />
-                        <source 
+                        <LazySrc 
                             media="(min-width: 768px)"
-                            srcSet={typeof bannerSrc_m === 'string' ? bannerSrc_m : bannerSrc_m.default}
+                            srcSet={typeof src_m === 'string' ? src_m : src_m.default}
+                            placeholderSrc={typeof placeholderSrc_m === 'string' ? placeholderSrc_m : placeholderSrc_m.default}
                         />
-                        <img src={typeof bannerSrc_m === 'string' ? bannerSrc_m : bannerSrc_m.default} alt="Articles of the week banner image" />
+                        <LazyImg 
+                            src={typeof src_m === 'string' ? src_m : src_m.default} 
+                            placeholderSrc={typeof placeholderSrc_m === 'string' ? placeholderSrc_m : placeholderSrc_m.default}
+                            alt="Articles of the week banner image" />
                     </picture>
                 </div>
                 <div 
