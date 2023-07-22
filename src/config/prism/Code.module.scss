@@ -1,6 +1,8 @@
 @use '../../styles/abstracts' as *;
 
 .code {
+    position: relative;
+    z-index: 1;
     height: 30rem;
     overflow: scroll;
     @include gridCol(auto, 12);
@@ -10,7 +12,7 @@
    
     pre {
         border-radius: 1rem;
-        overflow: scroll;
+        // overflow: scroll;
     }
 
     @include mq(medium) {

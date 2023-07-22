@@ -41,18 +41,19 @@ export default function ScrollNavigation({title, navigateTo, navigatePrev }: any
           const tl = gsap.timeline()
           tl.to(  '#js-progress-animation', {
               width: '100%',
+              // onStart: function() {
+              //   window.scrollTo(0,0)
+              // },
               onComplete: function() {
-
-          console.log('context');
-                console.log(navigateTo);
-                navigate(`/work/${navigateTo}`)},
+                navigate(`/work/${navigateTo}`)
+              } 
             })
       
           ScrollTrigger.create({
             animation: tl,
             trigger: progressRef.current,
             start: "top 30%",
-            end: "+=2500px",
+            end: "+=1500px",
             scrub: true,
             pin:  progressRef.current,
           })

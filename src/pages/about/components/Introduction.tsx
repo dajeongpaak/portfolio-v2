@@ -55,6 +55,7 @@ function Introduction() {
                 </div>
             </div>
             <div className={`col-12 col-md-6 col-lg-3 ${styles.hobby}`}>
+                <SubTitle title='Click This!'/>
                 <Link to={"/gallery"}>
                     <LazyImg 
                         src={cameraImage} 

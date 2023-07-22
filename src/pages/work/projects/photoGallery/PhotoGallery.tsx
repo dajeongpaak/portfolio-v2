@@ -130,8 +130,8 @@ export default function PhotoGallery() {
     </ProjectText>
     </ProjectContent>
     <ScrollNavigation 
-        navigateTo="jade-bookmark-manager"
-        title="JADE - Bookmark Manager"
+        navigateTo=""
+        title="List of All Work"
         navigatePrev="tlsi-text-summarizer"
     />
 </Transition>
