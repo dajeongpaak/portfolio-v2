@@ -2,7 +2,6 @@
 
 .project {
     color: $color-primary-light;
-   // margin-bottom: -100vh;
     a {
         color: $color-primary-light;
     }
@@ -72,7 +71,6 @@
 
     span {
         @include flex-center;
-        // color: $color-primary-light;
         font-weight: 400;
       }
 
@@ -132,7 +130,7 @@
     }
 
     &__heading {
-        @include flex(start, space-between, column);
+        @include flex(flex-start, space-between, column);
         @include gridCol(auto, 12);
 
         @include mq(large) {

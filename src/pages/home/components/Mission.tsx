@@ -35,16 +35,15 @@ function Mission() {
     >
       <div className={styles.statement}>
           <h2 className='h4'>
-          I 
-          <span>develop and design</span><br /> 
+          I <span>develop and design</span><br /> 
           engaging user experiences <br /> 
           that brings <br/>
           <span>emotional connection</span> 
          </h2>
       </div>
-      <h3 className={`h4 ${styles.values}`}>
+      <h3 className={`h5 ${styles.values}`}>
           through<br/>
-          <span>
+          <span className='h4'>
           Creativity, 
           <br />
           Lifelong Learning,

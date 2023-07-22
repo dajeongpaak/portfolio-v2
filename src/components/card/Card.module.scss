@@ -27,6 +27,32 @@
     &:hover img {
         transform: translateY(-5px);
     }
+
+    @keyframes moveGradient {
+         0% {
+            background-size: 200% 100%;
+            background-position: 0% 50%;
+        }
+    
+        50% {
+            background-size: 200% 100%;
+            background-position: -100% 50%;
+        }
+    
+        100% {
+            background-size: 200% 100%;
+            background-position: -170% 50%;
+        }
+     }
+
+    &:hover .title  {
+        animation: moveGradient 3s linear forwards; 
+        background: linear-gradient(145deg,$color-primary-dark,$color-primary-dark, #858585);
+
+        background-clip: text;
+        -webkit-background-clip: text;
+        color: transparent;
+    }
 }
 
 .preview {
@@ -49,6 +75,10 @@
             @include gridCol(auto, 6);
         }
     }
+}
+
+.blur {
+    filter: blur(10px);
 }
 
 .content {

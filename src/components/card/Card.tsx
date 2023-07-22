@@ -1,4 +1,5 @@
-import { useRef, useEffect } from 'react'
+
+import { useEffect, useRef, useState } from 'react';
 
 import { Link } from 'react-router-dom'
 
@@ -21,11 +22,38 @@ const Card: React.FC = () => {
 
 const items: Item[] = projects as Item[]
 
+
+       // const cards = placeholderRef.current
+
+    //    cards.forEach((card: any) => {
+    //         card.getBoundingClientRect()
+    //     });
+    //     console.log(rect)
+    // //     const observer = new IntersectionObserver((entries, obs) => {
+    //     for (const entry of entries) {
+    //         if (entry.isIntersecting) {
+    //             setInView(true);
+    //             obs.disconnect();
+    //         } else {
+    //             setInView(false);
+    //         }
+    //     }
+    // }, {});
+    // observer.observe(placeholderRef.current);
+    // return () => {
+    //     observer.disconnect();
+  //  }
+        
+
     return (
         <>
             {items.map((item, index) => (
-                <Link to={item.url} key={index} className={styles.card}>
-                    <div className={styles.preview}>
+                <Link  to={item.url} key={index} className={styles.card}>
+                    <div 
+                        // ref={cardRef}
+                        id='js-preview'
+                        className={styles.preview}
+                    >
                         <Arrow />
                         <LazyImg 
                             src={typeof item.src === 'string' ? item.src : item.src.default} 
@@ -33,7 +61,7 @@ const items: Item[] = projects as Item[]
                             alt={item.name}
                         />
                         <div className={styles.content}>
-                            <h4>{item.name}</h4>
+                            <h4 className={styles.title}>{item.name}</h4>
                             <div className={styles.discipline}>
                                 {item.stacks.map((stack, stackIndex) => (
                                     <p key={stackIndex}>{stack}</p>

@@ -5,7 +5,9 @@ import { BrowserRouter as
 import { useLocation } from 'react-router-dom';
 
 // External
+import Lenis from "@studio-freight/lenis";
 import { AnimatePresence } from 'framer-motion';
+import { ReactLenis, useLenis } from '@studio-freight/react-lenis'
 
 // Internal
 import './App.scss'
@@ -24,10 +26,23 @@ import Definition from './pages/work/projects/definition/Definition';
 // Component name is PascalCase
 // Double Quote for JSX single quote for js 
 
+const lenis = new Lenis({
+  duration: 0.7,
+});
+
+lenis.on('scroll', (e: any) => {
+
+})
+
+function raf(time: number) {
+  lenis.raf(time)
+  requestAnimationFrame(raf)
+}
+
+requestAnimationFrame(raf)
 
 function App() {
   const location = useLocation()
-
 
   return (
     <>

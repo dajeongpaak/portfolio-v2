@@ -46,11 +46,11 @@
 }
 
 .nextProject {
-    @include flex(start, space-between, column);
+    @include flex(flex-start, space-between, column);
     @include gridCol(1, 12);
     height: 10%;
     @include mq(large) {
-        @include flex(start, space-between);
+        @include flex(flex-start, space-between);
     }
 
     p {
