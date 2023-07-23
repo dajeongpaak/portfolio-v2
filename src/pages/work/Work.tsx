@@ -6,7 +6,7 @@ import Title from '../../components/title/Title'
 import Arrow from '../../assets/icons/Arrow'
 import Card from '../../components/card/Card'
 import Footer from '../../layouts/footer/Footer'
-import Transiton from '../../config/framerMotion/Transiton'
+import Transiton from '../../lib/framerMotion/Transiton'
 import setBodyColor from '../../utils/setBodyColor'
 
 function Work() {

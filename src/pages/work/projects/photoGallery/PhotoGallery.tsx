@@ -4,7 +4,7 @@ import Prism from "prismjs";
 import '../../../../styles/prismTheme/prism-vsc-dark-plus.css'
 
 import styles from './PhotoGallery.module.scss'
-import Transition from '../../../../config/framerMotion/Transiton'
+import Transition from '../../../../lib/framerMotion/Transiton'
 import setBodyColor from '../../../../utils/setBodyColor'
 import ScrollNavigation from '../../../../components/scrollNavigation/ScrollNavigation'
 import { gallery } from '../../../../data/projects'

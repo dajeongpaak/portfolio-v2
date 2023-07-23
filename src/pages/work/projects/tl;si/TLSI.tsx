@@ -6,9 +6,9 @@ import 'tippy.js/dist/tippy.css';
 
 import styles from './TLSI.module.scss'
 import setBodyColor from '../../../../utils/setBodyColor'
-import Transition from '../../../../config/framerMotion/Transiton';
+import Transition from '../../../../lib/framerMotion/Transiton';
 import ScrollNavigation from '../../../../components/scrollNavigation/ScrollNavigation'
-import Code from '../../../../config/prism/Code';
+import Code from '../../../../lib/prism/Code';
 import { validationCode } from '../../../../data/code';
 import { tlsi } from '../../../../data/projects';
 import ProjectBanner from '../../../../components/projectBanner/ProjectBanner';

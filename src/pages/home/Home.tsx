@@ -1,6 +1,6 @@
 
 import setBodyColor from '../../utils/setBodyColor'
-import Transition from '../../config/framerMotion/Transiton'
+import Transition from '../../lib/framerMotion/Transiton'
 import FeaturedWork from './components/FeaturedWork'
 import Hero from './components/Hero'
 import Mission from './components/Mission'

@@ -5,8 +5,8 @@ import { gsap } from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 
 import styles from './ProjectBanner.module.scss'
-import LazyImg from '../../config/lazyLoading/LazyImg';
-import LazySrc from '../../config/lazyLoading/LazySrc';
+import LazyImg from '../../lib/lazyLoading/LazyImg';
+import LazySrc from '../../lib/lazyLoading/LazySrc';
 interface ProjectBannerType {
   
     src: typeof import("*.png")

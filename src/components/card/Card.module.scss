@@ -46,7 +46,7 @@
      }
 
     &:hover .title  {
-        animation: moveGradient 3s linear forwards; 
+        animation: moveGradient 2s linear forwards; 
         background: linear-gradient(145deg,$color-primary-dark,$color-primary-dark, #858585);
 
         background-clip: text;

@@ -4,7 +4,7 @@ import { useEffect, useRef, useState } from 'react';
 import { Link } from 'react-router-dom'
 
 import styles from './Card.module.scss'
-import LazyImg from '../../config/lazyLoading/LazyImg'
+import LazyImg from '../../lib/lazyLoading/LazyImg'
 import {projects} from '../../data/projects'
 import Arrow from '../../assets/icons/Arrow'
 

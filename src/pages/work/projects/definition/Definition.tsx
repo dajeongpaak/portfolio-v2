@@ -1,9 +1,9 @@
 import styles from './Definition.module.scss'
 import { definition } from '../../../../data/projects';
 import setBodyColor from '../../../../utils/setBodyColor'
-import Transition from '../../../../config/framerMotion/Transiton';
+import Transition from '../../../../lib/framerMotion/Transiton';
 import ScrollNavigation from '../../../../components/scrollNavigation/ScrollNavigation'
-import Code from '../../../../config/prism/Code';
+import Code from '../../../../lib/prism/Code';
 import ProjectBanner from '../../../../components/projectBanner/ProjectBanner';
 import ProjectContent from '../../../../components/projectContent/ProjectContent';
 import ProjectText from '../../../../components/projectText/ProjectText';

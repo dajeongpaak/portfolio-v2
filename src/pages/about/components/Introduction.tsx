@@ -2,7 +2,7 @@
 import { Link } from 'react-router-dom'
 
 import styles from './Introduction.module.scss'
-import LazyImg from "../../../config/lazyLoading/LazyImg"
+import LazyImg from "../../../lib/lazyLoading/LazyImg"
 import Title from "../../../components/title/Title"
 import myImage from '../../../assets/images/DJ.jpg'
 import placeholderImg from '../../../assets/images/DJ-blurred.jpg'

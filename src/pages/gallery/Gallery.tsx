@@ -4,8 +4,8 @@ import { Link } from 'react-router-dom';
 import { gsap } from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 
-import Transition from '../../config/framerMotion/Transiton';
-import LazyImg from '../../config/lazyLoading/LazyImg';
+import Transition from '../../lib/framerMotion/Transiton';
+import LazyImg from '../../lib/lazyLoading/LazyImg';
 import styles from './Gallery.module.scss'
 import images from '../../data/gallery'
 import Arrow from '../../assets/icons/Arrow';

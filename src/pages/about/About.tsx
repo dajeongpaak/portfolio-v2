@@ -1,6 +1,6 @@
 
 import setBodyColor from "../../utils/setBodyColor"
-import Transiton from "../../config/framerMotion/Transiton"
+import Transiton from "../../lib/framerMotion/Transiton"
 import Introduction from "./components/Introduction"
 import Footer from "../../layouts/footer/Footer"
 import ValuesAndInterest from "./components/ValuesAndInterest"
