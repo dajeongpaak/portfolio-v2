@@ -26,20 +26,20 @@ import Definition from './pages/work/projects/definition/Definition';
 // Component name is PascalCase
 // Double Quote for JSX single quote for js 
 
-const lenis = new Lenis({
-  duration: 0.7,
-});
+// const lenis = new Lenis({
+//   duration: 0.7,
+// });
 
-lenis.on('scroll', (e: any) => {
+// lenis.on('scroll', (e: any) => {
 
-})
+// })
 
-function raf(time: number) {
-  lenis.raf(time)
-  requestAnimationFrame(raf)
-}
+// function raf(time: number) {
+//   lenis.raf(time)
+//   requestAnimationFrame(raf)
+// }
 
-requestAnimationFrame(raf)
+// requestAnimationFrame(raf)
 
 function App() {
   const location = useLocation()

@@ -1,4 +1,4 @@
-const projects = [
+export const projects = [
     {
         name: "Articles of the Week from NY Times",
         desc: "a web application with a newsletter subscription feature to view the most popular articles for the week.",
@@ -17,7 +17,7 @@ const projects = [
     },
     {
         name: "Definition - Vocabulary Wordbook",
-        desc: "Lorem ipsum dolor sit amet consectetur. Id porta lectus sit feugiat libero blandit augue.",
+        desc: "a web application to search definitions and save them for quick reference",
         stacks: ["HTML", "TypeScript", "SASS"],
         src: require('../assets/images/definition-banner.png'),
         placeholderSrc: require('../assets/images/definition-banner-blurred.webp'),
@@ -34,7 +34,7 @@ const projects = [
 
 ]
 
-const articlesOfTheWeek = [
+export const articlesOfTheWeek = [
     {
         src: require('../assets/images/articles-of-the-week-banner.png'),
         placeholderSrc: require('../assets/images/articles-of-the-week-banner-blurred.webp'),
@@ -51,7 +51,7 @@ const articlesOfTheWeek = [
     }
 ]
 
-const tlsi = [
+export const tlsi = [
     {
         src: require('../assets/images/too-long-summarize-it-banner.png'),
         placeholderSrc: require('../assets/images/too-long-summarize-it-banner-blurred.webp'),
@@ -68,7 +68,7 @@ const tlsi = [
     }
 ]
 
-const gallery = [
+export const gallery = [
     {
         src: require('../assets/images/photo-gallery-banner.png'),
         placeholderSrc: require('../assets/images/photo-gallery-banner-blurred.webp'),
@@ -85,7 +85,7 @@ const gallery = [
     }
 ]
 
-const definition = [
+export const definition = [
     {
         src: require('../assets/images/definition-banner.png'),
         placeholderSrc: require('../assets/images/definition-banner-blurred.webp'),
@@ -101,5 +101,3 @@ const definition = [
         "This project introduces an interactive feature that allows users to navigate through the gallery using the position of their mouse (desktop only, sadly)."]
     }
 ]
-
-export { projects, articlesOfTheWeek, tlsi, gallery, definition }

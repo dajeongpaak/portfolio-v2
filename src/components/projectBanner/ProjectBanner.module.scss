@@ -92,7 +92,7 @@
     @include gridCol(auto, 12);
 
     @include mq(large) {
-        @include gridCol(2, 6);
+        @include gridCol(2, 7);
     }
 
 }
@@ -106,7 +106,7 @@
     margin-bottom: 1rem;
 
     @include mq(large) {
-        @include gridCol(auto, 4);
+        @include gridCol(auto, 3);
         justify-self: end;
         align-self: end;    
     }

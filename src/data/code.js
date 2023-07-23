@@ -1,4 +1,4 @@
-const contextCode = `
+export const contextCode = `
  import { 
   createContext, 
   useEffect, 
@@ -61,7 +61,7 @@ export const ArticleProvider = ({ children }:ArticleProviderProp) => {
 export default ArticleContext
 `
 
-const mailChimpCode = `
+export const mailChimpCode = `
 
     // start server with Express
 const app = express();
@@ -160,7 +160,7 @@ const getMembersEmails = async () => {
 };
 `
 
-const emailContentCode = `
+export const emailContentCode = `
 // fetch NY Times data in order to complete an email content with the data for weekly updates 
 const fetchData = async () => {
 
@@ -235,7 +235,7 @@ const emailContent = async () => {
     };
 `
 
-const nodeMailerCode =`
+export const nodeMailerCode =`
 const transporter = nodemailer.createTransport({
 
     service: 'gmail',
@@ -276,7 +276,7 @@ sendEmail();
 
 `
 
-const validationCode = `
+ export const validationCode = `
 // Client Side Validation
 const handleSubmit = async (e) => {
     e.preventDefault()
@@ -358,7 +358,7 @@ app.post('/summarize', async (req, res) => {
 
 `
 
-const scrollCode = `
+export const scrollCode = `
 
 
 const handleMouseMove = (event: MouseEvent) => {
@@ -380,5 +380,3 @@ const handleMouseMove = (event: MouseEvent) => {
 
 
 `
-
-export { contextCode, mailChimpCode, nodeMailerCode, validationCode, scrollCode }

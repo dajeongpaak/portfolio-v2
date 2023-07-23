@@ -1,5 +1,5 @@
 import { useRef, useLayoutEffect } from 'react'
-import { Navigate, useNavigate, useMatch, useLocation } from 'react-router-dom'
+import { useNavigate, useLocation, redirect } from 'react-router-dom'
 
 import { gsap } from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
@@ -12,8 +12,9 @@ gsap.registerPlugin(ScrollTrigger)
 export default function ScrollNavigation({title, navigateTo, navigatePrev }: any) {
     const progressRef: any = useRef()
     const animRef: any = useRef()
-    const navigate = useNavigate();
-    // const location = useLocation
+    const isAnimationComplete = useRef(false);
+    const navigate = useNavigate()
+    const location = useLocation()
 
     const handleScroll = () => {
       window.scrollTo({
@@ -21,19 +22,22 @@ export default function ScrollNavigation({title, navigateTo, navigatePrev }: any
         behavior: 'smooth'
       });
     }  
-
+    console.log(location.pathname)
     useLayoutEffect(() => { 
+
 
       const handleNavigate = debounce(() => {
           if (
             animRef.current &&
-            animRef.current.style.width === '100%'
-          ) {
-            console.log(navigateTo);
-            // navigate(1);
-            // navigate(`/work/${navigateTo}`);
-          }
+            animRef.current.style.width ===
+            '100%' && 
+            isAnimationComplete.current) {
+            if (location.pathname !== `/work/${navigateTo}`){
+            navigate(`/work/${navigateTo}`);
+          }}
         }, 100);
+
+   
       
         let ctx = gsap.context(() => {
 
@@ -41,12 +45,10 @@ export default function ScrollNavigation({title, navigateTo, navigatePrev }: any
           const tl = gsap.timeline()
           tl.to(  '#js-progress-animation', {
               width: '100%',
-              // onStart: function() {
-              //   window.scrollTo(0,0)
-              // },
-              onComplete: function() {
-                navigate(`/work/${navigateTo}`)
-              } 
+              onComplete: () => {
+                isAnimationComplete.current = true;
+                handleNavigate()
+              }
             })
       
           ScrollTrigger.create({
@@ -58,12 +60,13 @@ export default function ScrollNavigation({title, navigateTo, navigatePrev }: any
             pin:  progressRef.current,
           })
         }, progressRef)
-    
+        console.log(isAnimationComplete.current)
         return () => {
           handleNavigate.cancel()
           ctx.revert()
+
         }
-      }, [])
+      }, [isAnimationComplete])
  
       
   return (

@@ -23,7 +23,7 @@ export default function Definition() {
           <ProjectBanner 
             data={definition}/>
             <ProjectContent 
-              heading="Modular State Management with Context"
+              heading="LocalStorage API"
             >
               <Code 
                 language="javascript"
@@ -31,7 +31,7 @@ export default function Definition() {
               />
               <ProjectText>
                 <p>
-                  One of the challenges I encountered while working with the component-based library React was efficiently handling props. This challenge became particularly relevant when I needed to use data from the New York Times API to create filters and display articles in the application.
+                  The main purpose of this project was to practice and gain experience in  localstorage API
                 </p>
                 <p>
                   To address this challenge, I employed various strategies to ensure the efficient handling of props. I leveraged a context provider to centralize the state management and access of the fetched data. 
