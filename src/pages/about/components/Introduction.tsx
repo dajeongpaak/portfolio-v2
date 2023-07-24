@@ -32,7 +32,7 @@ function Introduction() {
                             You can call me DJ
                         </h2>
                         <p className='col-12'>
-                            A front-end developer who is from Korea and currently in Vancouver, BC.
+                            A front-end developer from Korea and currently in Vancouver, BC.
                         </p>
                     </div>
                 </div>

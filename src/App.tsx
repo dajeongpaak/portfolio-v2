@@ -22,6 +22,7 @@ import ArticlesOfTheWeek from './pages/work/projects/articlesOfTheWeek/ArticlesO
 import TLSI from './pages/work/projects/tl;si/TLSI';
 import PhotoGallery from './pages/work/projects/photoGallery/PhotoGallery';
 import Definition from './pages/work/projects/definition/Definition';
+import Hope from './pages/home/components/Hope';
 // Variable name is camelCase
 // Component name is PascalCase
 // Double Quote for JSX single quote for js 
@@ -60,6 +61,7 @@ function App() {
               <Route path='photo-gallery' element={<PhotoGallery />} />
               <Route path='jade-bookmark-manager' element={<Jade />} />
             </Route>
+            <Route path='/hope' element={<Hope />} />
             <Route path="/gallery" element={<Gallery />} />
             {/* <Route path="*" element={<NotFound />} /> */}
           </Routes>
