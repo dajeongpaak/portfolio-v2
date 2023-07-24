@@ -412,13 +412,8 @@ function Hope() {
             // Remove the event listener when the component unmounts
             
         }
-    }, [heroRef])
+    }, [window.innerWidth])
 
-    // useEffect(() => {
-       
-    // }, [groundBody]) 
-
- 
 
   return (
     <section
