@@ -18,6 +18,10 @@ import imageCircle from '../../../assets/images/cir-1.png'
 import imageCircle2 from '../../../assets/images/cir-2.png'
 import imageCircle3 from '../../../assets/images/cir-3.png'
 import front from '../../../assets/images/front.png'
+import end from '../../../assets/images/end.png'
+import developer from '../../../assets/images/developer.png'
+import based from '../../../assets/images/based.png'
+import vancouver from '../../../assets/images/vancouver.png'
 
 
 function Hope() {
@@ -44,20 +48,17 @@ function Hope() {
         let Engine = Matter.Engine;
         let Render = Matter.Render;
         let Bodies = Matter.Bodies;
-        let Svg = Matter.Svg;
-        let Vector = Matter.Vector;
-        let Vertices = Matter.Vertices;
 
         const heroWidth = heroRef.current.clientWidth
         const heroHeight = heroRef.current.clientHeight
   
-        let actualPixel = 250
+        let actualPixel = 325
         let expectedRatio = 0.18
         let scaleFactor = 
             heroWidth > heroHeight ? 
             (heroWidth * expectedRatio) / actualPixel : 
             heroHeight * (expectedRatio * 1.15) / actualPixel
-        let scaleFactorCircle = scaleFactor * 0.8
+
         // create an engine
         var engine = Engine.create(),
             world = engine.world;
@@ -77,9 +78,72 @@ function Hope() {
         });
 
 
+      //  const frontPath = '#frontPath'
+        const SVGwidth = 100
+        const frontRatio = 0.2
+    //    createSVGBodies()
+    //     function createSVGBodies() {
+    //         const paths = document.querySelectorAll(frontPath)
+    //         paths.forEach((path, index) => {
+    //             let vertices = Svg.pathToVertices(path)
+    //             let scaleFactor =
+    //             (heroWidth * frontRatio) / SVGwidth
+    //         })
+    //     }
+
+        // createFrontSVG()
+        // function createFrontSVG() {
+        //     const svgElement = svgRef.current
+        //     const paths = Array.from(svgElement.querySelectorAll("path"));
+        //     if(svgRef.current) {
+        //         paths.forEach((path, index) => {
+        //         let vertices = Svg.pathToVertices(path);
+        //         let scaleFactor =
+        //         (heroWidth * frontRatio) / SVGwidth
+        //         vertices = Vertices.scale(vertices, scaleFactor, scaleFactor)
+        //         let svgBody = Bodies.fromVertices(
+        //             index * SVGwidth, 0, [vertices]
+        //         )
+        //         console.log(vertices, svgBody, index)
+        //      Composite.add(world, [svgBody])
+        //     })
+       
+        // }}
+
+       // const svgElement = svgRef.currentconst 
+        // const paths = svgElement.querySelectorAll("path");
+        // const bodies = [
+        //     Bodies.rectangle(heroWidth / 1.11, 0, 810, 60),
+        //     ...[...document.querySelectorAll("svg path")].map(path => {
+        //       const body = Bodies.fromVertices(
+        //         100, 80, Svg.pathToVertices(path), {}, true
+        //       );
+        //        let scale = Bodies.scale(body, 0.2, 0.2);
+        //       return body;
+        //     })
+        //   ];
+        //     const svgElement = svgRef.current
+        //  // const svg = document.getElementById("frontPath");
+        //   const svgPaths = Array.from(svgElement.querySelectorAll("path"));
+        //   const svgBodyOptions = { isStatic: true, render: { fillStyle: "blue" } };
+        //   const bodies = [
+        //     Bodies.rectangle(heroWidth / 1.11, 0, 810, 60, { isStatic: true }),
+        //     ...Array.from(svgPaths).map((path) => {
+        //       const pathData = new SVGPathData(path.getAttribute("d"));
+        //       const pathVertices = pathData.toPolygon();
+        
+        //       // Adjust pathVertices to your required position
+        //       const body = Bodies.fromVertices(
+        //         100, 80, pathVertices, svgBodyOptions, true
+        //       );
+        
+        //       return body;
+        //     }),
+        //   ];
+        
             
        // create physics elements
-        var hey = Bodies.rectangle(heroWidth / 1.11, 0, 200 * scaleFactor ,200 * scaleFactor
+        var FRONT = Bodies.rectangle(heroWidth / 1.11, 0, 200 * scaleFactor ,200 * scaleFactor
 ,  {
             density: 0.04,
 		    friction: 0.1,
@@ -87,45 +151,57 @@ function Hope() {
 		    restitution: 0.3,
             render: { 
             sprite: { 
-                texture: imageHey, 
+                texture: front, 
                 xScale: scaleFactor, 
                 yScale: scaleFactor  }}
             });
 
-        var name = Bodies.rectangle(heroWidth / 1.47, 0, 340 * scaleFactor, 185 * scaleFactor,  {
+        var END = Bodies.rectangle(heroWidth / 1.47, 0, 340 * scaleFactor, 185 * scaleFactor,  {
             density: 0.04,
             friction: 0.1,
             frictionAir: 0.005,
             restitution: 0.3,
             render: { 
             sprite: { 
-                texture: imageName, 
+                texture: end, 
                 xScale: scaleFactor, 
                 yScale: scaleFactor }}
             });
-    
-        var dj = Bodies.circle(heroWidth / 1.2, -200, 130 * scaleFactorCircle, {
-            density: 0.04,
-            friction: 2,
-            frictionAir: 0.01,
-            restitution: 0.1,
-            render: { 
-            sprite: { 
-                texture: imageDj, 
-                xScale: scaleFactorCircle, 
-                yScale: scaleFactorCircle }}
-            });
-            
-   
         
-        var iam = Bodies.rectangle(heroWidth /  4, -300, 340 * scaleFactor, 185 * scaleFactor,  {
+        var DEVELOPER = Bodies.rectangle(heroWidth /  4, -300, 340 * scaleFactor, 185 * scaleFactor,  {
             density: 0.04,
             friction: 1,
             frictionAir: 0.000001,
             restitution: 0.7,
             render: { 
             sprite: { 
-                texture: front, 
+                texture: developer, 
+                xScale: scaleFactor, 
+                yScale: scaleFactor  }}
+            });
+
+             
+        var BASED = Bodies.rectangle(heroWidth /  4, -300, 340 * scaleFactor, 185 * scaleFactor,  {
+            density: 0.04,
+            friction: 1,
+            frictionAir: 0.000001,
+            restitution: 0.7,
+            render: { 
+            sprite: { 
+                texture: based, 
+                xScale: scaleFactor, 
+                yScale: scaleFactor  }}
+            });
+
+             
+        var VANCOUVER = Bodies.rectangle(heroWidth /  4, -300, 340 * scaleFactor, 185 * scaleFactor,  {
+            density: 0.04,
+            friction: 1,
+            frictionAir: 0.000001,
+            restitution: 0.7,
+            render: { 
+            sprite: { 
+                texture: vancouver, 
                 xScale: scaleFactor, 
                 yScale: scaleFactor  }}
             });
@@ -153,7 +229,7 @@ function Hope() {
 
 
         // add all of the bodies to the world
-        Composite.add(world, [iam, groundBody, leftwall, rightwall,]);
+        Composite.add(world, [FRONT, END, DEVELOPER, BASED, VANCOUVER, groundBody, leftwall, rightwall,]);
 
         var canvas = render.canvas;
         const cwidth = canvas.width;
@@ -255,6 +331,23 @@ function Hope() {
         //     );
         // }
     
+
+        function scaleBodies() {
+            const allBodies = Composite.allBodies(world)
+
+            allBodies.forEach((body) => {
+                if(body.isStatic === true) return;
+                const { min, max } = body.bounds
+                const bodyWidth = max.x - min.x
+                let scaleFactor = 
+                heroWidth > heroHeight ? 
+                (heroWidth * expectedRatio) / bodyWidth : 
+                heroHeight * (expectedRatio * 1.15) / bodyWidth
+                
+                Matter.Body.scale(body, scaleFactor, scaleFactor)
+            })
+        }
+
         // window.addEventListener("resize", () => handleResize(matterContainer));
         const handleResize = () => {
             setWindowSize({ width: window.innerWidth, height: window.innerHeight });
@@ -281,6 +374,8 @@ function Hope() {
                     heightHero / 2
                     )
             );
+
+            scaleBodies()
         
         }
 
@@ -317,7 +412,7 @@ function Hope() {
             // Remove the event listener when the component unmounts
             
         }
-    }, [])
+    }, [windowSize])
 
     // useEffect(() => {
        
@@ -331,7 +426,8 @@ function Hope() {
         style={{ 
             height: "100vh",
             width: '100vw',
-            cursor: 'pointer'
+            cursor: 'pointer',
+            background: '#1C1C1E'
         }}
     >
         <h1 style={{
@@ -342,22 +438,9 @@ function Hope() {
         </h1>
     <svg 
     ref={svgRef}
-    style={{opacity: 0}}
+    style={{display: 'none'}}
      id="Layer_1" xmlns="http://www.w3.org/2000/svg"
-	 viewBox="0 0 1366 768">
-        <path d="M723.2,330.2v3.3h6.8v18.2h4v-18.2h6.8v-3.3H723.2z"/>
-        <path d="M640.8,351.7h4v-9.1h9.2v-3.3h-9.2v-5.8H655v-3.3h-14.1V351.7z"/>
-        <path d="M670.6,343.2c0.1-0.1,0.3-0.1,0.4-0.2c1.2-0.5,2-1.3,2.6-2.3c0.6-1,0.9-2.2,0.9-3.6c0-1.4-0.3-2.6-0.9-3.6
-            c-0.6-1-1.5-1.8-2.6-2.4c-1.2-0.6-2.6-0.9-4.3-0.9h-8.3v21.5h4v-7.9h4.1l4.3,7.9h4.5L670.6,343.2z M670.1,339
-            c-0.3,0.5-0.8,0.9-1.4,1.2c-0.6,0.3-1.4,0.4-2.4,0.4h-3.7v-7.1h3.7c1,0,1.8,0.1,2.4,0.4c0.6,0.3,1.1,0.7,1.4,1.2
-            c0.3,0.5,0.5,1.2,0.5,2C670.5,337.9,670.4,338.5,670.1,339z"/>
-        <path d="M715.9,344.9h-0.2l-10.4-14.6h-3.6v21.5h4v-14.6h0.2l10.4,14.6h3.6v-21.5h-4V344.9z"/>
-        <path d="M696.7,335c-0.9-1.6-2.1-2.9-3.6-3.8c-1.5-0.9-3.3-1.3-5.2-1.3c-1.9,0-3.7,0.4-5.2,1.3c-1.5,0.9-2.7,2.1-3.6,3.8
-            c-0.9,1.6-1.3,3.6-1.3,5.9c0,2.3,0.4,4.3,1.3,5.9c0.9,1.6,2.1,2.9,3.6,3.8c1.5,0.9,3.3,1.3,5.2,1.3c1.9,0,3.7-0.4,5.2-1.3
-            c1.5-0.9,2.7-2.1,3.6-3.8c0.9-1.6,1.3-3.6,1.3-5.9C698,338.7,697.5,336.7,696.7,335z M693.2,345.1c-0.5,1.1-1.2,2-2.2,2.5
-            c-0.9,0.6-2,0.9-3.2,0.9c-1.2,0-2.3-0.3-3.2-0.9c-0.9-0.6-1.6-1.4-2.2-2.5c-0.5-1.1-0.8-2.5-0.8-4.1c0-1.6,0.3-3,0.8-4.1
-            c0.5-1.1,1.2-2,2.2-2.5c0.9-0.6,2-0.9,3.2-0.9c1.2,0,2.3,0.3,3.2,0.9c0.9,0.6,1.6,1.4,2.2,2.5c0.5,1.1,0.8,2.5,0.8,4.1
-            C694,342.6,693.7,344,693.2,345.1z"/>
+	 viewBox="0 0 1366 768"><path d="M723.2 330.2v3.3h6.8v18.2h4v-18.2h6.8v-3.3h-17.6z"/><path d="M640.8 351.7h4v-9.1h9.2v-3.3h-9.2v-5.8H655v-3.3h-14.1v21.5z"/><path d="M670.6 343.2c.1-.1.3-.1.4-.2 1.2-.5 2-1.3 2.6-2.3.6-1 .9-2.2.9-3.6s-.3-2.6-.9-3.6c-.6-1-1.5-1.8-2.6-2.4-1.2-.6-2.6-.9-4.3-.9h-8.3v21.5h4v-7.9h4.1l4.3 7.9h4.5l-4.7-8.5zm-.5-4.2c-.3.5-.8.9-1.4 1.2-.6.3-1.4.4-2.4.4h-3.7v-7.1h3.7c1 0 1.8.1 2.4.4.6.3 1.1.7 1.4 1.2.3.5.5 1.2.5 2-.1.8-.2 1.4-.5 1.9z"/><path d="M715.9 344.9h-.2l-10.4-14.6h-3.6v21.5h4v-14.6h.2l10.4 14.6h3.6v-21.5h-4v14.6z"/><path d="M696.7 335c-.9-1.6-2.1-2.9-3.6-3.8-1.5-.9-3.3-1.3-5.2-1.3-1.9 0-3.7.4-5.2 1.3s-2.7 2.1-3.6 3.8c-.9 1.6-1.3 3.6-1.3 5.9 0 2.3.4 4.3 1.3 5.9.9 1.6 2.1 2.9 3.6 3.8 1.5.9 3.3 1.3 5.2 1.3 1.9 0 3.7-.4 5.2-1.3s2.7-2.1 3.6-3.8c.9-1.6 1.3-3.6 1.3-5.9 0-2.2-.5-4.2-1.3-5.9zm-3.5 10.1c-.5 1.1-1.2 2-2.2 2.5-.9.6-2 .9-3.2.9-1.2 0-2.3-.3-3.2-.9-.9-.6-1.6-1.4-2.2-2.5-.5-1.1-.8-2.5-.8-4.1 0-1.6.3-3 .8-4.1.5-1.1 1.2-2 2.2-2.5.9-.6 2-.9 3.2-.9 1.2 0 2.3.3 3.2.9.9.6 1.6 1.4 2.2 2.5.5 1.1.8 2.5.8 4.1 0 1.6-.3 3-.8 4.1z"/>
     </svg>
 
     </section>
