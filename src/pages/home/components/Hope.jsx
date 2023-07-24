@@ -412,7 +412,7 @@ function Hope() {
             // Remove the event listener when the component unmounts
             
         }
-    }, [windowSize])
+    }, [heroRef])
 
     // useEffect(() => {
        
@@ -425,8 +425,6 @@ function Hope() {
         ref={heroRef}
         style={{ 
             height: "100vh",
-            width: '100vw',
-            cursor: 'pointer',
             background: '#1C1C1E'
         }}
     >
