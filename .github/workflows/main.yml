@@ -28,6 +28,6 @@ jobs:
         uses: SamKirkland/FTP-Deploy-Action@4.3.3
         with:
           server: ftp.dajeongpark.com
-          username: portfolio-ftp@dajeongpark.com
+          username: portfolio-ftp@portfolio.dajeongpark.com
           password: ${{ secrets.ftp_password }}
           local-dir: build/
